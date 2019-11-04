@@ -158,11 +158,26 @@
     <Compile Include="ThuChi.Designer.cs">
       <DependentUpon>ThuChi.cs</DependentUpon>
     </Compile>
+    <Compile Include="TongHop_KhachLe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TongHop_KhachLe.Designer.cs">
+      <DependentUpon>TongHop_KhachLe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TuyChon_KhachLe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TuyChon_KhachLe.Designer.cs">
+      <DependentUpon>TuyChon_KhachLe.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DatPhong.resx">
       <DependentUpon>DatPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormChinh.resx">
       <DependentUpon>FormChinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KhachLe.resx">
+      <DependentUpon>KhachLe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LeTan.resx">
       <DependentUpon>LeTan.cs</DependentUpon>
@@ -185,6 +200,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ThongTinChung.resx">
       <DependentUpon>ThongTinChung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TongHop_KhachLe.resx">
+      <DependentUpon>TongHop_KhachLe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TuyChon_KhachLe.resx">
+      <DependentUpon>TuyChon_KhachLe.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

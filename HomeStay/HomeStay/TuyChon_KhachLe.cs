@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace HomeStay
 {
-    public partial class ThongKe : UserControl
+    public partial class TuyChon_KhachLe : UserControl
     {
-        public ThongKe()
+        public TuyChon_KhachLe()
         {
             InitializeComponent();
-        }
-
-        private void ThongKe_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

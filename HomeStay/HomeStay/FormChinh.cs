@@ -12,15 +12,21 @@ namespace HomeStay
 {
     public partial class FormChinh : Form
     {
-      
+        private
+        ThongTinChung us = new ThongTinChung();
+        SoDoPhong sdp = new SoDoPhong();
+        LeTan lt = new LeTan();
+        KhachLe kl = new KhachLe();
+
 
         public FormChinh()
         {
             InitializeComponent();
-            ThongTinChung us = new ThongTinChung();
-            Panel_NoiDung.Controls.Clear();
             Panel_NoiDung.Controls.Add(us);
-            
+            Panel_NoiDung.Controls.Add(sdp);
+            Panel_NoiDung.Controls.Add(lt);
+            Panel_NoiDung.Controls.Add(kl);
+
 
         }
 
@@ -31,9 +37,8 @@ namespace HomeStay
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-            ThongTinChung us = new ThongTinChung();
-            Panel_NoiDung.Controls.Clear();
-            Panel_NoiDung.Controls.Add(us);
+            us.BringToFront();
+            SDus.Show()
         }
 
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
@@ -47,10 +52,9 @@ namespace HomeStay
 
         private void bunifuFlatButton2_Click_1(object sender, EventArgs e)
         {
-
-            SoDoPhong sdp = new SoDoPhong();
-            Panel_NoiDung.Controls.Clear();
-            Panel_NoiDung.Controls.Add(sdp);
+            
+            sdp.BringToFront();
+            sdp.Show();
      
         }
 
@@ -76,16 +80,14 @@ namespace HomeStay
 
         private void bunifuFlatButton3_Click(object sender, EventArgs e)
         {
-            DatPhong LT = new DatPhong();
-            Panel_NoiDung.Controls.Clear();
-            Panel_NoiDung.Controls.Add(LT);
+            lt.BringToFront();
+            lt.Show();
         }
 
         private void bunifuFlatButton4_Click(object sender, EventArgs e)
         {
-            KhachLe Gust_Le = new KhachLe();
-            Panel_NoiDung.Controls.Clear();
-            Panel_NoiDung.Controls.Add(Gust_Le);
+            kl.BringToFront();
+            kl.Show();
         }
 
         private void bunifuFlatButton5_Click(object sender, EventArgs e)

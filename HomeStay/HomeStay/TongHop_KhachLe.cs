@@ -10,24 +10,24 @@ using System.Windows.Forms;
 
 namespace HomeStay
 {
-    public partial class ThuChi : UserControl
+    public partial class TongHop_KhachLe : UserControl
     {
-        public ThuChi()
+        public TongHop_KhachLe()
         {
             InitializeComponent();
         }
 
-        private void BunifuButton1_Click(object sender, EventArgs e)
+        private void bunifuCustomLabel1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void ThuChi_Load(object sender, EventArgs e)
+        private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void Label2_Click(object sender, EventArgs e)
+        private void bunifuDatepicker2_onValueChanged(object sender, EventArgs e)
         {
 
         }
