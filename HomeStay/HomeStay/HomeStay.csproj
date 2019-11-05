@@ -58,6 +58,9 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuRadioButton">
       <HintPath>E:\Bunifu UI WinForms 1.11.5.21\Bunifu.UI.WinForms.BunifuRadioButton.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuScrollBar">
+      <HintPath>E:\Bunifu UI WinForms 1.11.5.21\Bunifu.UI.WinForms.BunifuScrollBar.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
       <HintPath>E:\Bunifu UI WinForms 1.11.5.21\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
     </Reference>
@@ -75,6 +78,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xaml" />
@@ -96,6 +100,12 @@
     <Compile Include="BaoCao.Designer.cs">
       <DependentUpon>BaoCao.cs</DependentUpon>
     </Compile>
+    <Compile Include="DanhSachKhach_LeTan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DanhSachKhach_LeTan.Designer.cs">
+      <DependentUpon>DanhSachKhach_LeTan.cs</DependentUpon>
+    </Compile>
     <Compile Include="DatPhong.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -108,6 +118,12 @@
     <Compile Include="FormChinh.Designer.cs">
       <DependentUpon>FormChinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="KhachDaDi_LeTan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KhachDaDi_LeTan.Designer.cs">
+      <DependentUpon>KhachDaDi_LeTan.cs</DependentUpon>
+    </Compile>
     <Compile Include="KhachDoan.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -119,6 +135,18 @@
     </Compile>
     <Compile Include="KhachLe.Designer.cs">
       <DependentUpon>KhachLe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KhachSeDen_LeTan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KhachSeDen_LeTan.Designer.cs">
+      <DependentUpon>KhachSeDen_LeTan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KhachSeDi_LeTan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KhachSeDi_LeTan.Designer.cs">
+      <DependentUpon>KhachSeDi_LeTan.cs</DependentUpon>
     </Compile>
     <Compile Include="LeTan.cs">
       <SubType>UserControl</SubType>
@@ -170,14 +198,26 @@
     <Compile Include="TuyChon_KhachLe.Designer.cs">
       <DependentUpon>TuyChon_KhachLe.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DanhSachKhach_LeTan.resx">
+      <DependentUpon>DanhSachKhach_LeTan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DatPhong.resx">
       <DependentUpon>DatPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormChinh.resx">
       <DependentUpon>FormChinh.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="KhachDaDi_LeTan.resx">
+      <DependentUpon>KhachDaDi_LeTan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="KhachLe.resx">
       <DependentUpon>KhachLe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KhachSeDen_LeTan.resx">
+      <DependentUpon>KhachSeDen_LeTan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KhachSeDi_LeTan.resx">
+      <DependentUpon>KhachSeDi_LeTan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LeTan.resx">
       <DependentUpon>LeTan.cs</DependentUpon>
@@ -222,6 +262,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\airplane_landing_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_24px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
