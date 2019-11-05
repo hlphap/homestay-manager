@@ -12,14 +12,20 @@ namespace HomeStay
 {
     public partial class LeTan : UserControl
     {
+        private
+            DatPhong CtrDP = new DatPhong();
         public LeTan()
         {
             InitializeComponent();
+            PanelNoiDungLeTan.Controls.Add(CtrDP);
         }
 
-        private void bunifuUserControl1_Click(object sender, EventArgs e)
-        {
+       
 
+        private void ButtonDatPhong_Click(object sender, EventArgs e)
+        {
+            CtrDP.BringToFront();
+            CtrDP.Show();
         }
     }
 }

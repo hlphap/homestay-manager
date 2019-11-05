@@ -146,7 +146,7 @@
             this.Panel_THKL.Location = new System.Drawing.Point(0, 0);
             this.Panel_THKL.Name = "Panel_THKL";
             this.Panel_THKL.Quality = 10;
-            this.Panel_THKL.Size = new System.Drawing.Size(705, 354);
+            this.Panel_THKL.Size = new System.Drawing.Size(815, 464);
             this.Panel_THKL.TabIndex = 0;
             this.Panel_THKL.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuGradientPanel1_Paint);
             // 
@@ -1079,7 +1079,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.Panel_THKL);
             this.Name = "TongHop_KhachLe";
-            this.Size = new System.Drawing.Size(705, 354);
+            this.Size = new System.Drawing.Size(815, 464);
             this.Panel_THKL.ResumeLayout(false);
             this.Panel_THKL.PerformLayout();
             this.ResumeLayout(false);

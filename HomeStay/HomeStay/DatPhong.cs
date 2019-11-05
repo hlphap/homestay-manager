@@ -17,25 +17,16 @@ namespace HomeStay
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
+      
 
-        }
-
-        private void bunifuMaterialTextbox1_OnValueChanged(object sender, EventArgs e)
-        {
-
-        }
+ 
 
         private void bunifuMaterialTextbox1_OnValueChanged_1(object sender, EventArgs e)
         {
 
         }
 
-        private void bunifuDatePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void bunifuDatePicker1_ValueChanged_1(object sender, EventArgs e)
         {
@@ -47,8 +38,9 @@ namespace HomeStay
 
         }
 
-        private void bunifuDropdown1_onItemSelected(object sender, EventArgs e)
+        private void bunifuCustomLabel2_Click(object sender, EventArgs e)
         {
+
         }
     }
 }

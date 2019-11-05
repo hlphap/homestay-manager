@@ -16,5 +16,10 @@ namespace HomeStay
         {
             InitializeComponent();
         }
+
+        private void bunifuTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

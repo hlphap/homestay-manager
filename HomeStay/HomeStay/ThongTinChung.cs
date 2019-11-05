@@ -41,5 +41,10 @@ namespace HomeStay
         {
 
         }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

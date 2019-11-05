@@ -37,7 +37,8 @@
             Bunifu.UI.WinForms.BunifuAnimatorNS.Animation animation1 = new Bunifu.UI.WinForms.BunifuAnimatorNS.Animation();
             this.Panel_Chinh = new System.Windows.Forms.Panel();
             this.Panel_PhaiChinh = new System.Windows.Forms.Panel();
-            this.Panel_NoiDung = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.PanelTemb = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.PanelNoiDung = new System.Windows.Forms.Panel();
             this.Panel_Timkiem = new System.Windows.Forms.Panel();
             this.bunifuTextBox1 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.Panel_TraiChinh = new System.Windows.Forms.Panel();
@@ -58,6 +59,7 @@
             this.Animator = new Bunifu.UI.WinForms.BunifuTransition(this.components);
             this.Panel_Chinh.SuspendLayout();
             this.Panel_PhaiChinh.SuspendLayout();
+            this.PanelTemb.SuspendLayout();
             this.Panel_Timkiem.SuspendLayout();
             this.Panel_TraiChinh.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
@@ -76,37 +78,46 @@
             this.Panel_Chinh.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel_Chinh.Location = new System.Drawing.Point(0, 0);
             this.Panel_Chinh.Name = "Panel_Chinh";
-            this.Panel_Chinh.Size = new System.Drawing.Size(857, 481);
+            this.Panel_Chinh.Size = new System.Drawing.Size(1024, 587);
             this.Panel_Chinh.TabIndex = 0;
             // 
             // Panel_PhaiChinh
             // 
-            this.Panel_PhaiChinh.Controls.Add(this.Panel_NoiDung);
+            this.Panel_PhaiChinh.Controls.Add(this.PanelTemb);
             this.Panel_PhaiChinh.Controls.Add(this.Panel_Timkiem);
             this.Animator.SetDecoration(this.Panel_PhaiChinh, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.Panel_PhaiChinh.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Panel_PhaiChinh.Location = new System.Drawing.Point(173, 29);
+            this.Panel_PhaiChinh.Location = new System.Drawing.Point(197, 29);
             this.Panel_PhaiChinh.Name = "Panel_PhaiChinh";
-            this.Panel_PhaiChinh.Size = new System.Drawing.Size(684, 452);
+            this.Panel_PhaiChinh.Size = new System.Drawing.Size(827, 558);
             this.Panel_PhaiChinh.TabIndex = 3;
             // 
-            // Panel_NoiDung
+            // PanelTemb
             // 
-            this.Panel_NoiDung.BackColor = System.Drawing.Color.Transparent;
-            this.Panel_NoiDung.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Panel_NoiDung.BackgroundImage")));
-            this.Panel_NoiDung.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Animator.SetDecoration(this.Panel_NoiDung, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.Panel_NoiDung.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Panel_NoiDung.GradientBottomLeft = System.Drawing.Color.OldLace;
-            this.Panel_NoiDung.GradientBottomRight = System.Drawing.Color.SpringGreen;
-            this.Panel_NoiDung.GradientTopLeft = System.Drawing.Color.Navy;
-            this.Panel_NoiDung.GradientTopRight = System.Drawing.Color.SpringGreen;
-            this.Panel_NoiDung.Location = new System.Drawing.Point(0, 42);
-            this.Panel_NoiDung.Name = "Panel_NoiDung";
-            this.Panel_NoiDung.Quality = 10;
-            this.Panel_NoiDung.Size = new System.Drawing.Size(684, 410);
-            this.Panel_NoiDung.TabIndex = 1;
-            this.Panel_NoiDung.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel_NoiDung_Paint_1);
+            this.PanelTemb.BackColor = System.Drawing.Color.Transparent;
+            this.PanelTemb.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PanelTemb.BackgroundImage")));
+            this.PanelTemb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PanelTemb.Controls.Add(this.PanelNoiDung);
+            this.Animator.SetDecoration(this.PanelTemb, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.PanelTemb.Dock = System.Windows.Forms.DockStyle.Left;
+            this.PanelTemb.GradientBottomLeft = System.Drawing.Color.OldLace;
+            this.PanelTemb.GradientBottomRight = System.Drawing.Color.SpringGreen;
+            this.PanelTemb.GradientTopLeft = System.Drawing.Color.Navy;
+            this.PanelTemb.GradientTopRight = System.Drawing.Color.SpringGreen;
+            this.PanelTemb.Location = new System.Drawing.Point(0, 42);
+            this.PanelTemb.Name = "PanelTemb";
+            this.PanelTemb.Quality = 10;
+            this.PanelTemb.Size = new System.Drawing.Size(827, 516);
+            this.PanelTemb.TabIndex = 1;
+            this.PanelTemb.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel_NoiDung_Paint_1);
+            // 
+            // PanelNoiDung
+            // 
+            this.Animator.SetDecoration(this.PanelNoiDung, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.PanelNoiDung.Location = new System.Drawing.Point(6, 7);
+            this.PanelNoiDung.Name = "PanelNoiDung";
+            this.PanelNoiDung.Size = new System.Drawing.Size(815, 505);
+            this.PanelNoiDung.TabIndex = 0;
             // 
             // Panel_Timkiem
             // 
@@ -116,7 +127,7 @@
             this.Panel_Timkiem.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel_Timkiem.Location = new System.Drawing.Point(0, 0);
             this.Panel_Timkiem.Name = "Panel_Timkiem";
-            this.Panel_Timkiem.Size = new System.Drawing.Size(684, 42);
+            this.Panel_Timkiem.Size = new System.Drawing.Size(827, 42);
             this.Panel_Timkiem.TabIndex = 0;
             // 
             // bunifuTextBox1
@@ -202,7 +213,7 @@
             this.Panel_TraiChinh.Dock = System.Windows.Forms.DockStyle.Left;
             this.Panel_TraiChinh.Location = new System.Drawing.Point(0, 29);
             this.Panel_TraiChinh.Name = "Panel_TraiChinh";
-            this.Panel_TraiChinh.Size = new System.Drawing.Size(173, 452);
+            this.Panel_TraiChinh.Size = new System.Drawing.Size(197, 558);
             this.Panel_TraiChinh.TabIndex = 2;
             // 
             // bunifuImageButton1
@@ -210,7 +221,7 @@
             this.Animator.SetDecoration(this.bunifuImageButton1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
             this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(136, 7);
+            this.bunifuImageButton1.Location = new System.Drawing.Point(160, 7);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
             this.bunifuImageButton1.Size = new System.Drawing.Size(31, 28);
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -231,9 +242,9 @@
             this.panel1.Controls.Add(this.bunifuFlatButton1);
             this.Animator.SetDecoration(this.panel1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 42);
+            this.panel1.Location = new System.Drawing.Point(0, 41);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(173, 410);
+            this.panel1.Size = new System.Drawing.Size(197, 517);
             this.panel1.TabIndex = 1;
             // 
             // bunifuFlatButton8
@@ -267,7 +278,7 @@
             this.bunifuFlatButton8.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.bunifuFlatButton8.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.bunifuFlatButton8.selected = false;
-            this.bunifuFlatButton8.Size = new System.Drawing.Size(173, 49);
+            this.bunifuFlatButton8.Size = new System.Drawing.Size(197, 49);
             this.bunifuFlatButton8.TabIndex = 7;
             this.bunifuFlatButton8.Text = "Báo cáo";
             this.bunifuFlatButton8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -306,7 +317,7 @@
             this.bunifuFlatButton7.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.bunifuFlatButton7.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.bunifuFlatButton7.selected = false;
-            this.bunifuFlatButton7.Size = new System.Drawing.Size(173, 49);
+            this.bunifuFlatButton7.Size = new System.Drawing.Size(197, 49);
             this.bunifuFlatButton7.TabIndex = 6;
             this.bunifuFlatButton7.Text = "Thống kê";
             this.bunifuFlatButton7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -345,7 +356,7 @@
             this.bunifuFlatButton6.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.bunifuFlatButton6.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.bunifuFlatButton6.selected = false;
-            this.bunifuFlatButton6.Size = new System.Drawing.Size(173, 49);
+            this.bunifuFlatButton6.Size = new System.Drawing.Size(197, 49);
             this.bunifuFlatButton6.TabIndex = 5;
             this.bunifuFlatButton6.Text = "Thu chi";
             this.bunifuFlatButton6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -384,7 +395,7 @@
             this.bunifuFlatButton5.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.bunifuFlatButton5.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.bunifuFlatButton5.selected = false;
-            this.bunifuFlatButton5.Size = new System.Drawing.Size(173, 49);
+            this.bunifuFlatButton5.Size = new System.Drawing.Size(197, 49);
             this.bunifuFlatButton5.TabIndex = 4;
             this.bunifuFlatButton5.Text = "Khách đoàn";
             this.bunifuFlatButton5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -423,7 +434,7 @@
             this.bunifuFlatButton4.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.bunifuFlatButton4.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.bunifuFlatButton4.selected = false;
-            this.bunifuFlatButton4.Size = new System.Drawing.Size(173, 49);
+            this.bunifuFlatButton4.Size = new System.Drawing.Size(197, 49);
             this.bunifuFlatButton4.TabIndex = 3;
             this.bunifuFlatButton4.Text = "Khách lẻ";
             this.bunifuFlatButton4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -462,7 +473,7 @@
             this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.bunifuFlatButton3.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.bunifuFlatButton3.selected = false;
-            this.bunifuFlatButton3.Size = new System.Drawing.Size(173, 49);
+            this.bunifuFlatButton3.Size = new System.Drawing.Size(197, 49);
             this.bunifuFlatButton3.TabIndex = 2;
             this.bunifuFlatButton3.Text = "Lễ tân";
             this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -501,7 +512,7 @@
             this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.bunifuFlatButton2.selected = false;
-            this.bunifuFlatButton2.Size = new System.Drawing.Size(173, 49);
+            this.bunifuFlatButton2.Size = new System.Drawing.Size(197, 49);
             this.bunifuFlatButton2.TabIndex = 1;
             this.bunifuFlatButton2.Text = "Sơ đồ phòng";
             this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -540,7 +551,7 @@
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.bunifuFlatButton1.selected = true;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(173, 49);
+            this.bunifuFlatButton1.Size = new System.Drawing.Size(197, 49);
             this.bunifuFlatButton1.TabIndex = 0;
             this.bunifuFlatButton1.Text = "Thông tin chung";
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -557,7 +568,7 @@
             this.ThanhCongCu.Dock = System.Windows.Forms.DockStyle.Top;
             this.ThanhCongCu.Location = new System.Drawing.Point(0, 0);
             this.ThanhCongCu.Name = "ThanhCongCu";
-            this.ThanhCongCu.Size = new System.Drawing.Size(857, 29);
+            this.ThanhCongCu.Size = new System.Drawing.Size(1024, 29);
             this.ThanhCongCu.TabIndex = 1;
             // 
             // bunifuImageButton2
@@ -565,7 +576,7 @@
             this.Animator.SetDecoration(this.bunifuImageButton2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
             this.bunifuImageButton2.ImageActive = null;
-            this.bunifuImageButton2.Location = new System.Drawing.Point(831, 0);
+            this.bunifuImageButton2.Location = new System.Drawing.Point(998, 0);
             this.bunifuImageButton2.Name = "bunifuImageButton2";
             this.bunifuImageButton2.Size = new System.Drawing.Size(23, 29);
             this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -603,7 +614,7 @@
             animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
             animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
             animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            animation1.Padding = new System.Windows.Forms.Padding(0);
             animation1.RotateCoeff = 0F;
             animation1.RotateLimit = 0F;
             animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
@@ -617,7 +628,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(857, 479);
+            this.ClientSize = new System.Drawing.Size(1024, 587);
             this.Controls.Add(this.Panel_Chinh);
             this.Animator.SetDecoration(this, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -625,6 +636,7 @@
             this.Text = "HomeStay Manager";
             this.Panel_Chinh.ResumeLayout(false);
             this.Panel_PhaiChinh.ResumeLayout(false);
+            this.PanelTemb.ResumeLayout(false);
             this.Panel_Timkiem.ResumeLayout(false);
             this.Panel_TraiChinh.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
@@ -657,7 +669,8 @@
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox bunifuTextBox1;
-        private Bunifu.Framework.UI.BunifuGradientPanel Panel_NoiDung;
+        private Bunifu.Framework.UI.BunifuGradientPanel PanelTemb;
         private Bunifu.UI.WinForms.BunifuTransition Animator;
+        private System.Windows.Forms.Panel PanelNoiDung;
     }
 }

@@ -26,14 +26,14 @@ namespace HomeStay
         public FormChinh()
         {
             InitializeComponent();
-            Panel_NoiDung.Controls.Add(CtrTTC);
-            Panel_NoiDung.Controls.Add(CtrSDP);
-            Panel_NoiDung.Controls.Add(CtrLT);
-            Panel_NoiDung.Controls.Add(CtrKL);
-            Panel_NoiDung.Controls.Add(CtrKD);
-            Panel_NoiDung.Controls.Add(CtrTC);
-            Panel_NoiDung.Controls.Add(CtrTK);
-            Panel_NoiDung.Controls.Add(CtrBC);
+            PanelNoiDung.Controls.Add(CtrTTC);
+            PanelNoiDung.Controls.Add(CtrSDP);
+            PanelNoiDung.Controls.Add(CtrLT);
+            PanelNoiDung.Controls.Add(CtrKL);
+            PanelNoiDung.Controls.Add(CtrKD);
+            PanelNoiDung.Controls.Add(CtrTC);
+            PanelNoiDung.Controls.Add(CtrTK);
+            PanelNoiDung.Controls.Add(CtrBC);
         }
 
         private void ButtonExit_Click(object sender, EventArgs e)
