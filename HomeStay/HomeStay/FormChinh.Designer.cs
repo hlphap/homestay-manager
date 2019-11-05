@@ -55,7 +55,7 @@
             this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
             this.HomeStay = new System.Windows.Forms.Label();
             this.Head = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.SDPAnimator = new Bunifu.UI.WinForms.BunifuTransition(this.components);
+            this.Animator = new Bunifu.UI.WinForms.BunifuTransition(this.components);
             this.Panel_Chinh.SuspendLayout();
             this.Panel_PhaiChinh.SuspendLayout();
             this.Panel_Timkiem.SuspendLayout();
@@ -72,7 +72,7 @@
             this.Panel_Chinh.Controls.Add(this.Panel_PhaiChinh);
             this.Panel_Chinh.Controls.Add(this.Panel_TraiChinh);
             this.Panel_Chinh.Controls.Add(this.ThanhCongCu);
-            this.SDPAnimator.SetDecoration(this.Panel_Chinh, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.Animator.SetDecoration(this.Panel_Chinh, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.Panel_Chinh.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel_Chinh.Location = new System.Drawing.Point(0, 0);
             this.Panel_Chinh.Name = "Panel_Chinh";
@@ -83,7 +83,7 @@
             // 
             this.Panel_PhaiChinh.Controls.Add(this.Panel_NoiDung);
             this.Panel_PhaiChinh.Controls.Add(this.Panel_Timkiem);
-            this.SDPAnimator.SetDecoration(this.Panel_PhaiChinh, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.Animator.SetDecoration(this.Panel_PhaiChinh, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.Panel_PhaiChinh.Dock = System.Windows.Forms.DockStyle.Left;
             this.Panel_PhaiChinh.Location = new System.Drawing.Point(173, 29);
             this.Panel_PhaiChinh.Name = "Panel_PhaiChinh";
@@ -95,7 +95,7 @@
             this.Panel_NoiDung.BackColor = System.Drawing.Color.Transparent;
             this.Panel_NoiDung.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Panel_NoiDung.BackgroundImage")));
             this.Panel_NoiDung.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.SDPAnimator.SetDecoration(this.Panel_NoiDung, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.Animator.SetDecoration(this.Panel_NoiDung, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.Panel_NoiDung.Dock = System.Windows.Forms.DockStyle.Left;
             this.Panel_NoiDung.GradientBottomLeft = System.Drawing.Color.OldLace;
             this.Panel_NoiDung.GradientBottomRight = System.Drawing.Color.SpringGreen;
@@ -112,7 +112,7 @@
             // 
             this.Panel_Timkiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.Panel_Timkiem.Controls.Add(this.bunifuTextBox1);
-            this.SDPAnimator.SetDecoration(this.Panel_Timkiem, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.Animator.SetDecoration(this.Panel_Timkiem, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.Panel_Timkiem.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel_Timkiem.Location = new System.Drawing.Point(0, 0);
             this.Panel_Timkiem.Name = "Panel_Timkiem";
@@ -136,7 +136,7 @@
             this.bunifuTextBox1.BorderThickness = 1;
             this.bunifuTextBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.bunifuTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.SDPAnimator.SetDecoration(this.bunifuTextBox1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.Animator.SetDecoration(this.bunifuTextBox1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.bunifuTextBox1.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
             this.bunifuTextBox1.DefaultText = "";
             this.bunifuTextBox1.FillColor = System.Drawing.Color.White;
@@ -198,7 +198,7 @@
             this.Panel_TraiChinh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.Panel_TraiChinh.Controls.Add(this.bunifuImageButton1);
             this.Panel_TraiChinh.Controls.Add(this.panel1);
-            this.SDPAnimator.SetDecoration(this.Panel_TraiChinh, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.Animator.SetDecoration(this.Panel_TraiChinh, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.Panel_TraiChinh.Dock = System.Windows.Forms.DockStyle.Left;
             this.Panel_TraiChinh.Location = new System.Drawing.Point(0, 29);
             this.Panel_TraiChinh.Name = "Panel_TraiChinh";
@@ -207,7 +207,7 @@
             // 
             // bunifuImageButton1
             // 
-            this.SDPAnimator.SetDecoration(this.bunifuImageButton1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.Animator.SetDecoration(this.bunifuImageButton1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
             this.bunifuImageButton1.ImageActive = null;
             this.bunifuImageButton1.Location = new System.Drawing.Point(136, 7);
@@ -217,6 +217,7 @@
             this.bunifuImageButton1.TabIndex = 0;
             this.bunifuImageButton1.TabStop = false;
             this.bunifuImageButton1.Zoom = 10;
+            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
             // 
             // panel1
             // 
@@ -228,7 +229,7 @@
             this.panel1.Controls.Add(this.bunifuFlatButton3);
             this.panel1.Controls.Add(this.bunifuFlatButton2);
             this.panel1.Controls.Add(this.bunifuFlatButton1);
-            this.SDPAnimator.SetDecoration(this.panel1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.Animator.SetDecoration(this.panel1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 42);
             this.panel1.Name = "panel1";
@@ -244,7 +245,7 @@
             this.bunifuFlatButton8.BorderRadius = 0;
             this.bunifuFlatButton8.ButtonText = "Báo cáo";
             this.bunifuFlatButton8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SDPAnimator.SetDecoration(this.bunifuFlatButton8, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.Animator.SetDecoration(this.bunifuFlatButton8, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.bunifuFlatButton8.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton8.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuFlatButton8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -272,7 +273,7 @@
             this.bunifuFlatButton8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton8.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton8.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton8.Click += new System.EventHandler(this.bunifuFlatButton8_Click);
+            this.bunifuFlatButton8.Click += new System.EventHandler(this.ButtonBaoCao_Click);
             // 
             // bunifuFlatButton7
             // 
@@ -283,7 +284,7 @@
             this.bunifuFlatButton7.BorderRadius = 0;
             this.bunifuFlatButton7.ButtonText = "Thống kê";
             this.bunifuFlatButton7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SDPAnimator.SetDecoration(this.bunifuFlatButton7, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.Animator.SetDecoration(this.bunifuFlatButton7, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.bunifuFlatButton7.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton7.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuFlatButton7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -311,7 +312,7 @@
             this.bunifuFlatButton7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton7.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton7.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton7.Click += new System.EventHandler(this.bunifuFlatButton7_Click);
+            this.bunifuFlatButton7.Click += new System.EventHandler(this.ButtonThongKe_Click);
             // 
             // bunifuFlatButton6
             // 
@@ -322,7 +323,7 @@
             this.bunifuFlatButton6.BorderRadius = 0;
             this.bunifuFlatButton6.ButtonText = "Thu chi";
             this.bunifuFlatButton6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SDPAnimator.SetDecoration(this.bunifuFlatButton6, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.Animator.SetDecoration(this.bunifuFlatButton6, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.bunifuFlatButton6.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton6.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuFlatButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -350,7 +351,7 @@
             this.bunifuFlatButton6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton6.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton6.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton6.Click += new System.EventHandler(this.bunifuFlatButton6_Click);
+            this.bunifuFlatButton6.Click += new System.EventHandler(this.ButtonThuChi_Click);
             // 
             // bunifuFlatButton5
             // 
@@ -361,7 +362,7 @@
             this.bunifuFlatButton5.BorderRadius = 0;
             this.bunifuFlatButton5.ButtonText = "Khách đoàn";
             this.bunifuFlatButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SDPAnimator.SetDecoration(this.bunifuFlatButton5, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.Animator.SetDecoration(this.bunifuFlatButton5, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.bunifuFlatButton5.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton5.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuFlatButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -389,7 +390,7 @@
             this.bunifuFlatButton5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton5.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton5.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton5.Click += new System.EventHandler(this.bunifuFlatButton5_Click);
+            this.bunifuFlatButton5.Click += new System.EventHandler(this.ButtonKhachDoan_Click);
             // 
             // bunifuFlatButton4
             // 
@@ -400,7 +401,7 @@
             this.bunifuFlatButton4.BorderRadius = 0;
             this.bunifuFlatButton4.ButtonText = "Khách lẻ";
             this.bunifuFlatButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SDPAnimator.SetDecoration(this.bunifuFlatButton4, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.Animator.SetDecoration(this.bunifuFlatButton4, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.bunifuFlatButton4.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton4.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuFlatButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -428,7 +429,7 @@
             this.bunifuFlatButton4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton4.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton4.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton4.Click += new System.EventHandler(this.bunifuFlatButton4_Click);
+            this.bunifuFlatButton4.Click += new System.EventHandler(this.ButtonKhachLe_Click);
             // 
             // bunifuFlatButton3
             // 
@@ -439,7 +440,7 @@
             this.bunifuFlatButton3.BorderRadius = 0;
             this.bunifuFlatButton3.ButtonText = "Lễ tân";
             this.bunifuFlatButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SDPAnimator.SetDecoration(this.bunifuFlatButton3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.Animator.SetDecoration(this.bunifuFlatButton3, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.bunifuFlatButton3.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton3.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuFlatButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -467,7 +468,7 @@
             this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton3.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton3.Click += new System.EventHandler(this.bunifuFlatButton3_Click);
+            this.bunifuFlatButton3.Click += new System.EventHandler(this.ButtonLeTan_Click);
             // 
             // bunifuFlatButton2
             // 
@@ -478,7 +479,7 @@
             this.bunifuFlatButton2.BorderRadius = 0;
             this.bunifuFlatButton2.ButtonText = "Sơ đồ phòng";
             this.bunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SDPAnimator.SetDecoration(this.bunifuFlatButton2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.Animator.SetDecoration(this.bunifuFlatButton2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.bunifuFlatButton2.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton2.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuFlatButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -506,7 +507,7 @@
             this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton2.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton2.Click += new System.EventHandler(this.bunifuFlatButton2_Click_1);
+            this.bunifuFlatButton2.Click += new System.EventHandler(this.ButtonSoDoPhong_Click);
             // 
             // bunifuFlatButton1
             // 
@@ -517,7 +518,7 @@
             this.bunifuFlatButton1.BorderRadius = 0;
             this.bunifuFlatButton1.ButtonText = "Thông tin chung";
             this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SDPAnimator.SetDecoration(this.bunifuFlatButton1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.Animator.SetDecoration(this.bunifuFlatButton1, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
             this.bunifuFlatButton1.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuFlatButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -545,14 +546,14 @@
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
+            this.bunifuFlatButton1.Click += new System.EventHandler(this.ButtonThongTinChung_Click);
             // 
             // ThanhCongCu
             // 
             this.ThanhCongCu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.ThanhCongCu.Controls.Add(this.bunifuImageButton2);
             this.ThanhCongCu.Controls.Add(this.HomeStay);
-            this.SDPAnimator.SetDecoration(this.ThanhCongCu, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.Animator.SetDecoration(this.ThanhCongCu, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.ThanhCongCu.Dock = System.Windows.Forms.DockStyle.Top;
             this.ThanhCongCu.Location = new System.Drawing.Point(0, 0);
             this.ThanhCongCu.Name = "ThanhCongCu";
@@ -561,7 +562,7 @@
             // 
             // bunifuImageButton2
             // 
-            this.SDPAnimator.SetDecoration(this.bunifuImageButton2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.Animator.SetDecoration(this.bunifuImageButton2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
             this.bunifuImageButton2.ImageActive = null;
             this.bunifuImageButton2.Location = new System.Drawing.Point(831, 0);
@@ -571,12 +572,12 @@
             this.bunifuImageButton2.TabIndex = 1;
             this.bunifuImageButton2.TabStop = false;
             this.bunifuImageButton2.Zoom = 20;
-            this.bunifuImageButton2.Click += new System.EventHandler(this.bunifuImageButton2_Click);
+            this.bunifuImageButton2.Click += new System.EventHandler(this.ButtonExit_Click);
             // 
             // HomeStay
             // 
             this.HomeStay.AutoSize = true;
-            this.SDPAnimator.SetDecoration(this.HomeStay, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.Animator.SetDecoration(this.HomeStay, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.HomeStay.Location = new System.Drawing.Point(12, 9);
             this.HomeStay.Name = "HomeStay";
             this.HomeStay.Size = new System.Drawing.Size(104, 13);
@@ -590,10 +591,10 @@
             this.Head.TargetControl = this.ThanhCongCu;
             this.Head.Vertical = true;
             // 
-            // SDPAnimator
+            // Animator
             // 
-            this.SDPAnimator.AnimationType = Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType.HorizSlideAndRotate;
-            this.SDPAnimator.Cursor = null;
+            this.Animator.AnimationType = Bunifu.UI.WinForms.BunifuAnimatorNS.AnimationType.Scale;
+            this.Animator.Cursor = null;
             animation1.AnimateOnlyDifferences = true;
             animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
             animation1.LeafCoeff = 0F;
@@ -602,15 +603,15 @@
             animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
             animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
             animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(50);
-            animation1.RotateCoeff = 0.3F;
-            animation1.RotateLimit = 0.2F;
+            animation1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
             animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
             animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
             animation1.TimeCoeff = 0F;
             animation1.TransparencyCoeff = 0F;
-            this.SDPAnimator.DefaultAnimation = animation1;
-            this.SDPAnimator.TimeStep = 1F;
+            this.Animator.DefaultAnimation = animation1;
+            this.Animator.TimeStep = 3F;
             // 
             // FormChinh
             // 
@@ -618,7 +619,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(857, 479);
             this.Controls.Add(this.Panel_Chinh);
-            this.SDPAnimator.SetDecoration(this, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.Animator.SetDecoration(this, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormChinh";
             this.Text = "HomeStay Manager";
@@ -657,6 +658,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox bunifuTextBox1;
         private Bunifu.Framework.UI.BunifuGradientPanel Panel_NoiDung;
-        private Bunifu.UI.WinForms.BunifuTransition SDPAnimator;
+        private Bunifu.UI.WinForms.BunifuTransition Animator;
     }
 }
