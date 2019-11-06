@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace HomeStay
 {
-    public partial class ThongKe : UserControl
+    public partial class LapPhieuThuChi_ThuChi : UserControl
     {
-        public ThongKe()
+        public LapPhieuThuChi_ThuChi()
         {
             InitializeComponent();
-        }
-
-        private void ThongKe_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuCustomLabel1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

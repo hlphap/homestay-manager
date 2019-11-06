@@ -31,5 +31,30 @@ namespace HomeStay
         {
 
         }
+
+        private void bunifuCustomLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void bunifuMaterialTextbox1_OnValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuDropdown1_onItemSelected(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuGradientPanel8_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
