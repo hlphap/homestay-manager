@@ -10,13 +10,16 @@ using System.Windows.Forms;
 
 namespace HomeStay
 {
-    public partial class KhachSeDen_LeTan : UserControl
+    public partial class ThongKe_DoanhThu : UserControl
     {
-        public KhachSeDen_LeTan()
+        public ThongKe_DoanhThu()
         {
             InitializeComponent();
         }
 
-      
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

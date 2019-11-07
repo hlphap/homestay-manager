@@ -12,49 +12,48 @@ namespace HomeStay
 {
     public partial class ThuChi : UserControl
     {
+        private
+            KiemKe CrtKK = new KiemKe();
+            LapPhieuThuChi_ThuChi CrtLPTC = new LapPhieuThuChi_ThuChi();
+            SoChiTietTienGui_ChiTiet CrtSCTTG = new SoChiTietTienGui_ChiTiet();
         public ThuChi()
         {
             InitializeComponent();
+            PanelNoiDungThuChi.Controls.Add(CrtLPTC);
+            PanelNoiDungThuChi.Controls.Add(CrtKK);
+            PanelNoiDungThuChi.Controls.Add(CrtSCTTG);
+                       
         }
 
-        private void BunifuButton1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void ThuChi_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void Label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuCustomLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void bunifuMaterialTextbox1_OnValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuDropdown1_onItemSelected(object sender, EventArgs e)
-        {
-
-        }
+     
 
         private void bunifuGradientPanel8_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void ButtonLapPhieuThuChi_Click(object sender, EventArgs e)
+        {
+            CrtLPTC.BringToFront();
+            CrtLPTC.Show();
+        }
+
+        private void ButtonKiemKe_Click(object sender, EventArgs e)
+        {
+            CrtKK.BringToFront();
+            CrtKK.Show();
+        }
+
+        private void ButtonSoChiTieu_Click(object sender, EventArgs e)
+        {
+            CrtSCTTG.BringToFront();
+            CrtSCTTG.Show();
         }
     }
 }

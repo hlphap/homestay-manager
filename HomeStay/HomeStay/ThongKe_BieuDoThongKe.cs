@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace HomeStay
 {
-    public partial class KhachSeDen_LeTan : UserControl
+    public partial class ThongKe_BieuDoThongKe : UserControl
     {
-        public KhachSeDen_LeTan()
+        public ThongKe_BieuDoThongKe()
         {
             InitializeComponent();
         }
-
-      
     }
 }
