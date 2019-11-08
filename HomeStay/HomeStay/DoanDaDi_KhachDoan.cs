@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace HomeStay
 {
-    public partial class TuyChon_KhachLe : UserControl
+    public partial class DoanDaDi_KhachDoan : UserControl
     {
-        public TuyChon_KhachLe()
+        public DoanDaDi_KhachDoan()
         {
             InitializeComponent();
-        }
-
-        private void Panel_TuyChon_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void bunifuSeparator1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

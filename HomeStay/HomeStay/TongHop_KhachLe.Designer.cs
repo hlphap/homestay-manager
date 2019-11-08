@@ -98,6 +98,7 @@
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.Panel_THKL.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -105,6 +106,7 @@
             // 
             this.Panel_THKL.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Panel_THKL.BackgroundImage")));
             this.Panel_THKL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Panel_THKL.Controls.Add(this.bunifuSeparator1);
             this.Panel_THKL.Controls.Add(this.bunifuCustomLabel14);
             this.Panel_THKL.Controls.Add(this.bunifuTextBox9);
             this.Panel_THKL.Controls.Add(this.bunifuTextBox8);
@@ -376,7 +378,7 @@
             this.bunifuDatepicker3.Location = new System.Drawing.Point(120, 234);
             this.bunifuDatepicker3.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuDatepicker3.Name = "bunifuDatepicker3";
-            this.bunifuDatepicker3.Size = new System.Drawing.Size(204, 44);
+            this.bunifuDatepicker3.Size = new System.Drawing.Size(242, 44);
             this.bunifuDatepicker3.TabIndex = 24;
             this.bunifuDatepicker3.Value = new System.DateTime(2019, 10, 11, 8, 17, 40, 675);
             // 
@@ -390,7 +392,7 @@
             this.bunifuDatepicker2.Location = new System.Drawing.Point(120, 161);
             this.bunifuDatepicker2.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuDatepicker2.Name = "bunifuDatepicker2";
-            this.bunifuDatepicker2.Size = new System.Drawing.Size(204, 44);
+            this.bunifuDatepicker2.Size = new System.Drawing.Size(242, 44);
             this.bunifuDatepicker2.TabIndex = 23;
             this.bunifuDatepicker2.Value = new System.DateTime(2019, 10, 11, 8, 17, 40, 675);
             this.bunifuDatepicker2.onValueChanged += new System.EventHandler(this.bunifuDatepicker2_onValueChanged);
@@ -422,7 +424,7 @@
             this.bunifuTextBox7.IconRight = null;
             this.bunifuTextBox7.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox7.Lines = new string[0];
-            this.bunifuTextBox7.Location = new System.Drawing.Point(410, 298);
+            this.bunifuTextBox7.Location = new System.Drawing.Point(486, 305);
             this.bunifuTextBox7.MaxLength = 32767;
             this.bunifuTextBox7.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBox7.Modified = false;
@@ -474,7 +476,7 @@
             this.bunifuCustomLabel9.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel9.Font = new System.Drawing.Font("Segoe UI Semibold", 8F);
             this.bunifuCustomLabel9.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.bunifuCustomLabel9.Location = new System.Drawing.Point(572, 241);
+            this.bunifuCustomLabel9.Location = new System.Drawing.Point(648, 248);
             this.bunifuCustomLabel9.Name = "bunifuCustomLabel9";
             this.bunifuCustomLabel9.Size = new System.Drawing.Size(52, 13);
             this.bunifuCustomLabel9.TabIndex = 21;
@@ -488,7 +490,7 @@
             "Việt Nam",
             "Lào",
             "Campuchia"});
-            this.comboBox5.Location = new System.Drawing.Point(575, 257);
+            this.comboBox5.Location = new System.Drawing.Point(651, 264);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(89, 25);
             this.comboBox5.TabIndex = 20;
@@ -520,7 +522,7 @@
             this.bunifuTextBox6.IconRight = null;
             this.bunifuTextBox6.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox6.Lines = new string[0];
-            this.bunifuTextBox6.Location = new System.Drawing.Point(394, 249);
+            this.bunifuTextBox6.Location = new System.Drawing.Point(470, 256);
             this.bunifuTextBox6.MaxLength = 32767;
             this.bunifuTextBox6.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBox6.Modified = false;
@@ -593,7 +595,7 @@
             this.bunifuTextBox5.IconRight = null;
             this.bunifuTextBox5.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox5.Lines = new string[0];
-            this.bunifuTextBox5.Location = new System.Drawing.Point(542, 207);
+            this.bunifuTextBox5.Location = new System.Drawing.Point(618, 214);
             this.bunifuTextBox5.MaxLength = 32767;
             this.bunifuTextBox5.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBox5.Modified = false;
@@ -666,7 +668,7 @@
             this.bunifuTextBox4.IconRight = null;
             this.bunifuTextBox4.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox4.Lines = new string[0];
-            this.bunifuTextBox4.Location = new System.Drawing.Point(394, 207);
+            this.bunifuTextBox4.Location = new System.Drawing.Point(470, 214);
             this.bunifuTextBox4.MaxLength = 32767;
             this.bunifuTextBox4.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBox4.Modified = false;
@@ -719,7 +721,7 @@
             this.comboBox4.Items.AddRange(new object[] {
             "Nam",
             "Nữ"});
-            this.comboBox4.Location = new System.Drawing.Point(575, 165);
+            this.comboBox4.Location = new System.Drawing.Point(651, 172);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(89, 25);
             this.comboBox4.TabIndex = 16;
@@ -752,7 +754,7 @@
             this.bunifuTextBox3.IconRight = null;
             this.bunifuTextBox3.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox3.Lines = new string[0];
-            this.bunifuTextBox3.Location = new System.Drawing.Point(394, 161);
+            this.bunifuTextBox3.Location = new System.Drawing.Point(470, 168);
             this.bunifuTextBox3.MaxLength = 32767;
             this.bunifuTextBox3.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBox3.Modified = false;
@@ -805,7 +807,7 @@
             this.bunifuDatepicker1.ForeColor = System.Drawing.Color.White;
             this.bunifuDatepicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.bunifuDatepicker1.FormatCustom = null;
-            this.bunifuDatepicker1.Location = new System.Drawing.Point(480, 107);
+            this.bunifuDatepicker1.Location = new System.Drawing.Point(556, 114);
             this.bunifuDatepicker1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuDatepicker1.Name = "bunifuDatepicker1";
             this.bunifuDatepicker1.Size = new System.Drawing.Size(196, 38);
@@ -817,7 +819,7 @@
             this.bunifuCustomLabel8.AutoSize = true;
             this.bunifuCustomLabel8.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel8.Font = new System.Drawing.Font("Segoe UI Semibold", 11F);
-            this.bunifuCustomLabel8.Location = new System.Drawing.Point(390, 114);
+            this.bunifuCustomLabel8.Location = new System.Drawing.Point(466, 121);
             this.bunifuCustomLabel8.Name = "bunifuCustomLabel8";
             this.bunifuCustomLabel8.Size = new System.Drawing.Size(74, 20);
             this.bunifuCustomLabel8.TabIndex = 12;
@@ -829,7 +831,7 @@
             this.bunifuCustomLabel7.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel7.Font = new System.Drawing.Font("Segoe UI Semibold", 8F);
             this.bunifuCustomLabel7.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.bunifuCustomLabel7.Location = new System.Drawing.Point(391, 48);
+            this.bunifuCustomLabel7.Location = new System.Drawing.Point(467, 55);
             this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
             this.bunifuCustomLabel7.Size = new System.Drawing.Size(56, 13);
             this.bunifuCustomLabel7.TabIndex = 11;
@@ -862,7 +864,7 @@
             this.bunifuTextBox2.IconRight = null;
             this.bunifuTextBox2.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox2.Lines = new string[0];
-            this.bunifuTextBox2.Location = new System.Drawing.Point(394, 71);
+            this.bunifuTextBox2.Location = new System.Drawing.Point(461, 78);
             this.bunifuTextBox2.MaxLength = 32767;
             this.bunifuTextBox2.MinimumSize = new System.Drawing.Size(1, 1);
             this.bunifuTextBox2.Modified = false;
@@ -913,7 +915,7 @@
             this.bunifuCustomLabel6.AutoSize = true;
             this.bunifuCustomLabel6.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.bunifuCustomLabel6.Location = new System.Drawing.Point(390, 15);
+            this.bunifuCustomLabel6.Location = new System.Drawing.Point(466, 22);
             this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
             this.bunifuCustomLabel6.Size = new System.Drawing.Size(145, 25);
             this.bunifuCustomLabel6.TabIndex = 9;
@@ -1073,6 +1075,19 @@
             this.bunifuCustomLabel1.Text = "THÔNG TIN CHUNG";
             this.bunifuCustomLabel1.Click += new System.EventHandler(this.bunifuCustomLabel1_Click);
             // 
+            // bunifuSeparator1
+            // 
+            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator1.LineColor = System.Drawing.Color.DimGray;
+            this.bunifuSeparator1.LineThickness = 1;
+            this.bunifuSeparator1.Location = new System.Drawing.Point(415, 23);
+            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuSeparator1.Name = "bunifuSeparator1";
+            this.bunifuSeparator1.Size = new System.Drawing.Size(10, 414);
+            this.bunifuSeparator1.TabIndex = 33;
+            this.bunifuSeparator1.Transparency = 255;
+            this.bunifuSeparator1.Vertical = true;
+            // 
             // TongHop_KhachLe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1121,5 +1136,6 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel12;
         private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox1;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel14;
+        private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
     }
 }
