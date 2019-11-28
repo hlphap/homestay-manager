@@ -61,9 +61,10 @@
             this.Panel_Sign_in.GradientTopLeft = System.Drawing.Color.SeaGreen;
             this.Panel_Sign_in.GradientTopRight = System.Drawing.Color.Violet;
             this.Panel_Sign_in.Location = new System.Drawing.Point(0, 0);
+            this.Panel_Sign_in.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Panel_Sign_in.Name = "Panel_Sign_in";
             this.Panel_Sign_in.Quality = 10;
-            this.Panel_Sign_in.Size = new System.Drawing.Size(319, 373);
+            this.Panel_Sign_in.Size = new System.Drawing.Size(425, 459);
             this.Panel_Sign_in.TabIndex = 0;
             // 
             // bunifuLabel1
@@ -72,10 +73,11 @@
             this.bunifuLabel1.CursorType = null;
             this.bunifuLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel1.ForeColor = System.Drawing.Color.Lavender;
-            this.bunifuLabel1.Location = new System.Drawing.Point(44, 88);
+            this.bunifuLabel1.Location = new System.Drawing.Point(59, 108);
+            this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(86, 27);
+            this.bunifuLabel1.Size = new System.Drawing.Size(104, 32);
             this.bunifuLabel1.TabIndex = 5;
             this.bunifuLabel1.Text = "SIGN IN";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -103,13 +105,14 @@
             this.Button_Signin.IconVisible = true;
             this.Button_Signin.IconZoom = 90D;
             this.Button_Signin.IsTab = false;
-            this.Button_Signin.Location = new System.Drawing.Point(145, 241);
+            this.Button_Signin.Location = new System.Drawing.Point(193, 297);
+            this.Button_Signin.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Button_Signin.Name = "Button_Signin";
             this.Button_Signin.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.Button_Signin.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.Button_Signin.OnHoverTextColor = System.Drawing.Color.White;
             this.Button_Signin.selected = false;
-            this.Button_Signin.Size = new System.Drawing.Size(104, 32);
+            this.Button_Signin.Size = new System.Drawing.Size(139, 39);
             this.Button_Signin.TabIndex = 3;
             this.Button_Signin.Text = "Sign In";
             this.Button_Signin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -145,7 +148,8 @@
             this.Textbox_Password.IconRight = null;
             this.Textbox_Password.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.Textbox_Password.Lines = new string[0];
-            this.Textbox_Password.Location = new System.Drawing.Point(44, 189);
+            this.Textbox_Password.Location = new System.Drawing.Point(59, 233);
+            this.Textbox_Password.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Textbox_Password.MaxLength = 32767;
             this.Textbox_Password.MinimumSize = new System.Drawing.Size(1, 1);
             this.Textbox_Password.Modified = false;
@@ -180,7 +184,7 @@
             this.Textbox_Password.SelectionLength = 0;
             this.Textbox_Password.SelectionStart = 0;
             this.Textbox_Password.ShortcutsEnabled = true;
-            this.Textbox_Password.Size = new System.Drawing.Size(205, 35);
+            this.Textbox_Password.Size = new System.Drawing.Size(273, 43);
             this.Textbox_Password.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.Textbox_Password.TabIndex = 2;
             this.Textbox_Password.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -190,6 +194,7 @@
             this.Textbox_Password.TextPlaceholder = "Password";
             this.Textbox_Password.UseSystemPasswordChar = true;
             this.Textbox_Password.WordWrap = true;
+            this.Textbox_Password.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Textbox_Password_KeyUp);
             // 
             // Textbox_Username
             // 
@@ -218,7 +223,8 @@
             this.Textbox_Username.IconRight = null;
             this.Textbox_Username.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.Textbox_Username.Lines = new string[0];
-            this.Textbox_Username.Location = new System.Drawing.Point(44, 143);
+            this.Textbox_Username.Location = new System.Drawing.Point(59, 176);
+            this.Textbox_Username.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Textbox_Username.MaxLength = 32767;
             this.Textbox_Username.MinimumSize = new System.Drawing.Size(1, 1);
             this.Textbox_Username.Modified = false;
@@ -253,7 +259,7 @@
             this.Textbox_Username.SelectionLength = 0;
             this.Textbox_Username.SelectionStart = 0;
             this.Textbox_Username.ShortcutsEnabled = true;
-            this.Textbox_Username.Size = new System.Drawing.Size(205, 35);
+            this.Textbox_Username.Size = new System.Drawing.Size(273, 43);
             this.Textbox_Username.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.Textbox_Username.TabIndex = 1;
             this.Textbox_Username.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -270,9 +276,10 @@
             this.Button_Shutdown.BackColor = System.Drawing.Color.Transparent;
             this.Button_Shutdown.Image = ((System.Drawing.Image)(resources.GetObject("Button_Shutdown.Image")));
             this.Button_Shutdown.ImageActive = null;
-            this.Button_Shutdown.Location = new System.Drawing.Point(289, 3);
+            this.Button_Shutdown.Location = new System.Drawing.Point(385, 4);
+            this.Button_Shutdown.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Button_Shutdown.Name = "Button_Shutdown";
-            this.Button_Shutdown.Size = new System.Drawing.Size(27, 28);
+            this.Button_Shutdown.Size = new System.Drawing.Size(36, 34);
             this.Button_Shutdown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Button_Shutdown.TabIndex = 0;
             this.Button_Shutdown.TabStop = false;
@@ -281,11 +288,12 @@
             // 
             // Sign_in
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(320, 373);
+            this.ClientSize = new System.Drawing.Size(427, 459);
             this.Controls.Add(this.Panel_Sign_in);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Sign_in";
             this.Panel_Sign_in.ResumeLayout(false);
             this.Panel_Sign_in.PerformLayout();
