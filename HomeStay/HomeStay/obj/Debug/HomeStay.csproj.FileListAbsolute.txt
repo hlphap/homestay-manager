@@ -80,10 +80,13 @@ C:\Users\Long\Desktop\HomeStay\HomeStay\obj\Debug\HomeStay.ThongKe_DoanhThu.reso
 C:\Users\Long\Desktop\HomeStay\HomeStay\obj\Debug\HomeStay.ThongKe_ThongKe.resources
 C:\Users\Long\Desktop\HomeStay\HomeStay\obj\Debug\HomeStay.ThongTinChung.resources
 C:\Users\Long\Desktop\HomeStay\HomeStay\obj\Debug\HomeStay.ThuChi.resources
-C:\Users\Long\Desktop\HomeStay\HomeStay\obj\Debug\HomeStay.TongHop_KhachLe.resources
-C:\Users\Long\Desktop\HomeStay\HomeStay\obj\Debug\HomeStay.TuyChon_KhachLe.resources
 C:\Users\Long\Desktop\HomeStay\HomeStay\obj\Debug\HomeStay.csproj.GenerateResource.cache
 C:\Users\Long\Desktop\HomeStay\HomeStay\obj\Debug\HomeStay.csproj.CoreCompileInputs.cache
 C:\Users\Long\Desktop\HomeStay\HomeStay\obj\Debug\HomeStay.csproj.CopyComplete
 C:\Users\Long\Desktop\HomeStay\HomeStay\obj\Debug\HomeStay.exe
 C:\Users\Long\Desktop\HomeStay\HomeStay\obj\Debug\HomeStay.pdb
+C:\Users\Long\Desktop\HomeStay\HomeStay\obj\Debug\HomeStay.KhachDoan_Phongtrong.resources
+C:\Users\Long\Desktop\HomeStay\HomeStay\obj\Debug\HomeStay.KhachDoan_Thongtindoan.resources
+C:\Users\Long\Desktop\HomeStay\HomeStay\obj\Debug\HomeStay.KhachLe_TongHop.resources
+C:\Users\Long\Desktop\HomeStay\HomeStay\obj\Debug\HomeStay.KhachLe_TuyChon.resources
+C:\Users\Long\Desktop\HomeStay\HomeStay\obj\Debug\HomeStay.KhachDoan_ThanhToan.resources
