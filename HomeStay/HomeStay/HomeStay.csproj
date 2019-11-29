@@ -136,6 +136,12 @@
     <Compile Include="BaoCao.Designer.cs">
       <DependentUpon>BaoCao.cs</DependentUpon>
     </Compile>
+    <Compile Include="CauHinh_CaiDat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CauHinh_CaiDat.Designer.cs">
+      <DependentUpon>CauHinh_CaiDat.cs</DependentUpon>
+    </Compile>
     <Compile Include="DanhSachKhach_LeTan.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -148,23 +154,23 @@
     <Compile Include="DatPhong.Designer.cs">
       <DependentUpon>DatPhong.cs</DependentUpon>
     </Compile>
-    <Compile Include="KhachDoan_DoanDaDat.cs">
+    <Compile Include="DoanDaDat_KhachDoan.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="KhachDoan_DoanDaDat.Designer.cs">
-      <DependentUpon>KhachDoan_DoanDaDat.cs</DependentUpon>
+    <Compile Include="DoanDaDat_KhachDoan.Designer.cs">
+      <DependentUpon>DoanDaDat_KhachDoan.cs</DependentUpon>
     </Compile>
-    <Compile Include="KhachDoan_DoanDaDi.cs">
+    <Compile Include="DoanDaDi_KhachDoan.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="KhachDoan_DoanDaDi.Designer.cs">
-      <DependentUpon>KhachDoan_DoanDaDi.cs</DependentUpon>
+    <Compile Include="DoanDaDi_KhachDoan.Designer.cs">
+      <DependentUpon>DoanDaDi_KhachDoan.cs</DependentUpon>
     </Compile>
-    <Compile Include="KhachDoan_DoanDangO.cs">
+    <Compile Include="DoanDangO_KhachDoan.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="KhachDoan_DoanDangO.Designer.cs">
-      <DependentUpon>KhachDoan_DoanDangO.cs</DependentUpon>
+    <Compile Include="DoanDangO_KhachDoan.Designer.cs">
+      <DependentUpon>DoanDangO_KhachDoan.cs</DependentUpon>
     </Compile>
     <Compile Include="FormChinh.cs">
       <SubType>Form</SubType>
@@ -183,24 +189,6 @@
     </Compile>
     <Compile Include="KhachDoan.Designer.cs">
       <DependentUpon>KhachDoan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="KhachDoan_Phongtrong.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="KhachDoan_Phongtrong.Designer.cs">
-      <DependentUpon>KhachDoan_Phongtrong.cs</DependentUpon>
-    </Compile>
-    <Compile Include="KhachDoan_ThanhToan.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="KhachDoan_ThanhToan.Designer.cs">
-      <DependentUpon>KhachDoan_ThanhToan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="KhachDoan_Thongtindoan.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="KhachDoan_Thongtindoan.Designer.cs">
-      <DependentUpon>KhachDoan_Thongtindoan.cs</DependentUpon>
     </Compile>
     <Compile Include="KhachLe.cs">
       <SubType>UserControl</SubType>
@@ -244,11 +232,17 @@
     <Compile Include="LeTan.Designer.cs">
       <DependentUpon>LeTan.cs</DependentUpon>
     </Compile>
-    <Compile Include="KhachDoan_TaoDoan.cs">
+    <Compile Include="NhanVien.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="KhachDoan_TaoDoan.Designer.cs">
-      <DependentUpon>KhachDoan_TaoDoan.cs</DependentUpon>
+    <Compile Include="NhanVien.Designer.cs">
+      <DependentUpon>NhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaoDoan_KhachDoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TaoDoan_KhachDoan.Designer.cs">
+      <DependentUpon>TaoDoan_KhachDoan.cs</DependentUpon>
     </Compile>
     <Compile Include="ThanhToan_KhachLe.cs">
       <SubType>UserControl</SubType>
@@ -312,20 +306,29 @@
     <Compile Include="ThuChi.Designer.cs">
       <DependentUpon>ThuChi.cs</DependentUpon>
     </Compile>
-    <Compile Include="KhachLe_TongHop.cs">
+    <Compile Include="TongHop_KhachLe.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="KhachLe_TongHop.Designer.cs">
-      <DependentUpon>KhachLe_TongHop.cs</DependentUpon>
+    <Compile Include="TongHop_KhachLe.Designer.cs">
+      <DependentUpon>TongHop_KhachLe.cs</DependentUpon>
     </Compile>
-    <Compile Include="KhachLe_TuyChon.cs">
+    <Compile Include="TuyChon_KhachLe.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="KhachLe_TuyChon.Designer.cs">
-      <DependentUpon>KhachLe_TuyChon.cs</DependentUpon>
+    <Compile Include="TuyChon_KhachLe.Designer.cs">
+      <DependentUpon>TuyChon_KhachLe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="x1Phong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="x1Phong.Designer.cs">
+      <DependentUpon>x1Phong.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="BaoCao.resx">
       <DependentUpon>BaoCao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CauHinh_CaiDat.resx">
+      <DependentUpon>CauHinh_CaiDat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhSachKhach_LeTan.resx">
       <DependentUpon>DanhSachKhach_LeTan.cs</DependentUpon>
@@ -333,14 +336,14 @@
     <EmbeddedResource Include="DatPhong.resx">
       <DependentUpon>DatPhong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="KhachDoan_DoanDaDat.resx">
-      <DependentUpon>KhachDoan_DoanDaDat.cs</DependentUpon>
+    <EmbeddedResource Include="DoanDaDat_KhachDoan.resx">
+      <DependentUpon>DoanDaDat_KhachDoan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="KhachDoan_DoanDaDi.resx">
-      <DependentUpon>KhachDoan_DoanDaDi.cs</DependentUpon>
+    <EmbeddedResource Include="DoanDaDi_KhachDoan.resx">
+      <DependentUpon>DoanDaDi_KhachDoan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="KhachDoan_DoanDangO.resx">
-      <DependentUpon>KhachDoan_DoanDangO.cs</DependentUpon>
+    <EmbeddedResource Include="DoanDangO_KhachDoan.resx">
+      <DependentUpon>DoanDangO_KhachDoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormChinh.resx">
       <DependentUpon>FormChinh.cs</DependentUpon>
@@ -350,15 +353,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="KhachDoan.resx">
       <DependentUpon>KhachDoan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="KhachDoan_Phongtrong.resx">
-      <DependentUpon>KhachDoan_Phongtrong.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="KhachDoan_ThanhToan.resx">
-      <DependentUpon>KhachDoan_ThanhToan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="KhachDoan_Thongtindoan.resx">
-      <DependentUpon>KhachDoan_Thongtindoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KhachLe.resx">
       <DependentUpon>KhachLe.cs</DependentUpon>
@@ -381,6 +375,9 @@
     <EmbeddedResource Include="LeTan.resx">
       <DependentUpon>LeTan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NhanVien.resx">
+      <DependentUpon>NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -400,8 +397,8 @@
     <EmbeddedResource Include="SoDoPhong.resx">
       <DependentUpon>SoDoPhong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="KhachDoan_TaoDoan.resx">
-      <DependentUpon>KhachDoan_TaoDoan.cs</DependentUpon>
+    <EmbeddedResource Include="TaoDoan_KhachDoan.resx">
+      <DependentUpon>TaoDoan_KhachDoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThanhToan_KhachLe.resx">
       <DependentUpon>ThanhToan_KhachLe.cs</DependentUpon>
@@ -424,11 +421,14 @@
     <EmbeddedResource Include="ThuChi.resx">
       <DependentUpon>ThuChi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="KhachLe_TongHop.resx">
-      <DependentUpon>KhachLe_TongHop.cs</DependentUpon>
+    <EmbeddedResource Include="TongHop_KhachLe.resx">
+      <DependentUpon>TongHop_KhachLe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="KhachLe_TuyChon.resx">
-      <DependentUpon>KhachLe_TuyChon.cs</DependentUpon>
+    <EmbeddedResource Include="TuyChon_KhachLe.resx">
+      <DependentUpon>TuyChon_KhachLe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="x1Phong.resx">
+      <DependentUpon>x1Phong.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
