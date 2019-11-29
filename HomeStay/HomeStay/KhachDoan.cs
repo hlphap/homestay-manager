@@ -13,10 +13,10 @@ namespace HomeStay
     public partial class KhachDoan : UserControl
     {
         private
-            TaoDoan_KhachDoan CtrTD = new TaoDoan_KhachDoan();
-            DoanDangO_KhachDoan CtrDDO = new DoanDangO_KhachDoan();
-            DoanDaDat_KhachDoan CtrDDDat = new DoanDaDat_KhachDoan();
-            DoanDaDi_KhachDoan CtrDDDi = new DoanDaDi_KhachDoan();
+            KhachDoan_TaoDoan CtrTD = new KhachDoan_TaoDoan();
+            KhachDoan_DoanDangO CtrDDO = new KhachDoan_DoanDangO();
+            KhachDoan_DoanDaDat CtrDDDat = new KhachDoan_DoanDaDat();
+            KhachDoan_DoanDaDi CtrDDDi = new KhachDoan_DoanDaDi();
         public KhachDoan()
         {
             InitializeComponent();
