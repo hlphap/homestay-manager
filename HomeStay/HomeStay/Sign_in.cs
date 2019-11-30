@@ -25,7 +25,7 @@ namespace HomeStay
         private void Button_Signin_Click(object sender, EventArgs e)
         {
             Form NewForm = new FormChinh();
-            SqlConnection conn = new SqlConnection(@"Data Source=LAPTOP-4BQDKGPF;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source = SE140697\SQLEXPRESS; Initial Catalog = HomeStay; Integrated Security = True");
             conn.Open();
             string Taikhoan = Textbox_Username.Text;
             string MatKhau = Textbox_Password.Text;
@@ -61,7 +61,7 @@ namespace HomeStay
         private void Button_Signin_DragEnter(object sender, DragEventArgs e)
         {
             Form NewForm = new FormChinh();
-            SqlConnection conn = new SqlConnection(@"Data Source=LAPTOP-4BQDKGPF;Initial Catalog=HomeStay;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source = SE140697\SQLEXPRESS; Initial Catalog = HomeStay; Integrated Security = True");
             conn.Open();
             string Taikhoan = Textbox_Username.Text;
             string MatKhau = Textbox_Password.Text;
@@ -84,7 +84,7 @@ namespace HomeStay
             if(e.KeyCode == Keys.Enter)
             {
                 Form NewForm = new FormChinh();
-                SqlConnection conn = new SqlConnection(@"Data Source=LAPTOP-4BQDKGPF;Initial Catalog=HomeStay;Integrated Security=True");
+                SqlConnection conn = new SqlConnection(@"Data Source = SE140697\SQLEXPRESS; Initial Catalog = HomeStay; Integrated Security = True");
                 conn.Open();
                 string Taikhoan = Textbox_Username.Text;
                 string MatKhau = Textbox_Password.Text;
