@@ -136,6 +136,12 @@
     <Compile Include="BaoCao.Designer.cs">
       <DependentUpon>BaoCao.cs</DependentUpon>
     </Compile>
+    <Compile Include="CaiDat_CauHinh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CaiDat_CauHinh.Designer.cs">
+      <DependentUpon>CaiDat_CauHinh.cs</DependentUpon>
+    </Compile>
     <Compile Include="DanhSachKhach_LeTan.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -324,8 +330,17 @@
     <Compile Include="KhachLe_TuyChon.Designer.cs">
       <DependentUpon>KhachLe_TuyChon.cs</DependentUpon>
     </Compile>
+    <Compile Include="x1Phong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="x1Phong.Designer.cs">
+      <DependentUpon>x1Phong.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BaoCao.resx">
       <DependentUpon>BaoCao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CaiDat_CauHinh.resx">
+      <DependentUpon>CaiDat_CauHinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhSachKhach_LeTan.resx">
       <DependentUpon>DanhSachKhach_LeTan.cs</DependentUpon>
@@ -429,6 +444,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="KhachLe_TuyChon.resx">
       <DependentUpon>KhachLe_TuyChon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="x1Phong.resx">
+      <DependentUpon>x1Phong.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

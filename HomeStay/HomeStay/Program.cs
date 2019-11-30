@@ -16,10 +16,10 @@ namespace HomeStay
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            // Form Sign_In = new Sign_in();
-            // Sign_In.Show();
-            FormChinh cs = new FormChinh();
-            Application.Run(cs);
+            Form Sign_In = new Sign_in();
+            Sign_In.Show();
+           // FormChinh cs = new FormChinh();
+            Application.Run();
         }
     }
 }
