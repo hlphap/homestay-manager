@@ -99,7 +99,7 @@
             this.Panel_Sign_in.Name = "Panel_Sign_in";
             this.Panel_Sign_in.Quality = 10;
             this.Panel_Sign_in.Size = new System.Drawing.Size(609, 548);
-            this.Panel_Sign_in.TabIndex = 1;
+            this.Panel_Sign_in.TabIndex = 2;
             // 
             // txt_mat_nhau_nhap_lai
             // 
@@ -705,7 +705,6 @@
             this.btn_tao_tai_khoan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_tao_tai_khoan.Textcolor = System.Drawing.Color.White;
             this.btn_tao_tai_khoan.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_tao_tai_khoan.Click += new System.EventHandler(this.btn_tao_tai_khoan_Click);
             // 
             // tao_tai_khoan
             // 
@@ -716,7 +715,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "tao_tai_khoan";
             this.Text = "tao_tai_khoan";
-            this.Load += new System.EventHandler(this.tao_tai_khoan_Load);
             this.Panel_Sign_in.ResumeLayout(false);
             this.Panel_Sign_in.PerformLayout();
             this.ResumeLayout(false);
@@ -726,7 +724,10 @@
         #endregion
 
         private Bunifu.Framework.UI.BunifuGradientPanel Panel_Sign_in;
-        private Bunifu.Framework.UI.BunifuFlatButton btn_tao_tai_khoan;
+        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txt_mat_nhau_nhap_lai;
+        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txt_mat_khau;
+        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txt_tai_khoan;
+        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txt_manv;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txt_dia_chi;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txt_cmnd;
         private Bunifu.Framework.UI.BunifuDatepicker ngaysinh;
@@ -734,9 +735,6 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel7;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txt_hoten;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel6;
-        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txt_manv;
-        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txt_mat_nhau_nhap_lai;
-        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txt_mat_khau;
-        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txt_tai_khoan;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_tao_tai_khoan;
     }
 }
