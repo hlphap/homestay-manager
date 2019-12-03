@@ -44,7 +44,7 @@
             this.Panel_TuyChon.Location = new System.Drawing.Point(0, 0);
             this.Panel_TuyChon.Name = "Panel_TuyChon";
             this.Panel_TuyChon.Quality = 10;
-            this.Panel_TuyChon.Size = new System.Drawing.Size(815, 464);
+            this.Panel_TuyChon.Size = new System.Drawing.Size(705, 354);
             this.Panel_TuyChon.TabIndex = 1;
             // 
             // KhachLe_DichVuMoRong
@@ -53,7 +53,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.Panel_TuyChon);
             this.Name = "KhachLe_DichVuMoRong";
-            this.Size = new System.Drawing.Size(815, 464);
+            this.Size = new System.Drawing.Size(705, 354);
             this.ResumeLayout(false);
 
         }

@@ -22,12 +22,17 @@ namespace HomeStay
 
         }
 
-        private void bunifuGradientPanel1_Paint(object sender, PaintEventArgs e)
+        private void bunifuDatepicker2_onValueChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void bunifuDatepicker2_onValueChanged(object sender, EventArgs e)
+        private void KhachLe_TongHop_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

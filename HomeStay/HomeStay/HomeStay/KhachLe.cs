@@ -14,8 +14,8 @@ namespace HomeStay
     public partial class KhachLe : UserControl
     {
         private
-            KhachLe_TongHop CtrTH = new KhachLe_TongHop();
-            KhachLe_TuyChon CtrTC = new KhachLe_TuyChon();
+            TongHop_KhachLe CtrTH = new TongHop_KhachLe();
+            TuyChon_KhachLe CtrTC = new TuyChon_KhachLe();
             KhachLe_DichVuMoRong CtrDVMR = new KhachLe_DichVuMoRong();
             ThanhToan_KhachLe CtrTT = new ThanhToan_KhachLe();
         public KhachLe()

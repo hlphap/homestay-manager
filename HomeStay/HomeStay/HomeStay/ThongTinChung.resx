@@ -121,20 +121,37 @@
   <data name="Panel_NoiDung.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADwSURBVChTDcO5UQJhAIbhvwAaoIEtgAZogAJogAY2FFgT
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADwSURBVChTDcO5UQJhAIbhvwAaoIEtgAZogAJogAY2FFgT
         ZmQXBwMWWBNGWJwhWS4zOQy5QjkM5TCUwwY+32fmMc7dm5wH+nxhxHfOhnI++c3foYyd7cou0meTXY44
         i2Svuec5kslkO8oUWWWTXY4455p7njsy6VyotMsqW+xxzDk3PPASyqRyDaVc1thij2MuuOGBl4ZMMv+s
         pMcaQ/Y54SJQcssjr4FMIu8r4bHOkH1OuKwoseWR14qM5TzJKrHONgecclmWteOJt7JM3PEULzFgmwNO
         uXIV3/HEmysTuy8o9siArxzygyt+8Yd/Bf0D45UCfLTIovoAAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="Phong.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="MaDP.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Ten.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="NgayDen.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ThoiGianO.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="GhiChu.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="bunifuTextBox1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAQMAAAAfCAYAAADjsqifAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACSSURBVHhe7dTBCQMxEARB5R+VDoXhMByAjRphcAyqgvns
-        f3sA/Ky1XnPOj5ndt/3/JwVj7ANwp/3/JwViADcTAyBiAEQMgIgBEDEAIgZAxACIGAARAyBiAEQMgIgB
-        EDEAIgZAxACIGAARAyBiAEQMgIgBEDEAIgZAxACIGAARAyB/MXie570PZnbf9v+fFACM8QUFemKbd0fs
-        KQAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAAMIAAAAZCAYAAABjGPHdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB5SURBVHhe7dOxDcQwDARB9l+VBJXhMr6A9xFQ4ho4A1zC
+        mFvAdc551lp/s2nr378ZVPUBJurfvxkIgbmEACEECCFACAFCCBBCgBAChBAghAAhBAghQAgBQggQQoAQ
+        AoQQIIQAIQQIIUB8Qth7//pgNm39+zcDmK7qBdSphCSsQMA/AAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="bunifuFlatButton2.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
