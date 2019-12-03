@@ -124,7 +124,7 @@
             this.Button_TuyChon.BackColor1 = System.Drawing.Color.Transparent;
             this.Button_TuyChon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Button_TuyChon.BackgroundImage")));
             this.Button_TuyChon.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.Button_TuyChon.ButtonText = "Đoàn đang đặt";
+            this.Button_TuyChon.ButtonText = "Đoàn đang ở";
             this.Button_TuyChon.ButtonTextMarginLeft = 0;
             this.Button_TuyChon.ColorContrastOnClick = 45;
             this.Button_TuyChon.ColorContrastOnHover = 45;
@@ -254,7 +254,7 @@
             this.Button_TuyChonMorong.BackColor1 = System.Drawing.Color.Transparent;
             this.Button_TuyChonMorong.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Button_TuyChonMorong.BackgroundImage")));
             this.Button_TuyChonMorong.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.Button_TuyChonMorong.ButtonText = "Đoàn đang ở";
+            this.Button_TuyChonMorong.ButtonText = "Đoàn đang đặt";
             this.Button_TuyChonMorong.ButtonTextMarginLeft = 0;
             this.Button_TuyChonMorong.ColorContrastOnClick = 45;
             this.Button_TuyChonMorong.ColorContrastOnHover = 45;

@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 
 namespace HomeStay
 {
@@ -20,27 +19,23 @@ namespace HomeStay
 
         }
 
-
+       
 
         private void Button_Signin_Click(object sender, EventArgs e)
         {
             Form NewForm = new FormChinh();
-            SqlConnection conn = new SqlConnection(@"Data Source = SE140697\SQLEXPRESS; Initial Catalog = HomeStay; Integrated Security = True");
-            conn.Open();
-            string Taikhoan = Textbox_Username.Text;
-            string MatKhau = Textbox_Password.Text;
-            string sql = "SELECT TaiKhoan, MatKhau FROM Sign_in WHERE TaiKhoan = '" + Taikhoan + "' AND MatKhau = '" + MatKhau + "'";
-            SqlCommand cmd = new SqlCommand(sql, conn);
-            SqlDataReader dta = cmd.ExecuteReader();
-            if (dta.Read() == true)
+            string user = Textbox_Username.Text;
+            string pass = Textbox_Password.Text;
+            if ((user=="admin")&&(pass=="admin"))
             {
                 this.Hide();
                 NewForm.ShowDialog();
             }
             else
             {
-                MessageBox.Show("Sai Mat Khau! Nhap Lai? ", "Loi", MessageBoxButtons.OK);
+                MessageBox.Show("Sai Mat Khau! Nhap Lai? ","Loi",MessageBoxButtons.YesNo);
             }
+
         }
 
         private void Button_Shutdown_Click(object sender, EventArgs e)
@@ -61,45 +56,16 @@ namespace HomeStay
         private void Button_Signin_DragEnter(object sender, DragEventArgs e)
         {
             Form NewForm = new FormChinh();
-            SqlConnection conn = new SqlConnection(@"Data Source = SE140697\SQLEXPRESS; Initial Catalog = HomeStay; Integrated Security = True");
-            conn.Open();
-            string Taikhoan = Textbox_Username.Text;
-            string MatKhau = Textbox_Password.Text;
-            string sql = "SELECT TaiKhoan, MatKhau FROM Sign_in WHERE TaiKhoan = '" + Taikhoan + "' AND MatKhau = '" + MatKhau + "'";
-            SqlCommand cmd = new SqlCommand(sql, conn);
-            SqlDataReader dta = cmd.ExecuteReader();
-            if (dta.Read() == true)
+            string user = Textbox_Username.Text;
+            string pass = Textbox_Password.Text;
+            if ((user == "admin") && (pass == "admin"))
             {
                 this.Hide();
                 NewForm.ShowDialog();
             }
             else
             {
-                MessageBox.Show("Sai Mat Khau! Nhap Lai? ", "Loi", MessageBoxButtons.OK);
-            }
-        }
-
-        private void Textbox_Password_KeyUp(object sender, KeyEventArgs e)
-        {
-            if(e.KeyCode == Keys.Enter)
-            {
-                Form NewForm = new FormChinh();
-                SqlConnection conn = new SqlConnection(@"Data Source = SE140697\SQLEXPRESS; Initial Catalog = HomeStay; Integrated Security = True");
-                conn.Open();
-                string Taikhoan = Textbox_Username.Text;
-                string MatKhau = Textbox_Password.Text;
-                string sql = "SELECT TaiKhoan, MatKhau FROM Sign_in WHERE TaiKhoan = '" + Taikhoan + "' AND MatKhau = '" + MatKhau + "'";
-                SqlCommand cmd = new SqlCommand(sql, conn);
-                SqlDataReader dta = cmd.ExecuteReader();
-                if (dta.Read() == true)
-                {
-                    this.Hide();
-                    NewForm.ShowDialog();
-                }
-                else
-                {
-                    MessageBox.Show("Sai Mat Khau! Nhap Lai? ", "Loi", MessageBoxButtons.OK);
-                }
+                MessageBox.Show("Sai Mat Khau! Nhap Lai? ", "Loi", MessageBoxButtons.YesNo);
             }
         }
     }
