@@ -61,7 +61,6 @@ namespace HomeStay
             if(e.KeyCode == Keys.Enter)
             {
                 Form NewForm = new FormChinh();
-                // DATA SOURCE
                 SqlConnection conn = new SqlConnection(DataSource.connectionString);
                 conn.Open();
                 string Taikhoan = Textbox_Username.Text;
@@ -81,11 +80,6 @@ namespace HomeStay
             }
         }
 
-        private void bnt_tao_tai_khoan_Click(object sender, EventArgs e)
-        {
-            tao_tai_khoan taotaikhoan = new tao_tai_khoan();
-            this.Hide();
-            taotaikhoan.ShowDialog();
-        }
+
     }
 }

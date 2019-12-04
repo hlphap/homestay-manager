@@ -43,7 +43,6 @@
             this.Textbox_Password = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.Textbox_Username = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.Button_Shutdown = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bnt_tao_tai_khoan = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Panel_Sign_in.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Button_Shutdown)).BeginInit();
             this.SuspendLayout();
@@ -52,7 +51,6 @@
             // 
             this.Panel_Sign_in.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Panel_Sign_in.BackgroundImage")));
             this.Panel_Sign_in.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Panel_Sign_in.Controls.Add(this.bnt_tao_tai_khoan);
             this.Panel_Sign_in.Controls.Add(this.bunifuLabel1);
             this.Panel_Sign_in.Controls.Add(this.Button_Signin);
             this.Panel_Sign_in.Controls.Add(this.Textbox_Password);
@@ -271,7 +269,6 @@
             this.Textbox_Username.TextPlaceholder = "Username";
             this.Textbox_Username.UseSystemPasswordChar = false;
             this.Textbox_Username.WordWrap = true;
-
             // 
             // Button_Shutdown
             // 
@@ -287,43 +284,6 @@
             this.Button_Shutdown.TabStop = false;
             this.Button_Shutdown.Zoom = 10;
             this.Button_Shutdown.Click += new System.EventHandler(this.Button_Shutdown_Click_1);
-            // 
-            // bnt_tao_tai_khoan
-            // 
-            this.bnt_tao_tai_khoan.Active = false;
-            this.bnt_tao_tai_khoan.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bnt_tao_tai_khoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bnt_tao_tai_khoan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bnt_tao_tai_khoan.BorderRadius = 7;
-            this.bnt_tao_tai_khoan.ButtonText = "Tạo tài khoản";
-            this.bnt_tao_tai_khoan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bnt_tao_tai_khoan.DisabledColor = System.Drawing.Color.Gray;
-            this.bnt_tao_tai_khoan.Iconcolor = System.Drawing.Color.Transparent;
-            this.bnt_tao_tai_khoan.Iconimage = null;
-            this.bnt_tao_tai_khoan.Iconimage_right = null;
-            this.bnt_tao_tai_khoan.Iconimage_right_Selected = null;
-            this.bnt_tao_tai_khoan.Iconimage_Selected = null;
-            this.bnt_tao_tai_khoan.IconMarginLeft = 0;
-            this.bnt_tao_tai_khoan.IconMarginRight = 0;
-            this.bnt_tao_tai_khoan.IconRightVisible = true;
-            this.bnt_tao_tai_khoan.IconRightZoom = 0D;
-            this.bnt_tao_tai_khoan.IconVisible = true;
-            this.bnt_tao_tai_khoan.IconZoom = 90D;
-            this.bnt_tao_tai_khoan.IsTab = false;
-            this.bnt_tao_tai_khoan.Location = new System.Drawing.Point(105, 369);
-            this.bnt_tao_tai_khoan.Margin = new System.Windows.Forms.Padding(5);
-            this.bnt_tao_tai_khoan.Name = "bnt_tao_tai_khoan";
-            this.bnt_tao_tai_khoan.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bnt_tao_tai_khoan.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.bnt_tao_tai_khoan.OnHoverTextColor = System.Drawing.Color.White;
-            this.bnt_tao_tai_khoan.selected = false;
-            this.bnt_tao_tai_khoan.Size = new System.Drawing.Size(139, 39);
-            this.bnt_tao_tai_khoan.TabIndex = 6;
-            this.bnt_tao_tai_khoan.Text = "Tạo tài khoản";
-            this.bnt_tao_tai_khoan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bnt_tao_tai_khoan.Textcolor = System.Drawing.Color.White;
-            this.bnt_tao_tai_khoan.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bnt_tao_tai_khoan.Click += new System.EventHandler(this.bnt_tao_tai_khoan_Click);
             // 
             // Sign_in
             // 
@@ -349,7 +309,6 @@
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox Textbox_Password;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox Textbox_Username;
         private Bunifu.Framework.UI.BunifuImageButton Button_Shutdown;
-        private Bunifu.Framework.UI.BunifuFlatButton bnt_tao_tai_khoan;
     }
 }
 
