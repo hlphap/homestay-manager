@@ -39,9 +39,9 @@
             this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuDatepicker2 = new Bunifu.Framework.UI.BunifuDatepicker();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.Sophongtxt = new System.Windows.Forms.ComboBox();
+            this.Loaiphongtxt = new System.Windows.Forms.ComboBox();
+            this.Madatphongtxt = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.PanelNoiDung_KhachSeDi.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).BeginInit();
@@ -53,7 +53,7 @@
             this.PanelNoiDung_KhachSeDi.Controls.Add(this.bunifuCustomDataGrid1);
             this.PanelNoiDung_KhachSeDi.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.PanelNoiDung_KhachSeDi.Location = new System.Drawing.Point(0, 121);
-            this.PanelNoiDung_KhachSeDi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PanelNoiDung_KhachSeDi.Margin = new System.Windows.Forms.Padding(4);
             this.PanelNoiDung_KhachSeDi.Name = "PanelNoiDung_KhachSeDi";
             this.PanelNoiDung_KhachSeDi.Size = new System.Drawing.Size(1087, 450);
             this.PanelNoiDung_KhachSeDi.TabIndex = 37;
@@ -84,7 +84,7 @@
             this.bunifuCustomDataGrid1.HeaderBgColor = System.Drawing.SystemColors.ButtonShadow;
             this.bunifuCustomDataGrid1.HeaderForeColor = System.Drawing.Color.Navy;
             this.bunifuCustomDataGrid1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuCustomDataGrid1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuCustomDataGrid1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuCustomDataGrid1.Name = "bunifuCustomDataGrid1";
             this.bunifuCustomDataGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.bunifuCustomDataGrid1.RowHeadersWidth = 51;
@@ -100,13 +100,13 @@
             this.Panel_KhachSeDi.Controls.Add(this.bunifuCustomLabel10);
             this.Panel_KhachSeDi.Controls.Add(this.bunifuDatepicker2);
             this.Panel_KhachSeDi.Controls.Add(this.bunifuLabel1);
-            this.Panel_KhachSeDi.Controls.Add(this.comboBox3);
-            this.Panel_KhachSeDi.Controls.Add(this.comboBox2);
-            this.Panel_KhachSeDi.Controls.Add(this.bunifuMaterialTextbox1);
+            this.Panel_KhachSeDi.Controls.Add(this.Sophongtxt);
+            this.Panel_KhachSeDi.Controls.Add(this.Loaiphongtxt);
+            this.Panel_KhachSeDi.Controls.Add(this.Madatphongtxt);
             this.Panel_KhachSeDi.Controls.Add(this.bunifuCustomLabel4);
             this.Panel_KhachSeDi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Panel_KhachSeDi.Location = new System.Drawing.Point(0, 0);
-            this.Panel_KhachSeDi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Panel_KhachSeDi.Margin = new System.Windows.Forms.Padding(4);
             this.Panel_KhachSeDi.Name = "Panel_KhachSeDi";
             this.Panel_KhachSeDi.Size = new System.Drawing.Size(1087, 571);
             this.Panel_KhachSeDi.TabIndex = 1;
@@ -134,7 +134,7 @@
             this.ButtonTimKiem.IconZoom = 50D;
             this.ButtonTimKiem.IsTab = false;
             this.ButtonTimKiem.Location = new System.Drawing.Point(911, 12);
-            this.ButtonTimKiem.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.ButtonTimKiem.Margin = new System.Windows.Forms.Padding(5);
             this.ButtonTimKiem.Name = "ButtonTimKiem";
             this.ButtonTimKiem.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
             this.ButtonTimKiem.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
@@ -146,6 +146,7 @@
             this.ButtonTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ButtonTimKiem.Textcolor = System.Drawing.Color.White;
             this.ButtonTimKiem.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonTimKiem.Click += new System.EventHandler(this.ButtonTimKiem_Click);
             // 
             // bunifuDatepicker1
             // 
@@ -196,7 +197,7 @@
             this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel1.ForeColor = System.Drawing.Color.Black;
             this.bunifuLabel1.Location = new System.Drawing.Point(524, 85);
-            this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel1.Size = new System.Drawing.Size(22, 22);
@@ -205,54 +206,54 @@
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // comboBox3
+            // Sophongtxt
             // 
-            this.comboBox3.BackColor = System.Drawing.Color.White;
-            this.comboBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(193, 79);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(148, 29);
-            this.comboBox3.TabIndex = 13;
-            this.comboBox3.Text = "Chọn phòng";
+            this.Sophongtxt.BackColor = System.Drawing.Color.White;
+            this.Sophongtxt.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sophongtxt.FormattingEnabled = true;
+            this.Sophongtxt.Location = new System.Drawing.Point(193, 79);
+            this.Sophongtxt.Margin = new System.Windows.Forms.Padding(4);
+            this.Sophongtxt.Name = "Sophongtxt";
+            this.Sophongtxt.Size = new System.Drawing.Size(148, 29);
+            this.Sophongtxt.TabIndex = 13;
+            this.Sophongtxt.Text = "Chọn phòng";
             // 
-            // comboBox2
+            // Loaiphongtxt
             // 
-            this.comboBox2.BackColor = System.Drawing.Color.White;
-            this.comboBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(356, 79);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(148, 29);
-            this.comboBox2.TabIndex = 31;
-            this.comboBox2.Text = "Loại phòng";
+            this.Loaiphongtxt.BackColor = System.Drawing.Color.White;
+            this.Loaiphongtxt.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Loaiphongtxt.FormattingEnabled = true;
+            this.Loaiphongtxt.Location = new System.Drawing.Point(356, 79);
+            this.Loaiphongtxt.Margin = new System.Windows.Forms.Padding(4);
+            this.Loaiphongtxt.Name = "Loaiphongtxt";
+            this.Loaiphongtxt.Size = new System.Drawing.Size(148, 29);
+            this.Loaiphongtxt.TabIndex = 31;
+            this.Loaiphongtxt.Text = "Loại phòng";
             // 
-            // bunifuMaterialTextbox1
+            // Madatphongtxt
             // 
-            this.bunifuMaterialTextbox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.bunifuMaterialTextbox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.bunifuMaterialTextbox1.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.bunifuMaterialTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox1.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox1.HintText = "";
-            this.bunifuMaterialTextbox1.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.bunifuMaterialTextbox1.isPassword = false;
-            this.bunifuMaterialTextbox1.LineFocusedColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox1.LineThickness = 3;
-            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(28, 76);
-            this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.bunifuMaterialTextbox1.MaxLength = 32767;
-            this.bunifuMaterialTextbox1.Name = "bunifuMaterialTextbox1";
-            this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(156, 32);
-            this.bunifuMaterialTextbox1.TabIndex = 30;
-            this.bunifuMaterialTextbox1.Text = "Mã ĐP";
-            this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Madatphongtxt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.Madatphongtxt.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.Madatphongtxt.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.Madatphongtxt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Madatphongtxt.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.Madatphongtxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Madatphongtxt.HintForeColor = System.Drawing.Color.Empty;
+            this.Madatphongtxt.HintText = "";
+            this.Madatphongtxt.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.Madatphongtxt.isPassword = false;
+            this.Madatphongtxt.LineFocusedColor = System.Drawing.Color.Blue;
+            this.Madatphongtxt.LineIdleColor = System.Drawing.Color.Gray;
+            this.Madatphongtxt.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.Madatphongtxt.LineThickness = 3;
+            this.Madatphongtxt.Location = new System.Drawing.Point(28, 76);
+            this.Madatphongtxt.Margin = new System.Windows.Forms.Padding(5);
+            this.Madatphongtxt.MaxLength = 32767;
+            this.Madatphongtxt.Name = "Madatphongtxt";
+            this.Madatphongtxt.Size = new System.Drawing.Size(156, 32);
+            this.Madatphongtxt.TabIndex = 30;
+            this.Madatphongtxt.Text = "Mã ĐP";
+            this.Madatphongtxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel4
             // 
@@ -272,7 +273,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.Panel_KhachSeDi);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "KhachSeDi_LeTan";
             this.Size = new System.Drawing.Size(1087, 571);
             this.PanelNoiDung_KhachSeDi.ResumeLayout(false);
@@ -292,9 +293,9 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel10;
         private Bunifu.Framework.UI.BunifuDatepicker bunifuDatepicker2;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
+        private System.Windows.Forms.ComboBox Sophongtxt;
+        private System.Windows.Forms.ComboBox Loaiphongtxt;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox Madatphongtxt;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
         private Bunifu.Framework.UI.BunifuCustomDataGrid bunifuCustomDataGrid1;
     }

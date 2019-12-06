@@ -142,11 +142,11 @@
     <Compile Include="CaiDat_CauHinh.Designer.cs">
       <DependentUpon>CaiDat_CauHinh.cs</DependentUpon>
     </Compile>
-    <Compile Include="CauHinh_DsNhanVien.cs">
-      <SubType>Form</SubType>
+    <Compile Include="CauHinh_ThongTinNhanVien.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CauHinh_DsNhanVien.Designer.cs">
-      <DependentUpon>CauHinh_DsNhanVien.cs</DependentUpon>
+    <Compile Include="CauHinh_ThongTinNhanVien.Designer.cs">
+      <DependentUpon>CauHinh_ThongTinNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="DanhSachKhach_LeTan.cs">
       <SubType>UserControl</SubType>
@@ -355,8 +355,8 @@
     <EmbeddedResource Include="CaiDat_CauHinh.resx">
       <DependentUpon>CaiDat_CauHinh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CauHinh_DsNhanVien.resx">
-      <DependentUpon>CauHinh_DsNhanVien.cs</DependentUpon>
+    <EmbeddedResource Include="CauHinh_ThongTinNhanVien.resx">
+      <DependentUpon>CauHinh_ThongTinNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhSachKhach_LeTan.resx">
       <DependentUpon>DanhSachKhach_LeTan.cs</DependentUpon>

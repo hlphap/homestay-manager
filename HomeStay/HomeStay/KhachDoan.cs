@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Threading;
 namespace HomeStay
 {
     public partial class KhachDoan : UserControl
@@ -20,10 +20,22 @@ namespace HomeStay
         public KhachDoan()
         {
             InitializeComponent();
-            PanelNoiDungKhachDoan.Controls.Add(CtrTD);
-            PanelNoiDungKhachDoan.Controls.Add(CtrDDO);
-            PanelNoiDungKhachDoan.Controls.Add(CtrDDDi);
-            PanelNoiDungKhachDoan.Controls.Add(CtrDDDat);
+           
+        }
+
+        private void KhachDoan_Load(object sender, EventArgs e)
+        {
+            Thread newThread = new Thread(() =>
+            {
+                Invoke(new Action(() =>
+                {
+                    PanelNoiDungKhachDoan.Controls.Add(CtrTD);
+                    PanelNoiDungKhachDoan.Controls.Add(CtrDDO);
+                    PanelNoiDungKhachDoan.Controls.Add(CtrDDDi);
+                    PanelNoiDungKhachDoan.Controls.Add(CtrDDDat);
+                }));
+            });
+            newThread.Start();
         }
 
         private void ButtonTD_Click(object sender, EventArgs e)
@@ -49,5 +61,7 @@ namespace HomeStay
             CtrDDDat.BringToFront();
             CtrDDDat.Show();
         }
+
+        
     }
 }

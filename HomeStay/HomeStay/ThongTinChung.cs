@@ -26,10 +26,7 @@ namespace HomeStay
         {
 
         }
-
-   
-
-        
+      
         private void ThongTinChung_Load(object sender, EventArgs e)
         {
             conn.Open();
@@ -46,7 +43,44 @@ namespace HomeStay
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
+            conn.Open();
 
+            string sql = "SELECT SOPHONG as 'Số phòng', MADK as 'Mã đặt phòng', HOTENKH as 'Họ tên', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE WHERE KHACHHANG.MAKH = PHONGTHUE.MAKH AND NGAYDEN < '" + DateTime.Today + "'";
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            cmd.CommandType = CommandType.Text;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            DataGridTTC.DataSource = dt;
+            conn.Close();
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+
+            string sql = "SELECT SOPHONG as 'Số phòng', MADK as 'Mã đặt phòng', HOTENKH as 'Họ tên', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE WHERE KHACHHANG.MAKH = PHONGTHUE.MAKH AND NGAYDEN > '" + DateTime.Today + "' AND NGAYDI <'"+ DateTime.Today+ "'";
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            cmd.CommandType = CommandType.Text;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            DataGridTTC.DataSource = dt;
+            conn.Close();
+        }
+
+        private void bunifuFlatButton3_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+
+            string sql = "SELECT SOPHONG as 'Số phòng', MADK as 'Mã đặt phòng', HOTENKH as 'Họ tên', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE WHERE KHACHHANG.MAKH = PHONGTHUE.MAKH AND NGAYDEN > '" + DateTime.Today + "' AND NGAYDI <'" + DateTime.Today + "'";
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            cmd.CommandType = CommandType.Text;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            DataGridTTC.DataSource = dt;
+            conn.Close();
         }
     }
 }

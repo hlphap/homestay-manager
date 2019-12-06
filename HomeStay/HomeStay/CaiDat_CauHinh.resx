@@ -118,27 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="bunifuButton2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAKQAAAAgCAYAAACclNOPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADrSURBVHhe7dyxTcRAGITRbcR3lEIFtGYjyiAmpRQaIKKB
-        NWc0oVOsCd5IL1n94RfvMKvbfd2f7tt8v237Dpd7nR9Hg8lxjNs6P08P4SLLOr+S4yPIkwO4WnIUJB2S
-        oyDpkBwFSYfkKEg6JEdB0iE5CpIOyVGQdEiOgqRDchQkHZKjIOmQHAVJh+QoSDokR0HSITkKkg7JUZB0
-        SI6CpENyFCQdkqMg6ZAcBUmH5ChIOiRHQdIhOQqSDslRkHRIjoKkQ3IUJB2S4xjHNxZnB3CVZZs/yfHv
-        s6nnx8P32SH8tyPG5W2+JEezlo3xC6wit7MLY7NWAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="bunifuButton1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAKQAAAAgCAYAAACclNOPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADrSURBVHhe7dyxTcRAGITRbcR3lEIFtGYjyiAmpRQaIKKB
-        NWc0oVOsCd5IL1n94RfvMKvbfd2f7tt8v237Dpd7nR9Hg8lxjNs6P08P4SLLOr+S4yPIkwO4WnIUJB2S
-        oyDpkBwFSYfkKEg6JEdB0iE5CpIOyVGQdEiOgqRDchQkHZKjIOmQHAVJh+QoSDokR0HSITkKkg7JUZB0
-        SI6CpENyFCQdkqMg6ZAcBUmH5ChIOiRHQdIhOQqSDslRkHRIjoKkQ3IUJB2S4xjHNxZnB3CVZZs/yfHv
-        s6nnx8P32SH8tyPG5W2+JEezlo3xC6wit7MLY7NWAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="bunifuFlatButton5.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btNhanVien.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAYAAADFeBvrAAAABGdBTUEAALGPC/xhBQAAAwtJREFUaEPl
         2lmoTVEcx/FrSBmSOYoyRYYHhfJAeVCUF3lQRHgQkaEMkaJIeaJQxpK5zBlKIaRQZqFkTBEiZJ59fw/q

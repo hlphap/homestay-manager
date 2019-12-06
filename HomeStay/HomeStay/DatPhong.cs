@@ -13,37 +13,39 @@ namespace HomeStay
 {
     public partial class DatPhong : UserControl
     {
+        string sql4="";
+        SqlConnection conn = new SqlConnection(DataSource.connectionString);
         public DatPhong()
         {
             InitializeComponent();
-            SqlConnection conn = new SqlConnection(DataSource.connectionString);
+            
             conn.Open();
 
             string sql1 = "select * from PHONGTHUE";
             SqlDataAdapter da1 = new SqlDataAdapter(sql1, conn);
             DataTable dt1 = new DataTable();
             da1.Fill(dt1);
-            comboBox3.DataSource = dt1;
-            comboBox3.DisplayMember = "SOPHONG";
-            comboBox3.ValueMember = "SOPHONG";
+            Sophongtxt.DataSource = dt1;
+            Sophongtxt.DisplayMember = "SOPHONG";
+            Sophongtxt.ValueMember = "SOPHONG";
 
-            string sql2 = "select LOAIPHONG from PHONG WHERE SOPHONG = " + comboBox3.ValueMember;
+            string sql2 = "select LOAIPHONG from PHONG WHERE SOPHONG = " + Sophongtxt.ValueMember;
             SqlDataAdapter da2 = new SqlDataAdapter(sql2, conn);
             DataTable dt2 = new DataTable();
             da2.Fill(dt2);
-            comboBox2.DataSource = dt2;
-            comboBox2.DisplayMember = "LOAIPHONG";
-            comboBox2.ValueMember = "LOAIPHONG";
+            Loaiphongtxt.DataSource = dt2;
+            Loaiphongtxt.DisplayMember = "LOAIPHONG";
+            Loaiphongtxt.ValueMember = "LOAIPHONG";
 
-            string sql3 = "select * from PHONG WHERE SOPHONG = " + comboBox3.ValueMember;
+            string sql3 = "select * from PHONG WHERE SOPHONG = " + Sophongtxt.ValueMember;
             SqlDataAdapter da3 = new SqlDataAdapter(sql3, conn);
             DataTable dt3 = new DataTable();
             da3.Fill(dt3);
-            comboBox1.DataSource = dt3;
-            comboBox1.DisplayMember = "TRANGTHAI";
-            comboBox1.ValueMember = "TRANGTHAI";
+            Trangthaitxt.DataSource = dt3;
+            Trangthaitxt.DisplayMember = "TRANGTHAI";
+            Trangthaitxt.ValueMember = "TRANGTHAI";
 
-            string sql4 = "SELECT SOPHONG as 'Số phòng', MADK as 'Mã đặt phòng', HOTENKH as 'Họ tên', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE WHERE KHACHHANG.MAKH = PHONGTHUE.MAKH";
+            sql4 = "SELECT SOPHONG as 'Số phòng', MADK as 'Mã đặt phòng', HOTENKH as 'Họ tên', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE WHERE KHACHHANG.MAKH = PHONGTHUE.MAKH";
             SqlCommand cmd4 = new SqlCommand(sql4, conn);
             cmd4.CommandType = CommandType.Text;
             SqlDataAdapter da4 = new SqlDataAdapter(cmd4);
@@ -53,30 +55,35 @@ namespace HomeStay
             conn.Close();
         }
 
-      
-
- 
-
-        private void bunifuMaterialTextbox1_OnValueChanged_1(object sender, EventArgs e)
+        private void ButtonTimKiem_Click(object sender, EventArgs e)
         {
+            conn.Open();
+            if (Madatphongtxt.Text != null)
+            {
+                sql4 += " AND MADK = '" + Madatphongtxt.Text + "'";
+            }
 
-        }
+            if(Tenkhachtxt.Text!= null)
+            {
+               
+                sql4 += " AND HOTENKH = '" + Tenkhachtxt.Text + "'";
+            }
 
-        
+            if (Sophongtxt.ValueMember != null)
+                sql4 += "AND SOPHONG = '" + Sophongtxt.Text + "'";
+            /*if(Loaiphongtxt.ValueMember != null)
+                sql4 += "AND LOAIPHONG = '" + Loaiphongtxt.Text + "'";
+            if (Trangthaitxt.ValueMember != null)
+                sql4 += "AND TRANGTHAI = '" + Trangthaitxt.Text + "'";*/
 
-        private void bunifuDatePicker1_ValueChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuLabel4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuCustomLabel2_Click(object sender, EventArgs e)
-        {
-
+            SqlCommand cmd4 = new SqlCommand(sql4, conn);
+            cmd4.CommandType = CommandType.Text;
+            SqlDataAdapter da4 = new SqlDataAdapter(cmd4);
+            DataTable dt4 = new DataTable();
+            da4.Fill(dt4);
+            bunifuCustomDataGrid1.DataSource = dt4;
+            conn.Close();
+            sql4 = "SELECT SOPHONG as 'Số phòng', MADK as 'Mã đặt phòng', HOTENKH as 'Họ tên', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE WHERE KHACHHANG.MAKH = PHONGTHUE.MAKH";
         }
     }
 }

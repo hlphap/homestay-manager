@@ -36,11 +36,12 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.bunifuCustomDataGrid1 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.ButtonTimKiem = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuDatepicker4 = new Bunifu.Framework.UI.BunifuDatepicker();
             this.bunifuDatepicker3 = new Bunifu.Framework.UI.BunifuDatepicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.Trangthaitxt = new System.Windows.Forms.ComboBox();
+            this.Loaiphongtxt = new System.Windows.Forms.ComboBox();
+            this.Sophongtxt = new System.Windows.Forms.ComboBox();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -48,8 +49,8 @@
             this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuDatepicker2 = new Bunifu.Framework.UI.BunifuDatepicker();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuMaterialTextbox2 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.Tenkhachtxt = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.Madatphongtxt = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuGradientPanel1.SuspendLayout();
             this.bunifuGradientPanel3.SuspendLayout();
@@ -142,11 +143,12 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.ButtonTimKiem);
             this.panel2.Controls.Add(this.bunifuDatepicker4);
             this.panel2.Controls.Add(this.bunifuDatepicker3);
-            this.panel2.Controls.Add(this.comboBox1);
-            this.panel2.Controls.Add(this.comboBox2);
-            this.panel2.Controls.Add(this.comboBox3);
+            this.panel2.Controls.Add(this.Trangthaitxt);
+            this.panel2.Controls.Add(this.Loaiphongtxt);
+            this.panel2.Controls.Add(this.Sophongtxt);
             this.panel2.Controls.Add(this.bunifuCustomLabel4);
             this.panel2.Controls.Add(this.bunifuCustomLabel3);
             this.panel2.Controls.Add(this.bunifuCustomLabel1);
@@ -154,14 +156,51 @@
             this.panel2.Controls.Add(this.bunifuCustomLabel10);
             this.panel2.Controls.Add(this.bunifuDatepicker2);
             this.panel2.Controls.Add(this.bunifuLabel1);
-            this.panel2.Controls.Add(this.bunifuMaterialTextbox2);
-            this.panel2.Controls.Add(this.bunifuMaterialTextbox1);
+            this.panel2.Controls.Add(this.Tenkhachtxt);
+            this.panel2.Controls.Add(this.Madatphongtxt);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1087, 161);
             this.panel2.TabIndex = 0;
+            // 
+            // ButtonTimKiem
+            // 
+            this.ButtonTimKiem.Active = false;
+            this.ButtonTimKiem.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
+            this.ButtonTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
+            this.ButtonTimKiem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ButtonTimKiem.BorderRadius = 0;
+            this.ButtonTimKiem.ButtonText = "      Tìm Kiếm";
+            this.ButtonTimKiem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ButtonTimKiem.DisabledColor = System.Drawing.Color.Gray;
+            this.ButtonTimKiem.Iconcolor = System.Drawing.Color.Transparent;
+            this.ButtonTimKiem.Iconimage = null;
+            this.ButtonTimKiem.Iconimage_right = null;
+            this.ButtonTimKiem.Iconimage_right_Selected = null;
+            this.ButtonTimKiem.Iconimage_Selected = null;
+            this.ButtonTimKiem.IconMarginLeft = 0;
+            this.ButtonTimKiem.IconMarginRight = 0;
+            this.ButtonTimKiem.IconRightVisible = true;
+            this.ButtonTimKiem.IconRightZoom = 0D;
+            this.ButtonTimKiem.IconVisible = true;
+            this.ButtonTimKiem.IconZoom = 50D;
+            this.ButtonTimKiem.IsTab = false;
+            this.ButtonTimKiem.Location = new System.Drawing.Point(935, 11);
+            this.ButtonTimKiem.Margin = new System.Windows.Forms.Padding(5);
+            this.ButtonTimKiem.Name = "ButtonTimKiem";
+            this.ButtonTimKiem.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
+            this.ButtonTimKiem.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
+            this.ButtonTimKiem.OnHoverTextColor = System.Drawing.Color.White;
+            this.ButtonTimKiem.selected = false;
+            this.ButtonTimKiem.Size = new System.Drawing.Size(137, 43);
+            this.ButtonTimKiem.TabIndex = 32;
+            this.ButtonTimKiem.Text = "      Tìm Kiếm";
+            this.ButtonTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ButtonTimKiem.Textcolor = System.Drawing.Color.White;
+            this.ButtonTimKiem.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonTimKiem.Click += new System.EventHandler(this.ButtonTimKiem_Click);
             // 
             // bunifuDatepicker4
             // 
@@ -193,41 +232,41 @@
             this.bunifuDatepicker3.TabIndex = 26;
             this.bunifuDatepicker3.Value = new System.DateTime(2019, 10, 11, 8, 17, 40, 675);
             // 
-            // comboBox1
+            // Trangthaitxt
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.White;
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(924, 114);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(159, 29);
-            this.comboBox1.TabIndex = 10;
-            this.comboBox1.Text = "Chọn trạng thái";
+            this.Trangthaitxt.BackColor = System.Drawing.Color.White;
+            this.Trangthaitxt.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Trangthaitxt.FormattingEnabled = true;
+            this.Trangthaitxt.Location = new System.Drawing.Point(924, 114);
+            this.Trangthaitxt.Margin = new System.Windows.Forms.Padding(4);
+            this.Trangthaitxt.Name = "Trangthaitxt";
+            this.Trangthaitxt.Size = new System.Drawing.Size(159, 29);
+            this.Trangthaitxt.TabIndex = 10;
+            this.Trangthaitxt.Text = "Chọn trạng thái";
             // 
-            // comboBox2
+            // Loaiphongtxt
             // 
-            this.comboBox2.BackColor = System.Drawing.Color.White;
-            this.comboBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(785, 114);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(129, 29);
-            this.comboBox2.TabIndex = 11;
-            this.comboBox2.Text = "Loại phòng";
+            this.Loaiphongtxt.BackColor = System.Drawing.Color.White;
+            this.Loaiphongtxt.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Loaiphongtxt.FormattingEnabled = true;
+            this.Loaiphongtxt.Location = new System.Drawing.Point(785, 114);
+            this.Loaiphongtxt.Margin = new System.Windows.Forms.Padding(4);
+            this.Loaiphongtxt.Name = "Loaiphongtxt";
+            this.Loaiphongtxt.Size = new System.Drawing.Size(129, 29);
+            this.Loaiphongtxt.TabIndex = 11;
+            this.Loaiphongtxt.Text = "Loại phòng";
             // 
-            // comboBox3
+            // Sophongtxt
             // 
-            this.comboBox3.BackColor = System.Drawing.Color.White;
-            this.comboBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(637, 116);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(128, 29);
-            this.comboBox3.TabIndex = 12;
-            this.comboBox3.Text = "Chọn phòng";
+            this.Sophongtxt.BackColor = System.Drawing.Color.White;
+            this.Sophongtxt.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sophongtxt.FormattingEnabled = true;
+            this.Sophongtxt.Location = new System.Drawing.Point(637, 116);
+            this.Sophongtxt.Margin = new System.Windows.Forms.Padding(4);
+            this.Sophongtxt.Name = "Sophongtxt";
+            this.Sophongtxt.Size = new System.Drawing.Size(128, 29);
+            this.Sophongtxt.TabIndex = 12;
+            this.Sophongtxt.Text = "Chọn phòng";
             // 
             // bunifuCustomLabel4
             // 
@@ -323,56 +362,53 @@
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // bunifuMaterialTextbox2
+            // Tenkhachtxt
             // 
-            this.bunifuMaterialTextbox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.bunifuMaterialTextbox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.bunifuMaterialTextbox2.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.bunifuMaterialTextbox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox2.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox2.HintText = "";
-            this.bunifuMaterialTextbox2.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.bunifuMaterialTextbox2.isPassword = false;
-            this.bunifuMaterialTextbox2.LineFocusedColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox2.LineIdleColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox2.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox2.LineThickness = 3;
-            this.bunifuMaterialTextbox2.Location = new System.Drawing.Point(195, 60);
-            this.bunifuMaterialTextbox2.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuMaterialTextbox2.MaxLength = 32767;
-            this.bunifuMaterialTextbox2.Name = "bunifuMaterialTextbox2";
-            this.bunifuMaterialTextbox2.Size = new System.Drawing.Size(164, 32);
-            this.bunifuMaterialTextbox2.TabIndex = 2;
-            this.bunifuMaterialTextbox2.Text = "Tên khách";
-            this.bunifuMaterialTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Tenkhachtxt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.Tenkhachtxt.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.Tenkhachtxt.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.Tenkhachtxt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Tenkhachtxt.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.Tenkhachtxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Tenkhachtxt.HintForeColor = System.Drawing.Color.Empty;
+            this.Tenkhachtxt.HintText = "Tên khách";
+            this.Tenkhachtxt.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.Tenkhachtxt.isPassword = false;
+            this.Tenkhachtxt.LineFocusedColor = System.Drawing.Color.Blue;
+            this.Tenkhachtxt.LineIdleColor = System.Drawing.Color.Gray;
+            this.Tenkhachtxt.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.Tenkhachtxt.LineThickness = 3;
+            this.Tenkhachtxt.Location = new System.Drawing.Point(195, 60);
+            this.Tenkhachtxt.Margin = new System.Windows.Forms.Padding(5);
+            this.Tenkhachtxt.MaxLength = 32767;
+            this.Tenkhachtxt.Name = "Tenkhachtxt";
+            this.Tenkhachtxt.Size = new System.Drawing.Size(164, 32);
+            this.Tenkhachtxt.TabIndex = 2;
+            this.Tenkhachtxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // bunifuMaterialTextbox1
+            // Madatphongtxt
             // 
-            this.bunifuMaterialTextbox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.bunifuMaterialTextbox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.bunifuMaterialTextbox1.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.bunifuMaterialTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox1.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox1.HintText = "";
-            this.bunifuMaterialTextbox1.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.bunifuMaterialTextbox1.isPassword = false;
-            this.bunifuMaterialTextbox1.LineFocusedColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox1.LineThickness = 3;
-            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(9, 60);
-            this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuMaterialTextbox1.MaxLength = 32767;
-            this.bunifuMaterialTextbox1.Name = "bunifuMaterialTextbox1";
-            this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(164, 32);
-            this.bunifuMaterialTextbox1.TabIndex = 1;
-            this.bunifuMaterialTextbox1.Text = "Mã ĐP";
-            this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.bunifuMaterialTextbox1.OnValueChanged += new System.EventHandler(this.bunifuMaterialTextbox1_OnValueChanged_1);
+            this.Madatphongtxt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.Madatphongtxt.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.Madatphongtxt.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.Madatphongtxt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Madatphongtxt.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.Madatphongtxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Madatphongtxt.HintForeColor = System.Drawing.Color.Empty;
+            this.Madatphongtxt.HintText = "Mã đặt phòng";
+            this.Madatphongtxt.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.Madatphongtxt.isPassword = false;
+            this.Madatphongtxt.LineFocusedColor = System.Drawing.Color.Blue;
+            this.Madatphongtxt.LineIdleColor = System.Drawing.Color.Gray;
+            this.Madatphongtxt.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.Madatphongtxt.LineThickness = 3;
+            this.Madatphongtxt.Location = new System.Drawing.Point(9, 60);
+            this.Madatphongtxt.Margin = new System.Windows.Forms.Padding(5);
+            this.Madatphongtxt.MaxLength = 32767;
+            this.Madatphongtxt.Name = "Madatphongtxt";
+            this.Madatphongtxt.Size = new System.Drawing.Size(164, 32);
+            this.Madatphongtxt.TabIndex = 1;
+            this.Madatphongtxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // panel1
             // 
@@ -387,7 +423,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.bunifuGradientPanel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DatPhong";
             this.Size = new System.Drawing.Size(1087, 571);
             this.bunifuGradientPanel1.ResumeLayout(false);
@@ -405,12 +441,12 @@
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel3;
         private System.Windows.Forms.Panel panel2;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox2;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox Madatphongtxt;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox Tenkhachtxt;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox Sophongtxt;
+        private System.Windows.Forms.ComboBox Loaiphongtxt;
+        private System.Windows.Forms.ComboBox Trangthaitxt;
         private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuDatepicker bunifuDatepicker2;
         private Bunifu.Framework.UI.BunifuDatepicker bunifuDatepicker1;
@@ -422,5 +458,6 @@
         private Bunifu.Framework.UI.BunifuDatepicker bunifuDatepicker3;
         private System.Windows.Forms.Panel panel3;
         private Bunifu.Framework.UI.BunifuCustomDataGrid bunifuCustomDataGrid1;
+        private Bunifu.Framework.UI.BunifuFlatButton ButtonTimKiem;
     }
 }

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using HomeStay.Resources;
-
+using System.Threading;
 namespace HomeStay
 {
     public partial class KhachLe : UserControl
@@ -21,33 +21,25 @@ namespace HomeStay
         public KhachLe()
         {
             InitializeComponent();
-            PanelNoiDungKhachLe.Controls.Add(CtrTH);
-            PanelNoiDungKhachLe.Controls.Add(CtrTC);
-            PanelNoiDungKhachLe.Controls.Add(CtrDVMR);
-            PanelNoiDungKhachLe.Controls.Add(CtrTT);
+           
 
         }
-
-        private void bunifuCards1_Paint(object sender, PaintEventArgs e)
+        private void KhachLe_Load(object sender, EventArgs e)
         {
-
+            Thread newThread = new Thread(() =>
+            {
+                Invoke(new Action(() =>
+                {
+                    PanelNoiDungKhachLe.Controls.Add(CtrTH);
+                    PanelNoiDungKhachLe.Controls.Add(CtrTC);
+                    PanelNoiDungKhachLe.Controls.Add(CtrDVMR);
+                    PanelNoiDungKhachLe.Controls.Add(CtrTT);
+                }));
+            });
+            newThread.Start();
         }
 
-        private void bunifuLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuLabel1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
+ 
         private void bunifuButton1_Click_1(object sender, EventArgs e)
         {
             CtrTH.BringToFront();
@@ -71,6 +63,8 @@ namespace HomeStay
         {
             CtrTT.BringToFront();
             CtrTT.Show();
-        }     
+        }
+
+        
     }
 }

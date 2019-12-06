@@ -65,9 +65,10 @@
             this.PanelNoiDungKhachLe.GradientTopLeft = System.Drawing.Color.Navy;
             this.PanelNoiDungKhachLe.GradientTopRight = System.Drawing.Color.SpringGreen;
             this.PanelNoiDungKhachLe.Location = new System.Drawing.Point(0, 0);
+            this.PanelNoiDungKhachLe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PanelNoiDungKhachLe.Name = "PanelNoiDungKhachLe";
             this.PanelNoiDungKhachLe.Quality = 10;
-            this.PanelNoiDungKhachLe.Size = new System.Drawing.Size(815, 464);
+            this.PanelNoiDungKhachLe.Size = new System.Drawing.Size(1087, 571);
             this.PanelNoiDungKhachLe.TabIndex = 3;
             // 
             // panel1
@@ -76,8 +77,9 @@
             this.panel1.Controls.Add(this.Panel_TopKL);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(815, 464);
+            this.panel1.Size = new System.Drawing.Size(1087, 571);
             this.panel1.TabIndex = 1;
             // 
             // PanelNoiDungKhachDoan
@@ -89,10 +91,11 @@
             this.PanelNoiDungKhachDoan.GradientBottomRight = System.Drawing.Color.SpringGreen;
             this.PanelNoiDungKhachDoan.GradientTopLeft = System.Drawing.Color.Navy;
             this.PanelNoiDungKhachDoan.GradientTopRight = System.Drawing.Color.SpringGreen;
-            this.PanelNoiDungKhachDoan.Location = new System.Drawing.Point(0, 41);
+            this.PanelNoiDungKhachDoan.Location = new System.Drawing.Point(0, 50);
+            this.PanelNoiDungKhachDoan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PanelNoiDungKhachDoan.Name = "PanelNoiDungKhachDoan";
             this.PanelNoiDungKhachDoan.Quality = 10;
-            this.PanelNoiDungKhachDoan.Size = new System.Drawing.Size(815, 423);
+            this.PanelNoiDungKhachDoan.Size = new System.Drawing.Size(1087, 521);
             this.PanelNoiDungKhachDoan.TabIndex = 2;
             // 
             // Panel_TopKL
@@ -110,9 +113,10 @@
             this.Panel_TopKL.GradientTopLeft = System.Drawing.Color.Black;
             this.Panel_TopKL.GradientTopRight = System.Drawing.Color.DimGray;
             this.Panel_TopKL.Location = new System.Drawing.Point(0, 0);
+            this.Panel_TopKL.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Panel_TopKL.Name = "Panel_TopKL";
             this.Panel_TopKL.Quality = 10;
-            this.Panel_TopKL.Size = new System.Drawing.Size(815, 41);
+            this.Panel_TopKL.Size = new System.Drawing.Size(1087, 50);
             this.Panel_TopKL.TabIndex = 1;
             // 
             // Button_TuyChon
@@ -153,7 +157,8 @@
             this.Button_TuyChon.IdleIconLeftImage = null;
             this.Button_TuyChon.IdleIconRightImage = null;
             this.Button_TuyChon.IndicateFocus = false;
-            this.Button_TuyChon.Location = new System.Drawing.Point(459, 0);
+            this.Button_TuyChon.Location = new System.Drawing.Point(612, 0);
+            this.Button_TuyChon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Button_TuyChon.Name = "Button_TuyChon";
             stateProperties1.BorderColor = System.Drawing.Color.Yellow;
             stateProperties1.BorderRadius = 3;
@@ -173,7 +178,7 @@
             stateProperties2.IconLeftImage = null;
             stateProperties2.IconRightImage = null;
             this.Button_TuyChon.OnPressedState = stateProperties2;
-            this.Button_TuyChon.Size = new System.Drawing.Size(129, 41);
+            this.Button_TuyChon.Size = new System.Drawing.Size(172, 50);
             this.Button_TuyChon.TabIndex = 1;
             this.Button_TuyChon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Button_TuyChon.TextMarginLeft = 0;
@@ -218,7 +223,8 @@
             this.Button_ThanhToan.IdleIconLeftImage = null;
             this.Button_ThanhToan.IdleIconRightImage = null;
             this.Button_ThanhToan.IndicateFocus = false;
-            this.Button_ThanhToan.Location = new System.Drawing.Point(321, 0);
+            this.Button_ThanhToan.Location = new System.Drawing.Point(428, 0);
+            this.Button_ThanhToan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Button_ThanhToan.Name = "Button_ThanhToan";
             stateProperties3.BorderColor = System.Drawing.Color.Yellow;
             stateProperties3.BorderRadius = 3;
@@ -238,7 +244,7 @@
             stateProperties4.IconLeftImage = null;
             stateProperties4.IconRightImage = null;
             this.Button_ThanhToan.OnPressedState = stateProperties4;
-            this.Button_ThanhToan.Size = new System.Drawing.Size(138, 41);
+            this.Button_ThanhToan.Size = new System.Drawing.Size(184, 50);
             this.Button_ThanhToan.TabIndex = 3;
             this.Button_ThanhToan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Button_ThanhToan.TextMarginLeft = 0;
@@ -283,7 +289,8 @@
             this.Button_TuyChonMorong.IdleIconLeftImage = null;
             this.Button_TuyChonMorong.IdleIconRightImage = null;
             this.Button_TuyChonMorong.IndicateFocus = false;
-            this.Button_TuyChonMorong.Location = new System.Drawing.Point(147, 0);
+            this.Button_TuyChonMorong.Location = new System.Drawing.Point(196, 0);
+            this.Button_TuyChonMorong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Button_TuyChonMorong.Name = "Button_TuyChonMorong";
             stateProperties5.BorderColor = System.Drawing.Color.Yellow;
             stateProperties5.BorderRadius = 3;
@@ -303,7 +310,7 @@
             stateProperties6.IconLeftImage = null;
             stateProperties6.IconRightImage = null;
             this.Button_TuyChonMorong.OnPressedState = stateProperties6;
-            this.Button_TuyChonMorong.Size = new System.Drawing.Size(174, 41);
+            this.Button_TuyChonMorong.Size = new System.Drawing.Size(232, 50);
             this.Button_TuyChonMorong.TabIndex = 2;
             this.Button_TuyChonMorong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Button_TuyChonMorong.TextMarginLeft = 0;
@@ -349,6 +356,7 @@
             this.ButtonTongHop.IdleIconRightImage = null;
             this.ButtonTongHop.IndicateFocus = false;
             this.ButtonTongHop.Location = new System.Drawing.Point(0, 0);
+            this.ButtonTongHop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ButtonTongHop.Name = "ButtonTongHop";
             stateProperties7.BorderColor = System.Drawing.Color.Yellow;
             stateProperties7.BorderRadius = 3;
@@ -368,7 +376,7 @@
             stateProperties8.IconLeftImage = null;
             stateProperties8.IconRightImage = null;
             this.ButtonTongHop.OnPressedState = stateProperties8;
-            this.ButtonTongHop.Size = new System.Drawing.Size(147, 41);
+            this.ButtonTongHop.Size = new System.Drawing.Size(196, 50);
             this.ButtonTongHop.TabIndex = 0;
             this.ButtonTongHop.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ButtonTongHop.TextMarginLeft = 0;
@@ -377,11 +385,13 @@
             // 
             // KhachDoan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.PanelNoiDungKhachLe);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "KhachDoan";
-            this.Size = new System.Drawing.Size(815, 464);
+            this.Size = new System.Drawing.Size(1087, 571);
+            this.Load += new System.EventHandler(this.KhachDoan_Load);
             this.PanelNoiDungKhachLe.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.Panel_TopKL.ResumeLayout(false);
