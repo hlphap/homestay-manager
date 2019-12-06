@@ -59,9 +59,11 @@ namespace HomeStay
 
             if (Sophongtxt.ValueMember != null)
                 sql3 += "AND SOPHONG = '" + Sophongtxt.Text + "'";
-            if(Loaiphongtxt.ValueMember != null)
+            
+            // phong thue khong co LOAIPHONG
+            /*if(Loaiphongtxt.ValueMember != null)
                 sql3 += "AND LOAIPHONG = '" + Loaiphongtxt.Text + "'";
-
+             */
 
             SqlCommand cmd4 = new SqlCommand(sql3, conn);
             cmd4.CommandType = CommandType.Text;

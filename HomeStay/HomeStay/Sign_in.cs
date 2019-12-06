@@ -20,14 +20,10 @@ namespace HomeStay
 
         }
         
-
-
         private void Button_Signin_Click(object sender, EventArgs e)
         {
             Form NewForm = new FormChinh();
-            
-            
-            // DATA SOURCE
+
             SqlConnection conn = new SqlConnection(DataSource.connectionString);
             conn.Open();
             string Taikhoan = Textbox_Username.Text;
