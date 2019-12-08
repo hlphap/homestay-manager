@@ -16,25 +16,36 @@ namespace HomeStay
         public CaiDat_DsTang()
         {
             InitializeComponent();
-            
             conn.Open();
 
-            string sql = " select TANG as 'Tầng' SOPHONG 'Số Phòng' LOAIPHONG as'Loại Phòng' GIAPHONG as 'Giá Phòng' TRANGTHAI as'Trạng Thái' FROM PHONG WHERE TANG = '" + ChonTang.Text +"'";
+            string sql = " select TANG as 'Tầng', SOPHONG 'Số Phòng', LOAIPHONG as'Loại Phòng', GIAPHONG as 'Giá Phòng', TRANGTHAI as'Trạng Thái' FROM PHONG ";
             SqlCommand cmd = new SqlCommand(sql, conn);
             cmd.CommandType = CommandType.Text;
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
             DataGrid_DSTang.DataSource = dt;
+        }
+        
+        private void ChonTang_SelectedValueChanged(object sender, EventArgs e)
+        {
 
-            string sql1 = "select * from PHONG";
-            SqlDataAdapter da1 = new SqlDataAdapter(sql1, conn);
-            DataTable dt1 = new DataTable();
-            da1.Fill(dt1);
-            ChonTang.DataSource = dt1;
-            ChonTang.DisplayMember = "TANG";
-            ChonTang.ValueMember = "TANG";
         }
 
+
+        private void Tangtxt_TextChange(object sender, EventArgs e)
+        {
+            string sql = " select TANG as 'Tầng', SOPHONG 'Số Phòng', LOAIPHONG as'Loại Phòng', GIAPHONG as 'Giá Phòng', TRANGTHAI as'Trạng Thái' FROM PHONG WHERE TANG = ";
+
+            if (Tangtxt.Text != null)
+                 sql = " select TANG as 'Tầng', SOPHONG 'Số Phòng', LOAIPHONG as'Loại Phòng', GIAPHONG as 'Giá Phòng', TRANGTHAI as'Trạng Thái' FROM PHONG WHERE TANG = " + Tangtxt.Text;
+
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            cmd.CommandType = CommandType.Text;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            DataGrid_DSTang.DataSource = dt;
+        }
     }
 }

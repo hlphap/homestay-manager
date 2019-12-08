@@ -21,6 +21,7 @@ namespace HomeStay
             InitializeComponent();
             PanelCauHinh.Controls.Add(CtrTTNV);
             PanelCauHinh.Controls.Add(CtrTP);
+            PanelCauHinh.Controls.Add(CtrDST);
         }
 
     
