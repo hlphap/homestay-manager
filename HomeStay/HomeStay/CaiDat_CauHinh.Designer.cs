@@ -137,6 +137,7 @@
             this.bunifuFlatButton4.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuFlatButton4.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.bunifuFlatButton4.TextFont = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton4.Click += new System.EventHandler(this.bunifuFlatButton4_Click);
             // 
             // bunifuCustomLabel4
             // 
@@ -183,6 +184,7 @@
             this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuFlatButton3.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton3.Click += new System.EventHandler(this.bunifuFlatButton3_Click);
             // 
             // bunifuCustomLabel3
             // 
@@ -338,12 +340,11 @@
             // 
             this.PanelCauHinh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PanelCauHinh.BackgroundImage")));
             this.PanelCauHinh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PanelCauHinh.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelCauHinh.GradientBottomLeft = System.Drawing.Color.White;
             this.PanelCauHinh.GradientBottomRight = System.Drawing.Color.White;
             this.PanelCauHinh.GradientTopLeft = System.Drawing.Color.White;
             this.PanelCauHinh.GradientTopRight = System.Drawing.Color.White;
-            this.PanelCauHinh.Location = new System.Drawing.Point(0, 0);
+            this.PanelCauHinh.Location = new System.Drawing.Point(487, 423);
             this.PanelCauHinh.Name = "PanelCauHinh";
             this.PanelCauHinh.Quality = 10;
             this.PanelCauHinh.Size = new System.Drawing.Size(1087, 622);

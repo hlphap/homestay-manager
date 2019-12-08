@@ -37,7 +37,7 @@
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             this.Panel_NoiDung = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.Panel_NDThongTin = new System.Windows.Forms.Panel();
-            this.DataGridTTC = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.dataGridView1 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Loc_ThongTinChung = new System.Windows.Forms.ComboBox();
             this.bunifuTextBox1 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
@@ -46,7 +46,7 @@
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Panel_NoiDung.SuspendLayout();
             this.Panel_NDThongTin.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridTTC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,7 +71,7 @@
             // Panel_NDThongTin
             // 
             this.Panel_NDThongTin.BackColor = System.Drawing.Color.White;
-            this.Panel_NDThongTin.Controls.Add(this.DataGridTTC);
+            this.Panel_NDThongTin.Controls.Add(this.dataGridView1);
             this.Panel_NDThongTin.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Panel_NDThongTin.Location = new System.Drawing.Point(0, 58);
             this.Panel_NDThongTin.Margin = new System.Windows.Forms.Padding(4);
@@ -79,17 +79,17 @@
             this.Panel_NDThongTin.Size = new System.Drawing.Size(1087, 564);
             this.Panel_NDThongTin.TabIndex = 1;
             // 
-            // DataGridTTC
+            // dataGridView1
             // 
-            this.DataGridTTC.AllowUserToAddRows = false;
-            this.DataGridTTC.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.DataGridTTC.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.DataGridTTC.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DataGridTTC.BackgroundColor = System.Drawing.Color.White;
-            this.DataGridTTC.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DataGridTTC.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            this.DataGridTTC.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ButtonShadow;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -97,23 +97,23 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridTTC.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.DataGridTTC.ColumnHeadersHeight = 29;
-            this.DataGridTTC.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DataGridTTC.DoubleBuffered = true;
-            this.DataGridTTC.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.DataGridTTC.EnableHeadersVisualStyles = false;
-            this.DataGridTTC.GridColor = System.Drawing.Color.Black;
-            this.DataGridTTC.HeaderBgColor = System.Drawing.SystemColors.ButtonShadow;
-            this.DataGridTTC.HeaderForeColor = System.Drawing.Color.Navy;
-            this.DataGridTTC.Location = new System.Drawing.Point(0, 0);
-            this.DataGridTTC.Margin = new System.Windows.Forms.Padding(4);
-            this.DataGridTTC.Name = "DataGridTTC";
-            this.DataGridTTC.ReadOnly = true;
-            this.DataGridTTC.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.DataGridTTC.RowHeadersWidth = 51;
-            this.DataGridTTC.Size = new System.Drawing.Size(1087, 564);
-            this.DataGridTTC.TabIndex = 0;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.ColumnHeadersHeight = 29;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.DoubleBuffered = true;
+            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.dataGridView1.EnableHeadersVisualStyles = false;
+            this.dataGridView1.GridColor = System.Drawing.Color.Black;
+            this.dataGridView1.HeaderBgColor = System.Drawing.SystemColors.ButtonShadow;
+            this.dataGridView1.HeaderForeColor = System.Drawing.Color.Navy;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(1087, 564);
+            this.dataGridView1.TabIndex = 0;
             // 
             // panel1
             // 
@@ -345,7 +345,7 @@
             this.Load += new System.EventHandler(this.ThongTinChung_Load);
             this.Panel_NoiDung.ResumeLayout(false);
             this.Panel_NDThongTin.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridTTC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -360,7 +360,7 @@
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox bunifuTextBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel Panel_NDThongTin;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid DataGridTTC;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid dataGridView1;
         private System.Windows.Forms.ComboBox Loc_ThongTinChung;
     }
 }

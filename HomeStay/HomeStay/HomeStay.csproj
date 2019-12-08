@@ -142,6 +142,18 @@
     <Compile Include="CaiDat_CauHinh.Designer.cs">
       <DependentUpon>CaiDat_CauHinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="CaiDat_DsTang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CaiDat_DsTang.Designer.cs">
+      <DependentUpon>CaiDat_DsTang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CauHinh_ThemPhong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CauHinh_ThemPhong.Designer.cs">
+      <DependentUpon>CauHinh_ThemPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="CauHinh_ThongTinNhanVien.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -354,6 +366,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CaiDat_CauHinh.resx">
       <DependentUpon>CaiDat_CauHinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CaiDat_DsTang.resx">
+      <DependentUpon>CaiDat_DsTang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CauHinh_ThemPhong.resx">
+      <DependentUpon>CauHinh_ThemPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CauHinh_ThongTinNhanVien.resx">
       <DependentUpon>CauHinh_ThongTinNhanVien.cs</DependentUpon>

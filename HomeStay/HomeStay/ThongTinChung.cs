@@ -36,7 +36,7 @@ namespace HomeStay
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            DataGridTTC.DataSource = dt;
+            dataGridView1.DataSource = dt;
             conn.Close();
 
         }
@@ -51,7 +51,7 @@ namespace HomeStay
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            DataGridTTC.DataSource = dt;
+            dataGridView1.DataSource = dt;
             conn.Close();
         }
 
@@ -65,7 +65,7 @@ namespace HomeStay
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            DataGridTTC.DataSource = dt;
+            dataGridView1.DataSource = dt;
             conn.Close();
         }
 
@@ -79,7 +79,7 @@ namespace HomeStay
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            DataGridTTC.DataSource = dt;
+            dataGridView1.DataSource = dt;
             conn.Close();
         }
     }
