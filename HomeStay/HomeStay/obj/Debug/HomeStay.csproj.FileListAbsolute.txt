@@ -503,3 +503,4 @@ C:\Users\Tran Huy Win\Desktop\homestay_test\HOME132-master\HomeStay\HomeStay\obj
 C:\Users\Tran Huy Win\Desktop\homestay_test\HOME132-master\HomeStay\HomeStay\obj\Debug\HomeStay.exe
 C:\Users\Tran Huy Win\Desktop\homestay_test\HOME132-master\HomeStay\HomeStay\obj\Debug\HomeStay.pdb
 C:\Users\Tran Huy Win\Desktop\homestay_test\HOME132-master\HomeStay\HomeStay\obj\Debug\HomeStay.CauHinh_ThongTinNhanVien.resources
+D:\IT008 Lập trình trực quan\HomeStay_Git\HomeStay\HomeStay\obj\Debug\HomeStay.CauHinh_ThongTinNhanVien.resources

@@ -8,7 +8,7 @@ namespace HomeStay
 {
     public static class DataSource
     {
-        public static string connectionString = @"Data Source=SE140697\SQLEXPRESS;Initial Catalog = HOMESTAY; Integrated Security = True";
+        public static string connectionString = @"Data Source=LAPTOP-4BQDKGPF;Initial Catalog=HomeStay;Integrated Security=True";
     }
 
 }

@@ -22,8 +22,11 @@ namespace HomeStay
 
     
 
-        private void btNhanVien_Click(object sender, EventArgs e)
+    
+
+        private void btNhanVien_Click_1(object sender, EventArgs e)
         {
+            PanelCauHinh.Show();
             CtrTTNV.BringToFront();
         }
     }

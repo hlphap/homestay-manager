@@ -117,6 +117,7 @@ namespace HomeStay
 
         private void btSetting_Click(object sender, EventArgs e)
         {
+            setting.PanelCauHinh.Hide();
             setting.BringToFront();
         }
     }
