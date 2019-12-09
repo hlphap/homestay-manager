@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Data.Common;
 namespace HomeStay
 {
     public partial class ThongTinChung : UserControl
@@ -29,57 +30,73 @@ namespace HomeStay
       
         private void ThongTinChung_Load(object sender, EventArgs e)
         {
-            conn.Open();
-            string sql = "SELECT SOPHONG as 'Số phòng', MADK as 'Mã đặt phòng', HOTENKH as 'Họ tên', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE WHERE KHACHHANG.MAKH = PHONGTHUE.MAKH";
-            SqlCommand cmd = new SqlCommand(sql, conn);
-            cmd.CommandType = CommandType.Text;
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            dataGridView1.DataSource = dt;
-            conn.Close();
-
+            SeDen_Click(sender, e);
         }
+               
 
-        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        private void SeDen_Click(object sender, EventArgs e)
         {
+            
             conn.Open();
-
-            string sql = "SELECT SOPHONG as 'Số phòng', MADK as 'Mã đặt phòng', HOTENKH as 'Họ tên', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE WHERE KHACHHANG.MAKH = PHONGTHUE.MAKH AND NGAYDEN < '" + DateTime.Today + "'";
+            string sql = "SELECT SOPHONG as 'Số phòng', MADK as 'Mã đặt phòng', HOTENKH as 'Họ tên', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE WHERE KHACHHANG.MAKH = PHONGTHUE.MAKH AND GETDATE() < NGAYDEN";
             SqlCommand cmd = new SqlCommand(sql, conn);
             cmd.CommandType = CommandType.Text;
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
-            conn.Close();
-        }
-
-        private void bunifuFlatButton2_Click(object sender, EventArgs e)
-        {
-            conn.Open();
-
-            string sql = "SELECT SOPHONG as 'Số phòng', MADK as 'Mã đặt phòng', HOTENKH as 'Họ tên', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE WHERE KHACHHANG.MAKH = PHONGTHUE.MAKH AND NGAYDEN > '" + DateTime.Today + "' AND NGAYDI <'"+ DateTime.Today+ "'";
-            SqlCommand cmd = new SqlCommand(sql, conn);
-            cmd.CommandType = CommandType.Text;
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            dataGridView1.DataSource = dt;
+            if (dataGridView1.RowCount == 0)
+            {
+                msbRong.Show();
+            }
+            else
+            {
+                msbRong.Hide();
+            }
             conn.Close();
         }
 
-        private void bunifuFlatButton3_Click(object sender, EventArgs e)
+        private void SeDi_Click(object sender, EventArgs e)
         {
             conn.Open();
-
-            string sql = "SELECT SOPHONG as 'Số phòng', MADK as 'Mã đặt phòng', HOTENKH as 'Họ tên', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE WHERE KHACHHANG.MAKH = PHONGTHUE.MAKH AND NGAYDEN > '" + DateTime.Today + "' AND NGAYDI <'" + DateTime.Today + "'";
+            string sql = "SELECT SOPHONG as 'Số phòng', MADK as 'Mã đặt phòng', HOTENKH as 'Họ tên', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE WHERE KHACHHANG.MAKH = PHONGTHUE.MAKH AND GETDATE() = NGAYDI";
             SqlCommand cmd = new SqlCommand(sql, conn);
             cmd.CommandType = CommandType.Text;
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
+            if (dataGridView1.RowCount==0)
+            {
+                msbRong.Show();
+            }
+            else
+            {
+                msbRong.Hide();
+            }
+            conn.Close();
+        }
+
+        private void DangO_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+           
+
+            string sql = "SELECT SOPHONG as 'Số phòng', MADK as 'Mã đặt phòng', HOTENKH as 'Họ tên', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE WHERE KHACHHANG.MAKH = PHONGTHUE.MAKH AND NGAYDEN<GETDATE() AND NGAYDI > GETDATE()";
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            cmd.CommandType = CommandType.Text;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+            if (dataGridView1.RowCount == 0)
+            {
+                msbRong.Show();
+            }
+            else
+            {
+                msbRong.Hide();
+            }
             conn.Close();
         }
     }
