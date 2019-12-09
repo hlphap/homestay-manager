@@ -32,25 +32,68 @@ namespace HomeStay
             dataGridView1.DataSource = dt;
         }
 
-        private void listView1_Click(object sender, EventArgs e)
-        {
-            
-        }
 
         private void ButtonTimKiem_Click(object sender, EventArgs e)
         {
-            string sql = "INSERT INTO PHONG (TANG , SOPHONG, LOAIPHONG, GIAPHONG, TRANGTHAI) values ("+Tang.Text+",'"+SoPhong.Text + "','" + LoaiPhong.Text + "'," + GiaPhong.Text + "," + TrangThai.Text + ")";
-            SqlCommand cmd = new SqlCommand(sql, conn);
-            cmd.ExecuteNonQuery();
-            showdata();
+            Sua.Enabled = false;
+            xoa.Enabled = false;
+            if(ButtonTimKiem.Text == "Luu")
+            {
+                if (SoPhong.Text == "")
+                    MessageBox.Show("khong duoc de so phong trong");
+                else if (LoaiPhong.Text == "")
+                    MessageBox.Show("khong duoc de loai phong trong");
+                else if (GiaPhong.Text == "")
+                    MessageBox.Show("khong duoc de gia phong trong");
+                else if (Tang.Text == "")
+                    MessageBox.Show("khong duoc de tang trong");
+                else if (TrangThai.Text == "")
+                    MessageBox.Show("khong duoc de trang thai trong");
+                else
+                {
+                    try
+                    {
+                        string sql = "INSERT INTO PHONG (TANG , SOPHONG, LOAIPHONG, GIAPHONG, TRANGTHAI) values (" + Tang.Text + ",'" + SoPhong.Text + "','" + LoaiPhong.Text + "'," + GiaPhong.Text + "," + TrangThai.Text + ")";
+                        SqlCommand cmd = new SqlCommand(sql, conn);
+                        cmd.ExecuteNonQuery();
+                        showdata();
+                        MessageBox.Show("Luu thanh cong");
+                    }
+                    catch
+                    {
+                        MessageBox.Show("trung so phong, vui long kiem tra lai");
+                    }
+                }
+            }
+            ButtonTimKiem.Text = "Luu";
+
         }
 
         private void Sua_Click(object sender, EventArgs e)
         {
-            string sql = "UPDATE PHONG SET TANG =" + Tang.Text + ", SOPHONG = '" + SoPhong.Text + "', LOAIPHONG = '" + LoaiPhong.Text + "',GIAPHONG = " + GiaPhong.Text + ", TRANGTHAI = " + TrangThai.Text + " WHERE SOPHONG = '"+SoPhong.Text + "'";
-            SqlCommand cmd = new SqlCommand(sql, conn);
-            cmd.ExecuteNonQuery();
-            showdata();
+            if (SoPhong.Text == "")
+                MessageBox.Show("khong duoc de so phong trong");
+            else if (LoaiPhong.Text == "")
+                MessageBox.Show("khong duoc de loai phong trong");
+            else if (GiaPhong.Text == "")
+                MessageBox.Show("khong duoc de gia phong trong");
+            else if (Tang.Text == "")
+                MessageBox.Show("khong duoc de tang trong");
+            else if (TrangThai.Text == "")
+                MessageBox.Show("khong duoc de trang thai trong");
+            else
+                try
+                {
+                    string sql = "UPDATE PHONG SET TANG =" + Tang.Text + ", SOPHONG = '" + SoPhong.Text + "', LOAIPHONG = '" + LoaiPhong.Text + "',GIAPHONG = " + GiaPhong.Text + ", TRANGTHAI = " + TrangThai.Text + " WHERE SOPHONG = '" + SoPhong.Text + "'";
+                    SqlCommand cmd = new SqlCommand(sql, conn);
+                    cmd.ExecuteNonQuery();
+                    showdata();
+                    MessageBox.Show("Sua thanh cong");
+                }
+                catch
+                {
+                    MessageBox.Show("Loi so phong, vui long kiem tra lai");
+                }
         }
 
         private void xoa_Click(object sender, EventArgs e)
@@ -59,11 +102,7 @@ namespace HomeStay
             SqlCommand cmd = new SqlCommand(sql, conn);
             cmd.ExecuteNonQuery();
             showdata();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
+            MessageBox.Show("Xoa thanh cong");
         }
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
@@ -75,6 +114,14 @@ namespace HomeStay
             GiaPhong.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
             Tang.Text = dataGridView1.Rows[i].Cells[3].Value.ToString();
             TrangThai.Text = dataGridView1.Rows[i].Cells[4].Value.ToString();
+        }
+
+        private void btn_TroLai_Click(object sender, EventArgs e)
+        {
+            Sua.Enabled = true;
+            xoa.Enabled = true;
+            ButtonTimKiem.Enabled = true;
+            ButtonTimKiem.Text = "Thêm";
         }
     }
 }

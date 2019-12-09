@@ -17,35 +17,63 @@ namespace HomeStay
         {
             InitializeComponent();
             conn.Open();
-
-            string sql = " select TANG as 'Tầng', SOPHONG 'Số Phòng', LOAIPHONG as'Loại Phòng', GIAPHONG as 'Giá Phòng', TRANGTHAI as'Trạng Thái' FROM PHONG ";
-            SqlCommand cmd = new SqlCommand(sql, conn);
-            cmd.CommandType = CommandType.Text;
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            DataGrid_DSTang.DataSource = dt;
+            showdata();
+            themtang.Hide();
         }
         
-        private void ChonTang_SelectedValueChanged(object sender, EventArgs e)
+        void showdata()
         {
-
-        }
-
-
-        private void Tangtxt_TextChange(object sender, EventArgs e)
-        {
-            string sql = " select TANG as 'Tầng', SOPHONG 'Số Phòng', LOAIPHONG as'Loại Phòng', GIAPHONG as 'Giá Phòng', TRANGTHAI as'Trạng Thái' FROM PHONG WHERE TANG = ";
-
-            if (Tangtxt.Text != null)
-                 sql = " select TANG as 'Tầng', SOPHONG 'Số Phòng', LOAIPHONG as'Loại Phòng', GIAPHONG as 'Giá Phòng', TRANGTHAI as'Trạng Thái' FROM PHONG WHERE TANG = " + Tangtxt.Text;
-
+            string sql = " select TANG.TANG as 'Tầng' FROM TANG ";
             SqlCommand cmd = new SqlCommand(sql, conn);
             cmd.CommandType = CommandType.Text;
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             da.Fill(dt);
             DataGrid_DSTang.DataSource = dt;
+        }
+        private void Tangtxt_TextChange(object sender, EventArgs e)
+        {
+            string sql = " select TANG as 'Tầng', SOPHONG 'Số Phòng', LOAIPHONG as'Loại Phòng', GIAPHONG as 'Giá Phòng', TRANGTHAI as'Trạng Thái' FROM PHONG";
+            if (Tangtxt.Text != "")
+                 sql = " select TANG as 'Tầng', SOPHONG 'Số Phòng', LOAIPHONG as'Loại Phòng', GIAPHONG as 'Giá Phòng', TRANGTHAI as'Trạng Thái' FROM PHONG WHERE TANG = " + Tangtxt.Text;
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            cmd.CommandType = CommandType.Text;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            DataGrid_DSTang.DataSource = dt;
+        }
+
+        private void ButtonTimKiem_Click(object sender, EventArgs e)
+        {
+            xoa.Enabled = false;
+            themtang.Show();
+            if (ButtonTimKiem.Text =="Luu")
+            {
+                try
+                {
+                    string sql = "INSERT INTO TANG(TANG) VALUES (" + themtang.Text + ")";
+                    SqlCommand cmd = new SqlCommand(sql, conn);
+                    cmd.ExecuteNonQuery();
+                    showdata();
+                    MessageBox.Show("Them thanh cong");
+                    xoa.Enabled = true;
+                }
+                catch
+                {
+                    MessageBox.Show("loi them tang, vui  long kiem tra lai");
+                }
+            }
+            ButtonTimKiem.Text = "Luu";
+        }
+
+        private void xoa_Click(object sender, EventArgs e)
+        {
+            string sql = "DELETE FROM PHONG WHERE SOPHONG ='" + Tangtxt.Text + "'";
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            cmd.ExecuteNonQuery();
+            showdata();
+            MessageBox.Show("Xoa thanh cong");
         }
     }
 }
