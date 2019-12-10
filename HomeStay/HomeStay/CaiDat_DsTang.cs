@@ -33,15 +33,22 @@ namespace HomeStay
         }
         private void Tangtxt_TextChange(object sender, EventArgs e)
         {
-            string sql = " select TANG as 'Tầng', SOPHONG 'Số Phòng', LOAIPHONG as'Loại Phòng', GIAPHONG as 'Giá Phòng', TRANGTHAI as'Trạng Thái' FROM PHONG";
-            if (Tangtxt.Text != "")
-                 sql = " select TANG as 'Tầng', SOPHONG 'Số Phòng', LOAIPHONG as'Loại Phòng', GIAPHONG as 'Giá Phòng', TRANGTHAI as'Trạng Thái' FROM PHONG WHERE TANG = " + Tangtxt.Text;
-            SqlCommand cmd = new SqlCommand(sql, conn);
-            cmd.CommandType = CommandType.Text;
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            DataGrid_DSTang.DataSource = dt;
+            try
+            {
+                string sql = " select TANG as 'Tầng', SOPHONG 'Số Phòng', LOAIPHONG as'Loại Phòng', GIAPHONG as 'Giá Phòng', TRANGTHAI as'Trạng Thái' FROM PHONG";
+                if (Tangtxt.Text != "")
+                    sql = " select TANG as 'Tầng', SOPHONG 'Số Phòng', LOAIPHONG as'Loại Phòng', GIAPHONG as 'Giá Phòng', TRANGTHAI as'Trạng Thái' FROM PHONG WHERE TANG = " + Tangtxt.Text;
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.CommandType = CommandType.Text;
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                DataGrid_DSTang.DataSource = dt;
+            }
+            catch
+            {
+                MessageBox.Show("tai du lieu tang that bai");
+            }
         }
 
         private void ButtonTimKiem_Click(object sender, EventArgs e)
@@ -69,11 +76,20 @@ namespace HomeStay
 
         private void xoa_Click(object sender, EventArgs e)
         {
-            string sql = "DELETE FROM PHONG WHERE SOPHONG ='" + Tangtxt.Text + "'";
-            SqlCommand cmd = new SqlCommand(sql, conn);
-            cmd.ExecuteNonQuery();
-            showdata();
-            MessageBox.Show("Xoa thanh cong");
+            themtang.PlaceholderText = "Tầng Xóa";
+            try
+            {
+                string sql = "DELETE FROM PHONG WHERE SOPHONG ='" + themtang.Text + "'";
+
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.ExecuteNonQuery();
+                showdata();
+                MessageBox.Show("Xoa thanh cong");
+            }
+            catch
+            {
+                MessageBox.Show("xoa that bai");
+            }
         }
     }
 }
