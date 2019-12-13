@@ -46,6 +46,16 @@ namespace HomeStay
                     PanelNoiDung.Controls.Add(setting);
                 }));
             });
+            if (Sign_in.ChucVu == "1")
+            {
+                btSetting.Enabled = true;
+                btSetting.Visible = true;
+            }
+            else
+            {
+                btSetting.Enabled = false;
+                btSetting.Visible = false;
+            }
             newThread.Start();
         }
         private void ButtonExit_Click(object sender, EventArgs e)

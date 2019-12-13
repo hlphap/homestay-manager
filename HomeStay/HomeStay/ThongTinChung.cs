@@ -17,6 +17,7 @@ namespace HomeStay
         public ThongTinChung()
         {
             InitializeComponent();
+            Tester.Text = Sign_in.ChucVu;
         }
         SqlConnection conn = new SqlConnection(DataSource.connectionString);
 

@@ -45,13 +45,22 @@ namespace HomeStay
             Trangthaitxt.DisplayMember = "TRANGTHAI";
             Trangthaitxt.ValueMember = "TRANGTHAI";
 
-            sql4 = "SELECT SOPHONG as 'Số phòng', MADK as 'Mã đặt phòng', HOTENKH as 'Họ tên', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE WHERE KHACHHANG.MAKH = PHONGTHUE.MAKH";
-            SqlCommand cmd4 = new SqlCommand(sql4, conn);
-            cmd4.CommandType = CommandType.Text;
-            SqlDataAdapter da4 = new SqlDataAdapter(cmd4);
-            DataTable dt4 = new DataTable();
-            da4.Fill(dt4);
-            bunifuCustomDataGrid1.DataSource = dt4;
+            
+            string sql4 = "SELECT SOPHONG as 'Số phòng', MADK as 'Mã đặt phòng', HOTENKH as 'Họ tên', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE WHERE KHACHHANG.MAKH = PHONGTHUE.MAKH AND GETDATE() < NGAYDEN";
+            SqlCommand cmd = new SqlCommand(sql4, conn);
+            cmd.CommandType = CommandType.Text;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            GridView.DataSource = dt;
+            if (GridView.RowCount == 0)
+            {
+                msbRong.Show();
+            }
+            else
+            {
+                msbRong.Hide();
+            }
             conn.Close();
         }
 
@@ -60,17 +69,17 @@ namespace HomeStay
             conn.Open();
             if (Madatphongtxt.Text != null)
             {
-                sql4 += " AND MADK = '" + Madatphongtxt.Text + "'";
+                sql4 += " AND MADK LIKE '% " + Madatphongtxt.Text + "%'";
             }
 
             if(Tenkhachtxt.Text!= null)
             {
                
-                sql4 += " AND HOTENKH = '" + Tenkhachtxt.Text + "'";
+                sql4 += " AND HOTENKH LIKE '%" + Tenkhachtxt.Text + "%'";
             }
 
             if (Sophongtxt.ValueMember != null)
-                sql4 += "AND SOPHONG = '" + Sophongtxt.Text + "'";
+                sql4 += "AND SOPHONG LIKE '% " + Sophongtxt.Text + "%'";
             /*if(Loaiphongtxt.ValueMember != null)
                 sql4 += "AND LOAIPHONG = '" + Loaiphongtxt.Text + "'";
             if (Trangthaitxt.ValueMember != null)
@@ -81,9 +90,8 @@ namespace HomeStay
             SqlDataAdapter da4 = new SqlDataAdapter(cmd4);
             DataTable dt4 = new DataTable();
             da4.Fill(dt4);
-            bunifuCustomDataGrid1.DataSource = dt4;
+            GridView.DataSource = dt4;
             conn.Close();
-            sql4 = "SELECT SOPHONG as 'Số phòng', MADK as 'Mã đặt phòng', HOTENKH as 'Họ tên', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE WHERE KHACHHANG.MAKH = PHONGTHUE.MAKH";
         }
     }
 }

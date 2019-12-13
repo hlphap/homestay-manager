@@ -69,15 +69,13 @@
             this.bunifuButton8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.btAdd = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.x1Phong1 = new HomeStay.x1Phong();
             this.bunifuGradientPanel1.SuspendLayout();
-            this.PanelNoiDung.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuGradientPanel1
             // 
+            this.bunifuGradientPanel1.AutoScroll = true;
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuGradientPanel1.Controls.Add(this.PanelNoiDung);
@@ -96,14 +94,17 @@
             // 
             // PanelNoiDung
             // 
+            this.PanelNoiDung.AutoScroll = true;
+            this.PanelNoiDung.AutoScrollMargin = new System.Drawing.Size(2, 2);
+            this.PanelNoiDung.AutoScrollMinSize = new System.Drawing.Size(2, 2);
+            this.PanelNoiDung.AutoSize = true;
             this.PanelNoiDung.BackColor = System.Drawing.Color.Transparent;
-            this.PanelNoiDung.Controls.Add(this.btAdd);
-            this.PanelNoiDung.Controls.Add(this.x1Phong1);
             this.PanelNoiDung.Location = new System.Drawing.Point(4, 55);
             this.PanelNoiDung.Margin = new System.Windows.Forms.Padding(4);
             this.PanelNoiDung.Name = "PanelNoiDung";
             this.PanelNoiDung.Size = new System.Drawing.Size(1079, 563);
             this.PanelNoiDung.TabIndex = 5;
+            this.PanelNoiDung.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelNoiDung_Paint);
             // 
             // panel1
             // 
@@ -711,50 +712,6 @@
             this.bunifuButton6.TextMarginLeft = 0;
             this.bunifuButton6.UseDefaultRadiusAndThickness = true;
             // 
-            // btAdd
-            // 
-            this.btAdd.Active = false;
-            this.btAdd.Activecolor = System.Drawing.Color.Transparent;
-            this.btAdd.BackColor = System.Drawing.Color.Transparent;
-            this.btAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btAdd.BorderRadius = 0;
-            this.btAdd.ButtonText = "";
-            this.btAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btAdd.DisabledColor = System.Drawing.Color.Gray;
-            this.btAdd.Iconcolor = System.Drawing.Color.Transparent;
-            this.btAdd.Iconimage = ((System.Drawing.Image)(resources.GetObject("btAdd.Iconimage")));
-            this.btAdd.Iconimage_right = null;
-            this.btAdd.Iconimage_right_Selected = null;
-            this.btAdd.Iconimage_Selected = null;
-            this.btAdd.IconMarginLeft = 0;
-            this.btAdd.IconMarginRight = 0;
-            this.btAdd.IconRightVisible = true;
-            this.btAdd.IconRightZoom = 0D;
-            this.btAdd.IconVisible = true;
-            this.btAdd.IconZoom = 100D;
-            this.btAdd.IsTab = false;
-            this.btAdd.Location = new System.Drawing.Point(267, 33);
-            this.btAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btAdd.Name = "btAdd";
-            this.btAdd.Normalcolor = System.Drawing.Color.Transparent;
-            this.btAdd.OnHovercolor = System.Drawing.Color.Transparent;
-            this.btAdd.OnHoverTextColor = System.Drawing.Color.White;
-            this.btAdd.selected = false;
-            this.btAdd.Size = new System.Drawing.Size(63, 54);
-            this.btAdd.TabIndex = 1;
-            this.btAdd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btAdd.Textcolor = System.Drawing.Color.White;
-            this.btAdd.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btAdd.Click += new System.EventHandler(this.btAdd_Click);
-            // 
-            // x1Phong1
-            // 
-            this.x1Phong1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(245)))), ((int)(((byte)(233)))));
-            this.x1Phong1.Location = new System.Drawing.Point(0, 0);
-            this.x1Phong1.Name = "x1Phong1";
-            this.x1Phong1.Size = new System.Drawing.Size(260, 120);
-            this.x1Phong1.TabIndex = 0;
-            // 
             // SoDoPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -763,8 +720,9 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SoDoPhong";
             this.Size = new System.Drawing.Size(1087, 622);
+            this.Load += new System.EventHandler(this.SoDoPhong_Load);
             this.bunifuGradientPanel1.ResumeLayout(false);
-            this.PanelNoiDung.ResumeLayout(false);
+            this.bunifuGradientPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -784,7 +742,5 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton8;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox bunifuTextBox1;
         private System.Windows.Forms.Panel PanelNoiDung;
-        private x1Phong x1Phong1;
-        private Bunifu.Framework.UI.BunifuFlatButton btAdd;
     }
 }

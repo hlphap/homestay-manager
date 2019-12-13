@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.LoaiPhong = new System.Windows.Forms.Label();
             this.SoPhong = new System.Windows.Forms.Label();
+            this.LoaiPhong = new System.Windows.Forms.Label();
             this.TrangThai = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -46,16 +46,6 @@
             this.panel1.Size = new System.Drawing.Size(85, 120);
             this.panel1.TabIndex = 0;
             // 
-            // LoaiPhong
-            // 
-            this.LoaiPhong.AutoSize = true;
-            this.LoaiPhong.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoaiPhong.Location = new System.Drawing.Point(3, 22);
-            this.LoaiPhong.Name = "LoaiPhong";
-            this.LoaiPhong.Size = new System.Drawing.Size(79, 19);
-            this.LoaiPhong.TabIndex = 0;
-            this.LoaiPhong.Text = "Phòng đơn";
-            // 
             // SoPhong
             // 
             this.SoPhong.AutoSize = true;
@@ -65,6 +55,16 @@
             this.SoPhong.Size = new System.Drawing.Size(23, 19);
             this.SoPhong.TabIndex = 1;
             this.SoPhong.Text = "01";
+            // 
+            // LoaiPhong
+            // 
+            this.LoaiPhong.AutoSize = true;
+            this.LoaiPhong.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoaiPhong.Location = new System.Drawing.Point(3, 22);
+            this.LoaiPhong.Name = "LoaiPhong";
+            this.LoaiPhong.Size = new System.Drawing.Size(79, 19);
+            this.LoaiPhong.TabIndex = 0;
+            this.LoaiPhong.Text = "Phòng đơn";
             // 
             // TrangThai
             // 
@@ -94,9 +94,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label SoPhong;
-        private System.Windows.Forms.Label LoaiPhong;
-        private System.Windows.Forms.Label TrangThai;
+        public System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.Label SoPhong;
+        public System.Windows.Forms.Label LoaiPhong;
+        public System.Windows.Forms.Label TrangThai;
     }
 }

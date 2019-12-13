@@ -98,18 +98,11 @@ namespace HomeStay
 
         private void xoa_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string sql = "DELETE FROM PHONG WHERE SOPHONG ='" + SoPhong.Text + "'";
-                SqlCommand cmd = new SqlCommand(sql, conn);
-                cmd.ExecuteNonQuery();
-                showdata();
-                MessageBox.Show("Xoa thanh cong");
-            }
-            catch
-            {
-                MessageBox.Show("Xoa that bai");
-            }
+            string sql = "DELETE FROM PHONG WHERE SOPHONG ='"+SoPhong.Text + "'";
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            cmd.ExecuteNonQuery();
+            showdata();
+            MessageBox.Show("Xoa thanh cong");
         }
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)

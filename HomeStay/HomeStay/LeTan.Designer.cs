@@ -54,7 +54,7 @@
             this.bunifuLabel3.Location = new System.Drawing.Point(7, 78);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(58, 19);
+            this.bunifuLabel3.Size = new System.Drawing.Size(66, 23);
             this.bunifuLabel3.TabIndex = 4;
             this.bunifuLabel3.Text = "Ngày tạo";
             this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -69,7 +69,7 @@
             this.bunifuLabel4.Location = new System.Drawing.Point(177, 78);
             this.bunifuLabel4.Name = "bunifuLabel4";
             this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel4.Size = new System.Drawing.Size(27, 19);
+            this.bunifuLabel4.Size = new System.Drawing.Size(33, 23);
             this.bunifuLabel4.TabIndex = 8;
             this.bunifuLabel4.Text = "Đến";
             this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -87,9 +87,10 @@
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.White;
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.White;
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(815, 505);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1087, 622);
             this.bunifuGradientPanel1.TabIndex = 0;
             // 
             // bunifuGradientPanel4
@@ -105,17 +106,19 @@
             this.bunifuGradientPanel4.GradientTopLeft = System.Drawing.Color.Navy;
             this.bunifuGradientPanel4.GradientTopRight = System.Drawing.Color.SpringGreen;
             this.bunifuGradientPanel4.Location = new System.Drawing.Point(0, 0);
+            this.bunifuGradientPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuGradientPanel4.Name = "bunifuGradientPanel4";
             this.bunifuGradientPanel4.Quality = 10;
-            this.bunifuGradientPanel4.Size = new System.Drawing.Size(815, 505);
+            this.bunifuGradientPanel4.Size = new System.Drawing.Size(1087, 622);
             this.bunifuGradientPanel4.TabIndex = 1;
             // 
             // PanelNoiDungLeTan
             // 
             this.PanelNoiDungLeTan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelNoiDungLeTan.Location = new System.Drawing.Point(0, 41);
+            this.PanelNoiDungLeTan.Location = new System.Drawing.Point(0, 50);
+            this.PanelNoiDungLeTan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PanelNoiDungLeTan.Name = "PanelNoiDungLeTan";
-            this.PanelNoiDungLeTan.Size = new System.Drawing.Size(815, 464);
+            this.PanelNoiDungLeTan.Size = new System.Drawing.Size(1087, 572);
             this.PanelNoiDungLeTan.TabIndex = 1;
             // 
             // ThanhCCLeTan
@@ -134,9 +137,10 @@
             this.ThanhCCLeTan.GradientTopLeft = System.Drawing.Color.Black;
             this.ThanhCCLeTan.GradientTopRight = System.Drawing.Color.DimGray;
             this.ThanhCCLeTan.Location = new System.Drawing.Point(0, 0);
+            this.ThanhCCLeTan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ThanhCCLeTan.Name = "ThanhCCLeTan";
             this.ThanhCCLeTan.Quality = 10;
-            this.ThanhCCLeTan.Size = new System.Drawing.Size(815, 41);
+            this.ThanhCCLeTan.Size = new System.Drawing.Size(1087, 50);
             this.ThanhCCLeTan.TabIndex = 0;
             // 
             // bunifuFlatButton4
@@ -162,13 +166,14 @@
             this.bunifuFlatButton4.IconVisible = true;
             this.bunifuFlatButton4.IconZoom = 90D;
             this.bunifuFlatButton4.IsTab = true;
-            this.bunifuFlatButton4.Location = new System.Drawing.Point(526, 0);
+            this.bunifuFlatButton4.Location = new System.Drawing.Point(702, 0);
+            this.bunifuFlatButton4.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.bunifuFlatButton4.Name = "bunifuFlatButton4";
             this.bunifuFlatButton4.Normalcolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton4.OnHovercolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton4.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.bunifuFlatButton4.selected = false;
-            this.bunifuFlatButton4.Size = new System.Drawing.Size(171, 41);
+            this.bunifuFlatButton4.Size = new System.Drawing.Size(228, 50);
             this.bunifuFlatButton4.TabIndex = 5;
             this.bunifuFlatButton4.Text = "Danh Sách Khách";
             this.bunifuFlatButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -199,13 +204,14 @@
             this.bunifuFlatButton5.IconVisible = true;
             this.bunifuFlatButton5.IconZoom = 90D;
             this.bunifuFlatButton5.IsTab = true;
-            this.bunifuFlatButton5.Location = new System.Drawing.Point(398, 0);
+            this.bunifuFlatButton5.Location = new System.Drawing.Point(531, 0);
+            this.bunifuFlatButton5.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.bunifuFlatButton5.Name = "bunifuFlatButton5";
             this.bunifuFlatButton5.Normalcolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton5.OnHovercolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton5.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.bunifuFlatButton5.selected = false;
-            this.bunifuFlatButton5.Size = new System.Drawing.Size(128, 41);
+            this.bunifuFlatButton5.Size = new System.Drawing.Size(171, 50);
             this.bunifuFlatButton5.TabIndex = 4;
             this.bunifuFlatButton5.Text = "Khách đã đi";
             this.bunifuFlatButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -236,13 +242,14 @@
             this.bunifuFlatButton3.IconVisible = true;
             this.bunifuFlatButton3.IconZoom = 90D;
             this.bunifuFlatButton3.IsTab = true;
-            this.bunifuFlatButton3.Location = new System.Drawing.Point(270, 0);
+            this.bunifuFlatButton3.Location = new System.Drawing.Point(360, 0);
+            this.bunifuFlatButton3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.bunifuFlatButton3.Name = "bunifuFlatButton3";
             this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton3.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.bunifuFlatButton3.selected = false;
-            this.bunifuFlatButton3.Size = new System.Drawing.Size(128, 41);
+            this.bunifuFlatButton3.Size = new System.Drawing.Size(171, 50);
             this.bunifuFlatButton3.TabIndex = 3;
             this.bunifuFlatButton3.Text = "Khách sẽ đi";
             this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -273,13 +280,14 @@
             this.bunifuFlatButton2.IconVisible = true;
             this.bunifuFlatButton2.IconZoom = 90D;
             this.bunifuFlatButton2.IsTab = true;
-            this.bunifuFlatButton2.Location = new System.Drawing.Point(128, 0);
+            this.bunifuFlatButton2.Location = new System.Drawing.Point(171, 0);
+            this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.bunifuFlatButton2.Name = "bunifuFlatButton2";
             this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.bunifuFlatButton2.selected = false;
-            this.bunifuFlatButton2.Size = new System.Drawing.Size(142, 41);
+            this.bunifuFlatButton2.Size = new System.Drawing.Size(189, 50);
             this.bunifuFlatButton2.TabIndex = 2;
             this.bunifuFlatButton2.Text = "Khách sẽ đến";
             this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -311,12 +319,13 @@
             this.bunifuFlatButton1.IconZoom = 90D;
             this.bunifuFlatButton1.IsTab = true;
             this.bunifuFlatButton1.Location = new System.Drawing.Point(0, 0);
+            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.bunifuFlatButton1.selected = true;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(128, 41);
+            this.bunifuFlatButton1.Size = new System.Drawing.Size(171, 50);
             this.bunifuFlatButton1.TabIndex = 1;
             this.bunifuFlatButton1.Text = "Đặt phòng";
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -326,11 +335,13 @@
             // 
             // LeTan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.bunifuGradientPanel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "LeTan";
-            this.Size = new System.Drawing.Size(815, 505);
+            this.Size = new System.Drawing.Size(1087, 622);
+            this.Load += new System.EventHandler(this.LeTan_Load);
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel4.ResumeLayout(false);
             this.ThanhCCLeTan.ResumeLayout(false);
