@@ -37,14 +37,14 @@
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             this.Panel_NoiDung = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.Panel_NDThongTin = new System.Windows.Forms.Panel();
+            this.msbRong = new System.Windows.Forms.Label();
             this.dataGridView1 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Loc_ThongTinChung = new System.Windows.Forms.ComboBox();
-            this.Tester = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
+            this.Search = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
+            this.ComboBoxSearch = new System.Windows.Forms.ComboBox();
             this.btnDangO = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnSeDi = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnSeDen = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.msbRong = new System.Windows.Forms.Label();
             this.Panel_NoiDung.SuspendLayout();
             this.Panel_NDThongTin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -80,6 +80,18 @@
             this.Panel_NDThongTin.Name = "Panel_NDThongTin";
             this.Panel_NDThongTin.Size = new System.Drawing.Size(1087, 564);
             this.Panel_NDThongTin.TabIndex = 1;
+            // 
+            // msbRong
+            // 
+            this.msbRong.AutoSize = true;
+            this.msbRong.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msbRong.ForeColor = System.Drawing.Color.Red;
+            this.msbRong.Location = new System.Drawing.Point(337, 101);
+            this.msbRong.Name = "msbRong";
+            this.msbRong.Size = new System.Drawing.Size(336, 28);
+            this.msbRong.TabIndex = 1;
+            this.msbRong.Text = "Không tìm thấy thông tin đặt phòng";
+            this.msbRong.Visible = false;
             // 
             // dataGridView1
             // 
@@ -120,8 +132,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.Loc_ThongTinChung);
-            this.panel1.Controls.Add(this.Tester);
+            this.panel1.Controls.Add(this.Search);
+            this.panel1.Controls.Add(this.ComboBoxSearch);
             this.panel1.Controls.Add(this.btnDangO);
             this.panel1.Controls.Add(this.btnSeDi);
             this.panel1.Controls.Add(this.btnSeDen);
@@ -132,97 +144,98 @@
             this.panel1.Size = new System.Drawing.Size(1087, 50);
             this.panel1.TabIndex = 0;
             // 
-            // Loc_ThongTinChung
+            // Search
             // 
-            this.Loc_ThongTinChung.BackColor = System.Drawing.Color.White;
-            this.Loc_ThongTinChung.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Loc_ThongTinChung.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
-            this.Loc_ThongTinChung.FormattingEnabled = true;
-            this.Loc_ThongTinChung.Items.AddRange(new object[] {
-            "Phòng",
-            "Tên khách",
-            "Ngày đến",
-            "Thời gian ở"});
-            this.Loc_ThongTinChung.Location = new System.Drawing.Point(916, 9);
-            this.Loc_ThongTinChung.Margin = new System.Windows.Forms.Padding(4);
-            this.Loc_ThongTinChung.Name = "Loc_ThongTinChung";
-            this.Loc_ThongTinChung.Size = new System.Drawing.Size(165, 29);
-            this.Loc_ThongTinChung.TabIndex = 0;
-            this.Loc_ThongTinChung.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
-            // 
-            // Tester
-            // 
-            this.Tester.AcceptsReturn = false;
-            this.Tester.AcceptsTab = false;
-            this.Tester.AnimationSpeed = 200;
-            this.Tester.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.Tester.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.Tester.BackColor = System.Drawing.Color.Transparent;
-            this.Tester.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Tester.BackgroundImage")));
-            this.Tester.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.Tester.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.Tester.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.Tester.BorderColorIdle = System.Drawing.Color.Silver;
-            this.Tester.BorderRadius = 1;
-            this.Tester.BorderThickness = 1;
-            this.Tester.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.Tester.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Tester.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
-            this.Tester.DefaultText = "";
-            this.Tester.FillColor = System.Drawing.Color.White;
-            this.Tester.HideSelection = true;
-            this.Tester.IconLeft = null;
-            this.Tester.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.Tester.IconPadding = 10;
-            this.Tester.IconRight = null;
-            this.Tester.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.Tester.Lines = new string[0];
-            this.Tester.Location = new System.Drawing.Point(621, 9);
-            this.Tester.Margin = new System.Windows.Forms.Padding(4);
-            this.Tester.MaxLength = 32767;
-            this.Tester.MinimumSize = new System.Drawing.Size(1, 1);
-            this.Tester.Modified = false;
-            this.Tester.Multiline = false;
-            this.Tester.Name = "Tester";
+            this.Search.AcceptsReturn = false;
+            this.Search.AcceptsTab = false;
+            this.Search.AnimationSpeed = 200;
+            this.Search.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.Search.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.Search.BackColor = System.Drawing.Color.Transparent;
+            this.Search.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Search.BackgroundImage")));
+            this.Search.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.Search.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.Search.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.Search.BorderColorIdle = System.Drawing.Color.Silver;
+            this.Search.BorderRadius = 25;
+            this.Search.BorderThickness = 1;
+            this.Search.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.Search.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Search.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.Search.DefaultText = "";
+            this.Search.FillColor = System.Drawing.Color.White;
+            this.Search.HideSelection = true;
+            this.Search.IconLeft = null;
+            this.Search.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.Search.IconPadding = 3;
+            this.Search.IconRight = ((System.Drawing.Image)(resources.GetObject("Search.IconRight")));
+            this.Search.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.Search.Lines = new string[0];
+            this.Search.Location = new System.Drawing.Point(639, 10);
+            this.Search.Margin = new System.Windows.Forms.Padding(4);
+            this.Search.MaxLength = 32767;
+            this.Search.MinimumSize = new System.Drawing.Size(1, 1);
+            this.Search.Modified = false;
+            this.Search.Multiline = false;
+            this.Search.Name = "Search";
             stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
             stateProperties1.FillColor = System.Drawing.Color.Empty;
             stateProperties1.ForeColor = System.Drawing.Color.Empty;
             stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.Tester.OnActiveState = stateProperties1;
-            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.Search.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.Empty;
             stateProperties2.FillColor = System.Drawing.Color.White;
             stateProperties2.ForeColor = System.Drawing.Color.Empty;
             stateProperties2.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.Tester.OnDisabledState = stateProperties2;
+            this.Search.OnDisabledState = stateProperties2;
             stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties3.FillColor = System.Drawing.Color.Empty;
             stateProperties3.ForeColor = System.Drawing.Color.Empty;
             stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.Tester.OnHoverState = stateProperties3;
+            this.Search.OnHoverState = stateProperties3;
             stateProperties4.BorderColor = System.Drawing.Color.Silver;
             stateProperties4.FillColor = System.Drawing.Color.White;
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.Tester.OnIdleState = stateProperties4;
-            this.Tester.PasswordChar = '\0';
-            this.Tester.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.Tester.PlaceholderText = "Lọc";
-            this.Tester.ReadOnly = false;
-            this.Tester.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.Tester.SelectedText = "";
-            this.Tester.SelectionLength = 0;
-            this.Tester.SelectionStart = 0;
-            this.Tester.ShortcutsEnabled = true;
-            this.Tester.Size = new System.Drawing.Size(259, 31);
-            this.Tester.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
-            this.Tester.TabIndex = 1;
-            this.Tester.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Tester.TextMarginBottom = 0;
-            this.Tester.TextMarginLeft = 5;
-            this.Tester.TextMarginTop = 0;
-            this.Tester.TextPlaceholder = "Lọc";
-            this.Tester.UseSystemPasswordChar = false;
-            this.Tester.WordWrap = true;
+            this.Search.OnIdleState = stateProperties4;
+            this.Search.PasswordChar = '\0';
+            this.Search.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.Search.PlaceholderText = "Tìm kiếm.....";
+            this.Search.ReadOnly = false;
+            this.Search.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Search.SelectedText = "";
+            this.Search.SelectionLength = 0;
+            this.Search.SelectionStart = 0;
+            this.Search.ShortcutsEnabled = true;
+            this.Search.Size = new System.Drawing.Size(259, 31);
+            this.Search.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.Search.TabIndex = 4;
+            this.Search.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Search.TextMarginBottom = 0;
+            this.Search.TextMarginLeft = 5;
+            this.Search.TextMarginTop = 0;
+            this.Search.TextPlaceholder = "Tìm kiếm.....";
+            this.Search.UseSystemPasswordChar = false;
+            this.Search.WordWrap = true;
+            this.Search.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnSearch_KeyDown);
+            this.Search.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Search_KeyPress);
+            // 
+            // ComboBoxSearch
+            // 
+            this.ComboBoxSearch.BackColor = System.Drawing.SystemColors.Window;
+            this.ComboBoxSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.ComboBoxSearch.FormattingEnabled = true;
+            this.ComboBoxSearch.Items.AddRange(new object[] {
+            "Số phòng",
+            "Mã ĐP",
+            "Họ tên",
+            "Ngày đến",
+            "Ngày đi"});
+            this.ComboBoxSearch.Location = new System.Drawing.Point(916, 11);
+            this.ComboBoxSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.ComboBoxSearch.Name = "ComboBoxSearch";
+            this.ComboBoxSearch.Size = new System.Drawing.Size(165, 29);
+            this.ComboBoxSearch.TabIndex = 0;
             // 
             // btnDangO
             // 
@@ -335,18 +348,6 @@
             this.btnSeDen.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeDen.Click += new System.EventHandler(this.SeDen_Click);
             // 
-            // msbRong
-            // 
-            this.msbRong.AutoSize = true;
-            this.msbRong.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msbRong.ForeColor = System.Drawing.Color.Red;
-            this.msbRong.Location = new System.Drawing.Point(337, 101);
-            this.msbRong.Name = "msbRong";
-            this.msbRong.Size = new System.Drawing.Size(336, 28);
-            this.msbRong.TabIndex = 1;
-            this.msbRong.Text = "Không tìm thấy thông tin đặt phòng";
-            this.msbRong.Visible = false;
-            // 
             // ThongTinChung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -372,11 +373,11 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnSeDen;
         private Bunifu.Framework.UI.BunifuFlatButton btnSeDi;
         private Bunifu.Framework.UI.BunifuFlatButton btnDangO;
-        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox Tester;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel Panel_NDThongTin;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dataGridView1;
-        private System.Windows.Forms.ComboBox Loc_ThongTinChung;
         private System.Windows.Forms.Label msbRong;
+        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox Search;
+        private System.Windows.Forms.ComboBox ComboBoxSearch;
     }
 }

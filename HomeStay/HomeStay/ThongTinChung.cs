@@ -13,91 +13,115 @@ namespace HomeStay
 {
     public partial class ThongTinChung : UserControl
     {
-        
+        private int btnclick = 1;
         public ThongTinChung()
         {
             InitializeComponent();
         }
-        SqlConnection conn = new SqlConnection(DataSource.connectionString);
 
-
-   
-
-        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-
-        }
-      
         private void ThongTinChung_Load(object sender, EventArgs e)
         {
-            SeDen_Click(sender, e);
+            string sql = "SELECT KHACHHANG.MAKH as 'Mã KH', MADK as 'Mã đặt phòng',  SOPHONG as 'Số phòng', HOTENKH as 'Họ tên', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE WHERE KHACHHANG.MAKH = PHONGTHUE.MAKH AND GETDATE() < NGAYDEN";
+            LoadData(sql);
         }
+        private void LoadData(string sql)
+        {
+            SqlConnection conn = new SqlConnection(DataSource.connectionString);
+            try
+            {
+                conn.Open(); 
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.CommandType = CommandType.Text;
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dataGridView1.DataSource = dt;
+                if (dataGridView1.RowCount == 0)
+                {
+                    msbRong.Show();
+                }
+                else
+                {
+                    msbRong.Hide();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi", "Lỗi kết nối Server");
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+        }
+     
                
 
         private void SeDen_Click(object sender, EventArgs e)
         {
-            
-            conn.Open();
-            string sql = "SELECT SOPHONG as 'Số phòng', MADK as 'Mã đặt phòng', HOTENKH as 'Họ tên', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE WHERE KHACHHANG.MAKH = PHONGTHUE.MAKH AND GETDATE() < NGAYDEN";
-            SqlCommand cmd = new SqlCommand(sql, conn);
-            cmd.CommandType = CommandType.Text;
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            dataGridView1.DataSource = dt;
-            if (dataGridView1.RowCount == 0)
-            {
-                msbRong.Show();
-            }
-            else
-            {
-                msbRong.Hide();
-            }
-            conn.Close();
+            string sql = "SELECT KHACHHANG.MAKH as 'Mã KH', MADK as 'Mã đặt phòng',  SOPHONG as 'Số phòng', HOTENKH as 'Họ tên', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE WHERE KHACHHANG.MAKH = PHONGTHUE.MAKH AND GETDATE() < NGAYDEN";
+            LoadData(sql);
+            btnclick = 1; 
         }
 
         private void SeDi_Click(object sender, EventArgs e)
         {
-            conn.Open();
-            string sql = "SELECT SOPHONG as 'Số phòng', MADK as 'Mã đặt phòng', HOTENKH as 'Họ tên', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE WHERE KHACHHANG.MAKH = PHONGTHUE.MAKH AND GETDATE() = NGAYDI";
-            SqlCommand cmd = new SqlCommand(sql, conn);
-            cmd.CommandType = CommandType.Text;
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            dataGridView1.DataSource = dt;
-            if (dataGridView1.RowCount==0)
-            {
-                msbRong.Show();
-            }
-            else
-            {
-                msbRong.Hide();
-            }
-            conn.Close();
+            btnclick = 2;
+            string sql = "SELECT KHACHHANG.MAKH as 'Mã KH', MADK as 'Mã đặt phòng',  SOPHONG as 'Số phòng', HOTENKH as 'Họ tên', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE WHERE KHACHHANG.MAKH = PHONGTHUE.MAKH AND GETDATE() = NGAYDI";
+            LoadData(sql);
+       
         }
 
         private void DangO_Click(object sender, EventArgs e)
         {
-            conn.Open();
-           
+            btnclick = 3;
+            string sql = "SELECT KHACHHANG.MAKH as 'Mã KH', MADK as 'Mã đặt phòng',  SOPHONG as 'Số phòng', HOTENKH as 'Họ tên', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE WHERE KHACHHANG.MAKH = PHONGTHUE.MAKH AND NGAYDEN<GETDATE() AND NGAYDI > GETDATE()";
+            LoadData(sql);
+      
+        }
 
-            string sql = "SELECT SOPHONG as 'Số phòng', MADK as 'Mã đặt phòng', HOTENKH as 'Họ tên', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE WHERE KHACHHANG.MAKH = PHONGTHUE.MAKH AND NGAYDEN<GETDATE() AND NGAYDI > GETDATE()";
-            SqlCommand cmd = new SqlCommand(sql, conn);
-            cmd.CommandType = CommandType.Text;
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            dataGridView1.DataSource = dt;
-            if (dataGridView1.RowCount == 0)
+        private void btnSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+           
+        }
+
+        private void Search_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string sql = "";
+            string TypeSearch = "";
+
+            switch (ComboBoxSearch.Text)
             {
-                msbRong.Show();
+                case "Số phòng":
+                    TypeSearch = "SOPHONG";
+                    break;
+                case "Họ tên":
+                    TypeSearch = "HOTENKH";
+                    break;
+                case "Mã ĐP":
+                    TypeSearch = "MADK";
+                    break;
+                default:
+                    TypeSearch = "HOTENKH";
+                    break;
             }
-            else
+            if (Search.Text != "")
             {
-                msbRong.Hide();
+                switch (btnclick)
+                {
+                    case 1:
+                        sql = string.Format("SELECT KHACHHANG.MAKH as 'Mã KH', MADK as 'Mã đặt phòng',  SOPHONG as 'Số phòng', HOTENKH as 'Họ tên', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi'  FROM KHACHHANG, PHONGTHUE WHERE (KHACHHANG.MAKH = PHONGTHUE.MAKH AND GETDATE() < NGAYDEN) AND (" + TypeSearch + " like N'%{0}%')", Search.Text);
+                        break;
+                    case 2:
+                        sql = string.Format("SELECT KHACHHANG.MAKH as 'Mã KH', MADK as 'Mã đặt phòng',  SOPHONG as 'Số phòng', HOTENKH as 'Họ tên', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi'  FROM KHACHHANG, PHONGTHUE WHERE (KHACHHANG.MAKH = PHONGTHUE.MAKH AND GETDATE() = NGAYDI) AND (" + TypeSearch + " like N'%{0}%')", Search.Text);
+                        break;
+                    case 3:
+                        sql = string.Format("SELECT KHACHHANG.MAKH as 'Mã KH', MADK as 'Mã đặt phòng',  SOPHONG as 'Số phòng', HOTENKH as 'Họ tên', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi'  FROM KHACHHANG, PHONGTHUE WHERE (KHACHHANG.MAKH = PHONGTHUE.MAKH AND NGAYDEN<GETDATE() AND NGAYDI > GETDATE()) AND (" + TypeSearch + " like N'%{0}%')", Search.Text);
+                        break;
+                }
+                LoadData(sql);
             }
-            conn.Close();
         }
     }
 }

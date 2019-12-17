@@ -34,13 +34,13 @@ namespace HomeStay
             comboBox2.DisplayMember = "LOAIPHONG";
             comboBox2.ValueMember = "LOAIPHONG";
 
-            string sql3 = "SELECT SOPHONG as 'Số phòng', MADK as 'Mã đặt phòng', HOTENKH as 'Họ tên', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE WHERE KHACHHANG.MAKH = PHONGTHUE.MAKH";
+            string sql3 = "SELECT SOPHONG as 'Số phòng', MADK as 'Mã đặt phòng', HOTENKH as 'Họ tên', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE WHERE KHACHHANG.MAKH = PHONGTHUE.MAKH AND GETDATE() = NGAYDEN";
             SqlCommand cmd3 = new SqlCommand(sql3, conn);
             cmd3.CommandType = CommandType.Text;
             SqlDataAdapter da3 = new SqlDataAdapter(cmd3);
             DataTable dt3 = new DataTable();
             da3.Fill(dt3);
-            bunifuCustomDataGrid1.DataSource = dt3;
+            GridViewDSKSD.DataSource = dt3;
             conn.Close();
         }
 

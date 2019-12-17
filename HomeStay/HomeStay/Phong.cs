@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace HomeStay
 {
-    public partial class x1Phong : UserControl
+    public partial class Phong : UserControl
     {
-        public x1Phong()
+        public Phong()
         {
             InitializeComponent();
+        }
+
+        private void x1Phong_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

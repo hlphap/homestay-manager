@@ -154,6 +154,18 @@
     <Compile Include="CauHinh_ThemPhong.Designer.cs">
       <DependentUpon>CauHinh_ThemPhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="CauHinh_ThongTinCHST.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CauHinh_ThongTinCHST.Designer.cs">
+      <DependentUpon>CauHinh_ThongTinCHST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CauHinh_ThongTinChung.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CauHinh_ThongTinChung.Designer.cs">
+      <DependentUpon>CauHinh_ThongTinChung.cs</DependentUpon>
+    </Compile>
     <Compile Include="CauHinh_ThongTinNhanVien.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -355,11 +367,11 @@
     <Compile Include="KhachLe_TuyChon.Designer.cs">
       <DependentUpon>KhachLe_TuyChon.cs</DependentUpon>
     </Compile>
-    <Compile Include="x1Phong.cs">
+    <Compile Include="Phong.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="x1Phong.Designer.cs">
-      <DependentUpon>x1Phong.cs</DependentUpon>
+    <Compile Include="Phong.Designer.cs">
+      <DependentUpon>Phong.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="BaoCao.resx">
       <DependentUpon>BaoCao.cs</DependentUpon>
@@ -372,6 +384,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CauHinh_ThemPhong.resx">
       <DependentUpon>CauHinh_ThemPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CauHinh_ThongTinCHST.resx">
+      <DependentUpon>CauHinh_ThongTinCHST.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CauHinh_ThongTinChung.resx">
+      <DependentUpon>CauHinh_ThongTinChung.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CauHinh_ThongTinNhanVien.resx">
       <DependentUpon>CauHinh_ThongTinNhanVien.cs</DependentUpon>
@@ -482,8 +500,8 @@
     <EmbeddedResource Include="KhachLe_TuyChon.resx">
       <DependentUpon>KhachLe_TuyChon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="x1Phong.resx">
-      <DependentUpon>x1Phong.cs</DependentUpon>
+    <EmbeddedResource Include="Phong.resx">
+      <DependentUpon>Phong.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

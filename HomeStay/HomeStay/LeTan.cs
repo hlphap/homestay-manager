@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace HomeStay
 {
@@ -21,14 +22,25 @@ namespace HomeStay
         public LeTan()
         {
             InitializeComponent();
-            PanelNoiDungLeTan.Controls.Add(CtrDP);
-            PanelNoiDungLeTan.Controls.Add(CtrKSD_LT);
-            PanelNoiDungLeTan.Controls.Add(CtrKSDi_LT);
-            PanelNoiDungLeTan.Controls.Add(CtrKDDi_LT);
-            PanelNoiDungLeTan.Controls.Add(CtrDSK_LT);
+           
+            
         }
 
-
+        private void LeTan_Load(object sender, EventArgs e)
+        {
+            Thread newThread = new Thread(() =>
+            {
+                Invoke(new Action(() =>
+                {
+                    PanelNoiDungLeTan.Controls.Add(CtrDP);
+                    PanelNoiDungLeTan.Controls.Add(CtrKSD_LT);
+                    PanelNoiDungLeTan.Controls.Add(CtrKSDi_LT);
+                    PanelNoiDungLeTan.Controls.Add(CtrKDDi_LT);
+                    PanelNoiDungLeTan.Controls.Add(CtrDSK_LT);
+                }));
+            });
+            newThread.Start();
+        }
 
         private void ButtonDatPhong_Click(object sender, EventArgs e)
         {
@@ -60,5 +72,7 @@ namespace HomeStay
             CtrDSK_LT.BringToFront();
             CtrDSK_LT.Show();
         }
+
+     
     }
 }
