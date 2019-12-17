@@ -55,7 +55,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btn_TroLai = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -70,6 +69,7 @@
             this.SoPhong = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.ButtonTimKiem = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.btn_TroLai = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -156,43 +156,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1087, 275);
             this.panel2.TabIndex = 0;
-            // 
-            // btn_TroLai
-            // 
-            this.btn_TroLai.Active = false;
-            this.btn_TroLai.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
-            this.btn_TroLai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
-            this.btn_TroLai.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_TroLai.BorderRadius = 0;
-            this.btn_TroLai.ButtonText = "Trở Lại";
-            this.btn_TroLai.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_TroLai.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_TroLai.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_TroLai.Iconimage = null;
-            this.btn_TroLai.Iconimage_right = null;
-            this.btn_TroLai.Iconimage_right_Selected = null;
-            this.btn_TroLai.Iconimage_Selected = null;
-            this.btn_TroLai.IconMarginLeft = 0;
-            this.btn_TroLai.IconMarginRight = 0;
-            this.btn_TroLai.IconRightVisible = true;
-            this.btn_TroLai.IconRightZoom = 0D;
-            this.btn_TroLai.IconVisible = true;
-            this.btn_TroLai.IconZoom = 50D;
-            this.btn_TroLai.IsTab = false;
-            this.btn_TroLai.Location = new System.Drawing.Point(945, 153);
-            this.btn_TroLai.Margin = new System.Windows.Forms.Padding(5);
-            this.btn_TroLai.Name = "btn_TroLai";
-            this.btn_TroLai.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
-            this.btn_TroLai.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
-            this.btn_TroLai.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_TroLai.selected = false;
-            this.btn_TroLai.Size = new System.Drawing.Size(137, 43);
-            this.btn_TroLai.TabIndex = 45;
-            this.btn_TroLai.Text = "Trở Lại";
-            this.btn_TroLai.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_TroLai.Textcolor = System.Drawing.Color.White;
-            this.btn_TroLai.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_TroLai.Click += new System.EventHandler(this.btn_TroLai_Click);
             // 
             // bunifuCustomLabel5
             // 
@@ -751,6 +714,43 @@
             this.bunifuCustomLabel4.Size = new System.Drawing.Size(259, 29);
             this.bunifuCustomLabel4.TabIndex = 31;
             this.bunifuCustomLabel4.Text = "DANH SÁCH PHÒNG";
+            // 
+            // btn_TroLai
+            // 
+            this.btn_TroLai.Active = false;
+            this.btn_TroLai.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
+            this.btn_TroLai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
+            this.btn_TroLai.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_TroLai.BorderRadius = 0;
+            this.btn_TroLai.ButtonText = "Trở Lại";
+            this.btn_TroLai.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_TroLai.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_TroLai.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_TroLai.Iconimage = null;
+            this.btn_TroLai.Iconimage_right = null;
+            this.btn_TroLai.Iconimage_right_Selected = null;
+            this.btn_TroLai.Iconimage_Selected = null;
+            this.btn_TroLai.IconMarginLeft = 0;
+            this.btn_TroLai.IconMarginRight = 0;
+            this.btn_TroLai.IconRightVisible = true;
+            this.btn_TroLai.IconRightZoom = 0D;
+            this.btn_TroLai.IconVisible = true;
+            this.btn_TroLai.IconZoom = 50D;
+            this.btn_TroLai.IsTab = false;
+            this.btn_TroLai.Location = new System.Drawing.Point(945, 153);
+            this.btn_TroLai.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_TroLai.Name = "btn_TroLai";
+            this.btn_TroLai.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
+            this.btn_TroLai.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
+            this.btn_TroLai.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_TroLai.selected = false;
+            this.btn_TroLai.Size = new System.Drawing.Size(137, 43);
+            this.btn_TroLai.TabIndex = 45;
+            this.btn_TroLai.Text = "Trở Lại";
+            this.btn_TroLai.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_TroLai.Textcolor = System.Drawing.Color.White;
+            this.btn_TroLai.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_TroLai.Click += new System.EventHandler(this.btn_TroLai_Click);
             // 
             // CauHinh_ThemPhong
             // 

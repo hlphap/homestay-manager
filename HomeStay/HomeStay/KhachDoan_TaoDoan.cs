@@ -7,12 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace HomeStay
 {
     public partial class KhachDoan_TaoDoan : UserControl
     {
-        private
+        SqlConnection conn = new SqlConnection(DataSource.connectionString);
+        public string[] sophongtt = new string[20];
+        public int demsophongtt;
+        public string tentdtt, sdttdtt, socmndtdtt, madoantt;
+        public
         KhachDoan_Phongtrong CtrPhongTrong = new KhachDoan_Phongtrong();
         KhachDoan_Thongtindoan CtrTTDoan = new KhachDoan_Thongtindoan();
         KhachDoan_ThanhToan CtrTToan = new KhachDoan_ThanhToan();
@@ -22,21 +27,7 @@ namespace HomeStay
             PanelTaoDoan2.Controls.Add(CtrPhongTrong);
             PanelTaoDoan2.Controls.Add(CtrTTDoan);
             PanelTaoDoan2.Controls.Add(CtrTToan);
-        }
-
-        private void bunifuCustomLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuDatepicker1_onValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuCustomLabel6_Click(object sender, EventArgs e)
-        {
-
+            string[] sophongtt = new string[20];
         }
 
         private void BtnPhongTrong(object sender, EventArgs e)
@@ -49,12 +40,23 @@ namespace HomeStay
         {
             CtrTTDoan.BringToFront();
             CtrTTDoan.Show();
+            
         }
 
         private void BtnThanhToan(object sender, EventArgs e)
         {
+            sophongtt = CtrPhongTrong.sophong;
+            demsophongtt = CtrPhongTrong.demsophong;
+
+            tentdtt = CtrTTDoan.tentd;
+            sdttdtt = CtrTTDoan.sdttd;
+            socmndtdtt = CtrTTDoan.socmndtd;
+            madoantt = CtrTTDoan.madoan;
             CtrTToan.BringToFront();
             CtrTToan.Show();
+            CtrTToan.loaddata(sophongtt, demsophongtt);
+            CtrTToan.loaddatathongtindoan(tentdtt, sdttdtt, socmndtdtt, madoantt);
         }
+        
     }
 }

@@ -13,58 +13,32 @@ namespace HomeStay
 {
     public partial class Sign_in : Form
     {
-
-        public static string ChucVu = "";
         public Sign_in()
         {
             InitializeComponent();           
-        }
-
-        private string GetID(string username, string password)
-        {
-           
-            SqlConnection conn = new SqlConnection(DataSource.connectionString);
-            string cv = "";
-            try
-            {
-                conn.Open();
-                string sql = "SELECT TaiKhoan, MatKhau, ChucVu FROM Sign_in WHERE TaiKhoan = '" + username + "' AND MatKhau = '" + password + "'";
-                SqlCommand cmd = new SqlCommand(sql, conn);
-                SqlDataReader dta = cmd.ExecuteReader();
-                if (dta.Read() == true)
-                {
-                    cv = dta["ChucVu"].ToString();
-                }
-                else
-                {
-                    MessageBox.Show("Sai Mat Khau! Nhap Lai? ", "Loi", MessageBoxButtons.OK);
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Lỗi xảy ra khi truy vấn dữ liệu hoặc kết nối với server thất bại !");
-            }
-            finally
-            {
-                conn.Close();
-            }
-
-            return cv;
+          
 
         }
         
         private void Button_Signin_Click(object sender, EventArgs e)
         {
-            ChucVu = GetID(Textbox_Username.Text, Textbox_Password.Text);
-            if (ChucVu != "")
+            Form NewForm = new FormChinh();
+
+            SqlConnection conn = new SqlConnection(DataSource.connectionString);
+            conn.Open();
+            string Taikhoan = Textbox_Username.Text;
+            string MatKhau = Textbox_Password.Text;
+            string sql = "SELECT TaiKhoan, MatKhau FROM Sign_in WHERE TaiKhoan = '" + Taikhoan + "' AND MatKhau = '" + MatKhau + "'";
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            SqlDataReader dta = cmd.ExecuteReader();
+            if (dta.Read() == true)
             {
-                Form NewForm = new FormChinh();
-                NewForm.Show();
                 this.Hide();
+                NewForm.ShowDialog();
             }
             else
             {
-                MessageBox.Show("Tài khoảng và mật khẩu không đúng !");
+                MessageBox.Show("Sai Mat Khau! Nhap Lai? ", "Loi", MessageBoxButtons.OK);
             }
         }
 
@@ -82,8 +56,23 @@ namespace HomeStay
         {
             if(e.KeyCode == Keys.Enter)
             {
-
-                Button_Signin_Click(sender, e);
+                Form NewForm = new FormChinh();
+                SqlConnection conn = new SqlConnection(DataSource.connectionString);
+                conn.Open();
+                string Taikhoan = Textbox_Username.Text;
+                string MatKhau = Textbox_Password.Text;
+                string sql = "SELECT TaiKhoan, MatKhau FROM Sign_in WHERE TaiKhoan = '" + Taikhoan + "' AND MatKhau = '" + MatKhau + "'";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                SqlDataReader dta = cmd.ExecuteReader();
+                if (dta.Read() == true)
+                {
+                    this.Hide();
+                    NewForm.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Sai Mat Khau! Nhap Lai? ", "Loi", MessageBoxButtons.OK);
+                }
             }
         }
 

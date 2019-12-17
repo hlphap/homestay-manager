@@ -13,12 +13,14 @@ namespace HomeStay
 {
     public partial class KhachDoan_Phongtrong : UserControl
     {
+        SqlConnection conn = new SqlConnection(DataSource.connectionString);
+        string sql = " select SOPHONG as'Số Phòng', LOAIPHONG as'Loại Phòng', GIAPHONG as' Giá Phòng', TANG as'Tầng ' FROM PHONG WHERE TRANGTHAI =3 ";
+        public string[] sophong = new string[20];
+        public int demsophong = -1;
         public KhachDoan_Phongtrong()
         {
             InitializeComponent();
-            SqlConnection conn = new SqlConnection(DataSource.connectionString);
             conn.Open();
-
             string sql2 = "select LOAIPHONG from PHONG";
             SqlDataAdapter da2 = new SqlDataAdapter(sql2, conn);
             DataTable dt2 = new DataTable();
@@ -26,6 +28,54 @@ namespace HomeStay
             comboBox1.DataSource = dt2;
             comboBox1.DisplayMember = "LOAIPHONG";
             comboBox1.ValueMember = "LOAIPHONG";
+            showdata(sql);
+            
+        }
+        void showdata(string sql)
+        {
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            cmd.CommandType = CommandType.Text;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridViewphongtrong.DataSource = dt;
+        }
+
+        private void bunifuButton1_Click(object sender, EventArgs e)
+        {
+            sql = " select SOPHONG as'Số Phòng', LOAIPHONG as'Loại Phòng', GIAPHONG as' Giá Phòng', TANG as'Tầng ' FROM PHONG, PHONGTHUE WHERE PHONG.SOPHONG = PHONGTHUE.SOPHONG AND TRANGTHAI =3 ";
+
+            /*try
+            {
+                sql += "AND SOPHONG = '" + comboBox1.ValueMember.ToString() + "'";
+                sql += "AND NGAYDI > " + bunifuDatepicker1.Value.Date + " AND NGAYDEN < " + bunifuDatepicker2.Value.Date;
+                showdata(sql);
+            }
+            catch
+            {
+                MessageBox.Show("Loi tiem kiem");
+            }*/
+        }
+
+        private void dataGridViewphongtrong_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            int i = dataGridViewphongtrong.CurrentRow.Index;
+            int dem = 0;
+            int dong = DataGridPhongDaChon.RowCount;
+
+            for ( int j = 0; j < dong;j++)
+            {
+                if (DataGridPhongDaChon.Rows[j].Cells[0].Value == dataGridViewphongtrong.Rows[i].Cells[0].Value)
+                    dem++;
+            }
+            if(dem == 0)
+            {
+                int n = DataGridPhongDaChon.Rows.Add();
+                DataGridPhongDaChon.Rows[n].Cells[0].Value = dataGridViewphongtrong.Rows[i].Cells[0].Value;
+                //sophong = DataGridPhongDaChon.Rows[n].Cells[0].Value.ToString();
+                demsophong++;
+                sophong[demsophong] = DataGridPhongDaChon.Rows[n].Cells[0].Value.ToString();
+            }
         }
     }
 }

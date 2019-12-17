@@ -576,8 +576,3 @@ C:\Users\Tran Huy Win\Desktop\homestay_test\HomeStay\HomeStay\obj\Debug\HomeStay
 C:\Users\Tran Huy Win\Desktop\homestay_test\HomeStay\HomeStay\obj\Debug\HomeStay.pdb
 C:\Users\Tran Huy Win\Desktop\homestay_test\HomeStay\HomeStay\obj\Debug\HomeStay.CaiDat_DsTang.resources
 C:\Users\Tran Huy Win\Desktop\homestay_test\HomeStay\HomeStay\obj\Debug\HomeStay.CauHinh_ThemPhong.resources
-D:\IT008 Lập trình trực quan\HomeStay_Edit_new\HomeStay\HomeStay\obj\Debug\HomeStay.CaiDat_DsTang.resources
-D:\IT008 Lập trình trực quan\HomeStay_Edit_new\HomeStay\HomeStay\obj\Debug\HomeStay.CauHinh_ThemPhong.resources
-D:\IT008 Lập trình trực quan\HomeStay_Edit_new\HomeStay\HomeStay\obj\Debug\HomeStay.CauHinh_ThongTinNhanVien.resources
-D:\IT008 Lập trình trực quan\HomeStay_Edit_new\HomeStay\HomeStay\obj\Debug\HomeStay.CauHinh_ThongTinChung.resources
-D:\IT008 Lập trình trực quan\HomeStay_Edit_new\HomeStay\HomeStay\obj\Debug\HomeStay.CauHinh_ThongTinCHST.resources

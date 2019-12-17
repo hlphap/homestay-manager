@@ -21,6 +21,8 @@ namespace HomeStay
         public KhachLe()
         {
             InitializeComponent();
+           
+
         }
         private void KhachLe_Load(object sender, EventArgs e)
         {

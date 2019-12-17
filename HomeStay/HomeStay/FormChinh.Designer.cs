@@ -149,7 +149,6 @@
             this.Animator.SetDecoration(this.btSetting, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.btSetting.DisabledColor = System.Drawing.Color.Gray;
             this.btSetting.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btSetting.Enabled = false;
             this.btSetting.Iconcolor = System.Drawing.Color.Transparent;
             this.btSetting.Iconimage = ((System.Drawing.Image)(resources.GetObject("btSetting.Iconimage")));
             this.btSetting.Iconimage_right = null;
@@ -175,7 +174,6 @@
             this.btSetting.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btSetting.Textcolor = System.Drawing.Color.White;
             this.btSetting.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSetting.Visible = false;
             this.btSetting.Click += new System.EventHandler(this.btSetting_Click);
             // 
             // bunifuTextBox1

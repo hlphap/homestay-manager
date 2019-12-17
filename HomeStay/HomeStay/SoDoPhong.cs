@@ -7,60 +7,38 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
-using System.Data.Common;
+
 namespace HomeStay
 {
     public partial class SoDoPhong : UserControl
     {
         public SoDoPhong()
         {
-             InitializeComponent();
-           
+            InitializeComponent();
         }
-        private void SoDoPhong_Load(object sender, EventArgs e)
-        {
-            LoadPhong();
-        }
-        private void LoadPhong()
-        {
-            SqlConnection conn = new SqlConnection(DataSource.connectionString);
-            conn.Open();
-            string sql = "SELECT SOPHONG, LOAIPHONG, TRANGTHAI FROM PHONG ";
-            SqlCommand cmd = new SqlCommand(sql, conn);
-            int i = 0;
-            using (DbDataReader reader = cmd.ExecuteReader())
-            {
-                if (reader.HasRows)
-                    
-                {
-                    while (reader.Read())
-                    {
+        public
+            int x=212;
+            int y;
 
-                        x1Phong us1 = new x1Phong();
-                        us1.Location = new Point(i % 4 * 212, i / 4 * 98);
-                        us1.Size = new Size(200, 90);
-                        PanelNoiDung.Controls.Add(us1);
-                        us1.SoPhong.Text = reader.GetString(0);
-                        us1.LoaiPhong.Text = reader.GetString(1);
-                        
-                        i++;
-                    }
-                 
-                }
-                reader.Close();
-            }
-            conn.Close();
-
+        public System.Windows.Forms.UserControl AddUCx1Phong()
+        {
+            x1Phong uc = new x1Phong();
+            PanelNoiDung.Controls.Add(uc);
+            uc.Location = new System.Drawing.Point(x, y);
+            uc.Size = new System.Drawing.Size(212, 98);
+            x = x + 230;
+            btAdd.Location = new Point(x + 10, 30);
+            return uc;
         }
+
         private void bunifuTextBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void PanelNoiDung_Paint(object sender, PaintEventArgs e)
+        private void btAdd_Click(object sender, EventArgs e)
         {
-            LoadPhong();
+            AddUCx1Phong();
         }
     }
 }
