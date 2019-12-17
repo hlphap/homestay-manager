@@ -161,7 +161,7 @@ namespace HomeStay
           //  PanelTemp.Show();
             int x = await (LoadPhong(sql));
           //  PanelTemp.Hide();
-            Animator.ShowSync(PanelNoiDung);
+           Animator.ShowSync(PanelNoiDung);
         }
 
         private async void btnTrong_Click(object sender, EventArgs e)
