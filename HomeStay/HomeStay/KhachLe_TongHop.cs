@@ -34,14 +34,8 @@ namespace HomeStay
             comboBox1.DisplayMember = "LOAIPHONG";
             comboBox1.ValueMember = "LOAIPHONG";
 
-            string sql3 = "select * from PHONG WHERE SOPHONG = " + comboBox3.ValueMember;
-            SqlDataAdapter da3 = new SqlDataAdapter(sql3, conn);
-            DataTable dt3 = new DataTable();
-            da3.Fill(dt3);
-            comboBox2.DataSource = dt3;
-            comboBox2.DisplayMember = "GIAPHONG";
-            comboBox2.ValueMember = "GIAPHONG";
-          
+
+
         }
 
         private void bunifuCustomLabel1_Click(object sender, EventArgs e)
@@ -82,12 +76,13 @@ namespace HomeStay
                 else
                     try
                     {
-                        string sql = "INSERT INTO KHACHHANG(MAKH,HOTENKH,NGAYSINH,GIOITINH,CMND,SDT,QUOCTICH) VALUES('" + makh.Text + "','" + tenkhach.Text + "'," + bunifuDatepicker1.Value.Day + "/" + bunifuDatepicker1.Value.Month + "/" + bunifuDatepicker1.Value.Year + ",'" + gioitinhcombobox.Text + "','" + scmnt.Text + "','" + didong.Text + "','" + comboBox5.Text + "')";
+                        string sql = "INSERT INTO KHACHHANG(MAKH,HOTENKH,NGAYSINH,GIOITINH,CMND,SDT,QUOCTICH) VALUES('" + bunifuTextBox2.Text + "','" + tenkhach.Text + "'," + bunifuDatepicker1.Value.Day + "/" + bunifuDatepicker1.Value.Month + "/" + bunifuDatepicker1.Value.Year + ",'" + gioitinhcombobox.Text + "','" + scmnt.Text + "','" + didong.Text + "','" + comboBox5.Text + "')";
                         SqlCommand cmd = new SqlCommand(sql, conn);
                         string st = comboBox3.Text;
-                        string sql2 = "INSERT INTO PHONGTHUE(MAKH,MADK,SOPHONG,NGAYDEN,NGAYDI,NGAYDK,GIAPHONG) VALUES('" + makh.Text + "','" + makh.Text + "','" + comboBox3.Text + "'," + bunifuDatepicker2.Value.Day + "/" + bunifuDatepicker2.Value.Month + "/" + bunifuDatepicker2.Value.Year + "," + bunifuDatepicker3.Value.Day + "/" + bunifuDatepicker3.Value.Month + "/" + bunifuDatepicker3.Value.Year + "," + DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year + "," + comboBox2.Text + ")";
+                        string sql2 = "INSERT INTO PHONGTHUE(MAKH,MADK,SOPHONG,NGAYDEN,NGAYDI,NGAYDK) VALUES('" + bunifuTextBox2.Text + "','" + bunifuTextBox2.Text + "','" + comboBox3.Text + "'," + bunifuDatepicker2.Value.Day + "/" + bunifuDatepicker2.Value.Month + "/" + bunifuDatepicker2.Value.Year + "," + bunifuDatepicker3.Value.Day + "/" + bunifuDatepicker3.Value.Month + "/" + bunifuDatepicker3.Value.Year + "," + DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year + "," + ")";
                         SqlCommand cmd2 = new SqlCommand(sql2, conn);
                         cmd.ExecuteNonQuery();
+                        cmd2.ExecuteNonQuery();
                         MessageBox.Show("Them thanh cong");
 
                     }
@@ -97,6 +92,26 @@ namespace HomeStay
                     }
                 conn.Close();
             }
+        }
+
+        private void tenkhach_Leave(object sender, EventArgs e)
+        {
+            string sql = "SElECT max(MAKH) max FROM KHACHHANG";     // madoan
+            SqlCommand cmd1 = new SqlCommand(sql, conn);
+            cmd1.CommandType = CommandType.Text;
+            SqlDataAdapter da = new SqlDataAdapter(cmd1);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            object Max;
+            Max = dt.Compute("Max(max)", "");
+            string Str = Max.ToString();
+            string Str1 = Str.Substring(2);
+            int madoan = Int32.Parse(Str1);
+            madoan++;
+            Str = Str.Replace(Str1, madoan.ToString());
+            bunifuTextBox2.Text = Str;
+
         }
     }
 }

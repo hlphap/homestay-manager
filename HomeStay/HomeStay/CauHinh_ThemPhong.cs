@@ -23,7 +23,7 @@ namespace HomeStay
         }
         void showdata()
         { 
-            string sql = " select SOPHONG as'    Số Phòng    ', LOAIPHONG as'    Loại Phòng  ', GIAPHONG as' Giá Phòng   ', TANG as'   Tầng    ', TRANGTHAI as'  Trạng Thái  ' FROM PHONG";
+            string sql = " select SOPHONG as'    Số Phòng    ', LOAIPHONG.LOAIPHONG as'    Loại Phòng  ', GIA as' Giá Phòng   ', TANG as'   Tầng    ', TRANGTHAI as'  Trạng Thái  ' FROM PHONG,LOAIPHONG WHERE LOAIPHONG.LOAIPHONG = PHONG.LOAIPHONG";
             SqlCommand cmd = new SqlCommand(sql, conn);
             cmd.CommandType = CommandType.Text;
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -53,8 +53,11 @@ namespace HomeStay
                 {
                     try
                     {
-                        string sql = "INSERT INTO PHONG (TANG , SOPHONG, LOAIPHONG, GIAPHONG, TRANGTHAI) values (" + Tang.Text + ",'" + SoPhong.Text + "','" + LoaiPhong.Text + "'," + GiaPhong.Text + "," + TrangThai.Text + ")";
+                        string sql = "INSERT INTO PHONG (TANG , SOPHONG, LOAIPHONG, TRANGTHAI) values (" + Tang.Text + ",'" + SoPhong.Text + "','" + LoaiPhong.Text + "," + TrangThai.Text + ")";
+                        string sql2 = "INSERT INTO LOAIPHONG(LOAIPHONG, GIA) VALUES ('" + LoaiPhong.Text + "','" + GiaPhong.Text + "')";
+                        SqlCommand cmd2 = new SqlCommand(sql2, conn);
                         SqlCommand cmd = new SqlCommand(sql, conn);
+                        cmd2.ExecuteNonQuery();
                         cmd.ExecuteNonQuery();
                         showdata();
                         MessageBox.Show("Luu thanh cong");
