@@ -14,7 +14,7 @@ namespace HomeStay
     public partial class KhachDoan_Phongtrong : UserControl
     {
         SqlConnection conn = new SqlConnection(DataSource.connectionString);
-        string sql = " select SOPHONG as'Số Phòng', LOAIPHONG.loaiphong as'Loại Phòng', GIA as' Giá Phòng', TANG as'Tầng ' FROM PHONG,LOAIPHONG WHERE PHONG.LOAIPHONG=LOAIPHONG.LOAIPHONG AND TRANGTHAI = 1 ";
+        string sql = " select SOPHONG as'Số Phòng', LOAIPHONG as'Loại Phòng', GIAPHONG as' Giá Phòng', TANG as'Tầng ' FROM PHONG WHERE TRANGTHAI = 1 ";
         public string[] sophong = new string[20];
         public int demsophong = -1;
         public KhachDoan_Phongtrong()
@@ -43,7 +43,7 @@ namespace HomeStay
 
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
-            sql = " select SOPHONG as'Số Phòng', LOAIPHONG as'Loại Phòng', GIA as' Giá Phòng', TANG as'Tầng ' FROM PHONG, PHONGTHUE,LOAIPHONG WHERE PHONG.SOPHONG = PHONGTHUE.SOPHONG AND LOAIPHONG.LOAIPHONG = PHONG.LOAIPHONG AND TRANGTHAI = 1 ";
+            sql = " select SOPHONG as'Số Phòng', LOAIPHONG as'Loại Phòng', GIAPHONG as' Giá Phòng', TANG as'Tầng ' FROM PHONG, PHONGTHUE WHERE PHONG.SOPHONG = PHONGTHUE.SOPHONG AND TRANGTHAI = 1 ";
 
             /*try
             {
@@ -53,7 +53,7 @@ namespace HomeStay
             }
             catch
             {
-                MessageBox.Show("Loi tim kiem");
+                MessageBox.Show("Loi tiem kiem");
             }*/
         }
 

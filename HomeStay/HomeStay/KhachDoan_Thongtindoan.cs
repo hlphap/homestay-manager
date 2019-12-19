@@ -16,19 +16,27 @@ namespace HomeStay
     {
         SqlConnection conn = new SqlConnection(DataSource.connectionString);
         public string tentd, sdttd, socmndtd, madoan;
-        public KhachDoan_Thongtindoan()
+
+        private void bunifuTextBox3_Click(object sender, EventArgs e)
         {
-            InitializeComponent();
-            conn.Open();
-            
+            string sql = "SElECT max(MAKH) max FROM KHACHHANG";     // madoan
+            SqlCommand cmd1 = new SqlCommand(sql, conn);
+            cmd1.CommandType = CommandType.Text;
+            SqlDataAdapter da = new SqlDataAdapter(cmd1);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            object Max;
+            Max = dt.Compute("Max(max)", "");
+            string Str = Max.ToString();
+            string Str1 = Str.Substring(2);
+            int madoan = Int32.Parse(Str1);
+            madoan++;
+            Str = Str.Replace(Str1, madoan.ToString());
+            bunifuTextBox3.Text = Str;                   // btn, lable, text madoan
         }
 
-        private void KhachDoan_Thongtindoan_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ButtonTimKiem_Click(object sender, EventArgs e)
+        private void ButtonTimKiem_Click_1(object sender, EventArgs e)
         {
             if (ButtonTimKiem.Text == "Luu")
             {
@@ -36,17 +44,21 @@ namespace HomeStay
                     MessageBox.Show("khong duoc de ten truong doan trong");
                 else if (comboBox3.Text == "")
                     MessageBox.Show("Chon gioi tinh");
-                /*else if (bunifuDatePicker1.Value.Date < DateTime.Today)
-                    MessageBox.Show("Loi ngay sinh");*/
                 else if (sdttxt.Text == "")
                     MessageBox.Show("khong duoc de so dien thoai trong");
                 else if (cmndtxt.Text == "")
                     MessageBox.Show("khong duoc de cmnd trong");
+                else if (email.Text == "")
+                    MessageBox.Show("Khong duoc de email trong");
+                else if (quoctichtxt.Text == "")
+                    MessageBox.Show("Khong duoc de quoc tich trong");
+                else if (diachitxt.Text == "")
+                    MessageBox.Show("Khong duoc de dia chi trong");
                 else
                 {
                     try
                     {
-                        string sql = "INSERT INTO KHACHHANG  values ('" + bunifuTextBox3.Text + "','" + tentruongdoantxt.Text + "'," + bunifuDatePicker1.Value.Year +"/" + bunifuDatePicker1.Value.Month + "/" + bunifuDatePicker1.Value.Day + ",'" + comboBox3.Text + "','" + cmndtxt.Text + "','"+sdttxt.Text +"','"+quoctichtxt.Text+"')";
+                        string sql = "INSERT INTO KHACHHANG  values ('" + bunifuTextBox3.Text + "','" + tentruongdoantxt.Text + "'," + bunifuDatePicker1.Value.ToString("yyyy/MM/dd") + ",'" + comboBox3.Text + "','" + cmndtxt.Text + "','" + sdttxt.Text + "','" + quoctichtxt.Text + "','" + diachitxt.Text + "','" + email.Text + "','" + ghichu.Text + "')";
                         SqlCommand cmd = new SqlCommand(sql, conn);
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Luu thanh cong");
@@ -57,11 +69,36 @@ namespace HomeStay
                     }
                     catch
                     {
-                        MessageBox.Show("Loi");
+                        MessageBox.Show("Loi Ma Doan");
                     }
                 }
             }
             ButtonTimKiem.Text = "Luu";
         }
+
+        public KhachDoan_Thongtindoan()
+        {
+            InitializeComponent();
+            conn.Open();
+
+            string sql = "SElECT max(MAKH) max FROM KHACHHANG";     // madoan
+            SqlCommand cmd1 = new SqlCommand(sql, conn);
+            cmd1.CommandType = CommandType.Text;
+            SqlDataAdapter da = new SqlDataAdapter(cmd1);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            object Max;
+            Max = dt.Compute("Max(max)", "");
+            string Str = Max.ToString();
+            string Str1 = Str.Substring(2);
+            int madoan = Int32.Parse(Str1);
+            madoan++;
+            Str = Str.Replace(Str1, madoan.ToString());
+            bunifuTextBox3.Text = Str;                   // btn, lable, text madoan
+
+        }
+
+
     }
 }
