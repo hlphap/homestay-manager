@@ -59,7 +59,6 @@
             this.bunifuGradientPanel8.Quality = 10;
             this.bunifuGradientPanel8.Size = new System.Drawing.Size(815, 505);
             this.bunifuGradientPanel8.TabIndex = 4;
-            this.bunifuGradientPanel8.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuGradientPanel8_Paint);
             // 
             // PanelNoiDungThuChi
             // 
@@ -158,7 +157,6 @@
             this.ButtonSoChiTieu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ButtonSoChiTieu.TextMarginLeft = 0;
             this.ButtonSoChiTieu.UseDefaultRadiusAndThickness = true;
-            this.ButtonSoChiTieu.Click += new System.EventHandler(this.ButtonSoChiTieu_Click);
             // 
             // ButtonKiemKe
             // 
@@ -228,7 +226,6 @@
             this.ButtonKiemKe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ButtonKiemKe.TextMarginLeft = 0;
             this.ButtonKiemKe.UseDefaultRadiusAndThickness = true;
-            this.ButtonKiemKe.Click += new System.EventHandler(this.ButtonKiemKe_Click);
             // 
             // ButtonLapPhieuThuChi
             // 

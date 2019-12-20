@@ -29,38 +29,38 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KhachDoan_Phongtrong));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bunifuGradientPanel3 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.dataGridViewphongtrong = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.bunifuShadowPanel2 = new Bunifu.UI.WinForm.BunifuShadowPanel.BunifuShadowPanel();
             this.DataGridPhongDaChon = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.SoPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.bunifuDatepicker2 = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.NgayDiApp = new Bunifu.Framework.UI.BunifuDatepicker();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuDatepicker1 = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.NgayDenApp = new Bunifu.Framework.UI.BunifuDatepicker();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridViewphongtrong = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.bunifuGradientPanel1.SuspendLayout();
             this.bunifuGradientPanel3.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewphongtrong)).BeginInit();
             this.bunifuShadowPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridPhongDaChon)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewphongtrong)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuGradientPanel1
@@ -135,6 +135,43 @@
             this.panel4.Size = new System.Drawing.Size(773, 246);
             this.panel4.TabIndex = 2;
             // 
+            // dataGridViewphongtrong
+            // 
+            this.dataGridViewphongtrong.AllowUserToAddRows = false;
+            this.dataGridViewphongtrong.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridViewphongtrong.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewphongtrong.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewphongtrong.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewphongtrong.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewphongtrong.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            this.dataGridViewphongtrong.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewphongtrong.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewphongtrong.ColumnHeadersHeight = 29;
+            this.dataGridViewphongtrong.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewphongtrong.DoubleBuffered = true;
+            this.dataGridViewphongtrong.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.dataGridViewphongtrong.EnableHeadersVisualStyles = false;
+            this.dataGridViewphongtrong.GridColor = System.Drawing.Color.Black;
+            this.dataGridViewphongtrong.HeaderBgColor = System.Drawing.SystemColors.ButtonShadow;
+            this.dataGridViewphongtrong.HeaderForeColor = System.Drawing.Color.Navy;
+            this.dataGridViewphongtrong.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewphongtrong.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridViewphongtrong.Name = "dataGridViewphongtrong";
+            this.dataGridViewphongtrong.ReadOnly = true;
+            this.dataGridViewphongtrong.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridViewphongtrong.RowHeadersWidth = 51;
+            this.dataGridViewphongtrong.Size = new System.Drawing.Size(773, 246);
+            this.dataGridViewphongtrong.TabIndex = 3;
+            this.dataGridViewphongtrong.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewphongtrong_CellContentClick_1);
+            // 
             // bunifuShadowPanel2
             // 
             this.bunifuShadowPanel2.BorderColor = System.Drawing.Color.Gainsboro;
@@ -199,9 +236,9 @@
             this.panel2.AutoScroll = true;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.bunifuButton1);
-            this.panel2.Controls.Add(this.bunifuDatepicker2);
+            this.panel2.Controls.Add(this.NgayDiApp);
             this.panel2.Controls.Add(this.bunifuCustomLabel1);
-            this.panel2.Controls.Add(this.bunifuDatepicker1);
+            this.panel2.Controls.Add(this.NgayDenApp);
             this.panel2.Controls.Add(this.bunifuCustomLabel3);
             this.panel2.Controls.Add(this.comboBox1);
             this.panel2.Location = new System.Drawing.Point(4, 4);
@@ -275,19 +312,19 @@
             this.bunifuButton1.UseDefaultRadiusAndThickness = true;
             this.bunifuButton1.Click += new System.EventHandler(this.bunifuButton1_Click);
             // 
-            // bunifuDatepicker2
+            // NgayDiApp
             // 
-            this.bunifuDatepicker2.BackColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuDatepicker2.BorderRadius = 0;
-            this.bunifuDatepicker2.ForeColor = System.Drawing.Color.White;
-            this.bunifuDatepicker2.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.bunifuDatepicker2.FormatCustom = null;
-            this.bunifuDatepicker2.Location = new System.Drawing.Point(677, 30);
-            this.bunifuDatepicker2.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuDatepicker2.Name = "bunifuDatepicker2";
-            this.bunifuDatepicker2.Size = new System.Drawing.Size(217, 59);
-            this.bunifuDatepicker2.TabIndex = 25;
-            this.bunifuDatepicker2.Value = new System.DateTime(2019, 11, 28, 21, 30, 18, 197);
+            this.NgayDiApp.BackColor = System.Drawing.Color.DodgerBlue;
+            this.NgayDiApp.BorderRadius = 0;
+            this.NgayDiApp.ForeColor = System.Drawing.Color.White;
+            this.NgayDiApp.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.NgayDiApp.FormatCustom = null;
+            this.NgayDiApp.Location = new System.Drawing.Point(677, 44);
+            this.NgayDiApp.Margin = new System.Windows.Forms.Padding(5);
+            this.NgayDiApp.Name = "NgayDiApp";
+            this.NgayDiApp.Size = new System.Drawing.Size(217, 45);
+            this.NgayDiApp.TabIndex = 25;
+            this.NgayDiApp.Value = new System.DateTime(2019, 11, 28, 21, 30, 18, 197);
             // 
             // bunifuCustomLabel1
             // 
@@ -301,19 +338,19 @@
             this.bunifuCustomLabel1.TabIndex = 24;
             this.bunifuCustomLabel1.Text = "Ngày ra";
             // 
-            // bunifuDatepicker1
+            // NgayDenApp
             // 
-            this.bunifuDatepicker1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuDatepicker1.BorderRadius = 0;
-            this.bunifuDatepicker1.ForeColor = System.Drawing.Color.White;
-            this.bunifuDatepicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.bunifuDatepicker1.FormatCustom = null;
-            this.bunifuDatepicker1.Location = new System.Drawing.Point(303, 30);
-            this.bunifuDatepicker1.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuDatepicker1.Name = "bunifuDatepicker1";
-            this.bunifuDatepicker1.Size = new System.Drawing.Size(207, 59);
-            this.bunifuDatepicker1.TabIndex = 23;
-            this.bunifuDatepicker1.Value = new System.DateTime(2019, 11, 28, 21, 30, 18, 197);
+            this.NgayDenApp.BackColor = System.Drawing.Color.DodgerBlue;
+            this.NgayDenApp.BorderRadius = 0;
+            this.NgayDenApp.ForeColor = System.Drawing.Color.White;
+            this.NgayDenApp.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.NgayDenApp.FormatCustom = null;
+            this.NgayDenApp.Location = new System.Drawing.Point(303, 44);
+            this.NgayDenApp.Margin = new System.Windows.Forms.Padding(5);
+            this.NgayDenApp.Name = "NgayDenApp";
+            this.NgayDenApp.Size = new System.Drawing.Size(207, 44);
+            this.NgayDenApp.TabIndex = 23;
+            this.NgayDenApp.Value = new System.DateTime(2019, 11, 28, 21, 30, 18, 197);
             // 
             // bunifuCustomLabel3
             // 
@@ -346,43 +383,6 @@
             this.panel1.Size = new System.Drawing.Size(793, 197);
             this.panel1.TabIndex = 0;
             // 
-            // dataGridViewphongtrong
-            // 
-            this.dataGridViewphongtrong.AllowUserToAddRows = false;
-            this.dataGridViewphongtrong.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridViewphongtrong.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewphongtrong.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewphongtrong.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridViewphongtrong.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewphongtrong.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            this.dataGridViewphongtrong.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewphongtrong.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewphongtrong.ColumnHeadersHeight = 29;
-            this.dataGridViewphongtrong.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewphongtrong.DoubleBuffered = true;
-            this.dataGridViewphongtrong.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.dataGridViewphongtrong.EnableHeadersVisualStyles = false;
-            this.dataGridViewphongtrong.GridColor = System.Drawing.Color.Black;
-            this.dataGridViewphongtrong.HeaderBgColor = System.Drawing.SystemColors.ButtonShadow;
-            this.dataGridViewphongtrong.HeaderForeColor = System.Drawing.Color.Navy;
-            this.dataGridViewphongtrong.Location = new System.Drawing.Point(0, 0);
-            this.dataGridViewphongtrong.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridViewphongtrong.Name = "dataGridViewphongtrong";
-            this.dataGridViewphongtrong.ReadOnly = true;
-            this.dataGridViewphongtrong.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dataGridViewphongtrong.RowHeadersWidth = 51;
-            this.dataGridViewphongtrong.Size = new System.Drawing.Size(773, 246);
-            this.dataGridViewphongtrong.TabIndex = 3;
-            this.dataGridViewphongtrong.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewphongtrong_CellContentClick_1);
-            // 
             // KhachDoan_Phongtrong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -397,11 +397,11 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewphongtrong)).EndInit();
             this.bunifuShadowPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridPhongDaChon)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewphongtrong)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -415,9 +415,9 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
         private System.Windows.Forms.Panel panel2;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton1;
-        private Bunifu.Framework.UI.BunifuDatepicker bunifuDatepicker2;
+        private Bunifu.Framework.UI.BunifuDatepicker NgayDiApp;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
-        private Bunifu.Framework.UI.BunifuDatepicker bunifuDatepicker1;
+        private Bunifu.Framework.UI.BunifuDatepicker NgayDenApp;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Panel panel1;
