@@ -21,7 +21,7 @@ namespace HomeStay
              InitializeComponent();
              
         }
-        private async void SoDoPhong_Load(object sender, EventArgs e)
+        public async void SoDoPhong_Load(object sender, EventArgs e)
         {
        
             sql = "SELECT PHONG.SOPHONG, LOAIPHONG, TRANGTHAI, NGAYDEN, NGAYDI, HOTENKH, THOIGIANNHAN FROM PHONGTHUE JOIN KHACHHANG ON KHACHHANG.MAKH = PHONGTHUE.MAKH RIGHT JOIN PHONG ON PHONG.SOPHONG = PHONGTHUE.SOPHONG";

@@ -111,7 +111,7 @@
             this.panel3.Location = new System.Drawing.Point(0, 137);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1081, 276);
+            this.panel3.Size = new System.Drawing.Size(1081, 430);
             this.panel3.TabIndex = 1;
             // 
             // bunifuCustomLabel4

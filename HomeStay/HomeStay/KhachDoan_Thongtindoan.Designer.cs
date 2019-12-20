@@ -29,6 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KhachDoan_Thongtindoan));
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
@@ -52,19 +60,14 @@
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties28 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties29 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties30 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuGradientPanel3 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.diachitxt = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
+            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuTextBox3 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.tentruongdoantxt = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.makhl = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.ButtonTimKiem = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.ghichu = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
@@ -78,11 +81,7 @@
             this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.tentruongdoantxt = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
-            this.bunifuTextBox3 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.diachitxt = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
-            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bunifuGradientPanel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
@@ -101,7 +100,6 @@
             this.bunifuGradientPanel3.BackColor = System.Drawing.Color.Transparent;
             this.bunifuGradientPanel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel3.BackgroundImage")));
             this.bunifuGradientPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel3.Controls.Add(this.panel3);
             this.bunifuGradientPanel3.Controls.Add(this.panel2);
             this.bunifuGradientPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuGradientPanel3.ForeColor = System.Drawing.Color.Black;
@@ -115,14 +113,6 @@
             this.bunifuGradientPanel3.Quality = 10;
             this.bunifuGradientPanel3.Size = new System.Drawing.Size(1087, 571);
             this.bunifuGradientPanel3.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.Location = new System.Drawing.Point(4, 390);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1079, 171);
-            this.panel3.TabIndex = 1;
             // 
             // panel2
             // 
@@ -150,27 +140,195 @@
             this.panel2.Location = new System.Drawing.Point(4, 2);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1077, 380);
+            this.panel2.Size = new System.Drawing.Size(1077, 556);
             this.panel2.TabIndex = 0;
             // 
-            // bunifuGradientPanel1
+            // bunifuCustomLabel1
             // 
-            this.bunifuGradientPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
-            this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel1.Controls.Add(this.bunifuGradientPanel3);
-            this.bunifuGradientPanel1.Controls.Add(this.panel1);
-            this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.OldLace;
-            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.SpringGreen;
-            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.Navy;
-            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.SpringGreen;
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
-            this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1087, 571);
-            this.bunifuGradientPanel1.TabIndex = 2;
+            this.bunifuCustomLabel1.AutoSize = true;
+            this.bunifuCustomLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 8F);
+            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(311, 88);
+            this.bunifuCustomLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(258, 19);
+            this.bunifuCustomLabel1.TabIndex = 64;
+            this.bunifuCustomLabel1.Text = "*Click vào mã đoàn để có mã đoàn mới";
+            // 
+            // diachitxt
+            // 
+            this.diachitxt.AcceptsReturn = false;
+            this.diachitxt.AcceptsTab = false;
+            this.diachitxt.AnimationSpeed = 200;
+            this.diachitxt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.diachitxt.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.diachitxt.BackColor = System.Drawing.Color.Transparent;
+            this.diachitxt.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("diachitxt.BackgroundImage")));
+            this.diachitxt.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.diachitxt.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.diachitxt.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.diachitxt.BorderColorIdle = System.Drawing.Color.Silver;
+            this.diachitxt.BorderRadius = 1;
+            this.diachitxt.BorderThickness = 1;
+            this.diachitxt.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.diachitxt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.diachitxt.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.diachitxt.DefaultText = "";
+            this.diachitxt.FillColor = System.Drawing.Color.White;
+            this.diachitxt.HideSelection = true;
+            this.diachitxt.IconLeft = null;
+            this.diachitxt.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.diachitxt.IconPadding = 10;
+            this.diachitxt.IconRight = null;
+            this.diachitxt.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.diachitxt.Lines = new string[0];
+            this.diachitxt.Location = new System.Drawing.Point(315, 214);
+            this.diachitxt.Margin = new System.Windows.Forms.Padding(4);
+            this.diachitxt.MaxLength = 32767;
+            this.diachitxt.MinimumSize = new System.Drawing.Size(1, 1);
+            this.diachitxt.Modified = false;
+            this.diachitxt.Multiline = false;
+            this.diachitxt.Name = "diachitxt";
+            stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties1.FillColor = System.Drawing.Color.Empty;
+            stateProperties1.ForeColor = System.Drawing.Color.Empty;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.diachitxt.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.Empty;
+            stateProperties2.FillColor = System.Drawing.Color.White;
+            stateProperties2.ForeColor = System.Drawing.Color.Empty;
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.diachitxt.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.diachitxt.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.Silver;
+            stateProperties4.FillColor = System.Drawing.Color.White;
+            stateProperties4.ForeColor = System.Drawing.Color.Empty;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.diachitxt.OnIdleState = stateProperties4;
+            this.diachitxt.PasswordChar = '\0';
+            this.diachitxt.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.diachitxt.PlaceholderText = "Địa Chỉ";
+            this.diachitxt.ReadOnly = false;
+            this.diachitxt.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.diachitxt.SelectedText = "";
+            this.diachitxt.SelectionLength = 0;
+            this.diachitxt.SelectionStart = 0;
+            this.diachitxt.ShortcutsEnabled = true;
+            this.diachitxt.Size = new System.Drawing.Size(265, 33);
+            this.diachitxt.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.diachitxt.TabIndex = 63;
+            this.diachitxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.diachitxt.TextMarginBottom = 0;
+            this.diachitxt.TextMarginLeft = 5;
+            this.diachitxt.TextMarginTop = 0;
+            this.diachitxt.TextPlaceholder = "Địa Chỉ";
+            this.diachitxt.UseSystemPasswordChar = false;
+            this.diachitxt.WordWrap = true;
+            // 
+            // bunifuCustomLabel2
+            // 
+            this.bunifuCustomLabel2.AutoSize = true;
+            this.bunifuCustomLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 8F);
+            this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(311, 44);
+            this.bunifuCustomLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(66, 19);
+            this.bunifuCustomLabel2.TabIndex = 62;
+            this.bunifuCustomLabel2.Text = "Mã Đoàn";
+            // 
+            // bunifuTextBox3
+            // 
+            this.bunifuTextBox3.AutoSize = true;
+            this.bunifuTextBox3.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuTextBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 11F);
+            this.bunifuTextBox3.Location = new System.Drawing.Point(310, 63);
+            this.bunifuTextBox3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.bunifuTextBox3.Name = "bunifuTextBox3";
+            this.bunifuTextBox3.Size = new System.Drawing.Size(98, 25);
+            this.bunifuTextBox3.TabIndex = 61;
+            this.bunifuTextBox3.Text = "Ngày sinh";
+            this.bunifuTextBox3.Click += new System.EventHandler(this.bunifuTextBox3_Click);
+            // 
+            // tentruongdoantxt
+            // 
+            this.tentruongdoantxt.AcceptsReturn = false;
+            this.tentruongdoantxt.AcceptsTab = false;
+            this.tentruongdoantxt.AnimationSpeed = 200;
+            this.tentruongdoantxt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.tentruongdoantxt.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.tentruongdoantxt.BackColor = System.Drawing.Color.Transparent;
+            this.tentruongdoantxt.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tentruongdoantxt.BackgroundImage")));
+            this.tentruongdoantxt.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.tentruongdoantxt.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.tentruongdoantxt.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.tentruongdoantxt.BorderColorIdle = System.Drawing.Color.Silver;
+            this.tentruongdoantxt.BorderRadius = 1;
+            this.tentruongdoantxt.BorderThickness = 1;
+            this.tentruongdoantxt.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.tentruongdoantxt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tentruongdoantxt.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.tentruongdoantxt.DefaultText = "";
+            this.tentruongdoantxt.FillColor = System.Drawing.Color.White;
+            this.tentruongdoantxt.HideSelection = true;
+            this.tentruongdoantxt.IconLeft = null;
+            this.tentruongdoantxt.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.tentruongdoantxt.IconPadding = 10;
+            this.tentruongdoantxt.IconRight = null;
+            this.tentruongdoantxt.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.tentruongdoantxt.Lines = new string[0];
+            this.tentruongdoantxt.Location = new System.Drawing.Point(50, 55);
+            this.tentruongdoantxt.Margin = new System.Windows.Forms.Padding(4);
+            this.tentruongdoantxt.MaxLength = 32767;
+            this.tentruongdoantxt.MinimumSize = new System.Drawing.Size(1, 1);
+            this.tentruongdoantxt.Modified = false;
+            this.tentruongdoantxt.Multiline = false;
+            this.tentruongdoantxt.Name = "tentruongdoantxt";
+            stateProperties5.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties5.FillColor = System.Drawing.Color.Empty;
+            stateProperties5.ForeColor = System.Drawing.Color.Empty;
+            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tentruongdoantxt.OnActiveState = stateProperties5;
+            stateProperties6.BorderColor = System.Drawing.Color.Empty;
+            stateProperties6.FillColor = System.Drawing.Color.White;
+            stateProperties6.ForeColor = System.Drawing.Color.Empty;
+            stateProperties6.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.tentruongdoantxt.OnDisabledState = stateProperties6;
+            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties7.FillColor = System.Drawing.Color.Empty;
+            stateProperties7.ForeColor = System.Drawing.Color.Empty;
+            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tentruongdoantxt.OnHoverState = stateProperties7;
+            stateProperties8.BorderColor = System.Drawing.Color.Silver;
+            stateProperties8.FillColor = System.Drawing.Color.White;
+            stateProperties8.ForeColor = System.Drawing.Color.Empty;
+            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tentruongdoantxt.OnIdleState = stateProperties8;
+            this.tentruongdoantxt.PasswordChar = '\0';
+            this.tentruongdoantxt.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.tentruongdoantxt.PlaceholderText = "Họ tên chủ đoàn";
+            this.tentruongdoantxt.ReadOnly = false;
+            this.tentruongdoantxt.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tentruongdoantxt.SelectedText = "";
+            this.tentruongdoantxt.SelectionLength = 0;
+            this.tentruongdoantxt.SelectionStart = 0;
+            this.tentruongdoantxt.ShortcutsEnabled = true;
+            this.tentruongdoantxt.Size = new System.Drawing.Size(205, 33);
+            this.tentruongdoantxt.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.tentruongdoantxt.TabIndex = 60;
+            this.tentruongdoantxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.tentruongdoantxt.TextMarginBottom = 0;
+            this.tentruongdoantxt.TextMarginLeft = 5;
+            this.tentruongdoantxt.TextMarginTop = 0;
+            this.tentruongdoantxt.TextPlaceholder = "Họ tên chủ đoàn";
+            this.tentruongdoantxt.UseSystemPasswordChar = false;
+            this.tentruongdoantxt.WordWrap = true;
             // 
             // makhl
             // 
@@ -697,192 +855,24 @@
             this.bunifuCustomLabel6.TabIndex = 44;
             this.bunifuCustomLabel6.Text = "KHÁCH HÀNG";
             // 
-            // tentruongdoantxt
+            // bunifuGradientPanel1
             // 
-            this.tentruongdoantxt.AcceptsReturn = false;
-            this.tentruongdoantxt.AcceptsTab = false;
-            this.tentruongdoantxt.AnimationSpeed = 200;
-            this.tentruongdoantxt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.tentruongdoantxt.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.tentruongdoantxt.BackColor = System.Drawing.Color.Transparent;
-            this.tentruongdoantxt.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tentruongdoantxt.BackgroundImage")));
-            this.tentruongdoantxt.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.tentruongdoantxt.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.tentruongdoantxt.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.tentruongdoantxt.BorderColorIdle = System.Drawing.Color.Silver;
-            this.tentruongdoantxt.BorderRadius = 1;
-            this.tentruongdoantxt.BorderThickness = 1;
-            this.tentruongdoantxt.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.tentruongdoantxt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tentruongdoantxt.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
-            this.tentruongdoantxt.DefaultText = "";
-            this.tentruongdoantxt.FillColor = System.Drawing.Color.White;
-            this.tentruongdoantxt.HideSelection = true;
-            this.tentruongdoantxt.IconLeft = null;
-            this.tentruongdoantxt.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.tentruongdoantxt.IconPadding = 10;
-            this.tentruongdoantxt.IconRight = null;
-            this.tentruongdoantxt.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.tentruongdoantxt.Lines = new string[0];
-            this.tentruongdoantxt.Location = new System.Drawing.Point(50, 55);
-            this.tentruongdoantxt.Margin = new System.Windows.Forms.Padding(4);
-            this.tentruongdoantxt.MaxLength = 32767;
-            this.tentruongdoantxt.MinimumSize = new System.Drawing.Size(1, 1);
-            this.tentruongdoantxt.Modified = false;
-            this.tentruongdoantxt.Multiline = false;
-            this.tentruongdoantxt.Name = "tentruongdoantxt";
-            stateProperties5.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties5.FillColor = System.Drawing.Color.Empty;
-            stateProperties5.ForeColor = System.Drawing.Color.Empty;
-            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tentruongdoantxt.OnActiveState = stateProperties5;
-            stateProperties6.BorderColor = System.Drawing.Color.Empty;
-            stateProperties6.FillColor = System.Drawing.Color.White;
-            stateProperties6.ForeColor = System.Drawing.Color.Empty;
-            stateProperties6.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.tentruongdoantxt.OnDisabledState = stateProperties6;
-            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties7.FillColor = System.Drawing.Color.Empty;
-            stateProperties7.ForeColor = System.Drawing.Color.Empty;
-            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tentruongdoantxt.OnHoverState = stateProperties7;
-            stateProperties8.BorderColor = System.Drawing.Color.Silver;
-            stateProperties8.FillColor = System.Drawing.Color.White;
-            stateProperties8.ForeColor = System.Drawing.Color.Empty;
-            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.tentruongdoantxt.OnIdleState = stateProperties8;
-            this.tentruongdoantxt.PasswordChar = '\0';
-            this.tentruongdoantxt.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.tentruongdoantxt.PlaceholderText = "Họ tên chủ đoàn";
-            this.tentruongdoantxt.ReadOnly = false;
-            this.tentruongdoantxt.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.tentruongdoantxt.SelectedText = "";
-            this.tentruongdoantxt.SelectionLength = 0;
-            this.tentruongdoantxt.SelectionStart = 0;
-            this.tentruongdoantxt.ShortcutsEnabled = true;
-            this.tentruongdoantxt.Size = new System.Drawing.Size(205, 33);
-            this.tentruongdoantxt.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
-            this.tentruongdoantxt.TabIndex = 60;
-            this.tentruongdoantxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.tentruongdoantxt.TextMarginBottom = 0;
-            this.tentruongdoantxt.TextMarginLeft = 5;
-            this.tentruongdoantxt.TextMarginTop = 0;
-            this.tentruongdoantxt.TextPlaceholder = "Họ tên chủ đoàn";
-            this.tentruongdoantxt.UseSystemPasswordChar = false;
-            this.tentruongdoantxt.WordWrap = true;
-            // 
-            // bunifuTextBox3
-            // 
-            this.bunifuTextBox3.AutoSize = true;
-            this.bunifuTextBox3.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuTextBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 11F);
-            this.bunifuTextBox3.Location = new System.Drawing.Point(310, 63);
-            this.bunifuTextBox3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.bunifuTextBox3.Name = "bunifuTextBox3";
-            this.bunifuTextBox3.Size = new System.Drawing.Size(98, 25);
-            this.bunifuTextBox3.TabIndex = 61;
-            this.bunifuTextBox3.Text = "Ngày sinh";
-            this.bunifuTextBox3.Click += new System.EventHandler(this.bunifuTextBox3_Click);
-            // 
-            // bunifuCustomLabel2
-            // 
-            this.bunifuCustomLabel2.AutoSize = true;
-            this.bunifuCustomLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 8F);
-            this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(311, 44);
-            this.bunifuCustomLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(66, 19);
-            this.bunifuCustomLabel2.TabIndex = 62;
-            this.bunifuCustomLabel2.Text = "Mã Đoàn";
-            // 
-            // diachitxt
-            // 
-            this.diachitxt.AcceptsReturn = false;
-            this.diachitxt.AcceptsTab = false;
-            this.diachitxt.AnimationSpeed = 200;
-            this.diachitxt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.diachitxt.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.diachitxt.BackColor = System.Drawing.Color.Transparent;
-            this.diachitxt.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("diachitxt.BackgroundImage")));
-            this.diachitxt.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.diachitxt.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.diachitxt.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.diachitxt.BorderColorIdle = System.Drawing.Color.Silver;
-            this.diachitxt.BorderRadius = 1;
-            this.diachitxt.BorderThickness = 1;
-            this.diachitxt.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.diachitxt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.diachitxt.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
-            this.diachitxt.DefaultText = "";
-            this.diachitxt.FillColor = System.Drawing.Color.White;
-            this.diachitxt.HideSelection = true;
-            this.diachitxt.IconLeft = null;
-            this.diachitxt.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.diachitxt.IconPadding = 10;
-            this.diachitxt.IconRight = null;
-            this.diachitxt.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.diachitxt.Lines = new string[0];
-            this.diachitxt.Location = new System.Drawing.Point(315, 214);
-            this.diachitxt.Margin = new System.Windows.Forms.Padding(4);
-            this.diachitxt.MaxLength = 32767;
-            this.diachitxt.MinimumSize = new System.Drawing.Size(1, 1);
-            this.diachitxt.Modified = false;
-            this.diachitxt.Multiline = false;
-            this.diachitxt.Name = "diachitxt";
-            stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties1.FillColor = System.Drawing.Color.Empty;
-            stateProperties1.ForeColor = System.Drawing.Color.Empty;
-            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.diachitxt.OnActiveState = stateProperties1;
-            stateProperties2.BorderColor = System.Drawing.Color.Empty;
-            stateProperties2.FillColor = System.Drawing.Color.White;
-            stateProperties2.ForeColor = System.Drawing.Color.Empty;
-            stateProperties2.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.diachitxt.OnDisabledState = stateProperties2;
-            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties3.FillColor = System.Drawing.Color.Empty;
-            stateProperties3.ForeColor = System.Drawing.Color.Empty;
-            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.diachitxt.OnHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.Silver;
-            stateProperties4.FillColor = System.Drawing.Color.White;
-            stateProperties4.ForeColor = System.Drawing.Color.Empty;
-            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.diachitxt.OnIdleState = stateProperties4;
-            this.diachitxt.PasswordChar = '\0';
-            this.diachitxt.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.diachitxt.PlaceholderText = "Địa Chỉ";
-            this.diachitxt.ReadOnly = false;
-            this.diachitxt.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.diachitxt.SelectedText = "";
-            this.diachitxt.SelectionLength = 0;
-            this.diachitxt.SelectionStart = 0;
-            this.diachitxt.ShortcutsEnabled = true;
-            this.diachitxt.Size = new System.Drawing.Size(265, 33);
-            this.diachitxt.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
-            this.diachitxt.TabIndex = 63;
-            this.diachitxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.diachitxt.TextMarginBottom = 0;
-            this.diachitxt.TextMarginLeft = 5;
-            this.diachitxt.TextMarginTop = 0;
-            this.diachitxt.TextPlaceholder = "Địa Chỉ";
-            this.diachitxt.UseSystemPasswordChar = false;
-            this.diachitxt.WordWrap = true;
-            // 
-            // bunifuCustomLabel1
-            // 
-            this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 8F);
-            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(311, 88);
-            this.bunifuCustomLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(258, 19);
-            this.bunifuCustomLabel1.TabIndex = 64;
-            this.bunifuCustomLabel1.Text = "*Click vào mã đoàn để có mã đoàn mới";
+            this.bunifuGradientPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
+            this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.bunifuGradientPanel3);
+            this.bunifuGradientPanel1.Controls.Add(this.panel1);
+            this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.OldLace;
+            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.SpringGreen;
+            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.Navy;
+            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.SpringGreen;
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
+            this.bunifuGradientPanel1.Quality = 10;
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1087, 571);
+            this.bunifuGradientPanel1.TabIndex = 2;
             // 
             // KhachDoan_Thongtindoan
             // 
@@ -906,7 +896,6 @@
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel3;
         private System.Windows.Forms.Panel panel2;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
-        private System.Windows.Forms.Panel panel3;
         private Bunifu.Framework.UI.BunifuCustomLabel makhl;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton ButtonTimKiem;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox ghichu;

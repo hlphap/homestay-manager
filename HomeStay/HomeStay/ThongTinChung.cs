@@ -19,7 +19,7 @@ namespace HomeStay
             InitializeComponent();
         }
 
-        private void ThongTinChung_Load(object sender, EventArgs e)
+        public void ThongTinChung_Load(object sender, EventArgs e)
         {
             string sql = "SELECT KHACHHANG.MAKH as 'Mã KH', MADK as 'Mã đặt phòng',  SOPHONG as 'Số phòng', HOTENKH as 'Họ tên', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE WHERE KHACHHANG.MAKH = PHONGTHUE.MAKH AND GETDATE() < NGAYDEN";
             LoadData(sql);

@@ -63,13 +63,14 @@ namespace HomeStay
                 else
                     try
                     {
-                        string sql = "INSERT INTO KHACHHANG(MAKH,HOTENKH,NGAYSINH,GIOITINH,CMND,SDT,QUOCTICH) VALUES('" + bunifuTextBox2.Text + "','" + tenkhach.Text + "'," + bunifuDatepicker1.Value.Day + "/" + bunifuDatepicker1.Value.Month + "/" + bunifuDatepicker1.Value.Year + ",'" + gioitinhcombobox.Text + "','" + scmnt.Text + "','" + didong.Text + "','" + comboBox5.Text + "')";
+                        string sql = "INSERT INTO KHACHHANG(MAKH,HOTENKH,NGAYSINH,GIOITINH,CMND,SDT,QUOCTICH) VALUES('" + bunifuTextBox2.Text.Trim() + "','" + tenkhach.Text + "'," + bunifuDatepicker1.Value.Day + "/" + bunifuDatepicker1.Value.Month + "/" + bunifuDatepicker1.Value.Year + ",'" + gioitinhcombobox.Text + "','" + scmnt.Text + "','" + didong.Text + "','" + comboBox5.Text + "')";
                         SqlCommand cmd = new SqlCommand(sql, conn);
-                        string st = comboBox3.Text;
-                        string sql2 = "INSERT INTO PHONGTHUE(MAKH,MADK,SOPHONG,NGAYDEN,NGAYDI,NGAYDK) VALUES('" + bunifuTextBox2.Text + "','" + bunifuTextBox2.Text + "','" + comboBox3.Text + "'," + bunifuDatepicker2.Value.Day + "/" + bunifuDatepicker2.Value.Month + "/" + bunifuDatepicker2.Value.Year + "," + bunifuDatepicker3.Value.Day + "/" + bunifuDatepicker3.Value.Month + "/" + bunifuDatepicker3.Value.Year + "," + DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year + "," + ")";
-                        SqlCommand cmd2 = new SqlCommand(sql2, conn);
                         cmd.ExecuteNonQuery();
+                        string st = comboBox3.Text;
+                        string sql2 = "INSERT INTO PHONGTHUE(MAKH,MADK,SOPHONG,NGAYDEN,NGAYDI,NGAYDK) VALUES('" + bunifuTextBox2.Text.Trim() + "','" + bunifuTextBox2.Text + "','" + comboBox3.Text + "'," + bunifuDatepicker2.Value.Day + "/" + bunifuDatepicker2.Value.Month + "/" + bunifuDatepicker2.Value.Year + "," + bunifuDatepicker3.Value.Day + "/" + bunifuDatepicker3.Value.Month + "/" + bunifuDatepicker3.Value.Year + "," + DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year + ")";
+                        SqlCommand cmd2 = new SqlCommand(sql2, conn);
                         cmd2.ExecuteNonQuery();
+                        
                         MessageBox.Show("Them thanh cong");
 
                     }

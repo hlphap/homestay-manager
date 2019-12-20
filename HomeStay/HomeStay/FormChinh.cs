@@ -56,7 +56,7 @@ namespace HomeStay
         private void ButtonThongTinChung_Click(object sender, EventArgs e)
         {
             CtrTTC.BringToFront();
-      
+            CtrTTC.ThongTinChung_Load(sender, e);
         }
 
 
@@ -65,7 +65,8 @@ namespace HomeStay
         {
            
             CtrSDP.BringToFront();
-    
+            CtrSDP.SoDoPhong_Load(sender, e);
+
         }
 
 
