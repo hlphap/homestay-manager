@@ -56,8 +56,6 @@ namespace HomeStay
 
         private void ButtonTimKiem_Click(object sender, EventArgs e)
         {
-            
-            //string sql = "SELECT SUM( GIAPHONG) FROM KHACHHANG, PHONGTHUE, PHONG WHERE KHACHHANG.MAKH = PHONGTHUE.MAKH AND PHONGTHUE.SOPHONG = PHONG.SOPHONG AND ";
             string sql = "";
             int dong = DataGridPhongDaChon.RowCount;
             for (int j = 0; j < dong; j++)
@@ -66,7 +64,7 @@ namespace HomeStay
                 int madk = radmadk.Next(0, 99999);
                 try
                 {
-                    sql = "INSERT INTO PHONGTHUE VALUES('" + madk + "','" + madoantxt.Text + "','" + DataGridPhongDaChon.Rows[j].Cells[0].Value + "'," + DateTime.Today.Year + "/" + DateTime.Today.Month + "/" + DateTime.Today.Day + "," + DateTime.Today.Year + "/" + DateTime.Today.Month + "/" + DateTime.Today.Day + "," + DateTime.Today.Year + "/" + DateTime.Today.Month + "/" + DateTime.Today.Day + ")";
+                    sql = "INSERT INTO PHONGTHUE VALUES('" + madk + "','" + madoantxt.Text + "','" + DataGridPhongDaChon.Rows[j].Cells[0].Value + "'," + DateTime.Today.Year + "/" + DateTime.Today.Month + "/" + DateTime.Today.Day + "," + DateTime.Today.Year + "/" + DateTime.Today.Month + "/" + DateTime.Today.Day + "," + DateTime.Today.Year + "/" + DateTime.Today.Month + "/" + DateTime.Today.Day +","+ DateTime.Today.ToString("yyyy/MM/dd")+ ")";
                     SqlCommand cmd = new SqlCommand(sql, conn);
                     cmd.ExecuteNonQuery();
                 }
