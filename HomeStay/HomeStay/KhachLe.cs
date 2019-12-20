@@ -21,7 +21,10 @@ namespace HomeStay
         public KhachLe()
         {
             InitializeComponent();
-           
+            string SDT;
+            string HoTen;
+            string DiaChi;
+            string scmnd;
 
         }
         private void KhachLe_Load(object sender, EventArgs e)

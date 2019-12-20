@@ -18,21 +18,8 @@ namespace HomeStay
         {
             InitializeComponent();
             conn.Open();
-            string sql1 = "select * from PHONG";
-            SqlDataAdapter da1 = new SqlDataAdapter(sql1, conn);
-            DataTable dt1 = new DataTable();
-            da1.Fill(dt1);
-            comboBox3.DataSource = dt1;
-            comboBox3.DisplayMember = "SOPHONG";
-            comboBox3.ValueMember = "SOPHONG";
+            
 
-            string sql2 = "select LOAIPHONG from PHONG WHERE SOPHONG = " + comboBox3.ValueMember;
-            SqlDataAdapter da2 = new SqlDataAdapter(sql2, conn);
-            DataTable dt2 = new DataTable();
-            da2.Fill(dt2);
-            comboBox1.DataSource = dt2;
-            comboBox1.DisplayMember = "LOAIPHONG";
-            comboBox1.ValueMember = "LOAIPHONG";
 
 
 
@@ -112,6 +99,41 @@ namespace HomeStay
             Str = Str.Replace(Str1, madoan.ToString());
             bunifuTextBox2.Text = Str;
 
+        }
+
+        private void bunifuDatepicker3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
+        {
+            string sql1 = "SELECT SOPHONG FROM PHONG WHERE LOAIPHONG = N'"+comboBox1.Text+"'EXCEPT (SELECT P.SOPHONG FROM PHONGTHUE PT, PHONG P, KHACHHANG KH WHERE PT.SOPHONG = P.SOPHONG AND KH.MAKH = PT.MAKH AND (('" + bunifuDatepicker2.Value.ToString("yyyy-MM-dd") + "'<=NgayDen) AND('" + bunifuDatepicker3.Value.ToString("yyyy-MM-dd") + "' >= NGAYDI)))";
+            SqlDataAdapter da1 = new SqlDataAdapter(sql1, conn);
+            DataTable dt1 = new DataTable();
+            da1.Fill(dt1);
+            comboBox3.DataSource = dt1;
+            comboBox3.DisplayMember = "SOPHONG";
+            comboBox3.ValueMember = "SOPHONG";
+            comboBox3.Enabled = true;
+
+        }
+
+        private void bunifuDatepicker3_Leave(object sender, EventArgs e)
+        {
+            string sql2 = "SELECT LOAIPHONG FROM PHONG WHERE SOPHONG NOT IN (SELECT P.SOPHONG FROM PHONGTHUE PT, PHONG P, KHACHHANG KH WHERE PT.SOPHONG = P.SOPHONG AND KH.MAKH = PT.MAKH AND(('" + bunifuDatepicker2.Value.ToString("yyyy-MM-dd") + "'<=NgayDen) AND('" + bunifuDatepicker3.Value.ToString("yyyy-MM-dd") + "'>= NGAYDI)))";
+            SqlDataAdapter da2 = new SqlDataAdapter(sql2, conn);
+            DataTable dt2 = new DataTable();
+            da2.Fill(dt2);
+            comboBox1.DataSource = dt2;
+            comboBox1.DisplayMember = "LOAIPHONG";
+            comboBox1.ValueMember = "LOAIPHONG";
+            comboBox1.Enabled = true;
         }
     }
 }
