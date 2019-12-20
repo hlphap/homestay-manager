@@ -38,16 +38,12 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.PanelNoiDungKhachLe = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.Panel_TopKL = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.Button_TuyChon = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.Button_ThanhToan = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.Button_TuyChonMorong = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.ButtonTongHop = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.panel1.SuspendLayout();
             this.Panel_TopKL.SuspendLayout();
@@ -69,7 +65,6 @@
             this.bunifuLabel1.Text = "THÔNG TIN CHUNG";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-
             // 
             // panel1
             // 
@@ -77,7 +72,7 @@
             this.panel1.Controls.Add(this.Panel_TopKL);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1087, 622);
             this.panel1.TabIndex = 0;
@@ -105,7 +100,6 @@
             this.Panel_TopKL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Panel_TopKL.Controls.Add(this.Button_TuyChon);
             this.Panel_TopKL.Controls.Add(this.Button_ThanhToan);
-            this.Panel_TopKL.Controls.Add(this.Button_TuyChonMorong);
             this.Panel_TopKL.Controls.Add(this.ButtonTongHop);
             this.Panel_TopKL.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panel_TopKL.GradientBottomLeft = System.Drawing.Color.DimGray;
@@ -182,7 +176,6 @@
             this.Button_TuyChon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Button_TuyChon.TextMarginLeft = 0;
             this.Button_TuyChon.UseDefaultRadiusAndThickness = true;
-            this.Button_TuyChon.Click += new System.EventHandler(this.bunifuButton2_Click);
             // 
             // Button_ThanhToan
             // 
@@ -221,7 +214,7 @@
             this.Button_ThanhToan.IdleIconLeftImage = null;
             this.Button_ThanhToan.IdleIconRightImage = null;
             this.Button_ThanhToan.IndicateFocus = false;
-            this.Button_ThanhToan.Location = new System.Drawing.Point(515, 0);
+            this.Button_ThanhToan.Location = new System.Drawing.Point(289, 0);
             this.Button_ThanhToan.Margin = new System.Windows.Forms.Padding(4);
             this.Button_ThanhToan.Name = "Button_ThanhToan";
             stateProperties3.BorderColor = System.Drawing.Color.Yellow;
@@ -249,71 +242,6 @@
             this.Button_ThanhToan.UseDefaultRadiusAndThickness = true;
             this.Button_ThanhToan.Click += new System.EventHandler(this.ButtonThanhToan);
             // 
-            // Button_TuyChonMorong
-            // 
-            this.Button_TuyChonMorong.AllowToggling = false;
-            this.Button_TuyChonMorong.AnimationSpeed = 200;
-            this.Button_TuyChonMorong.AutoGenerateColors = false;
-            this.Button_TuyChonMorong.BackColor = System.Drawing.Color.Transparent;
-            this.Button_TuyChonMorong.BackColor1 = System.Drawing.Color.Transparent;
-            this.Button_TuyChonMorong.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Button_TuyChonMorong.BackgroundImage")));
-            this.Button_TuyChonMorong.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.Button_TuyChonMorong.ButtonText = "Dịch vụ mở rộng";
-            this.Button_TuyChonMorong.ButtonTextMarginLeft = 0;
-            this.Button_TuyChonMorong.ColorContrastOnClick = 45;
-            this.Button_TuyChonMorong.ColorContrastOnHover = 45;
-            this.Button_TuyChonMorong.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.Button_TuyChonMorong.CustomizableEdges = borderEdges3;
-            this.Button_TuyChonMorong.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.Button_TuyChonMorong.DisabledBorderColor = System.Drawing.Color.Empty;
-            this.Button_TuyChonMorong.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.Button_TuyChonMorong.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.Button_TuyChonMorong.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.Button_TuyChonMorong.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
-            this.Button_TuyChonMorong.ForeColor = System.Drawing.Color.White;
-            this.Button_TuyChonMorong.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
-            this.Button_TuyChonMorong.IconMarginLeft = 11;
-            this.Button_TuyChonMorong.IconPadding = 10;
-            this.Button_TuyChonMorong.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-            this.Button_TuyChonMorong.IdleBorderColor = System.Drawing.Color.Transparent;
-            this.Button_TuyChonMorong.IdleBorderRadius = 3;
-            this.Button_TuyChonMorong.IdleBorderThickness = 1;
-            this.Button_TuyChonMorong.IdleFillColor = System.Drawing.Color.Transparent;
-            this.Button_TuyChonMorong.IdleIconLeftImage = null;
-            this.Button_TuyChonMorong.IdleIconRightImage = null;
-            this.Button_TuyChonMorong.IndicateFocus = false;
-            this.Button_TuyChonMorong.Location = new System.Drawing.Point(321, 0);
-            this.Button_TuyChonMorong.Margin = new System.Windows.Forms.Padding(4);
-            this.Button_TuyChonMorong.Name = "Button_TuyChonMorong";
-            stateProperties5.BorderColor = System.Drawing.Color.Yellow;
-            stateProperties5.BorderRadius = 3;
-            stateProperties5.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties5.BorderThickness = 1;
-            stateProperties5.FillColor = System.Drawing.Color.Black;
-            stateProperties5.ForeColor = System.Drawing.Color.White;
-            stateProperties5.IconLeftImage = null;
-            stateProperties5.IconRightImage = null;
-            this.Button_TuyChonMorong.onHoverState = stateProperties5;
-            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            stateProperties6.BorderRadius = 3;
-            stateProperties6.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties6.BorderThickness = 1;
-            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            stateProperties6.ForeColor = System.Drawing.Color.White;
-            stateProperties6.IconLeftImage = null;
-            stateProperties6.IconRightImage = null;
-            this.Button_TuyChonMorong.OnPressedState = stateProperties6;
-            this.Button_TuyChonMorong.Size = new System.Drawing.Size(185, 50);
-            this.Button_TuyChonMorong.TabIndex = 2;
-            this.Button_TuyChonMorong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Button_TuyChonMorong.TextMarginLeft = 0;
-            this.Button_TuyChonMorong.UseDefaultRadiusAndThickness = true;
-            this.Button_TuyChonMorong.Click += new System.EventHandler(this.Button_TuyChonMorong_Click);
-            // 
             // ButtonTongHop
             // 
             this.ButtonTongHop.AllowToggling = false;
@@ -328,11 +256,11 @@
             this.ButtonTongHop.ColorContrastOnClick = 45;
             this.ButtonTongHop.ColorContrastOnHover = 45;
             this.ButtonTongHop.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges4.BottomLeft = true;
-            borderEdges4.BottomRight = true;
-            borderEdges4.TopLeft = true;
-            borderEdges4.TopRight = true;
-            this.ButtonTongHop.CustomizableEdges = borderEdges4;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.ButtonTongHop.CustomizableEdges = borderEdges3;
             this.ButtonTongHop.DialogResult = System.Windows.Forms.DialogResult.None;
             this.ButtonTongHop.DisabledBorderColor = System.Drawing.Color.Empty;
             this.ButtonTongHop.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -354,24 +282,24 @@
             this.ButtonTongHop.Location = new System.Drawing.Point(0, 0);
             this.ButtonTongHop.Margin = new System.Windows.Forms.Padding(4);
             this.ButtonTongHop.Name = "ButtonTongHop";
-            stateProperties7.BorderColor = System.Drawing.Color.Yellow;
-            stateProperties7.BorderRadius = 3;
-            stateProperties7.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties7.BorderThickness = 1;
-            stateProperties7.FillColor = System.Drawing.Color.Black;
-            stateProperties7.ForeColor = System.Drawing.Color.White;
-            stateProperties7.IconLeftImage = null;
-            stateProperties7.IconRightImage = null;
-            this.ButtonTongHop.onHoverState = stateProperties7;
-            stateProperties8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            stateProperties8.BorderRadius = 3;
-            stateProperties8.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties8.BorderThickness = 1;
-            stateProperties8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            stateProperties8.ForeColor = System.Drawing.Color.White;
-            stateProperties8.IconLeftImage = null;
-            stateProperties8.IconRightImage = null;
-            this.ButtonTongHop.OnPressedState = stateProperties8;
+            stateProperties5.BorderColor = System.Drawing.Color.Yellow;
+            stateProperties5.BorderRadius = 3;
+            stateProperties5.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties5.BorderThickness = 1;
+            stateProperties5.FillColor = System.Drawing.Color.Black;
+            stateProperties5.ForeColor = System.Drawing.Color.White;
+            stateProperties5.IconLeftImage = null;
+            stateProperties5.IconRightImage = null;
+            this.ButtonTongHop.onHoverState = stateProperties5;
+            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            stateProperties6.BorderRadius = 3;
+            stateProperties6.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties6.BorderThickness = 1;
+            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            stateProperties6.ForeColor = System.Drawing.Color.White;
+            stateProperties6.IconLeftImage = null;
+            stateProperties6.IconRightImage = null;
+            this.ButtonTongHop.OnPressedState = stateProperties6;
             this.ButtonTongHop.Size = new System.Drawing.Size(164, 50);
             this.ButtonTongHop.TabIndex = 0;
             this.ButtonTongHop.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -384,7 +312,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "KhachLe";
             this.Size = new System.Drawing.Size(1087, 622);
             this.Load += new System.EventHandler(this.KhachLe_Load);
@@ -400,7 +328,6 @@
         private Bunifu.Framework.UI.BunifuGradientPanel PanelNoiDungKhachLe;
         private Bunifu.Framework.UI.BunifuGradientPanel Panel_TopKL;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton Button_ThanhToan;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton Button_TuyChonMorong;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton Button_TuyChon;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton ButtonTongHop;
     }

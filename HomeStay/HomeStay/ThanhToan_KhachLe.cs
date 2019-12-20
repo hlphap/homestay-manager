@@ -15,6 +15,7 @@ namespace HomeStay.Resources
     {
         SqlConnection conn = new SqlConnection(DataSource.connectionString);
         string sophong;
+        string makh;
         public ThanhToan_KhachLe()
         {
             InitializeComponent();
@@ -24,48 +25,55 @@ namespace HomeStay.Resources
         }
         public void loaddatathongtinkhach(string sophong)
         {
-            string HoTenz, scmndz, DiaChiz, SDTz;
-            string sql = "SELECT HOTEN FROM KHACHHANG,PHONG WHERE KHACHHANG.MAKH = PHONG.MAKH AND SOPHONG ='" + sophong + "'";
+            string sql = "SELECT HOTENKH FROM KHACHHANG,PHONGTHUE WHERE KHACHHANG.MAKH = PHONGTHUE.MAKH AND SOPHONG ='" + sophong + "'";
             SqlCommand cmd = new SqlCommand(sql, conn);
             cmd.ExecuteNonQuery();
-            //HoTen.Text = HoTenz;
-            //scmnd.Text = scmndz;
-            //SDT.Text = SDTz;
-            //DiaChi.Text = DiaChiz;
-            showinfo();
+            showinfoMAKH();
+            showinfohoten();
+            showinfocmnd();
         }
-        public void showinfo()
+        public void showinfohoten()
         {
-            string sql = "SElECT HOTENKH  FROM PHONGTHUE WHERE SOPHONG = '" + sophong + "'";
+            string sql = "SElECT HOTENKH  FROM PHONGTHUE, KHACHHANG WHERE PHONGTHUE.MAKH= KHACHHANG.MAKH AND PHONGTHUE.makh = '" + makh + "'";
             SqlCommand cmd1 = new SqlCommand(sql, conn);
             cmd1.CommandType = CommandType.Text;
             SqlDataAdapter da = new SqlDataAdapter(cmd1);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            object SUM;
-            SUM = dt.Compute("(HOTENKH)", "");
-            HoTen.Text = SUM.ToString();
+            object ten;
+            ten = dt.Compute("max(HOTENKH)", "");
+            HoTen.Text = ten.ToString();
         }
-
-        private void bunifuCustomLabel6_Click(object sender, EventArgs e)
+        public void showinfocmnd()
         {
-
+            string sql = "SElECT CMND FROM PHONGTHUE, KHACHHANG WHERE PHONGTHUE.MAKH= KHACHHANG.MAKH AND PHONGTHUE.makh = '" + makh + "'";
+            SqlCommand cmd1 = new SqlCommand(sql, conn);
+            cmd1.CommandType = CommandType.Text;
+            SqlDataAdapter da = new SqlDataAdapter(cmd1);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            object ten;
+            ten = dt.Compute("max(CMND)", "");
+            scmnd.Text = ten.ToString();
         }
-
-        private void bunifuCustomLabel3_Click(object sender, EventArgs e)
+        public void showinfoMAKH()
         {
-
+            string sql = "SElECT KHACHHANG.MAKH FROM PHONGTHUE, KHACHHANG WHERE PHONGTHUE.MAKH= KHACHHANG.MAKH AND sophong = '" + sophong + "'";
+            SqlCommand cmd1 = new SqlCommand(sql, conn);
+            cmd1.CommandType = CommandType.Text;
+            SqlDataAdapter da = new SqlDataAdapter(cmd1);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            object ten;
+            ten = dt.Compute("max(MAKH)", "");
+            SDT.Text = ten.ToString();
+            makh = SDT.Text;
         }
-
-        private void bunifuCustomLabel3_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void DataGridPhongDaChon_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int i = DataGridPhongDaChon.CurrentRow.Index;
-            sophong = DataGridPhongDaChon.Rows[i].Cells[0].Value.ToString();
+            sophongtxt.Text = DataGridPhongDaChon.Rows[i].Cells[0].Value.ToString();
+            sophong = sophongtxt.Text;
             loaddatathongtinkhach(sophong);
 
         }
@@ -80,14 +88,9 @@ namespace HomeStay.Resources
             DataGridPhongDaChon.DataSource = dt;
         }
 
-        private void bunifuCustomLabel10_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
-            string sql = "SElECT GIA  FROM PHONG, PHONGTHUE,LOAIPHONG WHERE PHONGTHUE.SOPHONG = PHONG.SOPHONG AND LOAIPHONG.LOAIPHONG = PHONG.LOAIPHONG AND PHONG.SOPHONG = '" + sophong + "'";
+            string sql = "SELECT DATEDIFF (day, NGAYDEN, NGAYDI) AS ngayo From PHONGTHUE, KHACHHANG WHERE  SOPHONG = '" + sophong + "' AND khachhang.MAKH = '"+makh.Trim()+"'" ;
             SqlCommand cmd1 = new SqlCommand(sql, conn);
             cmd1.CommandType = CommandType.Text;
             SqlDataAdapter da = new SqlDataAdapter(cmd1);
@@ -95,8 +98,24 @@ namespace HomeStay.Resources
             da.Fill(dt);
 
             object SUM;
-            SUM = dt.Compute("Max(GIA)", "");
+            SUM = dt.Compute("Max(ngayo)", "");
             thanhtientext.Text = SUM.ToString();
+            int ngayo = Int32.Parse(thanhtientext.Text);
+            
+            string sql2 = "SELECT gia AS GIA From PHONGTHUE, KHACHHANG, LOAIPHONG, PHONG WHERE KHACHHANG.MAKH = PHONGTHUE.MAKH AND PHONGTHUE.SOPHONG = PHONG.SOPHONG AND PHONG.LOAIPHONG = LOAIPHONG.LOAIPHONG AND PHONGTHUE.SOPHONG  = '" + sophong + "' AND khachhang.MAKH = '" + makh.Trim() + "'";
+            SqlCommand cmd2 = new SqlCommand(sql2, conn);
+            cmd2.CommandType = CommandType.Text;
+            SqlDataAdapter da2 = new SqlDataAdapter(cmd2);
+            DataTable dt2 = new DataTable();
+            da2.Fill(dt2);
+
+            object GIA;
+            GIA = dt2.Compute("Max(GIA)", "");
+            thanhtientext.Text = GIA.ToString();
+            double gia = Convert.ToDouble(thanhtientext.Text);
+
+            thanhtientext.Text = (gia * ngayo).ToString();
         }
-    }
+
+     }
 }

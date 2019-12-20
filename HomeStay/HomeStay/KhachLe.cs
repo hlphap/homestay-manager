@@ -15,16 +15,12 @@ namespace HomeStay
     {
         private
             KhachLe_TongHop CtrTH = new KhachLe_TongHop();
-            KhachLe_TuyChon CtrTC = new KhachLe_TuyChon();
             KhachLe_DichVuMoRong CtrDVMR = new KhachLe_DichVuMoRong();
             ThanhToan_KhachLe CtrTT = new ThanhToan_KhachLe();
         public KhachLe()
         {
             InitializeComponent();
-            string SDT;
-            string HoTen;
-            string DiaChi;
-            string scmnd;
+
 
         }
         private void KhachLe_Load(object sender, EventArgs e)
@@ -34,7 +30,6 @@ namespace HomeStay
                 Invoke(new Action(() =>
                 {
                     PanelNoiDungKhachLe.Controls.Add(CtrTH);
-                    PanelNoiDungKhachLe.Controls.Add(CtrTC);
                     PanelNoiDungKhachLe.Controls.Add(CtrDVMR);
                     PanelNoiDungKhachLe.Controls.Add(CtrTT);
                 }));
@@ -48,12 +43,6 @@ namespace HomeStay
             CtrTH.BringToFront();
             CtrTH.Show();
 
-        }
-
-        private void bunifuButton2_Click(object sender, EventArgs e)
-        {
-            CtrTC.BringToFront();
-            CtrTC.Show();
         }
 
         private void Button_TuyChonMorong_Click(object sender, EventArgs e)
