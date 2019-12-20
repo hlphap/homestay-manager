@@ -14,7 +14,7 @@ namespace HomeStay
     public partial class KhachDoan_DoanDaDi : UserControl
     {
         SqlConnection conn = new SqlConnection(DataSource.connectionString);
-        string sql = "SELECT khachhang.MAKH AS'Mã khách hàng',HOTENKH AS'Họ Tên', MADK AS 'Mã đăng ký', LOAIPHONG AS'Loại phòng', NGAYDEN AS'Ngày đến', NGAYDI AS 'Ngày đi' FROM PHONGTHUE, PHONG, KHACHHANG WHERE PHONG.SOPHONG = PHONGTHUE.SOPHONG AND PHONGTHUE.MAKH = KHACHHANG.MAKH";
+        string sql = "SELECT KHACHHANG.MAKH as 'Mã KH', MADK as 'Mã đặt phòng',  SOPHONG as 'Số phòng', HOTENKH as 'Họ tên', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE WHERE KHACHHANG.MAKH = PHONGTHUE.MAKH AND NGAYDI < GETDATE()";
 
         public KhachDoan_DoanDaDi()
         {
@@ -34,13 +34,11 @@ namespace HomeStay
         {
             if (madatphongtxt.Text == "")
                 MessageBox.Show("Ma dat phong trong");
-            else if (comboBox2.Text == "")
-                MessageBox.Show("Phai chon loai phong");
             else
             {
                 try
                 {
-                    sql = "SELECT khachhang.MAKH AS'Mã khách hàng',HOTENKH AS'Họ Tên', MADK AS 'Mã đăng ký', LOAIPHONG AS'Loại phòng', NGAYDEN AS'Ngày đến', NGAYDI AS 'Ngày đi' FROM PHONGTHUE, PHONG, KHACHHANG WHERE PHONG.SOPHONG = PHONGTHUE.SOPHONG AND PHONGTHUE.MAKH = KHACHHANG.MAKH AND NGAYDI > "  + DateTime.Today.Year + "/" + DateTime.Today.Month + "/" + DateTime.Today.Day + "AND MADK = '" + madatphongtxt.Text + "' AND LOAIPHONG = '" + comboBox2.Text + "'";
+                    sql = "SELECT KHACHHANG.MAKH as 'Mã KH', MADK as 'Mã đặt phòng',  SOPHONG as 'Số phòng', HOTENKH as 'Họ tên', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE WHERE KHACHHANG.MAKH = PHONGTHUE.MAKH AND NGAYDI < GETDATE() AND MADK = '"+ madatphongtxt.Text +"' ";
                     showdata(sql);
                 }
                 catch

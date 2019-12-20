@@ -32,18 +32,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LapPhieuThuChi_ThuChi));
             this.bunifuCustomDataGrid1 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.ButtonTimKiem = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.bunifuDatepicker1 = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.ngayden = new Bunifu.Framework.UI.BunifuDatepicker();
             this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuDatepicker2 = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.ngaydi = new Bunifu.Framework.UI.BunifuDatepicker();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.tongtientxt = new Bunifu.Framework.UI.BunifuCustomLabel();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).BeginInit();
             this.bunifuGradientPanel2.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
@@ -67,12 +63,6 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.bunifuCustomDataGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.bunifuCustomDataGrid1.ColumnHeadersHeight = 29;
-            this.bunifuCustomDataGrid1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column5,
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4});
             this.bunifuCustomDataGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuCustomDataGrid1.DoubleBuffered = true;
             this.bunifuCustomDataGrid1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
@@ -88,45 +78,16 @@
             this.bunifuCustomDataGrid1.Size = new System.Drawing.Size(1087, 472);
             this.bunifuCustomDataGrid1.TabIndex = 5;
             // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Ngày";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Tài khoản";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Số chứng từ";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Số tiền";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Lý do";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            // 
             // bunifuGradientPanel2
             // 
             this.bunifuGradientPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel2.BackgroundImage")));
             this.bunifuGradientPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel2.Controls.Add(this.tongtientxt);
+            this.bunifuGradientPanel2.Controls.Add(this.bunifuCustomLabel1);
             this.bunifuGradientPanel2.Controls.Add(this.ButtonTimKiem);
-            this.bunifuGradientPanel2.Controls.Add(this.comboBox3);
-            this.bunifuGradientPanel2.Controls.Add(this.bunifuDatepicker1);
+            this.bunifuGradientPanel2.Controls.Add(this.ngayden);
             this.bunifuGradientPanel2.Controls.Add(this.bunifuCustomLabel10);
-            this.bunifuGradientPanel2.Controls.Add(this.bunifuDatepicker2);
+            this.bunifuGradientPanel2.Controls.Add(this.ngaydi);
             this.bunifuGradientPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuGradientPanel2.GradientBottomLeft = System.Drawing.Color.White;
             this.bunifuGradientPanel2.GradientBottomRight = System.Drawing.Color.White;
@@ -173,33 +134,22 @@
             this.ButtonTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ButtonTimKiem.Textcolor = System.Drawing.Color.White;
             this.ButtonTimKiem.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonTimKiem.Click += new System.EventHandler(this.ButtonTimKiem_Click);
             // 
-            // comboBox3
+            // ngayden
             // 
-            this.comboBox3.BackColor = System.Drawing.Color.White;
-            this.comboBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(672, 4);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(128, 29);
-            this.comboBox3.TabIndex = 30;
-            this.comboBox3.Text = "Phiếu thu tiền";
-            // 
-            // bunifuDatepicker1
-            // 
-            this.bunifuDatepicker1.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.bunifuDatepicker1.BorderRadius = 0;
-            this.bunifuDatepicker1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuDatepicker1.ForeColor = System.Drawing.Color.White;
-            this.bunifuDatepicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.bunifuDatepicker1.FormatCustom = null;
-            this.bunifuDatepicker1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuDatepicker1.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.bunifuDatepicker1.Name = "bunifuDatepicker1";
-            this.bunifuDatepicker1.Size = new System.Drawing.Size(233, 37);
-            this.bunifuDatepicker1.TabIndex = 28;
-            this.bunifuDatepicker1.Value = new System.DateTime(2019, 10, 11, 8, 17, 40, 675);
+            this.ngayden.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.ngayden.BorderRadius = 0;
+            this.ngayden.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ngayden.ForeColor = System.Drawing.Color.White;
+            this.ngayden.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.ngayden.FormatCustom = null;
+            this.ngayden.Location = new System.Drawing.Point(0, 0);
+            this.ngayden.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.ngayden.Name = "ngayden";
+            this.ngayden.Size = new System.Drawing.Size(233, 37);
+            this.ngayden.TabIndex = 28;
+            this.ngayden.Value = new System.DateTime(2009, 10, 11, 8, 17, 0, 0);
             // 
             // bunifuCustomLabel10
             // 
@@ -213,20 +163,20 @@
             this.bunifuCustomLabel10.TabIndex = 29;
             this.bunifuCustomLabel10.Text = "đến";
             // 
-            // bunifuDatepicker2
+            // ngaydi
             // 
-            this.bunifuDatepicker2.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.bunifuDatepicker2.BorderRadius = 0;
-            this.bunifuDatepicker2.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuDatepicker2.ForeColor = System.Drawing.Color.White;
-            this.bunifuDatepicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.bunifuDatepicker2.FormatCustom = null;
-            this.bunifuDatepicker2.Location = new System.Drawing.Point(301, 0);
-            this.bunifuDatepicker2.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.bunifuDatepicker2.Name = "bunifuDatepicker2";
-            this.bunifuDatepicker2.Size = new System.Drawing.Size(233, 37);
-            this.bunifuDatepicker2.TabIndex = 27;
-            this.bunifuDatepicker2.Value = new System.DateTime(2019, 10, 11, 8, 17, 40, 675);
+            this.ngaydi.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.ngaydi.BorderRadius = 0;
+            this.ngaydi.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ngaydi.ForeColor = System.Drawing.Color.White;
+            this.ngaydi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.ngaydi.FormatCustom = null;
+            this.ngaydi.Location = new System.Drawing.Point(301, 0);
+            this.ngaydi.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.ngaydi.Name = "ngaydi";
+            this.ngaydi.Size = new System.Drawing.Size(233, 37);
+            this.ngaydi.TabIndex = 27;
+            this.ngaydi.Value = new System.DateTime(2029, 10, 11, 8, 17, 0, 0);
             // 
             // bunifuGradientPanel1
             // 
@@ -244,6 +194,30 @@
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(1087, 565);
             this.bunifuGradientPanel1.TabIndex = 7;
+            // 
+            // bunifuCustomLabel1
+            // 
+            this.bunifuCustomLabel1.AutoSize = true;
+            this.bunifuCustomLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 11F);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(628, 53);
+            this.bunifuCustomLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(98, 25);
+            this.bunifuCustomLabel1.TabIndex = 32;
+            this.bunifuCustomLabel1.Text = "Tổng tiền:";
+            // 
+            // tongtientxt
+            // 
+            this.tongtientxt.AutoSize = true;
+            this.tongtientxt.BackColor = System.Drawing.Color.Transparent;
+            this.tongtientxt.Font = new System.Drawing.Font("Segoe UI Semibold", 11F);
+            this.tongtientxt.Location = new System.Drawing.Point(729, 53);
+            this.tongtientxt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.tongtientxt.Name = "tongtientxt";
+            this.tongtientxt.Size = new System.Drawing.Size(93, 25);
+            this.tongtientxt.TabIndex = 33;
+            this.tongtientxt.Text = "Tổng tiền";
             // 
             // LapPhieuThuChi_ThuChi
             // 
@@ -263,17 +237,13 @@
         #endregion
 
         private Bunifu.Framework.UI.BunifuCustomDataGrid bunifuCustomDataGrid1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel2;
         private Bunifu.Framework.UI.BunifuFlatButton ButtonTimKiem;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private Bunifu.Framework.UI.BunifuDatepicker bunifuDatepicker1;
+        private Bunifu.Framework.UI.BunifuDatepicker ngayden;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel10;
-        private Bunifu.Framework.UI.BunifuDatepicker bunifuDatepicker2;
+        private Bunifu.Framework.UI.BunifuDatepicker ngaydi;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
+        private Bunifu.Framework.UI.BunifuCustomLabel tongtientxt;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
     }
 }
