@@ -17,10 +17,14 @@ namespace HomeStay
         string sql = " select SOPHONG as'Số Phòng', LOAIPHONG.loaiphong as'Loại Phòng', GIA as' Giá Phòng', TANG as'Tầng ' FROM PHONG,LOAIPHONG WHERE PHONG.LOAIPHONG=LOAIPHONG.LOAIPHONG AND TRANGTHAI = 1 ";
         public string[] sophong = new string[20];
         public int demsophong = -1;
+        public string ngayden, ngaydi;
         public KhachDoan_Phongtrong()
         {
             InitializeComponent();
             conn.Open(); 
+            ngayden = NgayDenApp.Value.ToString("yyyy/MM/dd");
+            ngaydi = NgayDiApp.Value.ToString("yyyy/MM/dd");
+            showdata(sql);
         }
         void showdata(string sql)
         {
@@ -50,6 +54,8 @@ namespace HomeStay
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 ViewDTA.DataSource = dt;
+
+                showdata(sql);
             }
             catch
             {
@@ -60,6 +66,18 @@ namespace HomeStay
                 conn.Close();
             }
 
+        }
+
+        private void NgayDenApp_onValueChanged(object sender, EventArgs e)
+        {
+            ngayden = NgayDenApp.Value.ToString("yyyy/MM/dd");
+            ngaydi = NgayDiApp.Value.ToString("yyyy/MM/dd");
+        }
+
+        private void NgayDiApp_onValueChanged(object sender, EventArgs e)
+        {
+            ngayden = NgayDenApp.Value.ToString("yyyy/MM/dd");
+            ngaydi = NgayDiApp.Value.ToString("yyyy/MM/dd");
         }
 
         private void dataGridViewphongtrong_CellContentClick_1(object sender, DataGridViewCellEventArgs e)

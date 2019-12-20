@@ -58,7 +58,7 @@ namespace HomeStay
                 {
                     try
                     {
-                        string sql = "INSERT INTO KHACHHANG  values ('" + bunifuTextBox3.Text + "','" + tentruongdoantxt.Text + "'," + bunifuDatePicker1.Value.ToString("yyyy/MM/dd") + ",'" + comboBox3.Text + "','" + cmndtxt.Text + "','" + sdttxt.Text + "','" + quoctichtxt.Text + "','" + diachitxt.Text + "','" + email.Text + "','" + ghichu.Text + "')";
+                        string sql = "INSERT INTO KHACHHANG  values ('" + bunifuTextBox3.Text + "','" + tentruongdoantxt.Text + "'," + bunifuDatePicker1.Value.ToString("yyyy/MM/dd") + ",'" + comboBox3.Text + "','" + cmndtxt.Text + "','" + sdttxt.Text + "','" + quoctichtxt.Text + "','" + diachitxt.Text + "','" + email.Text + "')";
                         SqlCommand cmd = new SqlCommand(sql, conn);
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Luu thanh cong");

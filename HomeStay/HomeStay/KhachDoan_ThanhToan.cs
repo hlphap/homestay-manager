@@ -14,7 +14,7 @@ namespace HomeStay
     public partial class KhachDoan_ThanhToan : UserControl
     {
         SqlConnection conn = new SqlConnection(DataSource.connectionString);
-
+        string ngaydenttoan, ngaydittoan;
         public KhachDoan_ThanhToan()
         {
             InitializeComponent();
@@ -53,6 +53,11 @@ namespace HomeStay
             sdttdtxt.Text = sdttd;
             socmndtdtxt.Text = socmndtd;
         }
+        public void loaddataphongtrong(string ngayden, string ngaydi)
+        {
+            ngaydenttoan = ngayden;
+            ngaydittoan = ngaydi;
+        }
 
         private void ButtonTimKiem_Click(object sender, EventArgs e)
         {
@@ -64,7 +69,7 @@ namespace HomeStay
                 int madk = radmadk.Next(0, 99999);
                 try
                 {
-                    sql = "INSERT INTO PHONGTHUE VALUES('" + madk + "','" + madoantxt.Text + "','" + DataGridPhongDaChon.Rows[j].Cells[0].Value + "'," + DateTime.Today.Year + "/" + DateTime.Today.Month + "/" + DateTime.Today.Day + "," + DateTime.Today.Year + "/" + DateTime.Today.Month + "/" + DateTime.Today.Day + "," + DateTime.Today.Year + "/" + DateTime.Today.Month + "/" + DateTime.Today.Day +","+ DateTime.Today.ToString("yyyy/MM/dd")+ ")";
+                    sql = "INSERT INTO PHONGTHUE VALUES('" + madk + "','" + madoantxt.Text + "','" + DataGridPhongDaChon.Rows[j].Cells[0].Value + "'," + DateTime.Today.ToString("yyyy/MM/dd") + ",'" + ngaydenttoan + "','" +ngaydittoan +"',"+ DateTime.Today.ToString("yyyy/MM/dd")+ ")";
                     SqlCommand cmd = new SqlCommand(sql, conn);
                     cmd.ExecuteNonQuery();
                 }
@@ -74,7 +79,7 @@ namespace HomeStay
                 }
             }
 
-            sql = "SElECT SUM(GIAPHONG) tong FROM PHONG, PHONGTHUE WHERE PHONGTHUE.SOPHONG = PHONG.SOPHONG AND MAKH = '" + madoantxt.Text + "'";
+            sql = "SElECT SUM(GIA) tong FROM PHONG, PHONGTHUE, LOAIPHONG WHERE PHONGTHUE.SOPHONG = PHONG.SOPHONG AND LOAIPHONG.LOAIPHONG = PHONg.LOAIPHONG AND MAKH = '" + madoantxt.Text + "'";
             SqlCommand cmd1 = new SqlCommand(sql, conn);
             cmd1.CommandType = CommandType.Text;
             SqlDataAdapter da = new SqlDataAdapter(cmd1);
@@ -84,6 +89,7 @@ namespace HomeStay
             object SUM;
             SUM = dt.Compute("Max(tong)", "");
             Tinhtientxt.Text = SUM.ToString();
+
         }   
     }
 }

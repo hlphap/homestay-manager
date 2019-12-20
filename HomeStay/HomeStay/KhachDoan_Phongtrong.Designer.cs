@@ -325,6 +325,7 @@
             this.NgayDiApp.Size = new System.Drawing.Size(217, 45);
             this.NgayDiApp.TabIndex = 25;
             this.NgayDiApp.Value = new System.DateTime(2019, 11, 28, 21, 30, 18, 197);
+            this.NgayDiApp.onValueChanged += new System.EventHandler(this.NgayDiApp_onValueChanged);
             // 
             // bunifuCustomLabel1
             // 
@@ -351,6 +352,7 @@
             this.NgayDenApp.Size = new System.Drawing.Size(207, 44);
             this.NgayDenApp.TabIndex = 23;
             this.NgayDenApp.Value = new System.DateTime(2019, 11, 28, 21, 30, 18, 197);
+            this.NgayDenApp.onValueChanged += new System.EventHandler(this.NgayDenApp_onValueChanged);
             // 
             // bunifuCustomLabel3
             // 

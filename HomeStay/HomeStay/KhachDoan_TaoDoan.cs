@@ -17,6 +17,7 @@ namespace HomeStay
         public string[] sophongtt = new string[20];
         public int demsophongtt;
         public string tentdtt, sdttdtt, socmndtdtt, madoantt;
+        public string ngaydentt, ngayditt;
         public
         KhachDoan_Phongtrong CtrPhongTrong = new KhachDoan_Phongtrong();
         KhachDoan_Thongtindoan CtrTTDoan = new KhachDoan_Thongtindoan();
@@ -52,10 +53,15 @@ namespace HomeStay
             sdttdtt = CtrTTDoan.sdttd;
             socmndtdtt = CtrTTDoan.socmndtd;
             madoantt = CtrTTDoan.madoan;
+
+            ngaydentt = CtrPhongTrong.ngayden;
+            ngayditt = CtrPhongTrong.ngaydi;
+
             CtrTToan.BringToFront();
             CtrTToan.Show();
             CtrTToan.loaddata(sophongtt, demsophongtt);
             CtrTToan.loaddatathongtindoan(tentdtt, sdttdtt, socmndtdtt, madoantt);
+            CtrTToan.loaddataphongtrong(ngaydentt, ngayditt);
         }
         
     }
