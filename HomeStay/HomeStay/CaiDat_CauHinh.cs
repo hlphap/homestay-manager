@@ -18,6 +18,7 @@ namespace HomeStay
             CaiDat_DsTang CtrDST = new CaiDat_DsTang();
             CauHinh_ThongTinChung CtrTTC = new CauHinh_ThongTinChung();
             CauHinh_ThongTinCHST CtrTTCHST = new CauHinh_ThongTinCHST();
+            CauHinh_LoaiPhong CtrLP = new CauHinh_LoaiPhong();
         public CaiDat_CauHinh()
         {
             InitializeComponent();
@@ -38,6 +39,7 @@ namespace HomeStay
                     PanelCauHinh.Controls.Add(CtrDST);
                     PanelCauHinh.Controls.Add(CtrTTC);
                     PanelCauHinh.Controls.Add(CtrTTCHST);
+                    PanelCauHinh.Controls.Add(CtrLP);
                 }));
             });
             newThread.Start();
@@ -74,6 +76,10 @@ namespace HomeStay
             CtrTTC.BringToFront();
         }
 
-       
+        private void btnLoaiPhong_Click(object sender, EventArgs e)
+        {
+            PanelCauHinh.Show();
+            CtrLP.BringToFront();
+        }
     }
 }

@@ -13,11 +13,13 @@ namespace HomeStay
 {
     public partial class DatPhong : UserControl
     {
-        string sql4="";
+
         SqlConnection conn = new SqlConnection(DataSource.connectionString);
+        bool kttoday;
         public DatPhong()
         {
             InitializeComponent();
+            kttoday = true;
         }
 
         private void LoadData(string sql, DataGridView ViewDTA)
@@ -73,16 +75,9 @@ namespace HomeStay
                 Loaiphongtxt.DisplayMember = "LOAIPHONG";
                 Loaiphongtxt.ValueMember = "LOAIPHONG";
 
-                string sql3 = "select * from PHONG WHERE SOPHONG = " + Sophongtxt.ValueMember;
-                SqlDataAdapter da3 = new SqlDataAdapter(sql3, conn);
-                DataTable dt3 = new DataTable();
-                da3.Fill(dt3);
-                Trangthaitxt.DataSource = dt3;
-                Trangthaitxt.DisplayMember = "TRANGTHAI";
-                Trangthaitxt.ValueMember = "TRANGTHAI";
 
 
-                sql4 = "SELECT SOPHONG as 'Số phòng', MADK as 'Mã đặt phòng', HOTENKH as 'Họ tên', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE WHERE KHACHHANG.MAKH = PHONGTHUE.MAKH AND GETDATE() < NGAYDEN";
+                string sql4 = "SELECT PHONGTHUE.SOPHONG as 'Số phòng', MADK as 'Mã đặt phòng', HOTENKH as 'Họ tên', LOAIPHONG as 'Loại phòng', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE, PHONG WHERE PHONG.SOPHONG = PHONGTHUE.SOPHONG AND KHACHHANG.MAKH = PHONGTHUE.MAKH AND GETDATE() < NGAYDEN";
                 LoadData(sql4, GridViewDSDP);
 
 
@@ -94,38 +89,45 @@ namespace HomeStay
                 MessageBox.Show("Lỗi", "Lỗi kết nối Server");
             }
 
-            
+     
             conn.Close();
         }
 
         private void ButtonTimKiem_Click(object sender, EventArgs e)
         {
             conn.Open();
-            //if (Madatphongtxt.Text != null)
-            //{
-            //    sql4 += " AND MADK LIKE '% " + Madatphongtxt.Text + "%'";
-            //}
+            string sql = "";
+            if (kttoday == true)
+            {
+                sql = "SELECT PHONGTHUE.SOPHONG as 'Số phòng', MADK as 'Mã đặt phòng', HOTENKH as 'Họ tên', LOAIPHONG as 'Loại phòng', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE, PHONG WHERE PHONG.SOPHONG = PHONGTHUE.SOPHONG AND KHACHHANG.MAKH = PHONGTHUE.MAKH AND GETDATE() = NGAYDEN";
 
-            //if(Tenkhachtxt.Text!= null)
-            //{
-               
-            //    sql4 += " AND HOTENKH LIKE '%" + Tenkhachtxt.Text + "%'";
-            //}
+            }
+            else
+            {
+                sql = "SELECT PHONGTHUE.SOPHONG as 'Số phòng', MADK as 'Mã đặt phòng', HOTENKH as 'Họ tên', LOAIPHONG as 'Loại phòng', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE, PHONG WHERE PHONG.SOPHONG = PHONGTHUE.SOPHONG AND KHACHHANG.MAKH = PHONGTHUE.MAKH AND '" + NgayDenApp.Value.ToString() + "' <= NGAYDEN AND NGAYDI <= '" + NgayDiApp.Value.ToString() + "'";
+            }
+          
+            sql = sql + string.Format(" AND MADK like N'%{0}%' AND HOTENKH like N'%{1}%'", Madatphongtxt.Text, Tenkhachtxt.Text);
+            if (Sophongtxt.ValueMember != null)
+                sql = sql + string.Format(" AND PHONGTHUE.SOPHONG like N'%{0}%'", Sophongtxt.Text);
+           
+            if (Loaiphongtxt.ValueMember != null)
+                sql += " AND LOAIPHONG = N'" + Loaiphongtxt.Text + "'";
+        
+           
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            cmd.CommandType = CommandType.Text;
+            SqlDataAdapter da4 = new SqlDataAdapter(cmd);
+            DataTable dt4 = new DataTable();
+            da4.Fill(dt4);
+            GridViewDSDP.DataSource = dt4;
+            conn.Close();
+            
+           
 
-            //if (Sophongtxt.ValueMember != null)
-            //    sql4 += "AND SOPHONG LIKE '% " + Sophongtxt.Text + "%'";
-            ///*if(Loaiphongtxt.ValueMember != null)
-            //    sql4 += "AND LOAIPHONG = '" + Loaiphongtxt.Text + "'";
-            //if (Trangthaitxt.ValueMember != null)
-            //    sql4 += "AND TRANGTHAI = '" + Trangthaitxt.Text + "'";*/
+     
 
-            //SqlCommand cmd4 = new SqlCommand(sql4, conn);
-            //cmd4.CommandType = CommandType.Text;
-            //SqlDataAdapter da4 = new SqlDataAdapter(cmd4);
-            //DataTable dt4 = new DataTable();
-            //da4.Fill(dt4);
-            //GridViewDSDP.DataSource = dt4;
-            //conn.Close();
+           
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
@@ -135,6 +137,32 @@ namespace HomeStay
 
         private void DataGridViewPhongTrong_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+
+
+        private void btnToday_Click_1(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void btnToday_Click(object sender, EventArgs e)
+        {
+            if (kttoday == true)
+            {
+                btnToday.BorderStyle = BorderStyle.Fixed3D;
+                kttoday = false;
+                NgayDenApp.Enabled = true;
+                NgayDiApp.Enabled = true;
+            }
+            else
+            {
+                btnToday.BorderStyle = BorderStyle.None;
+                kttoday = true;
+                NgayDiApp.Enabled = false;
+                NgayDenApp.Enabled = false;
+            }
 
         }
     }

@@ -40,7 +40,7 @@
             this.btNhanVien = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnLoaiPhong = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnTTC = new Bunifu.Framework.UI.BunifuFlatButton();
             this.ThongTinCKS = new Bunifu.Framework.UI.BunifuFlatButton();
             this.SuspendLayout();
@@ -243,41 +243,42 @@
             this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuFlatButton3.Click += new System.EventHandler(this.bunifuFlatButton3_Click);
             // 
-            // bunifuFlatButton2
+            // btnLoaiPhong
             // 
-            this.bunifuFlatButton2.Active = false;
-            this.bunifuFlatButton2.Activecolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton2.BorderRadius = 0;
-            this.bunifuFlatButton2.ButtonText = "Loại phòng";
-            this.bunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton2.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton2.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton2.Iconimage")));
-            this.bunifuFlatButton2.Iconimage_right = null;
-            this.bunifuFlatButton2.Iconimage_right_Selected = null;
-            this.bunifuFlatButton2.Iconimage_Selected = null;
-            this.bunifuFlatButton2.IconMarginLeft = 0;
-            this.bunifuFlatButton2.IconMarginRight = 0;
-            this.bunifuFlatButton2.IconRightVisible = true;
-            this.bunifuFlatButton2.IconRightZoom = 0D;
-            this.bunifuFlatButton2.IconVisible = true;
-            this.bunifuFlatButton2.IconZoom = 80D;
-            this.bunifuFlatButton2.IsTab = false;
-            this.bunifuFlatButton2.Location = new System.Drawing.Point(169, 447);
-            this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.bunifuFlatButton2.Name = "bunifuFlatButton2";
-            this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.bunifuFlatButton2.selected = false;
-            this.bunifuFlatButton2.Size = new System.Drawing.Size(363, 74);
-            this.bunifuFlatButton2.TabIndex = 61;
-            this.bunifuFlatButton2.Text = "Loại phòng";
-            this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuFlatButton2.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoaiPhong.Active = false;
+            this.btnLoaiPhong.Activecolor = System.Drawing.Color.Transparent;
+            this.btnLoaiPhong.BackColor = System.Drawing.Color.Transparent;
+            this.btnLoaiPhong.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLoaiPhong.BorderRadius = 0;
+            this.btnLoaiPhong.ButtonText = "Loại phòng";
+            this.btnLoaiPhong.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLoaiPhong.DisabledColor = System.Drawing.Color.Gray;
+            this.btnLoaiPhong.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnLoaiPhong.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnLoaiPhong.Iconimage")));
+            this.btnLoaiPhong.Iconimage_right = null;
+            this.btnLoaiPhong.Iconimage_right_Selected = null;
+            this.btnLoaiPhong.Iconimage_Selected = null;
+            this.btnLoaiPhong.IconMarginLeft = 0;
+            this.btnLoaiPhong.IconMarginRight = 0;
+            this.btnLoaiPhong.IconRightVisible = true;
+            this.btnLoaiPhong.IconRightZoom = 0D;
+            this.btnLoaiPhong.IconVisible = true;
+            this.btnLoaiPhong.IconZoom = 80D;
+            this.btnLoaiPhong.IsTab = false;
+            this.btnLoaiPhong.Location = new System.Drawing.Point(169, 447);
+            this.btnLoaiPhong.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnLoaiPhong.Name = "btnLoaiPhong";
+            this.btnLoaiPhong.Normalcolor = System.Drawing.Color.Transparent;
+            this.btnLoaiPhong.OnHovercolor = System.Drawing.Color.Transparent;
+            this.btnLoaiPhong.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.btnLoaiPhong.selected = false;
+            this.btnLoaiPhong.Size = new System.Drawing.Size(363, 74);
+            this.btnLoaiPhong.TabIndex = 61;
+            this.btnLoaiPhong.Text = "Loại phòng";
+            this.btnLoaiPhong.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnLoaiPhong.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.btnLoaiPhong.TextFont = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoaiPhong.Click += new System.EventHandler(this.btnLoaiPhong_Click);
             // 
             // btnTTC
             // 
@@ -366,7 +367,7 @@
             this.Controls.Add(this.bunifuCustomLabel4);
             this.Controls.Add(this.bunifuFlatButton3);
             this.Controls.Add(this.bunifuCustomLabel3);
-            this.Controls.Add(this.bunifuFlatButton2);
+            this.Controls.Add(this.btnLoaiPhong);
             this.Controls.Add(this.bunifuCustomLabel2);
             this.Controls.Add(this.btnTTC);
             this.Controls.Add(this.bunifuCustomLabel1);
@@ -389,7 +390,7 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
+        private Bunifu.Framework.UI.BunifuFlatButton btnLoaiPhong;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
         private Bunifu.Framework.UI.BunifuFlatButton btnTTC;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;

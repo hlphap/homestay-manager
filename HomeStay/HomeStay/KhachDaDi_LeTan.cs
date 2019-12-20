@@ -13,36 +13,104 @@ namespace HomeStay
 {
     public partial class KhachDaDi_LeTan : UserControl
     {
+        SqlConnection conn = new SqlConnection(DataSource.connectionString);
+
         public KhachDaDi_LeTan()
         {
             InitializeComponent();
+
+        }
+        private void LoadData(string sql, DataGridView ViewDTA)
+        {
             SqlConnection conn = new SqlConnection(DataSource.connectionString);
-            conn.Open();
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.CommandType = CommandType.Text;
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                ViewDTA.DataSource = dt;
+                if (ViewDTA.RowCount == 0)
+                {
+                    msbRong.Show();
+                }
+                else
+                {
+                    msbRong.Hide();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi", "Lỗi kết nối Server");
+            }
+            finally
+            {
+                conn.Close();
+            }
 
-            string sql1 = "select * from PHONGTHUE";
-            SqlDataAdapter da1 = new SqlDataAdapter(sql1, conn);
-            DataTable dt1 = new DataTable();
-            da1.Fill(dt1);
-            comboBox3.DataSource = dt1;
-            comboBox3.DisplayMember = "SOPHONG";
-            comboBox3.ValueMember = "SOPHONG";
+        }
+        private void KhachDaDi_LeTan_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                conn.Open();
+                string sql1 = "select * from PHONGTHUE";
+                SqlDataAdapter da1 = new SqlDataAdapter(sql1, conn);
+                DataTable dt1 = new DataTable();
+                da1.Fill(dt1);
+                Sophongtxt.DataSource = dt1;
+                Sophongtxt.DisplayMember = "SOPHONG";
+                Sophongtxt.ValueMember = "SOPHONG";
 
-            string sql2 = "select LOAIPHONG from PHONG WHERE SOPHONG = " + comboBox3.ValueMember;
-            SqlDataAdapter da2 = new SqlDataAdapter(sql2, conn);
-            DataTable dt2 = new DataTable();
-            da2.Fill(dt2);
-            comboBox2.DataSource = dt2;
-            comboBox2.DisplayMember = "LOAIPHONG";
-            comboBox2.ValueMember = "LOAIPHONG";
+                string sql2 = "select LOAIPHONG from PHONG WHERE SOPHONG = " + Sophongtxt.ValueMember;
+                SqlDataAdapter da2 = new SqlDataAdapter(sql2, conn);
+                DataTable dt2 = new DataTable();
+                da2.Fill(dt2);
+                Loaiphongtxt.DataSource = dt2;
+                Loaiphongtxt.DisplayMember = "LOAIPHONG";
+                Loaiphongtxt.ValueMember = "LOAIPHONG";
 
-            string sql3 = "SELECT SOPHONG as 'Số phòng', MADK as 'Mã đặt phòng', HOTENKH as 'Họ tên', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE WHERE KHACHHANG.MAKH = PHONGTHUE.MAKH";
-            SqlCommand cmd3 = new SqlCommand(sql3, conn);
-            cmd3.CommandType = CommandType.Text;
-            SqlDataAdapter da3 = new SqlDataAdapter(cmd3);
-            DataTable dt3 = new DataTable();
-            da3.Fill(dt3);
-            bunifuCustomDataGrid1.DataSource = dt3;
+
+
+                string sql4 = "SELECT PHONGTHUE.SOPHONG as 'Số phòng', MADK as 'Mã đặt phòng', HOTENKH as 'Họ tên', LOAIPHONG as 'Loại phòng', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE, PHONG WHERE PHONG.SOPHONG = PHONGTHUE.SOPHONG AND KHACHHANG.MAKH = PHONGTHUE.MAKH AND GETDATE() > NGAYDI";
+                LoadData(sql4, GridViewDSKDD);
+
+
+
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi", "Lỗi kết nối Server");
+            }
+
+
             conn.Close();
         }
+
+        private void ButtonTimKiem_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            string sql = "SELECT PHONGTHUE.SOPHONG as 'Số phòng', MADK as 'Mã đặt phòng', HOTENKH as 'Họ tên', LOAIPHONG as 'Loại phòng', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE, PHONG WHERE PHONG.SOPHONG = PHONGTHUE.SOPHONG AND KHACHHANG.MAKH = PHONGTHUE.MAKH ";
+
+            sql = sql + string.Format(" AND MADK like N'%{0}%' AND HOTENKH like N'%{1}%'", Madatphongtxt.Text, Tenkhachtxt.Text);
+            if (Sophongtxt.ValueMember != null)
+                sql = sql + string.Format(" AND PHONGTHUE.SOPHONG like N'%{0}%'", Sophongtxt.Text);
+
+            if (Loaiphongtxt.ValueMember != null)
+                sql += " AND LOAIPHONG = N'" + Loaiphongtxt.Text + "'";
+
+
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            cmd.CommandType = CommandType.Text;
+            SqlDataAdapter da4 = new SqlDataAdapter(cmd);
+            DataTable dt4 = new DataTable();
+            da4.Fill(dt4);
+            GridViewDSKDD.DataSource = dt4;
+            conn.Close();
+        }
+
+       
     }
 }

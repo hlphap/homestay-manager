@@ -148,6 +148,12 @@
     <Compile Include="CaiDat_DsTang.Designer.cs">
       <DependentUpon>CaiDat_DsTang.cs</DependentUpon>
     </Compile>
+    <Compile Include="CauHinh_LoaiPhong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CauHinh_LoaiPhong.Designer.cs">
+      <DependentUpon>CauHinh_LoaiPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="CauHinh_ThemPhong.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -381,6 +387,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CaiDat_DsTang.resx">
       <DependentUpon>CaiDat_DsTang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CauHinh_LoaiPhong.resx">
+      <DependentUpon>CauHinh_LoaiPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CauHinh_ThemPhong.resx">
       <DependentUpon>CauHinh_ThemPhong.cs</DependentUpon>
