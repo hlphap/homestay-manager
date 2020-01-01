@@ -28,21 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KhachSeDen_LeTan));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KhachSeDen_LeTan));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.btnToday = new Bunifu.Framework.UI.BunifuFlatButton();
             this.ButtonTimKiem = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.GridViewDSKSD = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.bunifuDatepicker1 = new Bunifu.Framework.UI.BunifuDatepicker();
-            this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuDatepicker2 = new Bunifu.Framework.UI.BunifuDatepicker();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.Loaiphongtxt = new System.Windows.Forms.ComboBox();
+            this.Sophongtxt = new System.Windows.Forms.ComboBox();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.NgayDenApp = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.NgayDiApp = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.Tenkhachtxt = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.Madatphongtxt = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.msbRong = new System.Windows.Forms.Label();
+            this.GridViewDSKSD = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridViewDSKSD)).BeginInit();
@@ -51,16 +54,18 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.comboBox3);
-            this.panel1.Controls.Add(this.comboBox2);
-            this.panel1.Controls.Add(this.bunifuMaterialTextbox1);
+            this.panel1.Controls.Add(this.btnToday);
             this.panel1.Controls.Add(this.ButtonTimKiem);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.bunifuDatepicker1);
-            this.panel1.Controls.Add(this.bunifuCustomLabel10);
-            this.panel1.Controls.Add(this.bunifuDatepicker2);
-            this.panel1.Controls.Add(this.bunifuLabel1);
+            this.panel1.Controls.Add(this.Loaiphongtxt);
+            this.panel1.Controls.Add(this.Sophongtxt);
             this.panel1.Controls.Add(this.bunifuCustomLabel4);
+            this.panel1.Controls.Add(this.NgayDenApp);
+            this.panel1.Controls.Add(this.bunifuCustomLabel10);
+            this.panel1.Controls.Add(this.NgayDiApp);
+            this.panel1.Controls.Add(this.bunifuLabel1);
+            this.panel1.Controls.Add(this.Tenkhachtxt);
+            this.panel1.Controls.Add(this.Madatphongtxt);
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
@@ -68,54 +73,42 @@
             this.panel1.Size = new System.Drawing.Size(1087, 571);
             this.panel1.TabIndex = 0;
             // 
-            // comboBox3
+            // btnToday
             // 
-            this.comboBox3.BackColor = System.Drawing.Color.White;
-            this.comboBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(193, 80);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(148, 29);
-            this.comboBox3.TabIndex = 38;
-            this.comboBox3.Text = "Chọn phòng";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.BackColor = System.Drawing.Color.White;
-            this.comboBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(356, 80);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(148, 29);
-            this.comboBox2.TabIndex = 40;
-            this.comboBox2.Text = "Loại phòng";
-            // 
-            // bunifuMaterialTextbox1
-            // 
-            this.bunifuMaterialTextbox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.bunifuMaterialTextbox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.bunifuMaterialTextbox1.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.bunifuMaterialTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox1.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox1.HintText = "";
-            this.bunifuMaterialTextbox1.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.bunifuMaterialTextbox1.isPassword = false;
-            this.bunifuMaterialTextbox1.LineFocusedColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox1.LineThickness = 3;
-            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(28, 78);
-            this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuMaterialTextbox1.MaxLength = 32767;
-            this.bunifuMaterialTextbox1.Name = "bunifuMaterialTextbox1";
-            this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(156, 32);
-            this.bunifuMaterialTextbox1.TabIndex = 39;
-            this.bunifuMaterialTextbox1.Text = "Mã ĐP";
-            this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnToday.Active = false;
+            this.btnToday.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
+            this.btnToday.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnToday.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnToday.BorderRadius = 0;
+            this.btnToday.ButtonText = "Hôm nay";
+            this.btnToday.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnToday.DisabledColor = System.Drawing.Color.Gray;
+            this.btnToday.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnToday.Iconimage = null;
+            this.btnToday.Iconimage_right = null;
+            this.btnToday.Iconimage_right_Selected = null;
+            this.btnToday.Iconimage_Selected = null;
+            this.btnToday.IconMarginLeft = 0;
+            this.btnToday.IconMarginRight = 0;
+            this.btnToday.IconRightVisible = true;
+            this.btnToday.IconRightZoom = 0D;
+            this.btnToday.IconVisible = true;
+            this.btnToday.IconZoom = 50D;
+            this.btnToday.IsTab = false;
+            this.btnToday.Location = new System.Drawing.Point(8, 122);
+            this.btnToday.Margin = new System.Windows.Forms.Padding(5);
+            this.btnToday.Name = "btnToday";
+            this.btnToday.Normalcolor = System.Drawing.Color.CornflowerBlue;
+            this.btnToday.OnHovercolor = System.Drawing.Color.CornflowerBlue;
+            this.btnToday.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnToday.selected = false;
+            this.btnToday.Size = new System.Drawing.Size(112, 39);
+            this.btnToday.TabIndex = 48;
+            this.btnToday.Text = "Hôm nay";
+            this.btnToday.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnToday.Textcolor = System.Drawing.Color.White;
+            this.btnToday.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnToday.Click += new System.EventHandler(this.btnToday_Click);
             // 
             // ButtonTimKiem
             // 
@@ -139,7 +132,7 @@
             this.ButtonTimKiem.IconVisible = true;
             this.ButtonTimKiem.IconZoom = 50D;
             this.ButtonTimKiem.IsTab = false;
-            this.ButtonTimKiem.Location = new System.Drawing.Point(911, 12);
+            this.ButtonTimKiem.Location = new System.Drawing.Point(944, 116);
             this.ButtonTimKiem.Margin = new System.Windows.Forms.Padding(5);
             this.ButtonTimKiem.Name = "ButtonTimKiem";
             this.ButtonTimKiem.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
@@ -147,21 +140,177 @@
             this.ButtonTimKiem.OnHoverTextColor = System.Drawing.Color.White;
             this.ButtonTimKiem.selected = false;
             this.ButtonTimKiem.Size = new System.Drawing.Size(137, 43);
-            this.ButtonTimKiem.TabIndex = 0;
+            this.ButtonTimKiem.TabIndex = 47;
             this.ButtonTimKiem.Text = "      Tìm Kiếm";
             this.ButtonTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ButtonTimKiem.Textcolor = System.Drawing.Color.White;
             this.ButtonTimKiem.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonTimKiem.Click += new System.EventHandler(this.ButtonTimKiem_Click);
+            // 
+            // Loaiphongtxt
+            // 
+            this.Loaiphongtxt.BackColor = System.Drawing.Color.White;
+            this.Loaiphongtxt.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Loaiphongtxt.FormattingEnabled = true;
+            this.Loaiphongtxt.Location = new System.Drawing.Point(518, 71);
+            this.Loaiphongtxt.Margin = new System.Windows.Forms.Padding(4);
+            this.Loaiphongtxt.Name = "Loaiphongtxt";
+            this.Loaiphongtxt.Size = new System.Drawing.Size(129, 29);
+            this.Loaiphongtxt.TabIndex = 41;
+            this.Loaiphongtxt.Text = "Loại phòng";
+            // 
+            // Sophongtxt
+            // 
+            this.Sophongtxt.BackColor = System.Drawing.Color.White;
+            this.Sophongtxt.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sophongtxt.FormattingEnabled = true;
+            this.Sophongtxt.Location = new System.Drawing.Point(379, 71);
+            this.Sophongtxt.Margin = new System.Windows.Forms.Padding(4);
+            this.Sophongtxt.Name = "Sophongtxt";
+            this.Sophongtxt.Size = new System.Drawing.Size(128, 29);
+            this.Sophongtxt.TabIndex = 42;
+            this.Sophongtxt.Text = "Chọn phòng";
+            // 
+            // bunifuCustomLabel4
+            // 
+            this.bunifuCustomLabel4.AutoSize = true;
+            this.bunifuCustomLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(20, 33);
+            this.bunifuCustomLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
+            this.bunifuCustomLabel4.Size = new System.Drawing.Size(357, 29);
+            this.bunifuCustomLabel4.TabIndex = 46;
+            this.bunifuCustomLabel4.Text = "DANH SÁCH KHÁCH SẼ ĐẾN";
+            // 
+            // NgayDenApp
+            // 
+            this.NgayDenApp.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.NgayDenApp.BorderRadius = 0;
+            this.NgayDenApp.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NgayDenApp.ForeColor = System.Drawing.Color.White;
+            this.NgayDenApp.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.NgayDenApp.FormatCustom = "yyyy/MM/dd";
+            this.NgayDenApp.Location = new System.Drawing.Point(193, 122);
+            this.NgayDenApp.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.NgayDenApp.Name = "NgayDenApp";
+            this.NgayDenApp.Size = new System.Drawing.Size(233, 37);
+            this.NgayDenApp.TabIndex = 44;
+            this.NgayDenApp.Value = new System.DateTime(2019, 1, 1, 0, 0, 0, 0);
+            // 
+            // bunifuCustomLabel10
+            // 
+            this.bunifuCustomLabel10.AutoSize = true;
+            this.bunifuCustomLabel10.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel10.Font = new System.Drawing.Font("Segoe UI Semibold", 11F);
+            this.bunifuCustomLabel10.Location = new System.Drawing.Point(437, 134);
+            this.bunifuCustomLabel10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.bunifuCustomLabel10.Name = "bunifuCustomLabel10";
+            this.bunifuCustomLabel10.Size = new System.Drawing.Size(45, 25);
+            this.bunifuCustomLabel10.TabIndex = 45;
+            this.bunifuCustomLabel10.Text = "đến";
+            // 
+            // NgayDiApp
+            // 
+            this.NgayDiApp.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.NgayDiApp.BorderRadius = 0;
+            this.NgayDiApp.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NgayDiApp.ForeColor = System.Drawing.Color.White;
+            this.NgayDiApp.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.NgayDiApp.FormatCustom = "yyyy/MM/dd";
+            this.NgayDiApp.Location = new System.Drawing.Point(493, 122);
+            this.NgayDiApp.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.NgayDiApp.Name = "NgayDiApp";
+            this.NgayDiApp.Size = new System.Drawing.Size(233, 37);
+            this.NgayDiApp.TabIndex = 43;
+            this.NgayDiApp.Value = new System.DateTime(2100, 1, 1, 0, 0, 0, 0);
+            // 
+            // bunifuLabel1
+            // 
+            this.bunifuLabel1.AutoEllipsis = false;
+            this.bunifuLabel1.CursorType = null;
+            this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel1.ForeColor = System.Drawing.Color.Black;
+            this.bunifuLabel1.Location = new System.Drawing.Point(129, 137);
+            this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuLabel1.Name = "bunifuLabel1";
+            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel1.Size = new System.Drawing.Size(53, 22);
+            this.bunifuLabel1.TabIndex = 40;
+            this.bunifuLabel1.Text = "Sẽ đến";
+            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // Tenkhachtxt
+            // 
+            this.Tenkhachtxt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.Tenkhachtxt.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.Tenkhachtxt.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.Tenkhachtxt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Tenkhachtxt.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.Tenkhachtxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Tenkhachtxt.HintForeColor = System.Drawing.Color.Empty;
+            this.Tenkhachtxt.HintText = "Tên khách";
+            this.Tenkhachtxt.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.Tenkhachtxt.isPassword = false;
+            this.Tenkhachtxt.LineFocusedColor = System.Drawing.Color.Blue;
+            this.Tenkhachtxt.LineIdleColor = System.Drawing.Color.Gray;
+            this.Tenkhachtxt.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.Tenkhachtxt.LineThickness = 3;
+            this.Tenkhachtxt.Location = new System.Drawing.Point(194, 68);
+            this.Tenkhachtxt.Margin = new System.Windows.Forms.Padding(5);
+            this.Tenkhachtxt.MaxLength = 32767;
+            this.Tenkhachtxt.Name = "Tenkhachtxt";
+            this.Tenkhachtxt.Size = new System.Drawing.Size(164, 32);
+            this.Tenkhachtxt.TabIndex = 39;
+            this.Tenkhachtxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // Madatphongtxt
+            // 
+            this.Madatphongtxt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.Madatphongtxt.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.Madatphongtxt.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.Madatphongtxt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Madatphongtxt.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.Madatphongtxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Madatphongtxt.HintForeColor = System.Drawing.Color.Empty;
+            this.Madatphongtxt.HintText = "Mã đặt phòng";
+            this.Madatphongtxt.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.Madatphongtxt.isPassword = false;
+            this.Madatphongtxt.LineFocusedColor = System.Drawing.Color.Blue;
+            this.Madatphongtxt.LineIdleColor = System.Drawing.Color.Gray;
+            this.Madatphongtxt.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.Madatphongtxt.LineThickness = 3;
+            this.Madatphongtxt.Location = new System.Drawing.Point(8, 68);
+            this.Madatphongtxt.Margin = new System.Windows.Forms.Padding(5);
+            this.Madatphongtxt.MaxLength = 32767;
+            this.Madatphongtxt.Name = "Madatphongtxt";
+            this.Madatphongtxt.Size = new System.Drawing.Size(164, 32);
+            this.Madatphongtxt.TabIndex = 38;
+            this.Madatphongtxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.msbRong);
             this.panel2.Controls.Add(this.GridViewDSKSD);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 121);
+            this.panel2.Location = new System.Drawing.Point(0, 195);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1087, 450);
+            this.panel2.Size = new System.Drawing.Size(1087, 376);
             this.panel2.TabIndex = 37;
+            // 
+            // msbRong
+            // 
+            this.msbRong.AutoSize = true;
+            this.msbRong.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msbRong.ForeColor = System.Drawing.Color.Red;
+            this.msbRong.Location = new System.Drawing.Point(375, 174);
+            this.msbRong.Name = "msbRong";
+            this.msbRong.Size = new System.Drawing.Size(336, 28);
+            this.msbRong.TabIndex = 3;
+            this.msbRong.Text = "Không tìm thấy thông tin đặt phòng";
+            this.msbRong.Visible = false;
             // 
             // GridViewDSKSD
             // 
@@ -193,78 +342,8 @@
             this.GridViewDSKSD.Name = "GridViewDSKSD";
             this.GridViewDSKSD.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.GridViewDSKSD.RowHeadersWidth = 51;
-            this.GridViewDSKSD.Size = new System.Drawing.Size(1087, 450);
+            this.GridViewDSKSD.Size = new System.Drawing.Size(1087, 376);
             this.GridViewDSKSD.TabIndex = 1;
-            // 
-            // bunifuDatepicker1
-            // 
-            this.bunifuDatepicker1.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.bunifuDatepicker1.BorderRadius = 0;
-            this.bunifuDatepicker1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuDatepicker1.ForeColor = System.Drawing.Color.White;
-            this.bunifuDatepicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.bunifuDatepicker1.FormatCustom = null;
-            this.bunifuDatepicker1.Location = new System.Drawing.Point(559, 66);
-            this.bunifuDatepicker1.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.bunifuDatepicker1.Name = "bunifuDatepicker1";
-            this.bunifuDatepicker1.Size = new System.Drawing.Size(227, 43);
-            this.bunifuDatepicker1.TabIndex = 35;
-            this.bunifuDatepicker1.Value = new System.DateTime(2019, 10, 11, 8, 17, 40, 675);
-            // 
-            // bunifuCustomLabel10
-            // 
-            this.bunifuCustomLabel10.AutoSize = true;
-            this.bunifuCustomLabel10.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel10.Font = new System.Drawing.Font("Segoe UI Semibold", 11F);
-            this.bunifuCustomLabel10.Location = new System.Drawing.Point(796, 85);
-            this.bunifuCustomLabel10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.bunifuCustomLabel10.Name = "bunifuCustomLabel10";
-            this.bunifuCustomLabel10.Size = new System.Drawing.Size(45, 25);
-            this.bunifuCustomLabel10.TabIndex = 36;
-            this.bunifuCustomLabel10.Text = "đến";
-            // 
-            // bunifuDatepicker2
-            // 
-            this.bunifuDatepicker2.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.bunifuDatepicker2.BorderRadius = 0;
-            this.bunifuDatepicker2.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuDatepicker2.ForeColor = System.Drawing.Color.White;
-            this.bunifuDatepicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.bunifuDatepicker2.FormatCustom = "";
-            this.bunifuDatepicker2.Location = new System.Drawing.Point(853, 68);
-            this.bunifuDatepicker2.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.bunifuDatepicker2.Name = "bunifuDatepicker2";
-            this.bunifuDatepicker2.Size = new System.Drawing.Size(227, 43);
-            this.bunifuDatepicker2.TabIndex = 34;
-            this.bunifuDatepicker2.Value = new System.DateTime(2019, 10, 11, 8, 17, 40, 675);
-            // 
-            // bunifuLabel1
-            // 
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.CursorType = null;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel1.ForeColor = System.Drawing.Color.Black;
-            this.bunifuLabel1.Location = new System.Drawing.Point(524, 85);
-            this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(22, 22);
-            this.bunifuLabel1.TabIndex = 32;
-            this.bunifuLabel1.Text = "Từ";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuCustomLabel4
-            // 
-            this.bunifuCustomLabel4.AutoSize = true;
-            this.bunifuCustomLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(21, 25);
-            this.bunifuCustomLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
-            this.bunifuCustomLabel4.Size = new System.Drawing.Size(357, 29);
-            this.bunifuCustomLabel4.TabIndex = 29;
-            this.bunifuCustomLabel4.Text = "DANH SÁCH KHÁCH SẼ ĐẾN";
             // 
             // KhachSeDen_LeTan
             // 
@@ -274,9 +353,11 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "KhachSeDen_LeTan";
             this.Size = new System.Drawing.Size(1087, 571);
+            this.Load += new System.EventHandler(this.KhachSeDen_LeTan_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridViewDSKSD)).EndInit();
             this.ResumeLayout(false);
 
@@ -285,16 +366,19 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
         private System.Windows.Forms.Panel panel2;
-        private Bunifu.Framework.UI.BunifuDatepicker bunifuDatepicker1;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel10;
-        private Bunifu.Framework.UI.BunifuDatepicker bunifuDatepicker2;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
-        private Bunifu.Framework.UI.BunifuFlatButton ButtonTimKiem;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
         private Bunifu.Framework.UI.BunifuCustomDataGrid GridViewDSKSD;
+        private Bunifu.Framework.UI.BunifuFlatButton btnToday;
+        private Bunifu.Framework.UI.BunifuFlatButton ButtonTimKiem;
+        private System.Windows.Forms.ComboBox Loaiphongtxt;
+        private System.Windows.Forms.ComboBox Sophongtxt;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
+        private Bunifu.Framework.UI.BunifuDatepicker NgayDenApp;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel10;
+        private Bunifu.Framework.UI.BunifuDatepicker NgayDiApp;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox Tenkhachtxt;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox Madatphongtxt;
+        private System.Windows.Forms.Label msbRong;
     }
 }

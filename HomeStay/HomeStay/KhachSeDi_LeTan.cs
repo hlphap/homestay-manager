@@ -14,66 +14,128 @@ namespace HomeStay
     public partial class KhachSeDi_LeTan : UserControl
     {
         SqlConnection conn = new SqlConnection(DataSource.connectionString);
-        string sql3 = "";
+        bool kttoday;
         public KhachSeDi_LeTan()
         {
             InitializeComponent();
-
-            conn.Open();
-
-            string sql1 = "select * from PHONGTHUE";
-            SqlDataAdapter da1 = new SqlDataAdapter(sql1, conn);
-            DataTable dt1 = new DataTable();
-            da1.Fill(dt1);
-            Sophongtxt.DataSource = dt1;
-            Sophongtxt.DisplayMember = "SOPHONG";
-            Sophongtxt.ValueMember = "SOPHONG";
-
-            string sql2 = "select LOAIPHONG from PHONG WHERE SOPHONG = " + Sophongtxt.ValueMember;
-            SqlDataAdapter da2 = new SqlDataAdapter(sql2, conn);
-            DataTable dt2 = new DataTable();
-            da2.Fill(dt2);
-            Loaiphongtxt.DataSource = dt2;
-            Loaiphongtxt.DisplayMember = "LOAIPHONG";
-            Loaiphongtxt.ValueMember = "LOAIPHONG";
-
-
-            sql3 = "SELECT SOPHONG as 'Số phòng', MADK as 'Mã đặt phòng', HOTENKH as 'Họ tên', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE WHERE KHACHHANG.MAKH = PHONGTHUE.MAKH";
-            SqlCommand cmd3 = new SqlCommand(sql3, conn);
-            cmd3.CommandType = CommandType.Text;
-            SqlDataAdapter da3 = new SqlDataAdapter(cmd3);
-            DataTable dt3 = new DataTable();
-            da3.Fill(dt3);
-            bunifuCustomDataGrid1.DataSource = dt3;
-            conn.Close();
+            kttoday = true;
         }
 
-        private void ButtonTimKiem_Click(object sender, EventArgs e)
+        private void KhachSeDi_LeTan_Load(object sender, EventArgs e)
         {
-            conn.Open();
-            if (Madatphongtxt.Text != null)
+            try
             {
-                sql3 += " AND MADK = '" + Madatphongtxt.Text + "'";
+                conn.Open();
+                string sql1 = "select * from PHONGTHUE";
+                SqlDataAdapter da1 = new SqlDataAdapter(sql1, conn);
+                DataTable dt1 = new DataTable();
+                da1.Fill(dt1);
+                Sophongtxt.DataSource = dt1;
+                Sophongtxt.DisplayMember = "SOPHONG";
+                Sophongtxt.ValueMember = "SOPHONG";
+
+                string sql2 = "select LOAIPHONG from PHONG WHERE SOPHONG = " + Sophongtxt.ValueMember;
+                SqlDataAdapter da2 = new SqlDataAdapter(sql2, conn);
+                DataTable dt2 = new DataTable();
+                da2.Fill(dt2);
+                Loaiphongtxt.DataSource = dt2;
+                Loaiphongtxt.DisplayMember = "LOAIPHONG";
+                Loaiphongtxt.ValueMember = "LOAIPHONG";
+
+
+
+                string sql4 = "SELECT PHONGTHUE.SOPHONG as 'Số phòng', MADK as 'Mã đặt phòng', HOTENKH as 'Họ tên', LOAIPHONG as 'Loại phòng', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE, PHONG WHERE PHONG.SOPHONG = PHONGTHUE.SOPHONG AND KHACHHANG.MAKH = PHONGTHUE.MAKH AND GETDATE() < NGAYDI";
+                LoadData(sql4, GridDataViewDSKSDi);
+
+
+
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi", "Lỗi kết nối Server");
             }
 
 
-            if (Sophongtxt.ValueMember != null)
-                sql3 += "AND SOPHONG = '" + Sophongtxt.Text + "'";
-            
-            // phong thue khong co LOAIPHONG
-            /*if(Loaiphongtxt.ValueMember != null)
-                sql3 += "AND LOAIPHONG = '" + Loaiphongtxt.Text + "'";
-             */
+            conn.Close();
+        }
+        private void LoadData(string sql, DataGridView ViewDTA)
+        {
+            SqlConnection conn = new SqlConnection(DataSource.connectionString);
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.CommandType = CommandType.Text;
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                ViewDTA.DataSource = dt;
+                if (ViewDTA.RowCount == 0)
+                {
+                    msbRong.Show();
+                }
+                else
+                {
+                    msbRong.Hide();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi", "Lỗi kết nối Server");
+            }
+            finally
+            {
+                conn.Close();
+            }
 
-            SqlCommand cmd4 = new SqlCommand(sql3, conn);
-            cmd4.CommandType = CommandType.Text;
-            SqlDataAdapter da4 = new SqlDataAdapter(cmd4);
+        }
+        private void ButtonTimKiem_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            string sql = "";
+            if (kttoday == true)
+            {
+                sql = "SELECT PHONGTHUE.SOPHONG as 'Số phòng', MADK as 'Mã đặt phòng', HOTENKH as 'Họ tên', LOAIPHONG as 'Loại phòng', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE, PHONG WHERE PHONG.SOPHONG = PHONGTHUE.SOPHONG AND KHACHHANG.MAKH = PHONGTHUE.MAKH AND GETDATE() = NGAYDEN";
+
+            }
+            else
+            {
+                sql = "SELECT PHONGTHUE.SOPHONG as 'Số phòng', MADK as 'Mã đặt phòng', HOTENKH as 'Họ tên', LOAIPHONG as 'Loại phòng', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE, PHONG WHERE PHONG.SOPHONG = PHONGTHUE.SOPHONG AND KHACHHANG.MAKH = PHONGTHUE.MAKH AND '" + NgayDenApp.Value.ToString() + "' <= NGAYDI AND NGAYDI <= '" + NgayDiApp.Value.ToString() + "'";
+            }
+
+            sql = sql + string.Format(" AND MADK like N'%{0}%' AND HOTENKH like N'%{1}%'", Madatphongtxt.Text, Tenkhachtxt.Text);
+            if (Sophongtxt.ValueMember != null)
+                sql = sql + string.Format(" AND PHONGTHUE.SOPHONG like N'%{0}%'", Sophongtxt.Text);
+
+            if (Loaiphongtxt.ValueMember != null)
+                sql += " AND LOAIPHONG = N'" + Loaiphongtxt.Text + "'";
+
+
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            cmd.CommandType = CommandType.Text;
+            SqlDataAdapter da4 = new SqlDataAdapter(cmd);
             DataTable dt4 = new DataTable();
             da4.Fill(dt4);
-            bunifuCustomDataGrid1.DataSource = dt4;
+            GridDataViewDSKSDi.DataSource = dt4;
             conn.Close();
-            sql3 = "SELECT SOPHONG as 'Số phòng', MADK as 'Mã đặt phòng', HOTENKH as 'Họ tên', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE WHERE KHACHHANG.MAKH = PHONGTHUE.MAKH";
         }
-    
+
+        private void btnToday_Click(object sender, EventArgs e)
+        {
+            if (kttoday == true)
+            {
+                btnToday.BorderStyle = BorderStyle.Fixed3D;
+                kttoday = false;
+                NgayDenApp.Enabled = true;
+                NgayDiApp.Enabled = true;
+            }
+            else
+            {
+                btnToday.BorderStyle = BorderStyle.None;
+                kttoday = true;
+                NgayDiApp.Enabled = false;
+                NgayDenApp.Enabled = false;
+            }
+        }
     }
 }
