@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThanhToan_KhachLe));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
@@ -50,7 +51,7 @@
             this.sophongtxt = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel11 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.HoTen = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.SDT = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.makhtxt = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.scmnd = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -187,7 +188,7 @@
             this.bunifuShadowPanel1.Controls.Add(this.sophongtxt);
             this.bunifuShadowPanel1.Controls.Add(this.bunifuCustomLabel11);
             this.bunifuShadowPanel1.Controls.Add(this.HoTen);
-            this.bunifuShadowPanel1.Controls.Add(this.SDT);
+            this.bunifuShadowPanel1.Controls.Add(this.makhtxt);
             this.bunifuShadowPanel1.Controls.Add(this.scmnd);
             this.bunifuShadowPanel1.Controls.Add(this.bunifuCustomLabel7);
             this.bunifuShadowPanel1.Controls.Add(this.bunifuCustomLabel2);
@@ -243,18 +244,18 @@
             this.HoTen.TabIndex = 28;
             this.HoTen.Text = "Họ tên";
             // 
-            // SDT
+            // makhtxt
             // 
-            this.SDT.AutoSize = true;
-            this.SDT.BackColor = System.Drawing.Color.Transparent;
-            this.SDT.Font = new System.Drawing.Font("Segoe UI Semibold", 11F);
-            this.SDT.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.SDT.Location = new System.Drawing.Point(207, 378);
-            this.SDT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.SDT.Name = "SDT";
-            this.SDT.Size = new System.Drawing.Size(45, 25);
-            this.SDT.TabIndex = 27;
-            this.SDT.Text = "SDT";
+            this.makhtxt.AutoSize = true;
+            this.makhtxt.BackColor = System.Drawing.Color.Transparent;
+            this.makhtxt.Font = new System.Drawing.Font("Segoe UI Semibold", 11F);
+            this.makhtxt.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.makhtxt.Location = new System.Drawing.Point(207, 378);
+            this.makhtxt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.makhtxt.Name = "makhtxt";
+            this.makhtxt.Size = new System.Drawing.Size(69, 25);
+            this.makhtxt.TabIndex = 27;
+            this.makhtxt.Text = "MAKH";
             // 
             // scmnd
             // 
@@ -350,6 +351,14 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DataGridPhongDaChon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DataGridPhongDaChon.ColumnHeadersHeight = 29;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGridPhongDaChon.DefaultCellStyle = dataGridViewCellStyle3;
             this.DataGridPhongDaChon.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DataGridPhongDaChon.DoubleBuffered = true;
             this.DataGridPhongDaChon.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
@@ -636,7 +645,7 @@
         private System.Windows.Forms.Panel panel2;
         private Bunifu.Framework.UI.BunifuCustomDataGrid DataGridPhongDaChon;
         private Bunifu.Framework.UI.BunifuCustomLabel HoTen;
-        private Bunifu.Framework.UI.BunifuCustomLabel SDT;
+        private Bunifu.Framework.UI.BunifuCustomLabel makhtxt;
         private Bunifu.Framework.UI.BunifuCustomLabel scmnd;
         private Bunifu.Framework.UI.BunifuCustomLabel thanhtientext;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel10;

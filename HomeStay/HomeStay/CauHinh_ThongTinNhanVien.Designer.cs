@@ -31,7 +31,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuCustomDataGrid1 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.tenNV = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.MaNV = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.ButtonTimKiem = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -76,31 +75,6 @@
             this.bunifuCustomDataGrid1.Size = new System.Drawing.Size(1087, 450);
             this.bunifuCustomDataGrid1.TabIndex = 1;
             // 
-            // tenNV
-            // 
-            this.tenNV.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.tenNV.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.tenNV.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.tenNV.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tenNV.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.tenNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tenNV.HintForeColor = System.Drawing.Color.Empty;
-            this.tenNV.HintText = "";
-            this.tenNV.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.tenNV.isPassword = false;
-            this.tenNV.LineFocusedColor = System.Drawing.Color.Blue;
-            this.tenNV.LineIdleColor = System.Drawing.Color.Gray;
-            this.tenNV.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.tenNV.LineThickness = 3;
-            this.tenNV.Location = new System.Drawing.Point(246, 78);
-            this.tenNV.Margin = new System.Windows.Forms.Padding(5);
-            this.tenNV.MaxLength = 32767;
-            this.tenNV.Name = "tenNV";
-            this.tenNV.Size = new System.Drawing.Size(231, 32);
-            this.tenNV.TabIndex = 40;
-            this.tenNV.Text = "Tên nhân viên";
-            this.tenNV.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // MaNV
             // 
             this.MaNV.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
@@ -110,7 +84,7 @@
             this.MaNV.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.MaNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.MaNV.HintForeColor = System.Drawing.Color.Empty;
-            this.MaNV.HintText = "";
+            this.MaNV.HintText = "Mã nhân viên";
             this.MaNV.ImeMode = System.Windows.Forms.ImeMode.On;
             this.MaNV.isPassword = false;
             this.MaNV.LineFocusedColor = System.Drawing.Color.Blue;
@@ -123,7 +97,6 @@
             this.MaNV.Name = "MaNV";
             this.MaNV.Size = new System.Drawing.Size(156, 32);
             this.MaNV.TabIndex = 39;
-            this.MaNV.Text = "Mã nhân viên";
             this.MaNV.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // ButtonTimKiem
@@ -161,6 +134,7 @@
             this.ButtonTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ButtonTimKiem.Textcolor = System.Drawing.Color.White;
             this.ButtonTimKiem.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonTimKiem.Click += new System.EventHandler(this.ButtonTimKiem_Click);
             // 
             // panel2
             // 
@@ -188,7 +162,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.btThemNV);
-            this.panel1.Controls.Add(this.tenNV);
             this.panel1.Controls.Add(this.MaNV);
             this.panel1.Controls.Add(this.ButtonTimKiem);
             this.panel1.Controls.Add(this.panel2);
@@ -244,6 +217,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "CauHinh_ThongTinNhanVien";
             this.Size = new System.Drawing.Size(1087, 571);
+            this.Load += new System.EventHandler(this.CauHinh_ThongTinNhanVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -255,7 +229,6 @@
         #endregion
 
         private Bunifu.Framework.UI.BunifuCustomDataGrid bunifuCustomDataGrid1;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox tenNV;
         private Bunifu.Framework.UI.BunifuMaterialTextbox MaNV;
         private Bunifu.Framework.UI.BunifuFlatButton ButtonTimKiem;
         private System.Windows.Forms.Panel panel2;

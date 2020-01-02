@@ -23,7 +23,7 @@ namespace HomeStay
         }
         void showdata()
         { 
-            string sql = " select SOPHONG as'    Số Phòng    ', LOAIPHONG.LOAIPHONG as'    Loại Phòng  ', GIA as' Giá Phòng   ', TANG as'   Tầng    ', TRANGTHAI as'  Trạng Thái  ' FROM PHONG,LOAIPHONG WHERE LOAIPHONG.LOAIPHONG = PHONG.LOAIPHONG";
+            string sql = " select SOPHONG as'Số Phòng', LOAIPHONG.LOAIPHONG as'Loại Phòng', GIA as'Giá Phòng', TANG as'Tầng', TRANGTHAI as'Trạng Thái' FROM PHONG,LOAIPHONG WHERE LOAIPHONG.LOAIPHONG = PHONG.LOAIPHONG";
             SqlCommand cmd = new SqlCommand(sql, conn);
             cmd.CommandType = CommandType.Text;
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -31,7 +31,6 @@ namespace HomeStay
             da.Fill(dt);
             dataGridView1.DataSource = dt;
         }
-
 
         private void ButtonTimKiem_Click(object sender, EventArgs e)
         {
@@ -43,28 +42,21 @@ namespace HomeStay
                     MessageBox.Show("khong duoc de so phong trong");
                 else if (LoaiPhong.Text == "")
                     MessageBox.Show("khong duoc de loai phong trong");
-                else if (GiaPhong.Text == "")
-                    MessageBox.Show("khong duoc de gia phong trong");
                 else if (Tang.Text == "")
                     MessageBox.Show("khong duoc de tang trong");
-                else if (TrangThai.Text == "")
-                    MessageBox.Show("khong duoc de trang thai trong");
                 else
                 {
                     try
                     {
-                        string sql = "INSERT INTO PHONG (TANG , SOPHONG, LOAIPHONG, TRANGTHAI) values (" + Tang.Text + ",'" + SoPhong.Text + "','" + LoaiPhong.Text + "," + TrangThai.Text + ")";
-                        string sql2 = "INSERT INTO LOAIPHONG(LOAIPHONG, GIA) VALUES ('" + LoaiPhong.Text + "','" + GiaPhong.Text + "')";
-                        SqlCommand cmd2 = new SqlCommand(sql2, conn);
+                        string sql = "INSERT INTO PHONG (TANG , SOPHONG, LOAIPHONG, TRANGTHAI) values (" + Tang.Text + ",'" + SoPhong.Text + "',N'" + LoaiPhong.Text + "'," + 1 + ")";
                         SqlCommand cmd = new SqlCommand(sql, conn);
-                        cmd2.ExecuteNonQuery();
                         cmd.ExecuteNonQuery();
                         showdata();
                         MessageBox.Show("Luu thanh cong");
                     }
                     catch
                     {
-                        MessageBox.Show("trung so phong, vui long kiem tra lai");
+                        MessageBox.Show("Loi !!! vui long kiem tra lai");
                     }
                 }
             }
@@ -78,24 +70,22 @@ namespace HomeStay
                 MessageBox.Show("khong duoc de so phong trong");
             else if (LoaiPhong.Text == "")
                 MessageBox.Show("khong duoc de loai phong trong");
-            else if (GiaPhong.Text == "")
-                MessageBox.Show("khong duoc de gia phong trong");
+          
             else if (Tang.Text == "")
                 MessageBox.Show("khong duoc de tang trong");
-            else if (TrangThai.Text == "")
-                MessageBox.Show("khong duoc de trang thai trong");
+            
             else
                 try
                 {
-                    string sql = "UPDATE PHONG SET TANG =" + Tang.Text + ", SOPHONG = '" + SoPhong.Text + "', LOAIPHONG = '" + LoaiPhong.Text + "',GIAPHONG = " + GiaPhong.Text + ", TRANGTHAI = " + TrangThai.Text + " WHERE SOPHONG = '" + SoPhong.Text + "'";
+                    string sql = "UPDATE PHONG SET TANG =" + Tang.Text + ", LOAIPHONG = N'" + LoaiPhong.Text + "', TRANGTHAI = " + 1 + " WHERE SOPHONG = '" + SoPhong.Text + "'";
                     SqlCommand cmd = new SqlCommand(sql, conn);
                     cmd.ExecuteNonQuery();
                     showdata();
-                    MessageBox.Show("Sua thanh cong");
+                    MessageBox.Show("Sua thanh cong so phong "+ SoPhong.Text);
                 }
                 catch
                 {
-                    MessageBox.Show("Loi so phong, vui long kiem tra lai");
+                    MessageBox.Show("Loi !!! vui long kiem tra lai");
                 }
         }
 
@@ -114,9 +104,7 @@ namespace HomeStay
             i = dataGridView1.CurrentRow.Index;
             SoPhong.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
             LoaiPhong.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
-            GiaPhong.Text = dataGridView1.Rows[i].Cells[2].Value.ToString();
             Tang.Text = dataGridView1.Rows[i].Cells[3].Value.ToString();
-            TrangThai.Text = dataGridView1.Rows[i].Cells[4].Value.ToString();
         }
 
         private void btn_TroLai_Click(object sender, EventArgs e)
