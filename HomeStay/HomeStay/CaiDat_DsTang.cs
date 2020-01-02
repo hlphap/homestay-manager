@@ -33,9 +33,9 @@ namespace HomeStay
         }
         private void Tangtxt_TextChange(object sender, EventArgs e)
         {
-            string sql = " select TANG as 'Tầng', SOPHONG 'Số Phòng', LOAIPHONG as'Loại Phòng', GIAPHONG as 'Giá Phòng', TRANGTHAI as'Trạng Thái' FROM PHONG";
+            string sql = " select TANG as 'Tầng' FROM TANG ";
             if (Tangtxt.Text != "")
-                 sql = " select TANG as 'Tầng', SOPHONG 'Số Phòng', LOAIPHONG as'Loại Phòng', GIAPHONG as 'Giá Phòng', TRANGTHAI as'Trạng Thái' FROM PHONG WHERE TANG = " + Tangtxt.Text;
+                 sql = " select TANG as 'Tầng' FROM TANG WHERE TANG = " + Tangtxt.Text;
             SqlCommand cmd = new SqlCommand(sql, conn);
             cmd.CommandType = CommandType.Text;
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -69,11 +69,20 @@ namespace HomeStay
 
         private void xoa_Click(object sender, EventArgs e)
         {
-            string sql = "DELETE FROM PHONG WHERE SOPHONG ='" + Tangtxt.Text + "'";
+            string sql = "DELETE FROM PHONG WHERE TANG ='" + Tangtxt.Text + "'";
+            string sql2 = "DELETE FROM TANG WHERE TANG ='" + Tangtxt.Text + "'";
             SqlCommand cmd = new SqlCommand(sql, conn);
+            SqlCommand cmd2 = new SqlCommand(sql2, conn);
             cmd.ExecuteNonQuery();
+            cmd2.ExecuteNonQuery();
             showdata();
             MessageBox.Show("Xoa thanh cong");
+        }
+
+        private void DataGrid_DSTang_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int i = DataGrid_DSTang.CurrentRow.Index;
+            Tangtxt.Text = DataGrid_DSTang.Rows[i].Cells[0].Value.ToString();
         }
     }
 }

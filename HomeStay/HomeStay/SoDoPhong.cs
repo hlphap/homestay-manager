@@ -137,12 +137,19 @@ namespace HomeStay
                         PanelNoiDung.Controls.Add(us1);
                         us1.SoPhong.Text = reader.GetString(0);
                         us1.LoaiPhong.Text = reader.GetString(1);
-                        if (Convert.ToInt64(reader.GetValue(2)) != 1)
+                        try
                         {
-                            us1.txtNgDen.Text = reader.GetDateTime(3).ToString("dd/MM" + "," + "hh:mm");
-                            us1.txtNgDi.Text = reader.GetDateTime(4).ToString("dd/MM" + "," + "hh:mm");
-                            us1.txtHoTen.Text = reader.GetString(5);
-                            us1.txtTGNhan.Text = reader.GetDateTime(6).ToString();
+                            if (Convert.ToInt64(reader.GetValue(2)) != 1)
+                            {
+                                us1.txtNgDen.Text = reader.GetDateTime(3).ToString("dd/MM" + "," + "hh:mm");
+                                us1.txtNgDi.Text = reader.GetDateTime(4).ToString("dd/MM" + "," + "hh:mm");
+                                us1.txtHoTen.Text = reader.GetString(5);
+                                //us1.txtTGNhan.Text = reader.GetDateTime(6).ToString();
+                            }
+                        }
+                        catch
+                        {
+                          
                         }
                         i++;
                     }
