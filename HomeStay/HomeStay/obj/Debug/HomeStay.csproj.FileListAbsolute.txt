@@ -825,4 +825,8 @@ C:\Users\Tran Huy Win\Desktop\git\HomeStay\HomeStay\obj\Debug\HomeStay.csproj.Ge
 C:\Users\Tran Huy Win\Desktop\git\HomeStay\HomeStay\obj\Debug\HomeStay.csproj.CopyComplete
 C:\Users\Tran Huy Win\Desktop\git\HomeStay\HomeStay\obj\Debug\HomeStay.exe
 C:\Users\Tran Huy Win\Desktop\git\HomeStay\HomeStay\obj\Debug\HomeStay.pdb
+<<<<<<< HEAD
 D:\home11111\HomeStay\HomeStay\obj\Debug\HomeStay.CauHinh_LoaiPhong.resources
+=======
+C:\Users\Tran Huy Win\Desktop\homestay_test\HomeStay\HomeStay\obj\Debug\HomeStay.CauHinh_LoaiPhong.resources
+>>>>>>> abb8da2be6d4677090955c9ae59e869cdcaf868a

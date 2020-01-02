@@ -20,7 +20,7 @@ namespace HomeStay.Resources
         {
             InitializeComponent();
             conn.Open();
-            string sql2 = "SELECT SOPHONG FROM PHONG";
+            string sql2 = "SELECT distinct SOPHONG FROM PHONGTHUE WHERE NGAYDEN <= '" + DateTime.Now.ToString("yyyy/MM/dd") +"' AND NGAYDI > '" + DateTime.Now.ToString("yyyy/MM/dd") + "'";
             showdata(sql2);
         }
         public void loaddatathongtinkhach(string sophong)
@@ -58,7 +58,7 @@ namespace HomeStay.Resources
         }
         public void showinfoMAKH()
         {
-            string sql = "SElECT KHACHHANG.MAKH FROM PHONGTHUE, KHACHHANG WHERE PHONGTHUE.MAKH= KHACHHANG.MAKH AND sophong = '" + sophong + "'";
+            string sql = "SElECT KHACHHANG.MAKH FROM PHONGTHUE, KHACHHANG WHERE PHONGTHUE.MAKH= KHACHHANG.MAKH AND sophong = '" + sophong + "'AND NGAYDEN <= '" + DateTime.Now.ToString("yyyy/MM/dd") +"' AND NGAYDI > '" + DateTime.Now.ToString("yyyy/MM/dd") + "'";
             SqlCommand cmd1 = new SqlCommand(sql, conn);
             cmd1.CommandType = CommandType.Text;
             SqlDataAdapter da = new SqlDataAdapter(cmd1);
@@ -66,8 +66,8 @@ namespace HomeStay.Resources
             da.Fill(dt);
             object ten;
             ten = dt.Compute("max(MAKH)", "");
-            SDT.Text = ten.ToString();
-            makh = SDT.Text;
+            makhtxt.Text = ten.ToString();
+            makh = makhtxt.Text;
         }
         private void DataGridPhongDaChon_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -90,31 +90,45 @@ namespace HomeStay.Resources
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
-            string sql = "SELECT DATEDIFF (day, NGAYDEN, NGAYDI) AS ngayo From PHONGTHUE, KHACHHANG WHERE  SOPHONG = '" + sophong + "' AND khachhang.MAKH = '"+makh.Trim()+"'" ;
-            SqlCommand cmd1 = new SqlCommand(sql, conn);
-            cmd1.CommandType = CommandType.Text;
-            SqlDataAdapter da = new SqlDataAdapter(cmd1);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
+            try
+            {
+                string sql = "SELECT DATEDIFF (day, NGAYDEN, NGAYDI) AS ngayo From PHONGTHUE, KHACHHANG WHERE  SOPHONG = '" + sophong + "' AND khachhang.MAKH = '" + makh.Trim() + "'";
+                SqlCommand cmd1 = new SqlCommand(sql, conn);
+                cmd1.CommandType = CommandType.Text;
+                SqlDataAdapter da = new SqlDataAdapter(cmd1);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
 
-            object SUM;
-            SUM = dt.Compute("Max(ngayo)", "");
-            thanhtientext.Text = SUM.ToString();
-            int ngayo = Int32.Parse(thanhtientext.Text);
-            
-            string sql2 = "SELECT gia AS GIA From PHONGTHUE, KHACHHANG, LOAIPHONG, PHONG WHERE KHACHHANG.MAKH = PHONGTHUE.MAKH AND PHONGTHUE.SOPHONG = PHONG.SOPHONG AND PHONG.LOAIPHONG = LOAIPHONG.LOAIPHONG AND PHONGTHUE.SOPHONG  = '" + sophong + "' AND khachhang.MAKH = '" + makh.Trim() + "'";
-            SqlCommand cmd2 = new SqlCommand(sql2, conn);
-            cmd2.CommandType = CommandType.Text;
-            SqlDataAdapter da2 = new SqlDataAdapter(cmd2);
-            DataTable dt2 = new DataTable();
-            da2.Fill(dt2);
+                object SUM;
+                SUM = dt.Compute("Max(ngayo)", "");
+                thanhtientext.Text = SUM.ToString();
+                int ngayo = Int32.Parse(thanhtientext.Text); // so ngay o
 
-            object GIA;
-            GIA = dt2.Compute("Max(GIA)", "");
-            thanhtientext.Text = GIA.ToString();
-            double gia = Convert.ToDouble(thanhtientext.Text);
+                string sql2 = "SELECT gia AS GIA From PHONGTHUE, KHACHHANG, LOAIPHONG, PHONG WHERE KHACHHANG.MAKH = PHONGTHUE.MAKH AND PHONGTHUE.SOPHONG = PHONG.SOPHONG AND PHONG.LOAIPHONG = LOAIPHONG.LOAIPHONG AND PHONGTHUE.SOPHONG  = '" + sophong + "' AND khachhang.MAKH = '" + makh.Trim() + "'";
+                SqlCommand cmd2 = new SqlCommand(sql2, conn);
+                cmd2.CommandType = CommandType.Text;
+                SqlDataAdapter da2 = new SqlDataAdapter(cmd2);
+                DataTable dt2 = new DataTable();
+                da2.Fill(dt2);
 
-            thanhtientext.Text = (gia * ngayo).ToString();
+                object GIA;
+                GIA = dt2.Compute("Max(GIA)", "");
+                thanhtientext.Text = GIA.ToString();
+                double gia = Convert.ToDouble(thanhtientext.Text);  //so tien trong 1 ngay
+
+                thanhtientext.Text = (gia * ngayo).ToString();  // tong tien
+
+                string sql3 = "DELETE FROM PHONGTHUE WHERE MAKH ='" + makhtxt.Text+ "' " + "DELETE FROM KHACHHANG WHERE MAKH ='" + makhtxt.Text + "'";
+                SqlCommand cmd3 = new SqlCommand(sql3, conn);
+                cmd3.ExecuteNonQuery();                         // xoa phong thue
+                
+                sql2 = "SELECT distinct SOPHONG FROM PHONGTHUE WHERE NGAYDEN <= '" + DateTime.Now.ToString("yyyy/MM/dd") + "' AND NGAYDI > '" + DateTime.Now.ToString("yyyy/MM/dd") + "'";
+                showdata(sql2);
+            }
+            catch
+            {
+                MessageBox.Show("Loi!!! vui long kiem tra lai");
+            }
         }
 
      }

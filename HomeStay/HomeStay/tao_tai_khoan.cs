@@ -18,60 +18,59 @@ namespace HomeStay
             InitializeComponent();
         }
 
-        private void tao_tai_khoan_Load(object sender, EventArgs e)
+ 
+        private void Button_Shutdown_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btn_tao_tai_khoan_Click(object sender, EventArgs e)
+        private void btn_tao_tai_khoan_Click_1(object sender, EventArgs e)
         {
             string sql;
-            SqlConnection con = new SqlConnection();
-            // DATA SOURCE
-            con.ConnectionString = (@"Data Source = SE140697\SQLEXPRESS; Initial Catalog = HomeStay; Integrated Security = True");
+            SqlConnection conn = new SqlConnection(DataSource.connectionString);
 
-            /*if (txt_hoten.Text == null)
+            if (txt_hoten.Text == "")
             {
                 MessageBox.Show("ho ten khong duoc de trong");
             }
-            else if(txt_manv.Text == null)
+            else if (txt_manv.Text == "")
             {
                 MessageBox.Show("ma nhan vien khong duoc de trong");
             }
-            else if (txt_dia_chi.Text == null)
+            else if (txt_dia_chi.Text == "")
             {
                 MessageBox.Show("dia chi khong duoc de trong");
             }
-            else if (txt_cmnd.Text == null)
+            else if (txt_cmnd.Text == "")
             {
                 MessageBox.Show("cmnd khong duoc de trong");
             }
-            else if (txt_mat_khau.Text == null)
+            else if (txt_mat_khau.Text == "")
             {
                 MessageBox.Show("mat khau khong duoc de trong");
-            }*/
+            }
             if (txt_mat_nhau_nhap_lai.Text != txt_mat_khau.Text)
             {
                 MessageBox.Show("Mat khau nhap lai khac voi mat khau. nhap lai mat khau");
             }
             else
             {
-                con.Open();
-                sql = "INSERT INTO NHANVIEN(TaiKhoan,MANV,HOTEN,NGAYSINH,CMND_NV,DIACHI)VALUES (";
-                sql += "'" + txt_tai_khoan.Text + "','" + txt_manv.Text + "','" + txt_hoten.Text + "','" + ngaysinh.Value.Date + "','" + txt_cmnd.Text + "','" + txt_dia_chi.Text + "')";
-                //sql = "INSERT INTO Sign_in(TAIKHOAN, MATKHAU)VALUES ('";
-                //sql += txt_tai_khoan.Text + "','"+ txt_mat_khau.Text + "')";
-                SqlCommand cmd = new SqlCommand(sql, con);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("tao tai khoan thanh cong !!");
+                try
+                {
+                    conn.Open();
+                    sql = "INSERT INTO Sign_in(TAIKHOAN, MATKHAU,ChucVu)VALUES ('";
+                    sql += txt_tai_khoan.Text + "','" + txt_mat_khau.Text + "',2) ";
+                    sql += "INSERT INTO NHANVIEN(TaiKhoan,MANV,HOTEN,NGAYSINH,CMND_NV,DIACHI)VALUES (";
+                    sql += "'" + txt_tai_khoan.Text + "','" + txt_manv.Text + "','" + txt_hoten.Text + "','" + ngaysinh.Value.Date + "','" + txt_cmnd.Text + "','" + txt_dia_chi.Text + "')";
+                    SqlCommand cmd = new SqlCommand(sql, conn);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("tao tai khoan thanh cong !!");
+                }
+                catch
+                {
+                    MessageBox.Show("Loi !!!");
+                }
             }
         }
-
-
     }
 }

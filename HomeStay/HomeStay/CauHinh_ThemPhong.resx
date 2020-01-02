@@ -118,15 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="TrangThai.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAPsAAAApCAYAAADzhF+CAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACzSURBVHhe7dOxCQMxAARB9V+VHpXhMlyAH4ESt6CdgUsu
-        3wGErLU+c86fmd233fdJfYx9AHfafZ/UxQ43EztEiB0ixA4RYocIsUOE2CFC7BAhdogQO0SIHSLEDhFi
-        hwixQ4TYIULsECF2iBA7RIgdIsQOEWKHCLFDhNghQuwQIXaIEDtEiB0ixA4RYocIsUOE2CFC7BAhdogQ
-        O0SIHSLEDhF/sT/P892Hmd233fdJHbjfGC8MwYZs+Ob0PAAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="Tang.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAPsAAAApCAYAAADzhF+CAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -137,15 +128,6 @@
 </value>
   </data>
   <data name="LoaiPhong.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAPsAAAApCAYAAADzhF+CAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACzSURBVHhe7dOxCQMxAARB9V+VHpXhMlyAH4ESt6CdgUsu
-        3wGErLU+c86fmd233fdJfYx9AHfafZ/UxQ43EztEiB0ixA4RYocIsUOE2CFC7BAhdogQO0SIHSLEDhFi
-        hwixQ4TYIULsECF2iBA7RIgdIsQOEWKHCLFDhNghQuwQIXaIEDtEiB0ixA4RYocIsUOE2CFC7BAhdogQ
-        O0SIHSLEDhF/sT/P892Hmd233fdJHbjfGC8MwYZs+Ob0PAAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="GiaPhong.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAPsAAAApCAYAAADzhF+CAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACzSURBVHhe7dOxCQMxAARB9V+VHpXhMlyAH4ESt6CdgUsu

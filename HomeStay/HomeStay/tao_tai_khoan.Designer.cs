@@ -58,6 +58,7 @@
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties27 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties28 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             this.Panel_Sign_in = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.Button_Shutdown = new Bunifu.Framework.UI.BunifuImageButton();
             this.txt_mat_nhau_nhap_lai = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.txt_mat_khau = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.txt_tai_khoan = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
@@ -71,12 +72,14 @@
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btn_tao_tai_khoan = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Panel_Sign_in.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Button_Shutdown)).BeginInit();
             this.SuspendLayout();
             // 
             // Panel_Sign_in
             // 
             this.Panel_Sign_in.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Panel_Sign_in.BackgroundImage")));
             this.Panel_Sign_in.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Panel_Sign_in.Controls.Add(this.Button_Shutdown);
             this.Panel_Sign_in.Controls.Add(this.txt_mat_nhau_nhap_lai);
             this.Panel_Sign_in.Controls.Add(this.txt_mat_khau);
             this.Panel_Sign_in.Controls.Add(this.txt_tai_khoan);
@@ -100,6 +103,21 @@
             this.Panel_Sign_in.Quality = 10;
             this.Panel_Sign_in.Size = new System.Drawing.Size(609, 548);
             this.Panel_Sign_in.TabIndex = 2;
+            // 
+            // Button_Shutdown
+            // 
+            this.Button_Shutdown.BackColor = System.Drawing.Color.Transparent;
+            this.Button_Shutdown.Image = ((System.Drawing.Image)(resources.GetObject("Button_Shutdown.Image")));
+            this.Button_Shutdown.ImageActive = null;
+            this.Button_Shutdown.Location = new System.Drawing.Point(569, 13);
+            this.Button_Shutdown.Margin = new System.Windows.Forms.Padding(4);
+            this.Button_Shutdown.Name = "Button_Shutdown";
+            this.Button_Shutdown.Size = new System.Drawing.Size(36, 34);
+            this.Button_Shutdown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Button_Shutdown.TabIndex = 37;
+            this.Button_Shutdown.TabStop = false;
+            this.Button_Shutdown.Zoom = 10;
+            this.Button_Shutdown.Click += new System.EventHandler(this.Button_Shutdown_Click);
             // 
             // txt_mat_nhau_nhap_lai
             // 
@@ -705,6 +723,7 @@
             this.btn_tao_tai_khoan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_tao_tai_khoan.Textcolor = System.Drawing.Color.White;
             this.btn_tao_tai_khoan.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_tao_tai_khoan.Click += new System.EventHandler(this.btn_tao_tai_khoan_Click_1);
             // 
             // tao_tai_khoan
             // 
@@ -717,6 +736,7 @@
             this.Text = "tao_tai_khoan";
             this.Panel_Sign_in.ResumeLayout(false);
             this.Panel_Sign_in.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Button_Shutdown)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -736,5 +756,6 @@
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txt_hoten;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel6;
         private Bunifu.Framework.UI.BunifuFlatButton btn_tao_tai_khoan;
+        private Bunifu.Framework.UI.BunifuImageButton Button_Shutdown;
     }
 }

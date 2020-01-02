@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace HomeStay
 {
@@ -17,10 +18,42 @@ namespace HomeStay
             InitializeComponent();
         }
 
+        SqlConnection conn = new SqlConnection(DataSource.connectionString);
+
         private void btThemNV_Click(object sender, EventArgs e)
         {
             tao_tai_khoan ttk = new tao_tai_khoan();
             ttk.Show();
+            
+        }
+
+        private void CauHinh_ThongTinNhanVien_Load(object sender, EventArgs e)
+        {
+            conn.Open();
+            string sql = "SELECT TOP (1000) [TaiKhoan] as'Tài Khoản',[MANV]  as 'Mã NV',[HOTEN] as'Họ tên',[NGAYSINH] as'Ngày sinh',[CMND_NV] as'Số cmnd',[DIACHI] as'Địa chỉ' FROM[HomeStay].[dbo].[NHANVIEN]";
+            showdata(sql);
+        }
+        void showdata(string sql)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.CommandType = CommandType.Text;
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                bunifuCustomDataGrid1.DataSource = dt;
+            }
+            catch
+            {
+                MessageBox.Show("Loi !!!");
+            }
+        }
+
+        private void ButtonTimKiem_Click(object sender, EventArgs e)
+        {
+            string sql = "SELECT TOP (1000) [TaiKhoan] as'Tài Khoản',[MANV]  as 'Mã NV',[HOTEN] as'Họ tên',[NGAYSINH] as'Ngày sinh',[CMND_NV] as'Số cmnd',[DIACHI] as'Địa chỉ' FROM[HomeStay].[dbo].[NHANVIEN] WHERE MANV = '"+MaNV.Text +"'";
+            showdata(sql);
         }
     }
 }
