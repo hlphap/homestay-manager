@@ -142,6 +142,14 @@ namespace HomeStay
 
         }
 
-      
+        private void KhachSeDen_LeTan_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void panel1_Click(object sender, EventArgs e)
+        {
+            KhachSeDen_LeTan_Load(sender, e);
+        }
     }
 }
