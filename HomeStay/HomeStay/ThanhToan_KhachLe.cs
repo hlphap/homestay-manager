@@ -183,6 +183,7 @@ namespace HomeStay.Resources
             {
                 conn.Close();
             }
+            FormChinh.LoadTrangThai();
         }
 
         private void Panel_TuyChon_MouseLeave(object sender, EventArgs e)
