@@ -132,6 +132,12 @@ namespace HomeStay
             string sql = "UPDATE PHONG SET TRANGTHAI =1 FROM PHONGTHUE RIGHT JOIN PHONG ON PHONGTHUE.SOPHONG=PHONG.SOPHONG WHERE ( GETDATE() < NGAYDEN OR GETDATE() > NGAYDI ) OR NGAYDEN = NULL OR NGAYDI = NULL";
             string sql2 = "UPDATE PHONG SET TRANGTHAI = 4 FROM PHONG WHERE SOPHONG IN(SELECT DISTINCT SOPHONG FROM PHONGTHUE WHERE ('" + DateTime.Now.ToString("yyyy/MM/dd")+ " 00:00:00.000' = NGAYDEN))";
             string sql3 = "UPDATE PHONG SET TRANGTHAI = 3 FROM PHONG, PHONGTHUE WHERE PHONGTHUE.SOPHONG = PHONG.SOPHONG AND PHONG.SOPHONG IN(SELECT DISTINCT SOPHONG FROM PHONGTHUE WHERE (GETDATE() > NGAYDEN AND GETDATE() <= NGAYDI ) ) ";
+            //trang thai 1 = phong trong
+            //2 nhan phong
+            //3 khach dang o
+            //4 hom nay khach se den lay phong
+            //5 phong ban
+            
             SqlCommand cmd2 = new SqlCommand(sql2, conn);
             SqlCommand cmd = new SqlCommand(sql, conn);
             SqlCommand cmd3 = new SqlCommand(sql3, conn);

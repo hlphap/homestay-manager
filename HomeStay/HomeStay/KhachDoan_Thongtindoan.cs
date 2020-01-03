@@ -19,21 +19,29 @@ namespace HomeStay
 
         private void bunifuTextBox3_Click(object sender, EventArgs e)
         {
-            string sql = "SElECT max(MAKH) max FROM KHACHHANG";     // madoan
-            SqlCommand cmd1 = new SqlCommand(sql, conn);
-            cmd1.CommandType = CommandType.Text;
-            SqlDataAdapter da = new SqlDataAdapter(cmd1);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
+            try
+            {
+                string sql = "SElECT max(MAKH) max FROM KHACHHANG";     // madoan
+                SqlCommand cmd1 = new SqlCommand(sql, conn);
+                cmd1.CommandType = CommandType.Text;
+                SqlDataAdapter da = new SqlDataAdapter(cmd1);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
 
-            object Max;
-            Max = dt.Compute("Max(max)", "");
-            string Str = Max.ToString();
-            string Str1 = Str.Substring(2);
-            int madoan = Int32.Parse(Str1);
-            madoan++;
-            Str = Str.Replace(Str1, madoan.ToString());
-            bunifuTextBox3.Text = Str;                   // btn, lable, text madoan
+                object Max;
+                Max = dt.Compute("Max(max)", "");
+                string Str = Max.ToString();
+                string Str1 = Str.Substring(2);
+                int madoan = Int32.Parse(Str1);
+                madoan++;
+                Str = Str.Replace(Str1, madoan.ToString());
+                bunifuTextBox3.Text = Str;                   // btn, lable, text madoan
+            }
+            catch
+            {
+                bunifuTextBox3.Text = "KD01";
+
+            }
         }
 
         private void ButtonTimKiem_Click_1(object sender, EventArgs e)
@@ -80,22 +88,30 @@ namespace HomeStay
         {
             InitializeComponent();
             conn.Open();
+            try
+            {
+                string sql = "SElECT max(MAKH) max FROM KHACHHANG";     // madoan
+                SqlCommand cmd1 = new SqlCommand(sql, conn);
+                cmd1.CommandType = CommandType.Text;
+                SqlDataAdapter da = new SqlDataAdapter(cmd1);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
 
-            string sql = "SElECT max(MAKH) max FROM KHACHHANG";     // madoan
-            SqlCommand cmd1 = new SqlCommand(sql, conn);
-            cmd1.CommandType = CommandType.Text;
-            SqlDataAdapter da = new SqlDataAdapter(cmd1);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
+                object Max;
+                Max = dt.Compute("Max(max)", "");
+                string Str = Max.ToString();
+                string Str1 = Str.Substring(2);
+                int madoan = Int32.Parse(Str1);
+                madoan++;
+                Str = Str.Replace(Str1, madoan.ToString());
+                bunifuTextBox3.Text = Str;                   // btn, lable, text madoan
 
-            object Max;
-            Max = dt.Compute("Max(max)", "");
-            string Str = Max.ToString();
-            string Str1 = Str.Substring(2);
-            int madoan = Int32.Parse(Str1);
-            madoan++;
-            Str = Str.Replace(Str1, madoan.ToString());
-            bunifuTextBox3.Text = Str;                   // btn, lable, text madoan
+            }
+            catch
+            {
+                bunifuTextBox3.Text = "KD01";
+
+            }
 
         }
 

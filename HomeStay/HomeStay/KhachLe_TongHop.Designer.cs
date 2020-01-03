@@ -555,7 +555,6 @@
             this.bunifuDatepicker3.Size = new System.Drawing.Size(183, 35);
             this.bunifuDatepicker3.TabIndex = 24;
             this.bunifuDatepicker3.Value = new System.DateTime(2019, 10, 11, 8, 17, 40, 675);
-            this.bunifuDatepicker3.Enter += new System.EventHandler(this.bunifuDatepicker3_Enter);
             this.bunifuDatepicker3.Leave += new System.EventHandler(this.bunifuDatepicker3_Leave);
             // 
             // bunifuDatepicker2
@@ -571,7 +570,6 @@
             this.bunifuDatepicker2.Size = new System.Drawing.Size(183, 34);
             this.bunifuDatepicker2.TabIndex = 23;
             this.bunifuDatepicker2.Value = new System.DateTime(2019, 10, 11, 8, 17, 40, 675);
-            this.bunifuDatepicker2.onValueChanged += new System.EventHandler(this.bunifuDatepicker2_onValueChanged);
             // 
             // ghichu
             // 
@@ -1208,7 +1206,6 @@
             this.comboBox1.TabIndex = 4;
             this.comboBox1.ValueMember = "LOAIPHONG";
             this.comboBox1.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged);
-            this.comboBox1.Click += new System.EventHandler(this.comboBox1_Click);
             // 
             // bunifuCustomLabel4
             // 
@@ -1244,7 +1241,6 @@
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(198, 25);
             this.bunifuCustomLabel1.TabIndex = 0;
             this.bunifuCustomLabel1.Text = "THÔNG TIN CHUNG";
-            this.bunifuCustomLabel1.Click += new System.EventHandler(this.bunifuCustomLabel1_Click);
             // 
             // contextMenuStrip1
             // 
@@ -1258,7 +1254,6 @@
             this.Controls.Add(this.Panel_THKL);
             this.Name = "KhachLe_TongHop";
             this.Size = new System.Drawing.Size(815, 464);
-            this.Load += new System.EventHandler(this.KhachLe_TongHop_Load);
             this.Panel_THKL.ResumeLayout(false);
             this.Panel_THKL.PerformLayout();
             this.ResumeLayout(false);

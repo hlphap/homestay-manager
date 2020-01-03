@@ -20,6 +20,7 @@ namespace HomeStay
             InitializeComponent();
             conn.Open();
             showdata();
+            showcombox();
         }
         void showdata()
         { 
@@ -32,6 +33,17 @@ namespace HomeStay
             dataGridView1.DataSource = dt;
         }
 
+        void showcombox()
+        {
+            string sql2 = "SELECT distinct LOAIPHONG FROM LOAIPHONG";
+            SqlDataAdapter da2 = new SqlDataAdapter(sql2, conn);
+            DataTable dt2 = new DataTable();
+            da2.Fill(dt2);
+            comboBox1.DataSource = dt2;
+            comboBox1.DisplayMember = "LOAIPHONG";
+            comboBox1.ValueMember = "LOAIPHONG";
+        }
+
         private void ButtonTimKiem_Click(object sender, EventArgs e)
         {
             Sua.Enabled = false;
@@ -40,7 +52,7 @@ namespace HomeStay
             {
                 if (SoPhong.Text == "")
                     MessageBox.Show("khong duoc de so phong trong");
-                else if (LoaiPhong.Text == "")
+                else if (comboBox1.Text == "Chọn loại")
                     MessageBox.Show("khong duoc de loai phong trong");
                 else if (Tang.Text == "")
                     MessageBox.Show("khong duoc de tang trong");
@@ -48,7 +60,7 @@ namespace HomeStay
                 {
                     try
                     {
-                        string sql = "INSERT INTO PHONG (TANG , SOPHONG, LOAIPHONG, TRANGTHAI) values (" + Tang.Text + ",'" + SoPhong.Text + "',N'" + LoaiPhong.Text + "'," + 1 + ")";
+                        string sql = "INSERT INTO PHONG (TANG , SOPHONG, LOAIPHONG, TRANGTHAI) values (" + Tang.Text + ",'" + SoPhong.Text + "',N'" + comboBox1.Text + "'," + 1 + ")";
                         SqlCommand cmd = new SqlCommand(sql, conn);
                         cmd.ExecuteNonQuery();
                         showdata();
@@ -68,16 +80,15 @@ namespace HomeStay
         {
             if (SoPhong.Text == "")
                 MessageBox.Show("khong duoc de so phong trong");
-            else if (LoaiPhong.Text == "")
+            else if (comboBox1.Text == "Chọn loại")
                 MessageBox.Show("khong duoc de loai phong trong");
-          
             else if (Tang.Text == "")
                 MessageBox.Show("khong duoc de tang trong");
             
             else
                 try
                 {
-                    string sql = "UPDATE PHONG SET TANG =" + Tang.Text + ", LOAIPHONG = N'" + LoaiPhong.Text + "', TRANGTHAI = " + 1 + " WHERE SOPHONG = '" + SoPhong.Text + "'";
+                    string sql = "UPDATE PHONG SET TANG =" + Tang.Text + ", LOAIPHONG = N'" + comboBox1.Text + "', TRANGTHAI = " + 1 + " WHERE SOPHONG = '" + SoPhong.Text + "'";
                     SqlCommand cmd = new SqlCommand(sql, conn);
                     cmd.ExecuteNonQuery();
                     showdata();
@@ -103,7 +114,7 @@ namespace HomeStay
             int i;
             i = dataGridView1.CurrentRow.Index;
             SoPhong.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
-            LoaiPhong.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
+            comboBox1.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
             Tang.Text = dataGridView1.Rows[i].Cells[3].Value.ToString();
         }
 
