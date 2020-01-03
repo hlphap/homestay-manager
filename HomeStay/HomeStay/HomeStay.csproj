@@ -367,12 +367,6 @@
     <Compile Include="KhachLe_TongHop.Designer.cs">
       <DependentUpon>KhachLe_TongHop.cs</DependentUpon>
     </Compile>
-    <Compile Include="KhachLe_TuyChon.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="KhachLe_TuyChon.Designer.cs">
-      <DependentUpon>KhachLe_TuyChon.cs</DependentUpon>
-    </Compile>
     <Compile Include="Phong.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -505,9 +499,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="KhachLe_TongHop.resx">
       <DependentUpon>KhachLe_TongHop.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="KhachLe_TuyChon.resx">
-      <DependentUpon>KhachLe_TuyChon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Phong.resx">
       <DependentUpon>Phong.cs</DependentUpon>

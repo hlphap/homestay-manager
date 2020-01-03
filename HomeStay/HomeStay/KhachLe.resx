@@ -140,11 +140,11 @@
         SUVORK5CYII=
 </value>
   </data>
-  <data name="Button_TuyChon.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="ButtonTongHop.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAI0AAAAyCAYAAABhwlgFAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAAySURBVHhe7cExAQAAAMKg9U9tDB8gAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAArmpuWgABBhhdlwAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAAKQAAAAyCAYAAADSinAfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAA3SURBVHhe7cExAQAAAMKg9U9tCU8gAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAOCuBoBSAAETe2w/AAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="Button_ThanhToan.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -152,13 +152,6 @@
         iVBORw0KGgoAAAANSUhEUgAAAKMAAAAyCAYAAAAwVmtmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAA3SURBVHhe7cExAQAAAMKg9U9tDQ8gAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAADhSA3+KAAEPulgKAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="ButtonTongHop.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAKQAAAAyCAYAAADSinAfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAA3SURBVHhe7cExAQAAAMKg9U9tCU8gAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAOCuBoBSAAETe2w/AAAAAElFTkSuQmCC
 </value>
   </data>
 </root>

@@ -830,3 +830,34 @@ D:\home11111\HomeStay\HomeStay\obj\Debug\HomeStay.CauHinh_LoaiPhong.resources
 =======
 C:\Users\Tran Huy Win\Desktop\homestay_test\HomeStay\HomeStay\obj\Debug\HomeStay.CauHinh_LoaiPhong.resources
 >>>>>>> abb8da2be6d4677090955c9ae59e869cdcaf868a
+D:\IT008 Lập trình trực quan\HomeStay_Git\HomeStay\HomeStay\bin\Debug\Bunifu.Core.dll
+D:\IT008 Lập trình trực quan\HomeStay_Git\HomeStay\HomeStay\bin\Debug\Bunifu.UI.WinForm.BunifuShadowPanel.dll
+D:\IT008 Lập trình trực quan\HomeStay_Git\HomeStay\HomeStay\bin\Debug\Bunifu.UI.WinForms.BunifuButton.dll
+D:\IT008 Lập trình trực quan\HomeStay_Git\HomeStay\HomeStay\bin\Debug\Bunifu.UI.WinForms.BunifuCheckBox.dll
+D:\IT008 Lập trình trực quan\HomeStay_Git\HomeStay\HomeStay\bin\Debug\Bunifu.UI.WinForms.BunifuCircleProgress.dll
+D:\IT008 Lập trình trực quan\HomeStay_Git\HomeStay\HomeStay\bin\Debug\Bunifu.UI.WinForms.BunifuColorTransition.dll
+D:\IT008 Lập trình trực quan\HomeStay_Git\HomeStay\HomeStay\bin\Debug\Bunifu.UI.WinForms.BunifuDataGridView.dll
+D:\IT008 Lập trình trực quan\HomeStay_Git\HomeStay\HomeStay\bin\Debug\Bunifu.UI.WinForms.BunifuDatePicker.dll
+D:\IT008 Lập trình trực quan\HomeStay_Git\HomeStay\HomeStay\bin\Debug\Bunifu.UI.WinForms.BunifuDropdown.dll
+D:\IT008 Lập trình trực quan\HomeStay_Git\HomeStay\HomeStay\bin\Debug\Bunifu.UI.WinForms.BunifuFormDock.dll
+D:\IT008 Lập trình trực quan\HomeStay_Git\HomeStay\HomeStay\bin\Debug\Bunifu.UI.WinForms.BunifuGauge.dll
+D:\IT008 Lập trình trực quan\HomeStay_Git\HomeStay\HomeStay\bin\Debug\Bunifu.UI.WinForms.BunifuImageButton.dll
+D:\IT008 Lập trình trực quan\HomeStay_Git\HomeStay\HomeStay\bin\Debug\Bunifu.UI.WinForms.BunifuLabel.dll
+D:\IT008 Lập trình trực quan\HomeStay_Git\HomeStay\HomeStay\bin\Debug\Bunifu.UI.WinForms.BunifuPages.dll
+D:\IT008 Lập trình trực quan\HomeStay_Git\HomeStay\HomeStay\bin\Debug\Bunifu.UI.WinForms.BunifuPictureBox.dll
+D:\IT008 Lập trình trực quan\HomeStay_Git\HomeStay\HomeStay\bin\Debug\Bunifu.UI.WinForms.BunifuProgressBar.dll
+D:\IT008 Lập trình trực quan\HomeStay_Git\HomeStay\HomeStay\bin\Debug\Bunifu.UI.WinForms.BunifuRadioButton.dll
+D:\IT008 Lập trình trực quan\HomeStay_Git\HomeStay\HomeStay\bin\Debug\Bunifu.UI.WinForms.BunifuScrollBar.dll
+D:\IT008 Lập trình trực quan\HomeStay_Git\HomeStay\HomeStay\bin\Debug\Bunifu.UI.WinForms.BunifuSlider.dll
+D:\IT008 Lập trình trực quan\HomeStay_Git\HomeStay\HomeStay\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.dll
+D:\IT008 Lập trình trực quan\HomeStay_Git\HomeStay\HomeStay\bin\Debug\Bunifu.UI.WinForms.BunifuToolTip.dll
+D:\IT008 Lập trình trực quan\HomeStay_Git\HomeStay\HomeStay\bin\Debug\Bunifu.UI.WinForms.BunifuTransition.dll
+D:\IT008 Lập trình trực quan\HomeStay_Git\HomeStay\HomeStay\bin\Debug\Bunifu.UI.WinForms.BunifuUserControl.dll
+D:\IT008 Lập trình trực quan\HomeStay_Git\HomeStay\HomeStay\bin\Debug\Bunifu.UI.WinForms.ToggleSwitch.dll
+D:\IT008 Lập trình trực quan\HomeStay_Git\HomeStay\HomeStay\bin\Debug\Bunifu_UI_v1.5.3.dll
+D:\IT008 Lập trình trực quan\HomeStay_Git\HomeStay\HomeStay\obj\Debug\HomeStay.CaiDat_DsTang.resources
+D:\IT008 Lập trình trực quan\HomeStay_Git\HomeStay\HomeStay\obj\Debug\HomeStay.CauHinh_LoaiPhong.resources
+D:\IT008 Lập trình trực quan\HomeStay_Git\HomeStay\HomeStay\obj\Debug\HomeStay.CauHinh_ThemPhong.resources
+D:\IT008 Lập trình trực quan\HomeStay_Git\HomeStay\HomeStay\obj\Debug\HomeStay.CauHinh_ThongTinCHST.resources
+D:\IT008 Lập trình trực quan\HomeStay_Git\HomeStay\HomeStay\obj\Debug\HomeStay.CauHinh_ThongTinChung.resources
+D:\IT008 Lập trình trực quan\HomeStay_Git\HomeStay\HomeStay\obj\Debug\HomeStay.Phong.resources

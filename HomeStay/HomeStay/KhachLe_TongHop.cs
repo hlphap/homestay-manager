@@ -13,7 +13,7 @@ namespace HomeStay
     public partial class KhachLe_TongHop : UserControl
     {
         SqlConnection conn = new SqlConnection(DataSource.connectionString);
-
+        public static string ktload = "0";
         public KhachLe_TongHop()
         {
             InitializeComponent();
@@ -46,7 +46,7 @@ namespace HomeStay
                         cmd2.ExecuteNonQuery();
                         
                         MessageBox.Show("Them thanh cong");
-
+                        ktload = "1";
                     }
                     catch
                     {
@@ -55,6 +55,7 @@ namespace HomeStay
                 conn.Close();
             }
             FormChinh.LoadTrangThai();
+
         }
 
         private void tenkhach_Leave(object sender, EventArgs e)
