@@ -139,6 +139,7 @@ namespace HomeStay
         {
             SqlConnection conn = new SqlConnection(DataSource.connectionString);
             conn.Open();
+            string sql0 = "UPDATE PHONG SET TRANGTHAI = 1 FROM PHONG";
             string sql = "UPDATE PHONG SET TRANGTHAI =1 FROM PHONGTHUE RIGHT JOIN PHONG ON PHONGTHUE.SOPHONG=PHONG.SOPHONG WHERE ( GETDATE() < NGAYDEN OR GETDATE() > NGAYDI ) OR NGAYDEN = NULL OR NGAYDI = NULL";
             string sql2 = "UPDATE PHONG SET TRANGTHAI = 4 FROM PHONG WHERE SOPHONG IN(SELECT DISTINCT SOPHONG FROM PHONGTHUE WHERE ('" + DateTime.Now.ToString("yyyy/MM/dd") + " 00:00:00.000' = NGAYDEN))";
             string sql3 = "UPDATE PHONG SET TRANGTHAI = 3 FROM PHONG, PHONGTHUE WHERE PHONGTHUE.SOPHONG = PHONG.SOPHONG AND PHONG.SOPHONG IN(SELECT DISTINCT SOPHONG FROM PHONGTHUE WHERE (GETDATE() > NGAYDEN AND GETDATE() <= NGAYDI ) ) ";
@@ -147,10 +148,11 @@ namespace HomeStay
             //3 khach dang o
             //4 hom nay khach se den lay phong
             //5 phong ban
-
+            SqlCommand cmd0 = new SqlCommand(sql0, conn);
             SqlCommand cmd2 = new SqlCommand(sql2, conn);
             SqlCommand cmd = new SqlCommand(sql, conn);
             SqlCommand cmd3 = new SqlCommand(sql3, conn);
+            cmd0.ExecuteNonQuery();
             cmd.ExecuteNonQuery();
             cmd2.ExecuteNonQuery();
             cmd3.ExecuteNonQuery();

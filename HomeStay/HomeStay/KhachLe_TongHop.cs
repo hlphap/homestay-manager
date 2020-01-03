@@ -41,7 +41,7 @@ namespace HomeStay
                         SqlCommand cmd = new SqlCommand(sql, conn);
                         cmd.ExecuteNonQuery();
                         string st = comboBox3.Text;
-                        string sql2 = "INSERT INTO PHONGTHUE(MAKH,MADK,SOPHONG,NGAYDEN,NGAYDI,NGAYDK) VALUES('" + bunifuTextBox2.Text.Trim() + "','" + bunifuTextBox2.Text + "','" + comboBox3.Text + "','" + bunifuDatepicker2.Value.ToString("yyyy/MM/dd") + "','" + bunifuDatepicker3.Value.ToString("yyyy/MM/dd") + "','" + DateTime.Now.ToString("yyyy/MM/dd") + "')";
+                        string sql2 = "INSERT INTO PHONGTHUE(MAKH,MADK,SOPHONG,NGAYDEN,NGAYDI,NGAYDK) VALUES('" + bunifuTextBox2.Text.Trim() + "','" + bunifuTextBox2.Text.Trim() + "','" + comboBox3.Text + "','" + bunifuDatepicker2.Value.ToString("yyyy/MM/dd") + "','" + bunifuDatepicker3.Value.ToString("yyyy/MM/dd") + "','" + DateTime.Now.ToString("yyyy/MM/dd") + "')";
                         SqlCommand cmd2 = new SqlCommand(sql2, conn);
                         cmd2.ExecuteNonQuery();
                         
@@ -52,9 +52,10 @@ namespace HomeStay
                     {
                         MessageBox.Show("Xay ra loi");
                     }
-                conn.Close();
+ 
             }
             FormChinh.LoadTrangThai();
+          
 
         }
 
@@ -82,6 +83,7 @@ namespace HomeStay
             {
                 bunifuTextBox2.Text = "KH01";
             }
+
 
         }
 
