@@ -34,5 +34,10 @@ namespace HomeStay
             GridDataViewDSK.DataSource = dt4;
             conn.Close();
         }
+
+        private void Panel_KhachSeDi_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

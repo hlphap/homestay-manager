@@ -137,5 +137,10 @@ namespace HomeStay
                 NgayDenApp.Enabled = false;
             }
         }
+
+        private void Panel_KhachSeDi_Click(object sender, EventArgs e)
+        {
+            KhachSeDi_LeTan_Load(sender, e);
+        }
     }
 }

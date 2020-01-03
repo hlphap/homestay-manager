@@ -48,6 +48,7 @@
             this.msbRong = new System.Windows.Forms.Label();
             this.GridViewDSDP = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnToday = new Bunifu.Framework.UI.BunifuFlatButton();
             this.ButtonTimKiem = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Loaiphongtxt = new System.Windows.Forms.ComboBox();
             this.Sophongtxt = new System.Windows.Forms.ComboBox();
@@ -59,7 +60,6 @@
             this.Tenkhachtxt = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.Madatphongtxt = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnToday = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuGradientPanel1.SuspendLayout();
             this.bunifuGradientPanel3.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -312,6 +312,44 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1087, 161);
             this.panel2.TabIndex = 0;
+            this.panel2.Click += new System.EventHandler(this.panel2_Click);
+            // 
+            // btnToday
+            // 
+            this.btnToday.Active = false;
+            this.btnToday.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
+            this.btnToday.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnToday.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnToday.BorderRadius = 0;
+            this.btnToday.ButtonText = "Hôm nay";
+            this.btnToday.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnToday.DisabledColor = System.Drawing.Color.Gray;
+            this.btnToday.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnToday.Iconimage = null;
+            this.btnToday.Iconimage_right = null;
+            this.btnToday.Iconimage_right_Selected = null;
+            this.btnToday.Iconimage_Selected = null;
+            this.btnToday.IconMarginLeft = 0;
+            this.btnToday.IconMarginRight = 0;
+            this.btnToday.IconRightVisible = true;
+            this.btnToday.IconRightZoom = 0D;
+            this.btnToday.IconVisible = true;
+            this.btnToday.IconZoom = 50D;
+            this.btnToday.IsTab = false;
+            this.btnToday.Location = new System.Drawing.Point(9, 114);
+            this.btnToday.Margin = new System.Windows.Forms.Padding(5);
+            this.btnToday.Name = "btnToday";
+            this.btnToday.Normalcolor = System.Drawing.Color.CornflowerBlue;
+            this.btnToday.OnHovercolor = System.Drawing.Color.CornflowerBlue;
+            this.btnToday.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnToday.selected = false;
+            this.btnToday.Size = new System.Drawing.Size(112, 39);
+            this.btnToday.TabIndex = 33;
+            this.btnToday.Text = "Hôm nay";
+            this.btnToday.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnToday.Textcolor = System.Drawing.Color.White;
+            this.btnToday.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnToday.Click += new System.EventHandler(this.btnToday_Click);
             // 
             // ButtonTimKiem
             // 
@@ -501,43 +539,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(793, 197);
             this.panel1.TabIndex = 0;
-            // 
-            // btnToday
-            // 
-            this.btnToday.Active = false;
-            this.btnToday.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
-            this.btnToday.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnToday.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnToday.BorderRadius = 0;
-            this.btnToday.ButtonText = "Hôm nay";
-            this.btnToday.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnToday.DisabledColor = System.Drawing.Color.Gray;
-            this.btnToday.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnToday.Iconimage = null;
-            this.btnToday.Iconimage_right = null;
-            this.btnToday.Iconimage_right_Selected = null;
-            this.btnToday.Iconimage_Selected = null;
-            this.btnToday.IconMarginLeft = 0;
-            this.btnToday.IconMarginRight = 0;
-            this.btnToday.IconRightVisible = true;
-            this.btnToday.IconRightZoom = 0D;
-            this.btnToday.IconVisible = true;
-            this.btnToday.IconZoom = 50D;
-            this.btnToday.IsTab = false;
-            this.btnToday.Location = new System.Drawing.Point(9, 114);
-            this.btnToday.Margin = new System.Windows.Forms.Padding(5);
-            this.btnToday.Name = "btnToday";
-            this.btnToday.Normalcolor = System.Drawing.Color.CornflowerBlue;
-            this.btnToday.OnHovercolor = System.Drawing.Color.CornflowerBlue;
-            this.btnToday.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnToday.selected = false;
-            this.btnToday.Size = new System.Drawing.Size(112, 39);
-            this.btnToday.TabIndex = 33;
-            this.btnToday.Text = "Hôm nay";
-            this.btnToday.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnToday.Textcolor = System.Drawing.Color.White;
-            this.btnToday.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnToday.Click += new System.EventHandler(this.btnToday_Click);
             // 
             // DatPhong
             // 

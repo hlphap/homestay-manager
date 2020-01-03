@@ -165,5 +165,10 @@ namespace HomeStay
             }
 
         }
+
+        private void panel2_Click(object sender, EventArgs e)
+        {
+            DatPhong_Load(sender, e);
+        }
     }
 }
