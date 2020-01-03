@@ -24,7 +24,7 @@ namespace HomeStay
         public async void SoDoPhong_Load(object sender, EventArgs e)
         {
        
-            sql = "SELECT PHONG.SOPHONG, LOAIPHONG, TRANGTHAI, NGAYDEN, NGAYDI, HOTENKH, THOIGIANNHAN FROM PHONGTHUE JOIN KHACHHANG ON KHACHHANG.MAKH = PHONGTHUE.MAKH RIGHT JOIN PHONG ON PHONG.SOPHONG = PHONGTHUE.SOPHONG";
+            sql = "SELECT PHONG.SOPHONG, LOAIPHONG, TRANGTHAI, NGAYDEN, NGAYDI, HOTENKH, SDT FROM PHONGTHUE JOIN KHACHHANG ON KHACHHANG.MAKH = PHONGTHUE.MAKH RIGHT JOIN PHONG ON PHONG.SOPHONG = PHONGTHUE.SOPHONG";
           //  PanelTemp.Show();
             int x = await (LoadPhong(sql));
           //  PanelTemp.Hide();
@@ -144,7 +144,7 @@ namespace HomeStay
                                 us1.txtNgDen.Text = reader.GetDateTime(3).ToString("dd/MM" + "," + "hh:mm");
                                 us1.txtNgDi.Text = reader.GetDateTime(4).ToString("dd/MM" + "," + "hh:mm");
                                 us1.txtHoTen.Text = reader.GetString(5);
-                                //us1.txtTGNhan.Text = reader.GetDateTime(6).ToString();
+                                us1.txtTGNhan.Text = reader.GetString(6).ToString();
                             }
                         }
                         catch
