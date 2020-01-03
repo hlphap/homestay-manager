@@ -90,6 +90,10 @@ namespace HomeStay
             SUM = dt.Compute("Max(tong)", "");
             Tinhtientxt.Text = SUM.ToString();
 
+            string doanhthu = "UPDATE DOANHTHU SET TONGTIEN = TONGTIEN + " + Tinhtientxt.Text + " WHERE THANG = " + DateTime.Today.Month.ToString();
+            SqlCommand cmddoanhthu = new SqlCommand(doanhthu, conn);  //cong tien vao doanh thu trong thang
+            cmddoanhthu.ExecuteNonQuery();
+
         }   
     }
 }

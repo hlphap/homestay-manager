@@ -118,9 +118,13 @@ namespace HomeStay.Resources
 
                 thanhtientext.Text = (gia * ngayo).ToString();  // tong tien
 
-                string sql3 = "DELETE FROM PHONGTHUE WHERE MAKH ='" + makhtxt.Text+ "' " + "DELETE FROM KHACHHANG WHERE MAKH ='" + makhtxt.Text + "'";
+                string doanhthu = "UPDATE DOANHTHU SET TONGTIEN = TONGTIEN + "+thanhtientext.Text+" WHERE THANG = "+DateTime.Today.Month.ToString();
+                SqlCommand cmddoanhthu = new SqlCommand(doanhthu, conn);  //cong tien vao doanh thu trong thang
+                cmddoanhthu.ExecuteNonQuery();
+
+                string sql3 = "UPDATE PHONGTHUE SET NGAYDI = GETDATE() WHERE MAKH ='" + makhtxt.Text+ "' ";
                 SqlCommand cmd3 = new SqlCommand(sql3, conn);
-                cmd3.ExecuteNonQuery();                         // xoa phong thue
+                cmd3.ExecuteNonQuery();                         // UPDATE NGAYDI = HOM NAY
                 
                 sql2 = "SELECT distinct SOPHONG FROM PHONGTHUE WHERE NGAYDEN <= '" + DateTime.Now.ToString("yyyy/MM/dd") + "' AND NGAYDI > '" + DateTime.Now.ToString("yyyy/MM/dd") + "'";
                 showdata(sql2);

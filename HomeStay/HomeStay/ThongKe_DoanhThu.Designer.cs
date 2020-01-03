@@ -28,37 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.bunifuDatepicker2 = new Bunifu.Framework.UI.BunifuDatepicker();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            this.Bieudodoanhthu = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            ((System.ComponentModel.ISupportInitialize)(this.Bieudodoanhthu)).BeginInit();
             this.SuspendLayout();
             // 
-            // bunifuDatepicker2
+            // Bieudodoanhthu
             // 
-            this.bunifuDatepicker2.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.bunifuDatepicker2.BorderRadius = 0;
-            this.bunifuDatepicker2.ForeColor = System.Drawing.Color.White;
-            this.bunifuDatepicker2.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.bunifuDatepicker2.FormatCustom = null;
-            this.bunifuDatepicker2.Location = new System.Drawing.Point(5, 5);
-            this.bunifuDatepicker2.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuDatepicker2.Name = "bunifuDatepicker2";
-            this.bunifuDatepicker2.Size = new System.Drawing.Size(204, 44);
-            this.bunifuDatepicker2.TabIndex = 24;
-            this.bunifuDatepicker2.Value = new System.DateTime(2019, 10, 11, 8, 17, 40, 675);
+            chartArea3.Name = "ChartArea1";
+            this.Bieudodoanhthu.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.Bieudodoanhthu.Legends.Add(legend3);
+            this.Bieudodoanhthu.Location = new System.Drawing.Point(3, 79);
+            this.Bieudodoanhthu.Name = "Bieudodoanhthu";
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Thang";
+            this.Bieudodoanhthu.Series.Add(series3);
+            this.Bieudodoanhthu.Size = new System.Drawing.Size(1081, 471);
+            this.Bieudodoanhthu.TabIndex = 25;
+            this.Bieudodoanhthu.Text = "chart1";
             // 
             // ThongKe_DoanhThu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.bunifuDatepicker2);
+            this.Controls.Add(this.Bieudodoanhthu);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ThongKe_DoanhThu";
-            this.Size = new System.Drawing.Size(815, 464);
+            this.Size = new System.Drawing.Size(1087, 571);
+            this.Load += new System.EventHandler(this.ThongKe_DoanhThu_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.Bieudodoanhthu)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private Bunifu.Framework.UI.BunifuDatepicker bunifuDatepicker2;
+        private System.Windows.Forms.DataVisualization.Charting.Chart Bieudodoanhthu;
     }
 }

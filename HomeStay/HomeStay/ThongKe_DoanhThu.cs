@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace HomeStay
 {
@@ -16,10 +17,27 @@ namespace HomeStay
         {
             InitializeComponent();
         }
+        SqlConnection conn = new SqlConnection(DataSource.connectionString);
 
-        private void chart1_Click(object sender, EventArgs e)
+
+        private void ThongKe_DoanhThu_Load(object sender, EventArgs e)
         {
+            string sql = "SELECT * FROM DOANHTHU";
+            fillchart(sql);
+        }
 
+        void fillchart(string sql)
+        {
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            SqlDataAdapter ad = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            ad.Fill(ds);
+            conn.Open();
+            Bieudodoanhthu.DataSource = ds;
+            Bieudodoanhthu.Series["Thang"].XValueMember = "Thang";
+            Bieudodoanhthu.Series["Thang"].YValueMembers = "TongTien";
+            Bieudodoanhthu.Titles.Add("Tổng doanh thu");
+            conn.Close();
         }
     }
 }
