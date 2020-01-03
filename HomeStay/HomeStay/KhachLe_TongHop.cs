@@ -108,7 +108,7 @@ namespace HomeStay
 
         private void Panel_THKL_Click(object sender, EventArgs e)
         {
-            string sql2 = "SELECT distinct LOAIPHONG FROM PHONG WHERE SOPHONG NOT IN ( SELECT SOPHONG FROM PHONGTHUE WHERE '" + bunifuDatepicker2.Value.ToString("yyyy-MM-dd") + "'<=NgayDen AND'" + bunifuDatepicker3.Value.ToString("yyyy-MM-dd") + "'>= NGAYDI)";
+            string sql2 = "SELECT distinct LOAIPHONG FROM PHONG WHERE SOPHONG NOT IN ( SELECT SOPHONG FROM PHONGTHUE WHERE( '" + bunifuDatepicker2.Value.ToString("yyyy-MM-dd") + "'<=NgayDen AND'" + bunifuDatepicker3.Value.ToString("yyyy-MM-dd") + "'>= NGAYDI) or '" + bunifuDatepicker2.Value.ToString("yyyy-MM-dd") + "' = NGAYDI )";
             SqlDataAdapter da2 = new SqlDataAdapter(sql2, conn);
             DataTable dt2 = new DataTable();
             da2.Fill(dt2);
