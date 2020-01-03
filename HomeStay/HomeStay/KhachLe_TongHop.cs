@@ -100,12 +100,17 @@ namespace HomeStay
 
         private void bunifuDatepicker3_Leave(object sender, EventArgs e)
         {
+          
+        }
+
+        private void Panel_THKL_Click(object sender, EventArgs e)
+        {
             string sql2 = "SELECT distinct LOAIPHONG FROM PHONG WHERE SOPHONG NOT IN ( SELECT SOPHONG FROM PHONGTHUE WHERE '" + bunifuDatepicker2.Value.ToString("yyyy-MM-dd") + "'<=NgayDen AND'" + bunifuDatepicker3.Value.ToString("yyyy-MM-dd") + "'>= NGAYDI)";
             SqlDataAdapter da2 = new SqlDataAdapter(sql2, conn);
             DataTable dt2 = new DataTable();
             da2.Fill(dt2);
             comboBox1.DataSource = dt2;
-            comboBox1.DisplayMember = "LOAIPHONG";      
+            comboBox1.DisplayMember = "LOAIPHONG";
             comboBox1.ValueMember = "LOAIPHONG";
             comboBox1.Enabled = true;
         }

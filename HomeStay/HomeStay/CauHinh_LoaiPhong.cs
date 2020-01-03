@@ -13,6 +13,7 @@ namespace HomeStay
     public partial class CauHinh_LoaiPhong : UserControl
     {
         SqlConnection conn = new SqlConnection(DataSource.connectionString);
+        public static string ktload = "0";
         public CauHinh_LoaiPhong()
         {
             InitializeComponent();
@@ -70,6 +71,7 @@ namespace HomeStay
                     showdata("SELECT LOAIPHONG as 'Loại phòng', GIA as 'Giá phòng' FROM LOAIPHONG");
                     MessageBox.Show("Luu thanh cong");
                     btnTroLai_Click(sender, e);
+                    ktload = "1";
                 }
                 catch
                 {

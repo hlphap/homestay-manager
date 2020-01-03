@@ -60,7 +60,8 @@ namespace HomeStay
 
         private void ButtonTimKiem_Click(object sender, EventArgs e)
         {
-            string sql = "SELECT TOP (1000) [TaiKhoan] as'Tài Khoản',[MANV]  as 'Mã NV',[HOTEN] as'Họ tên',[NGAYSINH] as'Ngày sinh',[CMND_NV] as'Số cmnd',[DIACHI] as'Địa chỉ' FROM[HomeStay].[dbo].[NHANVIEN] WHERE MANV = '"+MaNV.Text +"'";
+
+            string sql = string.Format("SELECT TOP (1000) [TaiKhoan] as'Tài Khoản',[MANV]  as 'Mã NV',[HOTEN] as'Họ tên',[NGAYSINH] as'Ngày sinh',[CMND_NV] as'Số cmnd',[DIACHI] as'Địa chỉ' FROM[HomeStay].[dbo].[NHANVIEN] WHERE MANV like N'%{0}%'", MaNV.Text);
             showdata(sql);
         }
 
@@ -71,6 +72,11 @@ namespace HomeStay
                 CauHinh_ThongTinNhanVien_Load(sender, e);
             }
            
+        }
+
+        private void panel1_Click(object sender, EventArgs e)
+        {
+            CauHinh_ThongTinNhanVien_Load(sender, e);
         }
     }
 }

@@ -28,32 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CauHinh_ThemPhong));
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties17 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties18 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties19 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties20 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties21 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties22 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties23 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties24 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.Tang = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btn_TroLai = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.xoa = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Sua = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.Tang = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.SoPhong = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.ButtonTimKiem = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -84,21 +80,21 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeight = 29;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.DoubleBuffered = true;
@@ -116,10 +112,12 @@
             this.dataGridView1.Size = new System.Drawing.Size(1087, 341);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
+            this.dataGridView1.CellLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellLeave);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.Tang);
             this.panel2.Controls.Add(this.comboBox1);
             this.panel2.Controls.Add(this.btn_TroLai);
             this.panel2.Controls.Add(this.bunifuCustomLabel3);
@@ -127,7 +125,6 @@
             this.panel2.Controls.Add(this.bunifuCustomLabel7);
             this.panel2.Controls.Add(this.xoa);
             this.panel2.Controls.Add(this.Sua);
-            this.panel2.Controls.Add(this.Tang);
             this.panel2.Controls.Add(this.SoPhong);
             this.panel2.Controls.Add(this.ButtonTimKiem);
             this.panel2.Controls.Add(this.bunifuCustomLabel4);
@@ -136,6 +133,29 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1087, 275);
             this.panel2.TabIndex = 0;
+            this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
+            // 
+            // Tang
+            // 
+            this.Tang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tang.FormattingEnabled = true;
+            this.Tang.Location = new System.Drawing.Point(373, 166);
+            this.Tang.Margin = new System.Windows.Forms.Padding(4);
+            this.Tang.Name = "Tang";
+            this.Tang.Size = new System.Drawing.Size(194, 30);
+            this.Tang.TabIndex = 47;
+            this.Tang.Text = "Chọn tầng";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(24, 165);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(194, 30);
+            this.comboBox1.TabIndex = 46;
+            this.comboBox1.Text = "Chọn loại";
             // 
             // btn_TroLai
             // 
@@ -287,80 +307,6 @@
             this.Sua.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Sua.Click += new System.EventHandler(this.Sua_Click);
             // 
-            // Tang
-            // 
-            this.Tang.AcceptsReturn = false;
-            this.Tang.AcceptsTab = false;
-            this.Tang.AnimationSpeed = 200;
-            this.Tang.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.Tang.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.Tang.BackColor = System.Drawing.Color.Transparent;
-            this.Tang.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Tang.BackgroundImage")));
-            this.Tang.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.Tang.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.Tang.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.Tang.BorderColorIdle = System.Drawing.Color.Silver;
-            this.Tang.BorderRadius = 1;
-            this.Tang.BorderThickness = 1;
-            this.Tang.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.Tang.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Tang.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
-            this.Tang.DefaultText = "";
-            this.Tang.FillColor = System.Drawing.Color.White;
-            this.Tang.HideSelection = true;
-            this.Tang.IconLeft = null;
-            this.Tang.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.Tang.IconPadding = 10;
-            this.Tang.IconRight = null;
-            this.Tang.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.Tang.Lines = new string[0];
-            this.Tang.Location = new System.Drawing.Point(373, 165);
-            this.Tang.Margin = new System.Windows.Forms.Padding(4);
-            this.Tang.MaxLength = 32767;
-            this.Tang.MinimumSize = new System.Drawing.Size(1, 1);
-            this.Tang.Modified = false;
-            this.Tang.Multiline = false;
-            this.Tang.Name = "Tang";
-            stateProperties17.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties17.FillColor = System.Drawing.Color.Empty;
-            stateProperties17.ForeColor = System.Drawing.Color.Empty;
-            stateProperties17.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.Tang.OnActiveState = stateProperties17;
-            stateProperties18.BorderColor = System.Drawing.Color.Empty;
-            stateProperties18.FillColor = System.Drawing.Color.White;
-            stateProperties18.ForeColor = System.Drawing.Color.Empty;
-            stateProperties18.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.Tang.OnDisabledState = stateProperties18;
-            stateProperties19.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties19.FillColor = System.Drawing.Color.Empty;
-            stateProperties19.ForeColor = System.Drawing.Color.Empty;
-            stateProperties19.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.Tang.OnHoverState = stateProperties19;
-            stateProperties20.BorderColor = System.Drawing.Color.Silver;
-            stateProperties20.FillColor = System.Drawing.Color.White;
-            stateProperties20.ForeColor = System.Drawing.Color.Empty;
-            stateProperties20.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.Tang.OnIdleState = stateProperties20;
-            this.Tang.PasswordChar = '\0';
-            this.Tang.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.Tang.PlaceholderText = "Tầng";
-            this.Tang.ReadOnly = false;
-            this.Tang.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.Tang.SelectedText = "";
-            this.Tang.SelectionLength = 0;
-            this.Tang.SelectionStart = 0;
-            this.Tang.ShortcutsEnabled = true;
-            this.Tang.Size = new System.Drawing.Size(251, 41);
-            this.Tang.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
-            this.Tang.TabIndex = 36;
-            this.Tang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Tang.TextMarginBottom = 0;
-            this.Tang.TextMarginLeft = 5;
-            this.Tang.TextMarginTop = 0;
-            this.Tang.TextPlaceholder = "Tầng";
-            this.Tang.UseSystemPasswordChar = false;
-            this.Tang.WordWrap = true;
-            // 
             // SoPhong
             // 
             this.SoPhong.AcceptsReturn = false;
@@ -395,26 +341,26 @@
             this.SoPhong.Modified = false;
             this.SoPhong.Multiline = false;
             this.SoPhong.Name = "SoPhong";
-            stateProperties21.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties21.FillColor = System.Drawing.Color.Empty;
-            stateProperties21.ForeColor = System.Drawing.Color.Empty;
-            stateProperties21.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.SoPhong.OnActiveState = stateProperties21;
-            stateProperties22.BorderColor = System.Drawing.Color.Empty;
-            stateProperties22.FillColor = System.Drawing.Color.White;
-            stateProperties22.ForeColor = System.Drawing.Color.Empty;
-            stateProperties22.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.SoPhong.OnDisabledState = stateProperties22;
-            stateProperties23.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties23.FillColor = System.Drawing.Color.Empty;
-            stateProperties23.ForeColor = System.Drawing.Color.Empty;
-            stateProperties23.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.SoPhong.OnHoverState = stateProperties23;
-            stateProperties24.BorderColor = System.Drawing.Color.Silver;
-            stateProperties24.FillColor = System.Drawing.Color.White;
-            stateProperties24.ForeColor = System.Drawing.Color.Empty;
-            stateProperties24.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.SoPhong.OnIdleState = stateProperties24;
+            stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties1.FillColor = System.Drawing.Color.Empty;
+            stateProperties1.ForeColor = System.Drawing.Color.Empty;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.SoPhong.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.Empty;
+            stateProperties2.FillColor = System.Drawing.Color.White;
+            stateProperties2.ForeColor = System.Drawing.Color.Empty;
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.SoPhong.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.SoPhong.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.Silver;
+            stateProperties4.FillColor = System.Drawing.Color.White;
+            stateProperties4.ForeColor = System.Drawing.Color.Empty;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.SoPhong.OnIdleState = stateProperties4;
             this.SoPhong.PasswordChar = '\0';
             this.SoPhong.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.SoPhong.PlaceholderText = "Số phòng";
@@ -484,17 +430,6 @@
             this.bunifuCustomLabel4.TabIndex = 31;
             this.bunifuCustomLabel4.Text = "DANH SÁCH PHÒNG";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(24, 165);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(194, 30);
-            this.comboBox1.TabIndex = 46;
-            this.comboBox1.Text = "Chọn loại";
-            // 
             // CauHinh_ThemPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -518,7 +453,6 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
         private System.Windows.Forms.Panel panel3;
         private Bunifu.Framework.UI.BunifuFlatButton ButtonTimKiem;
-        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox Tang;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox SoPhong;
         private Bunifu.Framework.UI.BunifuFlatButton xoa;
         private Bunifu.Framework.UI.BunifuFlatButton Sua;
@@ -528,5 +462,6 @@
         private Bunifu.Framework.UI.BunifuCustomDataGrid dataGridView1;
         private Bunifu.Framework.UI.BunifuFlatButton btn_TroLai;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox Tang;
     }
 }

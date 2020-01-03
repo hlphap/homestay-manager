@@ -21,8 +21,7 @@ namespace HomeStay
 
         public void ThongTinChung_Load(object sender, EventArgs e)
         {
-            string sql = "SELECT KHACHHANG.MAKH as 'Mã KH', MADK as 'Mã đặt phòng',  SOPHONG as 'Số phòng', HOTENKH as 'Họ tên', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE WHERE KHACHHANG.MAKH = PHONGTHUE.MAKH AND CONVERT(varchar, GETDATE(), 103) = NGAYDEN";
-            LoadData(sql);
+            SeDen_Click(sender, e);
         }
         private void LoadData(string sql)
         {
@@ -60,7 +59,7 @@ namespace HomeStay
 
         private void SeDen_Click(object sender, EventArgs e)
         {
-            string sql = "SELECT KHACHHANG.MAKH as 'Mã KH', MADK as 'Mã đặt phòng',  SOPHONG as 'Số phòng', HOTENKH as 'Họ tên', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE WHERE KHACHHANG.MAKH = PHONGTHUE.MAKH AND CONVERT(varchar, GETDATE(), 103) = NGAYDEN";
+            string sql = "SELECT KHACHHANG.MAKH as 'Mã KH', MADK as 'Mã đặt phòng',  SOPHONG as 'Số phòng', HOTENKH as 'Họ tên', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE WHERE KHACHHANG.MAKH = PHONGTHUE.MAKH AND '" + DateTime.Now.ToString("yyyy / MM / dd") + " 00:00:00.000' = NGAYDEN";
             LoadData(sql);
             btnclick = 1; 
         }
@@ -68,7 +67,7 @@ namespace HomeStay
         private void SeDi_Click(object sender, EventArgs e)
         {
             btnclick = 2;
-            string sql = "SELECT KHACHHANG.MAKH as 'Mã KH', MADK as 'Mã đặt phòng',  SOPHONG as 'Số phòng', HOTENKH as 'Họ tên', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE WHERE KHACHHANG.MAKH = PHONGTHUE.MAKH AND CONVERT(varchar, GETDATE(), 103) = NGAYDI";
+            string sql = "SELECT KHACHHANG.MAKH as 'Mã KH', MADK as 'Mã đặt phòng',  SOPHONG as 'Số phòng', HOTENKH as 'Họ tên', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE WHERE KHACHHANG.MAKH = PHONGTHUE.MAKH AND '" + DateTime.Now.ToString("yyyy / MM / dd") + " 00:00:00.000' = NGAYDI";
             LoadData(sql);
        
         }
@@ -76,7 +75,7 @@ namespace HomeStay
         private void DangO_Click(object sender, EventArgs e)
         {
             btnclick = 3;
-            string sql = "SELECT KHACHHANG.MAKH as 'Mã KH', MADK as 'Mã đặt phòng',  SOPHONG as 'Số phòng', HOTENKH as 'Họ tên', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE WHERE KHACHHANG.MAKH = PHONGTHUE.MAKH AND NGAYDEN <= CONVERT(varchar, GETDATE(), 103)AND NGAYDI >= CONVERT(varchar, GETDATE(), 103)";
+            string sql = "SELECT KHACHHANG.MAKH as 'Mã KH', MADK as 'Mã đặt phòng',  SOPHONG as 'Số phòng', HOTENKH as 'Họ tên', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE WHERE KHACHHANG.MAKH = PHONGTHUE.MAKH AND NGAYDEN <= ' " + DateTime.Now.ToString("yyyy / MM / dd") + " 00:00:00.000' AND NGAYDI >= '" + DateTime.Now.ToString("yyyy / MM / dd") + " 00:00:00.000'";
             LoadData(sql);
       
         }

@@ -15,6 +15,7 @@ namespace HomeStay
     public partial class CauHinh_ThemPhong : UserControl
     {
         SqlConnection conn = new SqlConnection(DataSource.connectionString);
+
         public CauHinh_ThemPhong()
         {
             InitializeComponent();
@@ -42,6 +43,13 @@ namespace HomeStay
             comboBox1.DataSource = dt2;
             comboBox1.DisplayMember = "LOAIPHONG";
             comboBox1.ValueMember = "LOAIPHONG";
+            string sql3 = "SELECT distinct TANG FROM TANG";
+            SqlDataAdapter da3 = new SqlDataAdapter(sql3, conn);
+            DataTable dt3 = new DataTable();
+            da3.Fill(dt3);
+            Tang.DataSource = dt3;
+            Tang.DisplayMember = "TANG";
+            Tang.ValueMember = "TANG";
         }
 
         private void ButtonTimKiem_Click(object sender, EventArgs e)
@@ -111,11 +119,7 @@ namespace HomeStay
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            int i;
-            i = dataGridView1.CurrentRow.Index;
-            SoPhong.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
-            comboBox1.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
-            Tang.Text = dataGridView1.Rows[i].Cells[3].Value.ToString();
+       
         }
 
         private void btn_TroLai_Click(object sender, EventArgs e)
@@ -124,6 +128,24 @@ namespace HomeStay
             xoa.Enabled = true;
             ButtonTimKiem.Enabled = true;
             ButtonTimKiem.Text = "Thêm";
+        }
+
+        private void panel2_MouseMove(object sender, MouseEventArgs e)
+        {
+            if ((CauHinh_LoaiPhong.ktload == "1")||(CaiDat_DsTang.ktload)=="1")
+            {
+                showcombox();
+                CauHinh_LoaiPhong.ktload = "0";
+            }
+        }
+
+        private void dataGridView1_CellLeave(object sender, DataGridViewCellEventArgs e)
+        {
+            int i;
+            i = dataGridView1.CurrentRow.Index;
+            SoPhong.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
+            comboBox1.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
+            Tang.Text = dataGridView1.Rows[i].Cells[3].Value.ToString();
         }
     }
 }

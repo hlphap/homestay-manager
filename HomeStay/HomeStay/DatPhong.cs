@@ -59,7 +59,7 @@ namespace HomeStay
             try
             {
                 conn.Open();
-                string sql1 = "select * from PHONGTHUE";
+                string sql1 = "SELECT SOPHONG FROM PHONG";
                 SqlDataAdapter da1 = new SqlDataAdapter(sql1, conn);
                 DataTable dt1 = new DataTable();
                 da1.Fill(dt1);
@@ -67,7 +67,7 @@ namespace HomeStay
                 Sophongtxt.DisplayMember = "SOPHONG";
                 Sophongtxt.ValueMember = "SOPHONG";
 
-                string sql2 = "select LOAIPHONG from PHONG WHERE SOPHONG = " + Sophongtxt.ValueMember;
+                string sql2 = "SELECT LOAIPHONG FROM LOAIPHONG";
                 SqlDataAdapter da2 = new SqlDataAdapter(sql2, conn);
                 DataTable dt2 = new DataTable();
                 da2.Fill(dt2);
@@ -77,7 +77,7 @@ namespace HomeStay
 
 
 
-                string sql4 = "SELECT PHONGTHUE.SOPHONG as 'Số phòng', MADK as 'Mã đặt phòng', HOTENKH as 'Họ tên', LOAIPHONG as 'Loại phòng', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE, PHONG WHERE PHONG.SOPHONG = PHONGTHUE.SOPHONG AND KHACHHANG.MAKH = PHONGTHUE.MAKH AND GETDATE() < NGAYDEN";
+                string sql4 = "SELECT PHONGTHUE.SOPHONG as 'Số phòng', MADK as 'Mã đặt phòng', HOTENKH as 'Họ tên', LOAIPHONG as 'Loại phòng', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE, PHONG WHERE PHONG.SOPHONG = PHONGTHUE.SOPHONG AND KHACHHANG.MAKH = PHONGTHUE.MAKH AND '" + DateTime.Now.ToString("yyyy / MM / dd") + " 00:00:00.000' < NGAYDEN";
                 LoadData(sql4, GridViewDSDP);
 
 
@@ -99,7 +99,7 @@ namespace HomeStay
             string sql = "";
             if (kttoday == true)
             {
-                sql = "SELECT PHONGTHUE.SOPHONG as 'Số phòng', MADK as 'Mã đặt phòng', HOTENKH as 'Họ tên', LOAIPHONG as 'Loại phòng', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE, PHONG WHERE PHONG.SOPHONG = PHONGTHUE.SOPHONG AND KHACHHANG.MAKH = PHONGTHUE.MAKH AND GETDATE() = NGAYDEN";
+                sql = "SELECT PHONGTHUE.SOPHONG as 'Số phòng', MADK as 'Mã đặt phòng', HOTENKH as 'Họ tên', LOAIPHONG as 'Loại phòng', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE, PHONG WHERE PHONG.SOPHONG = PHONGTHUE.SOPHONG AND KHACHHANG.MAKH = PHONGTHUE.MAKH AND'" + DateTime.Now.ToString("yyyy / MM / dd") + " 00:00:00.000'  = NGAYDEN";
 
             }
             else

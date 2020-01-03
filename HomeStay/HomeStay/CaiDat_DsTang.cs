@@ -13,6 +13,7 @@ namespace HomeStay
     public partial class CaiDat_DsTang : UserControl
     {
         SqlConnection conn = new SqlConnection(DataSource.connectionString);
+        public static string ktload = "0";
         public CaiDat_DsTang()
         {
             InitializeComponent();
@@ -58,6 +59,7 @@ namespace HomeStay
                     showdata();
                     MessageBox.Show("Them thanh cong");
                     xoa.Enabled = true;
+                    ktload = "1";
                 }
                 catch
                 {
