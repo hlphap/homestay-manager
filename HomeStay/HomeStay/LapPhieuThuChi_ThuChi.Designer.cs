@@ -33,13 +33,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LapPhieuThuChi_ThuChi));
             this.bunifuCustomDataGrid1 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.tongtientxt = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.ButtonTimKiem = new Bunifu.Framework.UI.BunifuFlatButton();
             this.ngayden = new Bunifu.Framework.UI.BunifuDatepicker();
             this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.ngaydi = new Bunifu.Framework.UI.BunifuDatepicker();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.tongtientxt = new Bunifu.Framework.UI.BunifuCustomLabel();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuCustomDataGrid1)).BeginInit();
             this.bunifuGradientPanel2.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
@@ -99,6 +99,30 @@
             this.bunifuGradientPanel2.Size = new System.Drawing.Size(1087, 93);
             this.bunifuGradientPanel2.TabIndex = 6;
             // 
+            // tongtientxt
+            // 
+            this.tongtientxt.AutoSize = true;
+            this.tongtientxt.BackColor = System.Drawing.Color.Transparent;
+            this.tongtientxt.Font = new System.Drawing.Font("Segoe UI Semibold", 11F);
+            this.tongtientxt.Location = new System.Drawing.Point(729, 53);
+            this.tongtientxt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.tongtientxt.Name = "tongtientxt";
+            this.tongtientxt.Size = new System.Drawing.Size(93, 25);
+            this.tongtientxt.TabIndex = 33;
+            this.tongtientxt.Text = "Tổng tiền";
+            // 
+            // bunifuCustomLabel1
+            // 
+            this.bunifuCustomLabel1.AutoSize = true;
+            this.bunifuCustomLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 11F);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(628, 53);
+            this.bunifuCustomLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(98, 25);
+            this.bunifuCustomLabel1.TabIndex = 32;
+            this.bunifuCustomLabel1.Text = "Tổng tiền:";
+            // 
             // ButtonTimKiem
             // 
             this.ButtonTimKiem.Active = false;
@@ -121,7 +145,7 @@
             this.ButtonTimKiem.IconVisible = true;
             this.ButtonTimKiem.IconZoom = 50D;
             this.ButtonTimKiem.IsTab = false;
-            this.ButtonTimKiem.Location = new System.Drawing.Point(897, 5);
+            this.ButtonTimKiem.Location = new System.Drawing.Point(945, 7);
             this.ButtonTimKiem.Margin = new System.Windows.Forms.Padding(5);
             this.ButtonTimKiem.Name = "ButtonTimKiem";
             this.ButtonTimKiem.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
@@ -144,7 +168,7 @@
             this.ngayden.ForeColor = System.Drawing.Color.White;
             this.ngayden.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.ngayden.FormatCustom = null;
-            this.ngayden.Location = new System.Drawing.Point(0, 0);
+            this.ngayden.Location = new System.Drawing.Point(7, 7);
             this.ngayden.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.ngayden.Name = "ngayden";
             this.ngayden.Size = new System.Drawing.Size(233, 37);
@@ -156,7 +180,7 @@
             this.bunifuCustomLabel10.AutoSize = true;
             this.bunifuCustomLabel10.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel10.Font = new System.Drawing.Font("Segoe UI Semibold", 11F);
-            this.bunifuCustomLabel10.Location = new System.Drawing.Point(244, 8);
+            this.bunifuCustomLabel10.Location = new System.Drawing.Point(251, 15);
             this.bunifuCustomLabel10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.bunifuCustomLabel10.Name = "bunifuCustomLabel10";
             this.bunifuCustomLabel10.Size = new System.Drawing.Size(45, 25);
@@ -171,7 +195,7 @@
             this.ngaydi.ForeColor = System.Drawing.Color.White;
             this.ngaydi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.ngaydi.FormatCustom = null;
-            this.ngaydi.Location = new System.Drawing.Point(301, 0);
+            this.ngaydi.Location = new System.Drawing.Point(308, 7);
             this.ngaydi.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.ngaydi.Name = "ngaydi";
             this.ngaydi.Size = new System.Drawing.Size(233, 37);
@@ -194,30 +218,6 @@
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(1087, 565);
             this.bunifuGradientPanel1.TabIndex = 7;
-            // 
-            // bunifuCustomLabel1
-            // 
-            this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 11F);
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(628, 53);
-            this.bunifuCustomLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(98, 25);
-            this.bunifuCustomLabel1.TabIndex = 32;
-            this.bunifuCustomLabel1.Text = "Tổng tiền:";
-            // 
-            // tongtientxt
-            // 
-            this.tongtientxt.AutoSize = true;
-            this.tongtientxt.BackColor = System.Drawing.Color.Transparent;
-            this.tongtientxt.Font = new System.Drawing.Font("Segoe UI Semibold", 11F);
-            this.tongtientxt.Location = new System.Drawing.Point(729, 53);
-            this.tongtientxt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.tongtientxt.Name = "tongtientxt";
-            this.tongtientxt.Size = new System.Drawing.Size(93, 25);
-            this.tongtientxt.TabIndex = 33;
-            this.tongtientxt.Text = "Tổng tiền";
             // 
             // LapPhieuThuChi_ThuChi
             // 

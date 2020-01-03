@@ -13,6 +13,7 @@ namespace HomeStay
 {
     public partial class tao_tai_khoan : Form
     {
+        public static string ktclick = "0";
         public tao_tai_khoan()
         {
             InitializeComponent();
@@ -65,13 +66,16 @@ namespace HomeStay
                     SqlCommand cmd = new SqlCommand(sql, conn);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("tao tai khoan thanh cong !!");
+                    ktclick = "1";
+
                 }
                 catch
                 {
                     MessageBox.Show("Loi !!!");
+                    ktclick = "0";
                 }
             }
-    
+
         }
     }
 }

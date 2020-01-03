@@ -29,14 +29,16 @@ namespace HomeStay
 
         private void CauHinh_ThongTinNhanVien_Load(object sender, EventArgs e)
         {
-            conn.Open();
+      
             string sql = "SELECT TOP (1000) [TaiKhoan] as'Tài Khoản',[MANV]  as 'Mã NV',[HOTEN] as'Họ tên',[NGAYSINH] as'Ngày sinh',[CMND_NV] as'Số cmnd',[DIACHI] as'Địa chỉ' FROM[HomeStay].[dbo].[NHANVIEN]";
             showdata(sql);
+            
         }
 
     
         void showdata(string sql)
         {
+            conn.Open();
             try
             {
                 SqlCommand cmd = new SqlCommand(sql, conn);
@@ -50,6 +52,10 @@ namespace HomeStay
             {
                 MessageBox.Show("Loi !!!");
             }
+            finally
+            {
+                conn.Close();
+            }
         }
 
         private void ButtonTimKiem_Click(object sender, EventArgs e)
@@ -58,5 +64,13 @@ namespace HomeStay
             showdata(sql);
         }
 
-}
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (tao_tai_khoan.ktclick == "1")
+            {
+                CauHinh_ThongTinNhanVien_Load(sender, e);
+            }
+           
+        }
+    }
 }
