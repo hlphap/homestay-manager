@@ -54,6 +54,7 @@ namespace HomeStay
                     }
                 conn.Close();
             }
+            FormChinh.LoadTrangThai();
         }
 
         private void tenkhach_Leave(object sender, EventArgs e)

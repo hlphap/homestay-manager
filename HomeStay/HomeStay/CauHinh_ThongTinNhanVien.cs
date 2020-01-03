@@ -33,6 +33,8 @@ namespace HomeStay
             string sql = "SELECT TOP (1000) [TaiKhoan] as'Tài Khoản',[MANV]  as 'Mã NV',[HOTEN] as'Họ tên',[NGAYSINH] as'Ngày sinh',[CMND_NV] as'Số cmnd',[DIACHI] as'Địa chỉ' FROM[HomeStay].[dbo].[NHANVIEN]";
             showdata(sql);
         }
+
+    
         void showdata(string sql)
         {
             try
@@ -55,5 +57,6 @@ namespace HomeStay
             string sql = "SELECT TOP (1000) [TaiKhoan] as'Tài Khoản',[MANV]  as 'Mã NV',[HOTEN] as'Họ tên',[NGAYSINH] as'Ngày sinh',[CMND_NV] as'Số cmnd',[DIACHI] as'Địa chỉ' FROM[HomeStay].[dbo].[NHANVIEN] WHERE MANV = '"+MaNV.Text +"'";
             showdata(sql);
         }
-    }
+
+}
 }
