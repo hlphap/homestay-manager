@@ -30,7 +30,7 @@ namespace HomeStay
         private void CauHinh_ThongTinNhanVien_Load(object sender, EventArgs e)
         {
       
-            string sql = "SELECT TOP (1000) [TaiKhoan] as'Tài Khoản',[MANV]  as 'Mã NV',[HOTEN] as'Họ tên',[NGAYSINH] as'Ngày sinh',[CMND_NV] as'Số cmnd',[DIACHI] as'Địa chỉ' FROM[HomeStay].[dbo].[NHANVIEN]";
+            string sql = "SELECT TOP (1000) [TaiKhoan] as'Tài Khoản',[MANV]  as 'Mã NV',[HOTEN] as'Họ tên',[NGAYSINH] as'Ngày sinh',[CMND_NV] as'Số cmnd',[DIACHI] as'Địa chỉ' FROM NHANVIEN";
             showdata(sql);
             
         }
@@ -50,7 +50,7 @@ namespace HomeStay
             }
             catch
             {
-                MessageBox.Show("Loi !!!");
+                MessageBox.Show("Loi thong tin nhan vien !!!");
             }
             finally
             {
