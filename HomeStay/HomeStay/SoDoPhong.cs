@@ -23,9 +23,8 @@ namespace HomeStay
         }
         public async void SoDoPhong_Load(object sender, EventArgs e)
         {
-       
-            sql = "SELECT PHONG.SOPHONG, LOAIPHONG, TRANGTHAI, NGAYDEN, NGAYDI, HOTENKH, SDT FROM PHONGTHUE JOIN KHACHHANG ON KHACHHANG.MAKH = PHONGTHUE.MAKH RIGHT JOIN PHONG ON PHONG.SOPHONG = PHONGTHUE.SOPHONG";
-          //  PanelTemp.Show();
+
+            sql = "SELECT PHONG.SOPHONG, LOAIPHONG, TRANGTHAI, NGAYDEN, NGAYDI, HOTENKH, SDT FROM PHONGTHUE JOIN KHACHHANG ON KHACHHANG.MAKH = PHONGTHUE.MAKH RIGHT JOIN PHONG ON PHONG.SOPHONG = PHONGTHUE.SOPHONG";          //  PanelTemp.Show();
             int x = await (LoadPhong(sql));
           //  PanelTemp.Hide();
             Animator.ShowSync(PanelNoiDung);
@@ -147,9 +146,10 @@ namespace HomeStay
                                 us1.txtTGNhan.Text = reader.GetString(6).ToString();
                             }
                         }
+                        
                         catch
                         {
-                          
+                            
                         }
                         i++;
                     }

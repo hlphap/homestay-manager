@@ -173,7 +173,7 @@
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_mat_nhau_nhap_lai.OnIdleState = stateProperties4;
-            this.txt_mat_nhau_nhap_lai.PasswordChar = '\0';
+            this.txt_mat_nhau_nhap_lai.PasswordChar = '●';
             this.txt_mat_nhau_nhap_lai.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txt_mat_nhau_nhap_lai.PlaceholderText = "Nhập lại";
             this.txt_mat_nhau_nhap_lai.ReadOnly = false;
@@ -247,7 +247,7 @@
             stateProperties8.ForeColor = System.Drawing.Color.Empty;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_mat_khau.OnIdleState = stateProperties8;
-            this.txt_mat_khau.PasswordChar = '\0';
+            this.txt_mat_khau.PasswordChar = '●';
             this.txt_mat_khau.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txt_mat_khau.PlaceholderText = "Mật khẩu";
             this.txt_mat_khau.ReadOnly = false;

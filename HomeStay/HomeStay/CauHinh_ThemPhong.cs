@@ -132,11 +132,7 @@ namespace HomeStay
 
         private void panel2_MouseMove(object sender, MouseEventArgs e)
         {
-            if ((CauHinh_LoaiPhong.ktload == "1")||(CaiDat_DsTang.ktload)=="1")
-            {
-                showcombox();
-                CauHinh_LoaiPhong.ktload = "0";
-            }
+           
         }
 
         private void dataGridView1_CellLeave(object sender, DataGridViewCellEventArgs e)
@@ -146,6 +142,20 @@ namespace HomeStay
             SoPhong.Text = dataGridView1.Rows[i].Cells[0].Value.ToString();
             comboBox1.Text = dataGridView1.Rows[i].Cells[1].Value.ToString();
             Tang.Text = dataGridView1.Rows[i].Cells[3].Value.ToString();
+        }
+
+        private void panel2_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+
+            if ((CauHinh_LoaiPhong.ktload == "1") || (CaiDat_DsTang.ktload) == "1")
+            {
+                showcombox();
+                CauHinh_LoaiPhong.ktload = "0";
+            }
         }
     }
 }

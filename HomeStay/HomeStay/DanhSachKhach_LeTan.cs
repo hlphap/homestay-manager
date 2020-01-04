@@ -39,5 +39,55 @@ namespace HomeStay
         {
 
         }
+        private void LoadData(string sql, DataGridView ViewDTA)
+        {
+            SqlConnection conn = new SqlConnection(DataSource.connectionString);
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.CommandType = CommandType.Text;
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                ViewDTA.DataSource = dt;
+                if (ViewDTA.RowCount == 0)
+                {
+                    msbRong.Show();
+                }
+                else
+                {
+                    msbRong.Hide();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi", "Lỗi kết nối Server");
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+        }
+
+        private void DanhSachKhach_LeTan_Load(object sender, EventArgs e)
+        {
+
+            try
+            {
+                conn.Open();
+              
+                string sql4 = "SELECT PHONGTHUE.SOPHONG as 'Số phòng', MADK as 'Mã đặt phòng', HOTENKH as 'Họ tên', LOAIPHONG as 'Loại phòng', NGAYDEN as 'Ngày đến', NGAYDI as 'Ngày đi' FROM KHACHHANG, PHONGTHUE, PHONG WHERE PHONG.SOPHONG = PHONGTHUE.SOPHONG AND KHACHHANG.MAKH = PHONGTHUE.MAKH ";
+                LoadData(sql4, GridDataViewDSK);
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi", "Lỗi kết nối Server");
+            }
+
+
+            conn.Close();
+        }
     }
 }

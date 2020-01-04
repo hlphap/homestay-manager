@@ -37,11 +37,11 @@ namespace HomeStay
                 else
                     try
                     {
-                        string sql = "INSERT INTO KHACHHANG(MAKH,HOTENKH,NGAYSINH,GIOITINH,CMND,SDT,QUOCTICH) VALUES('" + bunifuTextBox2.Text.Trim() + "','" + tenkhach.Text + "','" + bunifuDatepicker1.Value.ToString("yyyy/MM/dd")+ "','" + gioitinhcombobox.Text + "','" + scmnt.Text + "','" + didong.Text + "','" + comboBox5.Text + "')";
+                        string sql = "INSERT INTO KHACHHANG(MAKH,HOTENKH,NGAYSINH,GIOITINH,CMND,SDT,QUOCTICH) VALUES(N'" + bunifuTextBox2.Text.Trim() + "',N'" + tenkhach.Text + "','" + bunifuDatepicker1.Value.ToString("yyyy/MM/dd")+ "',N'" + gioitinhcombobox.Text + "',N'" + scmnt.Text + "',N'" + didong.Text + "',N'" + comboBox5.Text + "')";
                         SqlCommand cmd = new SqlCommand(sql, conn);
                         cmd.ExecuteNonQuery();
                         string st = comboBox3.Text;
-                        string sql2 = "INSERT INTO PHONGTHUE(MAKH,MADK,SOPHONG,NGAYDEN,NGAYDI,NGAYDK) VALUES('" + bunifuTextBox2.Text.Trim() + "','" + bunifuTextBox2.Text.Trim() + "','" + comboBox3.Text + "','" + bunifuDatepicker2.Value.ToString("yyyy/MM/dd") + "','" + bunifuDatepicker3.Value.ToString("yyyy/MM/dd") + "','" + DateTime.Now.ToString("yyyy/MM/dd") + "')";
+                        string sql2 = "INSERT INTO PHONGTHUE(MAKH,MADK,SOPHONG,NGAYDEN,NGAYDI,NGAYDK) VALUES(N'" + bunifuTextBox2.Text.Trim() + "',N'" + bunifuTextBox2.Text.Trim() + "',N'" + comboBox3.Text + "','" + bunifuDatepicker2.Value.ToString("yyyy/MM/dd") + "','" + bunifuDatepicker3.Value.ToString("yyyy/MM/dd") + "','" + DateTime.Now.ToString("yyyy/MM/dd") + "')";
                         SqlCommand cmd2 = new SqlCommand(sql2, conn);
                         cmd2.ExecuteNonQuery();
                         
@@ -108,8 +108,7 @@ namespace HomeStay
 
         private void Panel_THKL_Click(object sender, EventArgs e)
         {
-            string sql2 = "SELECT distinct LOAIPHONG FROM PHONG WHERE SOPHONG NOT IN ( SELECT SOPHONG FROM PHONGTHUE WHERE( '" + bunifuDatepicker2.Value.ToString("yyyy-MM-dd") + "'<=NgayDen AND'" + bunifuDatepicker3.Value.ToString("yyyy-MM-dd") + "'>= NGAYDI) or '" + bunifuDatepicker2.Value.ToString("yyyy-MM-dd") + "' = NGAYDI )";
-            SqlDataAdapter da2 = new SqlDataAdapter(sql2, conn);
+            string sql2 = "SELECT distinct LOAIPHONG FROM PHONG WHERE SOPHONG NOT IN ( SELECT SOPHONG FROM PHONGTHUE WHERE( '" + bunifuDatepicker2.Value.ToString("yyyy-MM-dd") + "'<=NgayDen AND'" + bunifuDatepicker3.Value.ToString("yyyy-MM-dd") + "'>= NGAYDI) or '" + bunifuDatepicker2.Value.ToString("yyyy-MM-dd") + "' = NGAYDI )"; SqlDataAdapter da2 = new SqlDataAdapter(sql2, conn);
             DataTable dt2 = new DataTable();
             da2.Fill(dt2);
             comboBox1.DataSource = dt2;

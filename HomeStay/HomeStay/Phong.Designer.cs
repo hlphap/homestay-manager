@@ -157,7 +157,6 @@
             this.txtTrangThai.ReadOnly = true;
             this.txtTrangThai.Size = new System.Drawing.Size(254, 35);
             this.txtTrangThai.TabIndex = 15;
-            this.txtTrangThai.Text = "Online";
             this.txtTrangThai.Visible = false;
             // 
             // txtHoTen

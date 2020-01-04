@@ -424,6 +424,7 @@
             this.Name = "CauHinh_LoaiPhong";
             this.Size = new System.Drawing.Size(1087, 622);
             this.Load += new System.EventHandler(this.CauHinh_LoaiPhong_Load);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CauHinh_LoaiPhong_MouseClick);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid_DSLoaiPhong)).EndInit();
             this.ResumeLayout(false);

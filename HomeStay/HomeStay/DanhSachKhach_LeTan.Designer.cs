@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DanhSachKhach_LeTan));
             this.PanelNoiDung_DanhSachKhach = new System.Windows.Forms.Panel();
             this.GridDataViewDSK = new Bunifu.Framework.UI.BunifuCustomDataGrid();
@@ -43,6 +43,7 @@
             this.SDTtxt = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.Tenkhachtxt = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.msbRong = new System.Windows.Forms.Label();
             this.PanelNoiDung_DanhSachKhach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridDataViewDSK)).BeginInit();
             this.Panel_KhachSeDi.SuspendLayout();
@@ -50,6 +51,7 @@
             // 
             // PanelNoiDung_DanhSachKhach
             // 
+            this.PanelNoiDung_DanhSachKhach.Controls.Add(this.msbRong);
             this.PanelNoiDung_DanhSachKhach.Controls.Add(this.GridDataViewDSK);
             this.PanelNoiDung_DanhSachKhach.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.PanelNoiDung_DanhSachKhach.Location = new System.Drawing.Point(0, 165);
@@ -60,21 +62,21 @@
             // 
             // GridDataViewDSK
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.GridDataViewDSK.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.GridDataViewDSK.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.GridDataViewDSK.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.GridDataViewDSK.BackgroundColor = System.Drawing.Color.White;
             this.GridDataViewDSK.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.GridDataViewDSK.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.GridDataViewDSK.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GridDataViewDSK.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridDataViewDSK.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.GridDataViewDSK.ColumnHeadersHeight = 29;
             this.GridDataViewDSK.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GridDataViewDSK.DoubleBuffered = true;
@@ -291,6 +293,18 @@
             this.bunifuCustomLabel4.TabIndex = 29;
             this.bunifuCustomLabel4.Text = "DANH SÁCH KHÁCH";
             // 
+            // msbRong
+            // 
+            this.msbRong.AutoSize = true;
+            this.msbRong.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msbRong.ForeColor = System.Drawing.Color.Red;
+            this.msbRong.Location = new System.Drawing.Point(375, 189);
+            this.msbRong.Name = "msbRong";
+            this.msbRong.Size = new System.Drawing.Size(336, 28);
+            this.msbRong.TabIndex = 5;
+            this.msbRong.Text = "Không tìm thấy thông tin đặt phòng";
+            this.msbRong.Visible = false;
+            // 
             // DanhSachKhach_LeTan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -300,7 +314,9 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DanhSachKhach_LeTan";
             this.Size = new System.Drawing.Size(1087, 571);
+            this.Load += new System.EventHandler(this.DanhSachKhach_LeTan_Load);
             this.PanelNoiDung_DanhSachKhach.ResumeLayout(false);
+            this.PanelNoiDung_DanhSachKhach.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridDataViewDSK)).EndInit();
             this.Panel_KhachSeDi.ResumeLayout(false);
             this.Panel_KhachSeDi.PerformLayout();
@@ -322,5 +338,6 @@
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private Bunifu.Framework.UI.BunifuDatepicker NgayDenApp;
         private Bunifu.Framework.UI.BunifuCustomDataGrid GridDataViewDSK;
+        private System.Windows.Forms.Label msbRong;
     }
 }

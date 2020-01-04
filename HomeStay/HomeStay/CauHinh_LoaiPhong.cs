@@ -65,7 +65,7 @@ namespace HomeStay
             conn.Open();
                 try
                 {
-                    string sql1 = "INSERT INTO LOAIPHONG(LOAIPHONG, GIA) VALUES ('" + txtPhong.Text + "'," + GiaPhong.Text + ")";
+                    string sql1 = "INSERT INTO LOAIPHONG(LOAIPHONG, GIA) VALUES (N'" + txtPhong.Text + "'," + GiaPhong.Text + ")";
                     SqlCommand cmd = new SqlCommand(sql1, conn);
                     cmd.ExecuteNonQuery();
                     showdata("SELECT LOAIPHONG as 'Loại phòng', GIA as 'Giá phòng' FROM LOAIPHONG");
@@ -94,6 +94,11 @@ namespace HomeStay
         private void txtPhong_KeyUp(object sender, KeyEventArgs e)
         {
            
+        }
+
+        private void CauHinh_LoaiPhong_MouseClick(object sender, MouseEventArgs e)
+        {
+            CauHinh_LoaiPhong_Load(sender, e);
         }
     }
 }
