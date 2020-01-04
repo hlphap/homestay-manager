@@ -191,24 +191,6 @@
     <Compile Include="DatPhong.Designer.cs">
       <DependentUpon>DatPhong.cs</DependentUpon>
     </Compile>
-    <Compile Include="KhachDoan_DoanDaDat.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="KhachDoan_DoanDaDat.Designer.cs">
-      <DependentUpon>KhachDoan_DoanDaDat.cs</DependentUpon>
-    </Compile>
-    <Compile Include="KhachDoan_DoanDaDi.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="KhachDoan_DoanDaDi.Designer.cs">
-      <DependentUpon>KhachDoan_DoanDaDi.cs</DependentUpon>
-    </Compile>
-    <Compile Include="KhachDoan_DoanDangO.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="KhachDoan_DoanDangO.Designer.cs">
-      <DependentUpon>KhachDoan_DoanDangO.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormChinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -402,15 +384,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DatPhong.resx">
       <DependentUpon>DatPhong.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="KhachDoan_DoanDaDat.resx">
-      <DependentUpon>KhachDoan_DoanDaDat.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="KhachDoan_DoanDaDi.resx">
-      <DependentUpon>KhachDoan_DoanDaDi.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="KhachDoan_DoanDangO.resx">
-      <DependentUpon>KhachDoan_DoanDangO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormChinh.resx">
       <DependentUpon>FormChinh.cs</DependentUpon>
