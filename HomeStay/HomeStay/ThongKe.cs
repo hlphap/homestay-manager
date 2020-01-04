@@ -13,11 +13,14 @@ namespace HomeStay
     public partial class ThongKe : UserControl
     {
         private
+            ThongKe_DoanhThu CrtDT = new ThongKe_DoanhThu();
             ThongKe_ThongKe CrtTK = new ThongKe_ThongKe();
+
 
         public ThongKe()
         {
             InitializeComponent();
+            PanelNoiDung.Controls.Add(CrtDT);
             PanelNoiDung.Controls.Add(CrtTK);
         }
 
@@ -25,10 +28,21 @@ namespace HomeStay
         {
 
         }
+
+
+       
+        private void ButtonDoanhThu_Click(object sender, EventArgs e)
+        {
+            CrtDT.BringToFront();
+            CrtDT.Show();
+        }
+
         private void ButtonThongKe_Click(object sender, EventArgs e)
         {
             CrtTK.BringToFront();
             CrtTK.Show();
         }
+
+ 
     }
 }
